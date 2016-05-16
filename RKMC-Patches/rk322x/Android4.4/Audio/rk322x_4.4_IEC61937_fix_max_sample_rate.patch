@@ -1,0 +1,166 @@
+commit 8933e4c4ef4b2281f73272a0350faa60899df2fe
+Author: linyuhui <james.lin@rock-chips.com>
+Date:   Mon Apr 11 09:54:23 2016 +0800
+
+    Add AudioTrack IEC61937、DTS、AC3 Format Support and change max sample rate to 192000Hz
+
+diff --git a/core/jni/android_media_AudioTrack.cpp b/core/jni/android_media_AudioTrack.cpp
+index 225bf06..afb959e 100644
+--- a/core/jni/android_media_AudioTrack.cpp
++++ b/core/jni/android_media_AudioTrack.cpp
+@@ -58,7 +58,9 @@ struct audiotrack_callback_cookie {
+ // keep these values in sync with AudioFormat.java
+ #define ENCODING_PCM_16BIT 2
+ #define ENCODING_PCM_8BIT  3
+-
++#define ENCODING_AC3       5
++#define ENCODING_E_AC3     6
++#define ENCODING_IEC61937  10 
+ // ----------------------------------------------------------------------------
+ class AudioTrackJniStorage {
+     public:
+@@ -203,6 +205,7 @@ android_media_AudioTrack_native_setup(JNIEnv *env, jobject thiz, jobject weak_th
+         sampleRateInHertz, audioFormat, javaChannelMask, buffSizeInBytes);
+     uint32_t afSampleRate;
+     size_t afFrameCount;
++    bool afPCM;
+ 
+     if (AudioSystem::getOutputFrameCount(&afFrameCount, (audio_stream_type_t) streamType) != NO_ERROR) {
+         ALOGE("Error creating AudioTrack: Could not get AudioSystem frame count.");
+@@ -245,9 +248,17 @@ android_media_AudioTrack_native_setup(JNIEnv *env, jobject thiz, jobject weak_th
+     // check the format.
+     // This function was called from Java, so we compare the format against the Java constants
+     if ((audioFormat != ENCODING_PCM_16BIT) && (audioFormat != ENCODING_PCM_8BIT)) {
+-
+-        ALOGE("Error creating AudioTrack: unsupported audio format.");
+-        return AUDIOTRACK_ERROR_SETUP_INVALIDFORMAT;
++        if (audioFormat == ENCODING_IEC61937 ||
++	    audioFormat == ENCODING_AC3 ||
++	    audioFormat == ENCODING_E_AC3) {
++	    afPCM = false;
++	    audioFormat = ENCODING_PCM_16BIT;
++	} else {
++            ALOGE("Error creating AudioTrack: unsupported audio format.");
++            return AUDIOTRACK_ERROR_SETUP_INVALIDFORMAT;
++	}
++    } else {
++        afPCM = true;
+     }
+ 
+     // for the moment 8bitPCM in MODE_STATIC is not supported natively in the AudioTrack C++ class
+@@ -301,6 +312,7 @@ android_media_AudioTrack_native_setup(JNIEnv *env, jobject thiz, jobject weak_th
+     lpJniStorage->mCallbackData.audioTrack_ref = env->NewGlobalRef(weak_this);
+     lpJniStorage->mCallbackData.busy = false;
+ 
++    audio_output_flags_t flag = afPCM ? AUDIO_OUTPUT_FLAG_NONE : AUDIO_OUTPUT_FLAG_DIRECT;
+     // initialize the native AudioTrack object
+     switch (memoryMode) {
+     case MODE_STREAM:
+@@ -311,7 +323,7 @@ android_media_AudioTrack_native_setup(JNIEnv *env, jobject thiz, jobject weak_th
+             format,// word length, PCM
+             nativeChannelMask,
+             frameCount,
+-            AUDIO_OUTPUT_FLAG_NONE,
++            flag,
+             audioCallback, &(lpJniStorage->mCallbackData),//callback, callback data (user)
+             0,// notificationFrames == 0 since not using EVENT_MORE_DATA to feed the AudioTrack
+             0,// shared mem
+@@ -333,7 +345,7 @@ android_media_AudioTrack_native_setup(JNIEnv *env, jobject thiz, jobject weak_th
+             format,// word length, PCM
+             nativeChannelMask,
+             frameCount,
+-            AUDIO_OUTPUT_FLAG_NONE,
++            flag,
+             audioCallback, &(lpJniStorage->mCallbackData),//callback, callback data (user));
+             0,// notificationFrames == 0 since not using EVENT_MORE_DATA to feed the AudioTrack
+             lpJniStorage->mMemBase,// shared mem
+diff --git a/core/res/AndroidManifest.xml b/core/res/AndroidManifest.xml
+index 1e526c0..259f905 100755
+--- a/core/res/AndroidManifest.xml
++++ b/core/res/AndroidManifest.xml
+@@ -2093,7 +2093,7 @@
+     <permission android:name="android.permission.ACCESS_SURFACE_FLINGER"
+         android:label="@string/permlab_accessSurfaceFlinger"
+         android:description="@string/permdesc_accessSurfaceFlinger"
+-        android:protectionLevel="signature" />
++        android:protectionLevel="normal" />
+ 
+     <!-- Allows an application to take screen shots and more generally
+          get access to the frame buffer data.
+diff --git a/media/java/android/media/AudioFormat.java b/media/java/android/media/AudioFormat.java
+index 8ac26ea..17d0299 100644
+--- a/media/java/android/media/AudioFormat.java
++++ b/media/java/android/media/AudioFormat.java
+@@ -36,6 +36,14 @@ public class AudioFormat {
+     public static final int ENCODING_PCM_16BIT = 2;
+     /** Audio data format: PCM 8 bit per sample. Not guaranteed to be supported by devices. */
+     public static final int ENCODING_PCM_8BIT = 3;
++    /** Audio data format: single-precision floating-point per sample */
++    public static final int ENCODING_PCM_FLOAT = 4;
++    /** Audio data format: AC-3 compressed */
++    public static final int ENCODING_AC3 = 5;
++    /** Audio data format: E-AC-3 compressed */
++    public static final int ENCODING_E_AC3 = 6;
++    /** Audio data format: ENCODING_IEC61937*/
++    public static final int ENCODING_IEC61937 = 10;
+ 
+     /** Invalid audio channel configuration */
+     /** @deprecated use CHANNEL_INVALID instead  */
+diff --git a/media/java/android/media/AudioRecord.java b/media/java/android/media/AudioRecord.java
+index c0e968d..d06b0cd 100644
+--- a/media/java/android/media/AudioRecord.java
++++ b/media/java/android/media/AudioRecord.java
+@@ -260,7 +260,7 @@ public class AudioRecord
+ 
+         //--------------
+         // sample rate
+-        if ( (sampleRateInHz < 4000) || (sampleRateInHz > 48000) ) {
++        if ( (sampleRateInHz < 4000) || (sampleRateInHz > 192000) ) {
+             throw new IllegalArgumentException(sampleRateInHz
+                     + "Hz is not a supported sample rate.");
+         }
+diff --git a/media/java/android/media/AudioTrack.java b/media/java/android/media/AudioTrack.java
+index 78a37c5..39adff4 100644
+--- a/media/java/android/media/AudioTrack.java
++++ b/media/java/android/media/AudioTrack.java
+@@ -71,7 +71,7 @@ public class AudioTrack
+     /** Minimum value for sample rate */
+     private static final int SAMPLE_RATE_HZ_MIN = 4000;
+     /** Maximum value for sample rate */
+-    private static final int SAMPLE_RATE_HZ_MAX = 48000;
++    private static final int SAMPLE_RATE_HZ_MAX = 192000;
+ 
+     /** indicates AudioTrack state is stopped */
+     public static final int PLAYSTATE_STOPPED = 1;  // matches SL_PLAYSTATE_STOPPED
+@@ -348,7 +348,9 @@ public class AudioTrack
+             AudioFormat.CHANNEL_OUT_LOW_FREQUENCY |
+             AudioFormat.CHANNEL_OUT_BACK_LEFT |
+             AudioFormat.CHANNEL_OUT_BACK_RIGHT |
+-            AudioFormat.CHANNEL_OUT_BACK_CENTER;
++            AudioFormat.CHANNEL_OUT_BACK_CENTER |
++	    AudioFormat.CHANNEL_OUT_SIDE_LEFT |
++	    AudioFormat.CHANNEL_OUT_SIDE_RIGHT;
+ 
+     // Convenience method for the constructor's parameter checks.
+     // This is where constructor IllegalArgumentException-s are thrown
+@@ -376,7 +378,7 @@ public class AudioTrack
+ 
+         //--------------
+         // sample rate, note these values are subject to change
+-        if ( (sampleRateInHz < 4000) || (sampleRateInHz > 48000) ) {
++        if ( (sampleRateInHz < 4000) || (sampleRateInHz > 192000) ) {
+             throw new IllegalArgumentException(sampleRateInHz
+                     + "Hz is not a supported sample rate.");
+         }
+@@ -417,6 +419,11 @@ public class AudioTrack
+         case AudioFormat.ENCODING_PCM_8BIT:
+             mAudioFormat = audioFormat;
+             break;
++	case AudioFormat.ENCODING_AC3:
++	case AudioFormat.ENCODING_E_AC3:
++        case AudioFormat.ENCODING_IEC61937:
++	    mAudioFormat = audioFormat;
++	    break;
+         default:
+             throw new IllegalArgumentException("Unsupported sample encoding."
+                 + " Should be ENCODING_PCM_8BIT or ENCODING_PCM_16BIT.");
