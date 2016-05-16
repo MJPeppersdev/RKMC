@@ -18116,3 +18116,20 @@ msgstr ""
 msgctxt "#38023"
 msgid "Set my rating"
 msgstr ""
+
+#. Used in new Features
+msgctxt "#39000"
+msgid "RKMC"
+msgstr ""
+
+msgctxt "#39001"
+msgid "Accelerate RKCodec"
+msgstr ""
+
+msgctxt "#39002"
+msgid "Framepacking 3D"
+msgstr ""
+
+msgctxt "#39003"
+msgid "Force HDMI-24Hz Bluray3D"
+msgstr ""

@@ -23,6 +23,7 @@
 #include "cores/VideoRenderers/RenderManager.h"
 #include "settings/MediaSettings.h"
 #include "settings/DisplaySettings.h"
+#include "settings/Settings.h"
 #include "utils/log.h"
 
 #define __MODULE_NAME__ "RKCodec"
@@ -97,7 +98,9 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
   if (AV_CODEC_ID_H264MVC == hints.codec_tag)
   {
     CLog::Log(LOGDEBUG,"s: OpenDecoder mvc detected!", __MODULE_NAME__);
-    m_streamInfo.stereo_mode = 1;
+    m_streamInfo.stereo_mode = RK_STEREO_LR;
+    if (CSettings::GetInstance().GetBool(RKMC_SETTING_FP3D))
+      m_streamInfo.stereo_mode = RK_STEREO_MVC; 
   }
 
   /* init and open rk codec */

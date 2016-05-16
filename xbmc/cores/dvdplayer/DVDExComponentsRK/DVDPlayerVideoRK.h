@@ -21,6 +21,7 @@
  */
 
 #include "cores/dvdplayer/DVDPlayerVideo.h"
+#include "RKCoreComponent.h"
 
 #define VC_BYPASS  0x00000100
 

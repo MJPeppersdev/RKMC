@@ -558,7 +558,10 @@ void CDVDPlayer::CreatePlayers()
   }
   else
   {
-    m_dvdPlayerVideo = new CDVDPlayerVideoRK(&m_clock, &m_overlayContainer, m_messenger);
+    if (CSettings::GetInstance().GetBool(RKMC_SETTING_RKCODEC))
+      m_dvdPlayerVideo = new CDVDPlayerVideoRK(&m_clock, &m_overlayContainer, m_messenger);
+    else
+      m_dvdPlayerVideo = new CDVDPlayerVideo(&m_clock, &m_overlayContainer, m_messenger);
     m_dvdPlayerAudio = new CDVDPlayerAudio(&m_clock, m_messenger);
   }
   m_dvdPlayerSubtitle = new CDVDPlayerSubtitle(&m_overlayContainer);
@@ -820,9 +823,13 @@ bool CDVDPlayer::OpenDemuxStream()
     int attempts = 10;
     while(!m_bStop && attempts-- > 0)
     {
-      std::unique_ptr<CDVDDemuxFFmpegRK> demuxer(new CDVDDemuxFFmpegRK());
-      if(demuxer->Open(m_pInputStream))
+      if (CSettings::GetInstance().GetBool(RKMC_SETTING_RKCODEC)) 
+      {
+        std::unique_ptr<CDVDDemuxFFmpegRK> demuxer(new CDVDDemuxFFmpegRK());
+        if(demuxer->Open(m_pInputStream))
         m_pDemuxer = demuxer.release();
+      }
+      
       if (m_pDemuxer == NULL)
         m_pDemuxer = CDVDFactoryDemuxer::CreateDemuxer(m_pInputStream);
       if(!m_pDemuxer && m_pInputStream->IsStreamType(DVDSTREAM_TYPE_PVRMANAGER))

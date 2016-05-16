@@ -1,3 +1,4 @@
+#pragma once
 /*
  *      Copyright (C) 2005-2013 Team XBMC
  *      http://xbmc.org
@@ -84,11 +85,18 @@ class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
   END_METHOD_RESOLVE()
 };
 
+#define RKMC_SETTING_RKCODEC  "videoplayer.userkcodec"
+#define RKMC_SETTING_FP3D     "videoplayer.framepacking"
+#define RKMC_SETTING_3D24HZ   "videoplayer.force24hzbluray3d"
+
 enum RKCodecDecodeType
 {
   RK_VIDEO               = 1,
   RK_AUDIO               = 0,
-  RK_SUBTITLE            = 2
+  RK_SUBTITLE            = 2,
+  RK_STEREO_LR           = 0x1000,
+  RK_STEREO_BT           = 0x2000,
+  RK_STEREO_MVC          = 0x4000,
 };
 
 enum RKListenerType

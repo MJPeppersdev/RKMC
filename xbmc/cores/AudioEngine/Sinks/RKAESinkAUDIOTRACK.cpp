@@ -178,7 +178,7 @@ CRKAESinkAUDIOTRACK::~CRKAESinkAUDIOTRACK()
 void CRKAESinkAUDIOTRACK::PopulateExStaticFields()
 {
   jhclass c = find_class("android/media/AudioFormat");
-  CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = get_static_field<int>(c, "ENCODING_IEC61937");
+  CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = 10;
 }
 
 bool CRKAESinkAUDIOTRACK::IsSupported(int sampleRateInHz, int channelConfig, int encoding)

@@ -836,6 +836,27 @@
         </setting>
       </group>
     </category>
+    <category id="rkmc" label="39000">
+      <group id="1">
+        <setting id="videoplayer.userkcodec" type="boolean" label="39001">
+          <level>0</level>
+          <default>true</default>
+          <control type="toggle" />
+        </setting>
+      </group>
+      <group id="2">
+        <setting id="videoplayer.framepacking" type="boolean" label="39002">
+          <level>0</level>
+          <default>true</default>
+          <control type="toggle" />
+        </setting>
+        <setting id="videoplayer.force24hzbluray3d" type="boolean" label="39003">
+          <level>0</level>
+          <default>true</default>
+          <control type="toggle" />
+        </setting>
+      </group>
+    </category>
     <category id="myvideos" label="14081" help="36601">
       <group id="1">
         <setting id="myvideos.selectaction" type="integer" label="22079" help="36177">
