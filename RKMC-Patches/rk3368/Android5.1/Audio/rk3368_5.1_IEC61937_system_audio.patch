@@ -1,0 +1,12 @@
+diff --git a/include/system/audio.h b/include/system/audio.h
+index 57e98f5..8fb6115 100755
+--- a/include/system/audio.h
++++ b/include/system/audio.h
+@@ -262,6 +262,7 @@ typedef enum {
+     AUDIO_FORMAT_OPUS                = 0x08000000UL,
+     AUDIO_FORMAT_AC3                 = 0x09000000UL,
+     AUDIO_FORMAT_E_AC3               = 0x0A000000UL,
++    AUDIO_FORMAT_IEC61937            = 0x0B000000UL,
+     AUDIO_FORMAT_MAIN_MASK           = 0xFF000000UL,
+     AUDIO_FORMAT_SUB_MASK            = 0x00FFFFFFUL,
+ 
