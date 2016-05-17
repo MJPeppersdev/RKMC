@@ -1,8 +1,47 @@
 [![Build Status](https://travis-ci.org/xbmc/xbmc.svg?branch=Jarvis)](https://travis-ci.org/xbmc/xbmc)
 
-#### About
+#### About RKMC
 
-RKMC is an award-winning free and open source (GPL) software media player and
+RKMC is a fork for Kodi and provides hardware acceleration and more features on
+rockchip mainstream chips(rk3228、rk3288、rk3368) and most android version. In 
+the case of hardware allowed, RKMC supports 4K2K、4K2K 10bit(H264、HEVC)、MVC 3D
+(bluray & mkv)、high profile audio passthrough.
+
+RKMC use specific ffmpeg version in https://github.com/JamesLinEngineer/RKMC-FFmpeg
+and related firmware patches are in RKMC-Patches folder.
+
+RKMC welcome everyone to participate in development! More problems can contact the 
+author james.lin@rock-chips.com. 
+
+#### Build RKMC
+
+RKMC main compilation process, please refer to the official Kodi documentation 
+in folder docs/README.*
+
+After step 5.1. Building dependencies
+--------------------------------------------------------------------
+
+    $ cd $HOME/kodi-android/tools/depends
+    $ ./bootstrap
+    $ ./configure --help
+	
+--------------------------------------------------------------------
+
+Please compress RKMC-FFmpeg
+
+    $ tar -zcvf ffmpeg-2.8.6-Jarvis-16.0-RK.tar.gz <RKMC-FFmpeg folder>
+
+And move this file to your configure tarballs folder
+ 
+    $ mv ffmpeg-2.8.6-Jarvis-16.0-RK.tar.gz <tarballs folder>
+
+Then the same way as Kodi docs
+
+    $ make -j <jobs>
+
+#### About Kodi
+
+Kodi is an award-winning free and open source (GPL) software media player and
 entertainment hub for digital media. Kodi is available for multiple platforms.
 Created in 2003 by a group of like minded programmers, Kodi is a non-profit
 project run and developed by volunteers located around the world.
