@@ -251,19 +251,19 @@ bool CEGLNativeTypeRockchip::ProbeResolutions(std::vector<RESOLUTION_INFO> &reso
             if (ires3d & 1)
             {
               RESOLUTION_INFO res3d = res;
-              res.dwFlags = D3DPRESENTFLAG_MODE3DMVC;
+              res3d.dwFlags = D3DPRESENTFLAG_MODE3DMVC;
               resolutions.push_back(res3d);
             }
             if (ires3d & (1 << 6))
             {
               RESOLUTION_INFO res3d = res;
-              res.dwFlags = D3DPRESENTFLAG_MODE3DSBS;
+              res3d.dwFlags = D3DPRESENTFLAG_MODE3DSBS;
               resolutions.push_back(res3d);
             }
             if (ires3d & (1 << 8))
             {
               RESOLUTION_INFO res3d = res;
-              res.dwFlags = D3DPRESENTFLAG_MODE3DTB;
+              res3d.dwFlags = D3DPRESENTFLAG_MODE3DTB;
               resolutions.push_back(res3d);
             }
           }
