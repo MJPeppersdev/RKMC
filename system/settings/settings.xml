@@ -855,6 +855,11 @@
           <default>true</default>
           <control type="toggle" />
         </setting>
+        <setting id="videoplayer.forcehdmi3d" type="boolean" label="39004">
+          <level>0</level>
+          <default>true</default>
+          <control type="toggle" />
+        </setting>
       </group>
     </category>
     <category id="myvideos" label="14081" help="36601">

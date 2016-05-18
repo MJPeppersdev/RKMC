@@ -88,6 +88,7 @@ class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
 #define RKMC_SETTING_RKCODEC  "videoplayer.userkcodec"
 #define RKMC_SETTING_FP3D     "videoplayer.framepacking"
 #define RKMC_SETTING_3D24HZ   "videoplayer.force24hzbluray3d"
+#define RKMC_SETTING_3DSWITCH "videoplayer.forcehdmi3d"
 
 enum RKCodecDecodeType
 {
@@ -97,6 +98,7 @@ enum RKCodecDecodeType
   RK_STEREO_LR           = 0x1000,
   RK_STEREO_BT           = 0x2000,
   RK_STEREO_MVC          = 0x4000,
+  RK_STEREO_MASK         = 0xF000,
 };
 
 enum RKListenerType
@@ -107,10 +109,20 @@ enum RKListenerType
 
 enum RKCodecCommand
 {
+  RK_CMD_NONE            = 0,
   RK_CMD_SETSPEED        = 1,
   RK_CMD_SYNC            = 2,
   RK_CMD_EOS             = 3,
-  RK_CMD_SETRES          = 4
+  RK_CMD_SETRES          = 4,
+  RK_CMD_MAX             = 1000
+};
+
+enum RKCodecConfig
+{
+  RK_CONF_NONE           = 1000,
+  RK_CONF_FORCE24HZ_3D,
+  RK_CONF_FORCESWITCH_3D,
+  RK_CONF_MAX            = 2000
 };
 
 enum RKDecodeRetStatus
@@ -192,6 +204,14 @@ protected:
   void UpdatePlayStatus();
   static void RenderUpdateCallBack(const void *ctx, const CRect &SrcRect, const CRect &DestRect);
   void UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect);
+  RK_U32 GetStereoMode();
+  void UpdateRenderStereo(bool flag = false);
+  bool Support3D(int width, int height, float fps, uint32_t mode);
+  void SetNative3DResolution(RK_U32 res3d);
+
+private:
+  void ConfigureSetting();
+  void SendConfigure(RK_U32 config, RK_PTR param = NULL);
   
 private:
   CDVDStreamInfo  m_hints;
@@ -203,8 +223,10 @@ private:
   bool m_bReady;
   bool m_bOpen;
   bool m_bSubmittedEos;
+  bool m_bSyncStatus;
   int m_iSyncMode;
   double m_lfSyncThreshold;
+  int m_iSpeed;
   
 };
 

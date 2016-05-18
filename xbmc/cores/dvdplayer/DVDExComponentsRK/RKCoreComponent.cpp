@@ -24,6 +24,8 @@
 #include "settings/MediaSettings.h"
 #include "settings/DisplaySettings.h"
 #include "settings/Settings.h"
+#include "guilib/GraphicContext.h"
+#include "utils/SysfsUtils.h"
 #include "utils/log.h"
 
 #define __MODULE_NAME__ "RKCodec"
@@ -36,8 +38,10 @@ CRKCodec::CRKCodec()
     m_bLoad(false),
     m_bReady(false),
     m_bSubmittedEos(false),
+    m_bSyncStatus(false),
     m_iSyncMode(RK_CLIENT_NOTIFY),
     m_lfSyncThreshold(0.125),
+    m_iSpeed(DVD_PLAYSPEED_PAUSE),
     m_dll(NULL)
      
 {
@@ -136,6 +140,7 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
       Create();
   
   m_bReady = true;
+  
   return true;
   
 FAIL:
@@ -149,6 +154,8 @@ void CRKCodec::CloseDecoder()
     CLog::Log(LOGDEBUG,"%s: CloseDecoder!", __MODULE_NAME__);
     StopThread();
     m_dll->RK_CodecClose();
+    g_graphicsContext.SetStereoMode(RENDER_STEREO_MODE_OFF);
+    SetNative3DResolution(RENDER_STEREO_MODE_OFF);
   }
 }
 
@@ -238,6 +245,7 @@ void CRKCodec::Process()
 {
   /* use for client process sync */
   CLog::Log(LOGDEBUG, "%s: Process!", __MODULE_NAME__);
+  m_iSpeed = DVD_PLAYSPEED_NORMAL;
   while(!m_bStop)
   {
     UpdatePlayStatus();
@@ -246,28 +254,47 @@ SLEEP:
   }
 }
 
+void CRKCodec::ConfigureSetting()
+{
+  if (m_dll)
+  {
+    if (CSettings::GetInstance().GetBool(RKMC_SETTING_3D24HZ))
+      SendConfigure(RK_CONF_FORCE24HZ_3D, NULL);
+    if (CSettings::GetInstance().GetBool(RKMC_SETTING_3DSWITCH))
+      SendConfigure(RK_CONF_FORCESWITCH_3D, NULL);
+  }
+}
+
 void CRKCodec::UpdatePlayStatus()
 {
-  CDVDClock *playerclock = NULL;
-  double master_pts, error, offset, radio = 0.0;
-  RKCodecDisplayInfo* info = GetDisplayInfo();
-  playerclock = CDVDClock::GetMasterClock();
-  if (playerclock && info)    
-  {    
-    master_pts = playerclock->GetClock();
-    if (info->pts > 0.0)
-      radio = (double)info->raw / info->pts - 1.0;
-    offset = g_renderManager.GetDisplayLatency() - CMediaSettings::GetInstance().GetCurrentVideoSettings().m_AudioDelay;  
-    master_pts += offset * DVD_TIME_BASE;
-    playerclock->SetSpeedAdjust(radio);
-    error = (master_pts - info->raw) / DVD_TIME_BASE;
-    if (fabs(error) > m_lfSyncThreshold)
-    {
-      CLog::Log(LOGDEBUG, "%s: UpdatePlayStatus error = %lf radio = %lf", __MODULE_NAME__, error, radio);
-      double sync = master_pts * (1.0 - radio);
-      SendCommand(RK_CMD_SYNC, &sync);
-    }
-  }  
+  if (m_iSpeed == DVD_PLAYSPEED_NORMAL)
+  {
+    CDVDClock *playerclock = NULL;
+    double master_pts, error, offset, radio = 0.0;
+    RKCodecDisplayInfo* info = GetDisplayInfo();
+    playerclock = CDVDClock::GetMasterClock();
+    if (playerclock && info)    
+    { 
+      if (!m_bSyncStatus && info->pts > 0)
+      {
+        UpdateRenderStereo(true);
+        m_bSyncStatus = true;
+      }
+      master_pts = playerclock->GetClock();
+      if (info->pts > 0.0)
+        radio = (double)info->raw / info->pts - 1.0;
+      offset = g_renderManager.GetDisplayLatency() - CMediaSettings::GetInstance().GetCurrentVideoSettings().m_AudioDelay;  
+      master_pts += offset * DVD_TIME_BASE;
+      playerclock->SetSpeedAdjust(radio);
+      error = (master_pts - info->raw) / DVD_TIME_BASE;
+      if (fabs(error) > m_lfSyncThreshold)
+      {
+        CLog::Log(LOGDEBUG, "%s: UpdatePlayStatus error = %lf radio = %lf", __MODULE_NAME__, error, radio);
+        double sync = master_pts * (1.0 - radio);
+        SendCommand(RK_CMD_SYNC, &sync);
+      }
+    }  
+  }
 }
 
 void CRKCodec::SubmitEOS()
@@ -296,6 +323,7 @@ bool CRKCodec::IsEOS()
 
 void CRKCodec::SetSpeed(int speed)
 {
+  m_iSpeed = speed;
   if (m_bReady && m_dll)
   {
     CLog::Log(LOGDEBUG, "%s: SetSpeed speed= %d!", __MODULE_NAME__, speed);
@@ -324,10 +352,22 @@ void CRKCodec::SendCommand(RK_U32 cmd, RK_PTR param)
   }
 }
 
+void CRKCodec::SendConfigure(RK_U32 config, RK_PTR param)
+{
+  if (m_dll)
+  {
+    CLog::Log(LOGDEBUG, "%s: SendConfigure config = %d!", __MODULE_NAME__, config);
+    m_dll->RK_CodecSendCommand(config, param);
+  }
+}
+
 void CRKCodec::RenderUpdateCallBack(const void *ctx, const CRect &SrcRect, const CRect &DestRect)
 {
   if (ctx)
+  {
     ((CRKCodec*)ctx)->UpdateRenderRect(SrcRect,DestRect);
+    ((CRKCodec*)ctx)->UpdateRenderStereo();
+  }
 }
 
 void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
@@ -344,4 +384,92 @@ void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
     SendCommand(RK_CMD_SETRES, dst);
   }
 }
+
+void CRKCodec::UpdateRenderStereo(bool flag)
+{
+  RK_U32 local_stereo = (m_displayInfo.type & RK_STEREO_MASK);
+  if (GetStereoMode() != local_stereo)
+  {
+    if (flag)
+    {
+      RENDER_STEREO_MODE stereo_view;
+      switch (local_stereo)
+      {
+        case RK_STEREO_LR: stereo_view = RENDER_STEREO_MODE_SPLIT_VERTICAL; break;
+        case RK_STEREO_BT: stereo_view = RENDER_STEREO_MODE_SPLIT_HORIZONTAL; break;
+        case RK_STEREO_MVC: stereo_view = RENDER_STEREO_MODE_MVC; break;
+        default: stereo_view = (RENDER_STEREO_MODE)CMediaSettings::GetInstance().GetCurrentVideoSettings().m_StereoMode; break;
+      }
+      g_graphicsContext.SetStereoMode(stereo_view);
+      if (Support3D(0, 0, 0, stereo_view) && CSettings::GetInstance().GetBool(RKMC_SETTING_3DSWITCH))
+        SetNative3DResolution(stereo_view);
+    }
+  }
+}
+
+bool CRKCodec::Support3D(int width, int height, float fps, uint32_t mode)
+{
+  RK_U32 d3d_stereo;
+  switch(mode)
+  {
+    case RENDER_STEREO_MODE_SPLIT_VERTICAL: d3d_stereo = D3DPRESENTFLAG_MODE3DSBS; break;
+    case RENDER_STEREO_MODE_SPLIT_HORIZONTAL: d3d_stereo = D3DPRESENTFLAG_MODE3DTB; break;
+    case RENDER_STEREO_MODE_MVC: d3d_stereo = D3DPRESENTFLAG_MODE3DMVC; break;
+    default: return false;
+  }
+  
+  RESOLUTION_INFO &curr = CDisplaySettings::GetInstance().GetResolutionInfo(g_graphicsContext.GetVideoResolution());
+  int searchWidth = curr.iScreenWidth;
+  int searchHeight = curr.iScreenHeight;
+  int searchFps = (int)curr.fRefreshRate;
+  if (width > 0 && height > 0 && fps > 0) {
+    searchWidth = width;
+    searchHeight = height;
+    searchFps = (int)fps;
+  }
+  for (unsigned int i = 0; i < CDisplaySettings::GetInstance().ResolutionInfoSize(); i++)
+  {
+    RESOLUTION_INFO res = CDisplaySettings::GetInstance().GetResolutionInfo(i);
+    if(res.iScreenWidth == searchWidth && res.iScreenHeight == searchHeight && 
+        (int)res.fRefreshRate == searchFps && (res.dwFlags & d3d_stereo))
+      return true;
+  }
+  return false;
+}
+
+void CRKCodec::SetNative3DResolution(RK_U32 stereo_view)
+{
+  int out;
+  switch(stereo_view)
+  {
+    case RENDER_STEREO_MODE_SPLIT_VERTICAL: out = 8; break;
+    case RENDER_STEREO_MODE_SPLIT_HORIZONTAL: out = 6; break;
+    case RENDER_STEREO_MODE_MVC: out = 0; break;
+    default: out = -1;
+  }
+  if (SysfsUtils::HasRW("/sys/class/display/display0.HDMI/3dmode"))
+  {
+    SysfsUtils::SetInt("/sys/class/display/display0.HDMI/3dmode", out);
+  }
+  else if (SysfsUtils::HasRW("/sys/class/display/HDMI/3dmode"))
+  {
+    SysfsUtils::SetInt("/sys/class/display/HDMI/3dmode", out);
+  }
+}
+
+RK_U32 CRKCodec::GetStereoMode()
+{
+  RK_U32  stereo_mode;
+  
+  switch(CMediaSettings::GetInstance().GetCurrentVideoSettings().m_StereoMode)
+  {
+    case RENDER_STEREO_MODE_SPLIT_VERTICAL:   stereo_mode = RK_STEREO_LR; break;
+    case RENDER_STEREO_MODE_SPLIT_HORIZONTAL: stereo_mode = RK_STEREO_BT; break;
+    case RENDER_STEREO_MODE_MVC:              stereo_mode = RK_STEREO_MVC; break;
+    default:                                  stereo_mode = 0; break;
+  }
+  
+  return stereo_mode;
+}
+
 

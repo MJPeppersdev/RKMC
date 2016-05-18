@@ -18133,3 +18133,8 @@ msgstr ""
 msgctxt "#39003"
 msgid "Force HDMI-24Hz Bluray3D"
 msgstr ""
+
+msgctxt "#39004"
+msgid "Auto switch HDMI-3D Bluray3D"
+msgstr ""
+

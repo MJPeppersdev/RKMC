@@ -36,11 +36,13 @@
 #define D3DPRESENTFLAG_PROGRESSIVE  4
 #define D3DPRESENTFLAG_MODE3DSBS    8
 #define D3DPRESENTFLAG_MODE3DTB    16
+#define D3DPRESENTFLAG_MODE3DMVC   32
 
 /* what types are important for mode setting */
 #define D3DPRESENTFLAG_MODEMASK ( D3DPRESENTFLAG_INTERLACED \
                                 | D3DPRESENTFLAG_MODE3DSBS  \
-                                | D3DPRESENTFLAG_MODE3DTB   )
+                                | D3DPRESENTFLAG_MODE3DTB   \
+                                | D3DPRESENTFLAG_MODE3DMVC)
 
 #define D3DFMT_LIN_A8R8G8B8 D3DFMT_A8R8G8B8
 #define D3DFMT_LIN_X8R8G8B8 D3DFMT_X8R8G8B8

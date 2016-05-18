@@ -218,13 +218,18 @@ bool CEGLNativeTypeRockchip::SetNativeResolution(const RESOLUTION_INFO &res)
 bool CEGLNativeTypeRockchip::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions)
 {
   CEGLNativeTypeAndroid::GetNativeResolution(&m_fb_res);
-
   std::string valstr;
   if (SysfsUtils::GetString("/sys/class/display/display0.HDMI/modes", valstr) < 0 
     && SysfsUtils::GetString("/sys/class/display/HDMI/modes", valstr) < 0)
     return false;
   std::vector<std::string> probe_str = StringUtils::Split(valstr, "\n");
 
+  std::string val3dstr;
+  if (SysfsUtils::GetString("/sys/class/display/display0.HDMI/3dmode", val3dstr) < 0 
+    && SysfsUtils::GetString("/sys/class/display/HDMI/3dmode", val3dstr) < 0)
+    val3dstr = "";
+  std::vector<std::string> probe3d_str = StringUtils::Split(val3dstr, "\n");
+  
   resolutions.clear();
   RESOLUTION_INFO res;
   
@@ -235,7 +240,37 @@ bool CEGLNativeTypeRockchip::ProbeResolutions(std::vector<RESOLUTION_INFO> &reso
       res.iWidth = m_fb_res.iWidth;
       res.iHeight = m_fb_res.iHeight;
       res.iSubtitles    = (int)(0.965 * res.iHeight);
-      CLog::Log(LOGDEBUG,"ProbeResolutions width:%d height:%d fps:%f",m_fb_res.iWidth,m_fb_res.iHeight,res.fRefreshRate);
+      for (size_t j = 0; j < probe3d_str.size(); j++)
+      {
+        if (StringUtils::StartsWithNoCase(probe3d_str[j], probe_str[i].c_str()))
+        {
+          std::vector<std::string> tmp = StringUtils::Split(probe3d_str[j], ",");
+          if (tmp.size() == 2 && StringUtils::IsInteger(tmp[1]))
+          {
+            int ires3d = atoi(tmp[1].c_str());
+            if (ires3d & 1)
+            {
+              RESOLUTION_INFO res3d = res;
+              res.dwFlags = D3DPRESENTFLAG_MODE3DMVC;
+              resolutions.push_back(res3d);
+            }
+            if (ires3d & (1 << 6))
+            {
+              RESOLUTION_INFO res3d = res;
+              res.dwFlags = D3DPRESENTFLAG_MODE3DSBS;
+              resolutions.push_back(res3d);
+            }
+            if (ires3d & (1 << 8))
+            {
+              RESOLUTION_INFO res3d = res;
+              res.dwFlags = D3DPRESENTFLAG_MODE3DTB;
+              resolutions.push_back(res3d);
+            }
+          }
+        }
+      }
+      CLog::Log(LOGDEBUG,"ProbeResolutions width:%d height:%d ScreenWidth:%d ScreenHeight:%d fps:%f", 
+        res.iWidth, res.iHeight, res.iScreenWidth, res.iScreenHeight, res.fRefreshRate);
       resolutions.push_back(res);
     }
   }
@@ -299,5 +334,6 @@ int CEGLNativeTypeRockchip::Get3DMode()
   }
   return -1;
 }
+
 
 
