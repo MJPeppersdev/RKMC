@@ -1,0 +1,15 @@
+diff --git a/rk_hwcomposer.cpp b/rk_hwcomposer.cpp
+index f46dc43..8eaade2 100755
+--- a/rk_hwcomposer.cpp
++++ b/rk_hwcomposer.cpp
+@@ -5678,7 +5678,9 @@ void* hwc_control_3dmode_thread(void *arg)
+         needStereo = contextp->mControlStereo.count;
+         pthread_mutex_unlock(&contextp->mControlStereo.mlk);
+         if(needStereo != hwc_control_3dmode(2,0)) {
+-            hwc_control_3dmode(needStereo,1);
++            char value[PROPERTY_VALUE_MAX];            
++            if (property_get("sys.video.hwcswitch", value, "1") && atoi(value) > 0)
++                hwc_control_3dmode(needStereo,1);
+         }
+         ALOGD_IF(mLogL&HLLTWO,"mControlStereo.count=%d",needStereo);
+         pthread_cond_wait(&contextp->mControlStereo.cond,&contextp->mControlStereo.mtx);
