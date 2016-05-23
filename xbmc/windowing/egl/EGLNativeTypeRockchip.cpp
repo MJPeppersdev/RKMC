@@ -107,12 +107,13 @@ bool CEGLNativeTypeRockchip::GetNativeResolution(RESOLUTION_INFO *res) const
   }
   else
     *res = m_fb_res;
-
+  CLog::Log(LOGDEBUG,"CEGLNativeTypeRockchip current res:%dx%d-%f hz",res->iScreenWidth,res->iScreenHeight,res->fRefreshRate);
   return true;
 }
 
 bool CEGLNativeTypeRockchip::SetNativeResolution(const RESOLUTION_INFO &res)
 {
+  CLog::Log(LOGDEBUG,"CEGLNativeTypeRockchip res:%dx%d-%f hz", res.iScreenWidth, res.iScreenHeight, res.fRefreshRate);
   switch((int)(res.fRefreshRate*10))
   {
     default:
@@ -285,8 +286,7 @@ bool CEGLNativeTypeRockchip::GetPreferredResolution(RESOLUTION_INFO *res) const
 
 bool CEGLNativeTypeRockchip::SetDisplayResolution(const char *resolution)
 {
-  return false;
-  CLog::Log(LOGDEBUG,"EGL SetDisplayResolution %s",resolution);
+  CLog::Log(LOGDEBUG,"CEGLNativeTypeRockchip SetDisplayResolution %s",resolution);
   // current 3d mode 
   if (Get3DMode() >= 0)
     return false;
