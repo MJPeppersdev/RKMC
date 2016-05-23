@@ -133,7 +133,7 @@ bool CDVDVideoCodecRK::GetPicture(DVDVideoPicture* pDvdVideoPicture)
         pDvdVideoPicture->pts = playerclock->GetClock();
     }
     else
-        pDvdVideoPicture->pts = 0;
+        pDvdVideoPicture->pts = DVD_NOPTS_VALUE;
   }
   return true;
 }

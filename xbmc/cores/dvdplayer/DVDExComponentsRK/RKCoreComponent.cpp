@@ -286,13 +286,13 @@ void CRKCodec::UpdatePlayStatus()
       offset = g_renderManager.GetDisplayLatency() - CMediaSettings::GetInstance().GetCurrentVideoSettings().m_AudioDelay;  
       master_pts += offset * DVD_TIME_BASE;
       playerclock->SetSpeedAdjust(radio);
-      error = (master_pts - info->raw) / DVD_TIME_BASE;
+      error = (master_pts - info->pts) / DVD_TIME_BASE;
       if (fabs(error) > m_lfSyncThreshold)
       {
         CLog::Log(LOGDEBUG, "%s: UpdatePlayStatus error = %lf radio = %lf", __MODULE_NAME__, error, radio);
         double sync = master_pts * (1.0 - radio);
         SendCommand(RK_CMD_SYNC, &sync);
-      }
+      } 
     }  
   }
 }
