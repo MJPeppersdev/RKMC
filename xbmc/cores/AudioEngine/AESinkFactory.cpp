@@ -195,7 +195,7 @@ void CAESinkFactory::EnumerateEx(AESinkInfoList &list, bool force)
 
   info.m_deviceInfoList.clear();
   info.m_sinkName = "AUDIOTRACK";
-  CAESinkAUDIOTRACK::EnumerateDevicesEx(info.m_deviceInfoList, force);
+  CRKAESinkAUDIOTRACK::EnumerateDevicesEx(info.m_deviceInfoList, force);
   if(!info.m_deviceInfoList.empty())
     list.push_back(info);
 

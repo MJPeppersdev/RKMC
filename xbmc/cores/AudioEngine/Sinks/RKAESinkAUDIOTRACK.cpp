@@ -360,9 +360,9 @@ void CRKAESinkAUDIOTRACK::EnumerateDevicesEx(AEDeviceInfoList &list, bool force)
   m_info.m_sampleRates.clear();
 
   m_info.m_deviceType = AE_DEVTYPE_PCM;
-  m_info.m_deviceName = "RKAudioTrack";
+  m_info.m_deviceName = "AudioTrack";
   m_info.m_displayName = "android";
-  m_info.m_displayNameExtra = "audiotrack";
+  m_info.m_displayNameExtra = "audiotrack-rockchip";
   m_info.m_channels = AE_CH_LAYOUT_7_1;
   m_info.m_dataFormats.push_back(AE_FMT_S16LE);
   m_info.m_sampleRates.push_back(CJNIAudioTrack::getNativeOutputSampleRate(CJNIAudioManager::STREAM_MUSIC));
