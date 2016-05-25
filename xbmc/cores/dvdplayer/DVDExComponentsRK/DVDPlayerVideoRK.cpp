@@ -17,6 +17,7 @@
  *  <http://www.gnu.org/licenses/>.
  *
  */
+
 #include "settings/MediaSettings.h"
 #include "settings/AdvancedSettings.h"
 #include "video/VideoReferenceClock.h"
@@ -29,6 +30,10 @@
 #include "cores/dvdplayer/DVDCodecs/Video/DVDVideoPPFFmpeg.h"
 #include "cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.h"
 #include "utils/log.h"
+#include <sstream>
+#include <iomanip>
+#include <numeric>
+#include <iterator>
 
 class CPulldownCorrection
 {
@@ -684,6 +689,25 @@ void CDVDPlayerVideoRK::Process()
 
   // we need to let decoder release any picture retained resources.
   m_pVideoCodec->ClearPicture(&picture);
+}
+
+std::string CDVDPlayerVideoRK::GetPlayerInfo()
+{
+  std::ostringstream s;
+  s << "fr:"     << std::fixed << std::setprecision(3) << m_fFrameRate;
+  s << ", vq:"   << std::setw(2) << std::min(99,GetLevel()) << "%";
+  s << ", dc:"   << m_codecname;
+  s << ", Mb/s:" << std::fixed << std::setprecision(2) << (double)GetVideoBitrate() / (1024.0*1024.0);
+  s << ", drop:" << 0; // useless for rkcodec
+  s << ", skip:" << 0;
+
+  int pc = m_pullupCorrection.GetPatternLength();
+  if (pc > 0)
+    s << ", pc:" << pc;
+  else
+    s << ", pc:none";
+
+  return s.str();
 }
 
 

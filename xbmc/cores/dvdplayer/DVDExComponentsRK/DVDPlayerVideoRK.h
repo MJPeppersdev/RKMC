@@ -34,6 +34,7 @@ public:
   virtual ~CDVDPlayerVideoRK();
 
   bool OpenStream(CDVDStreamInfo &hint);
+  std::string GetPlayerInfo();
 
 protected:
   virtual void Process();
