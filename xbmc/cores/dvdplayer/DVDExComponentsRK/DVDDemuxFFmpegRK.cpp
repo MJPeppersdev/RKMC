@@ -486,7 +486,7 @@ DemuxPacket* CDVDDemuxFFmpegRK::Read()
 
       AVStream *stream = m_pFormatContext->streams[m_pkt.pkt.stream_index];
 
-      if (stream->codec->codec_type == AVMEDIA_TYPE_VIDEO && m_speed > DVD_PLAYSPEED_NORMAL) {
+      if (stream->codec->codec_type == AVMEDIA_TYPE_VIDEO && abs(m_speed) > DVD_PLAYSPEED_NORMAL) {
         if (m_pkt.pkt.flags & AV_PKT_FLAG_KEY)
           bDrop = false;
         else
