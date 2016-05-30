@@ -22,6 +22,7 @@
 
 #include "CPUInfo.h"
 #include "utils/Temperature.h"
+#include "utils/log.h"
 #include <string>
 #include <string.h>
 
@@ -578,7 +579,7 @@ float CCPUInfo::getCPUFrequency()
 bool CCPUInfo::getTemperature(CTemperature& temperature)
 {
   int         value = 0;
-  char        scale = 0;
+  char        scale = 'c';
   
 #ifdef TARGET_POSIX
 #if defined(TARGET_DARWIN_OSX)
@@ -588,7 +589,7 @@ bool CCPUInfo::getTemperature(CTemperature& temperature)
   int         ret   = 0;
   FILE        *p    = NULL;
   std::string  cmd   = g_advancedSettings.m_cpuTempCmd;
-
+  cmd = "cat /sys/class/hwmon/hwmon0/device/temp0_input";
   temperature.SetValid(false);
 
   if (cmd.empty() && m_fProcTemperature == NULL)
@@ -599,7 +600,8 @@ bool CCPUInfo::getTemperature(CTemperature& temperature)
     p = popen (cmd.c_str(), "r");
     if (p)
     {
-      ret = fscanf(p, "%d %c", &value, &scale);
+      ret = fscanf(p, "%d", &value);
+      ret++;
       pclose(p);
     }
   }
