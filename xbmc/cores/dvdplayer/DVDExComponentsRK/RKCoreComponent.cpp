@@ -25,6 +25,7 @@
 #include "settings/DisplaySettings.h"
 #include "settings/Settings.h"
 #include "guilib/GraphicContext.h"
+#include "windowing/egl/WinSystemEGL.h"
 #include "utils/SysfsUtils.h"
 #include "utils/log.h"
 
@@ -393,6 +394,7 @@ void CRKCodec::UpdateRenderStereo(bool flag)
     if (flag)
     {
       RENDER_STEREO_MODE stereo_view;
+      RESOLUTION_INFO res_info;
       switch (local_stereo)
       {
         case RK_STEREO_LR: stereo_view = RENDER_STEREO_MODE_SPLIT_VERTICAL; break;
@@ -401,7 +403,9 @@ void CRKCodec::UpdateRenderStereo(bool flag)
         default: stereo_view = (RENDER_STEREO_MODE)CMediaSettings::GetInstance().GetCurrentVideoSettings().m_StereoMode; break;
       }
       g_graphicsContext.SetStereoMode(stereo_view);
-      if (Support3D(0, 0, 0, stereo_view) && CSettings::GetInstance().GetBool(RKMC_SETTING_3DSWITCH))
+      g_Windowing.GetNativeResolution(&res_info);
+      if (Support3D(res_info.iScreenWidth, res_info.iScreenHeight, res_info.fRefreshRate, stereo_view) && 
+          CSettings::GetInstance().GetBool(RKMC_SETTING_3DSWITCH))
         SetNative3DResolution(stereo_view);
     }
   }

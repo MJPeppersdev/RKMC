@@ -567,4 +567,14 @@ bool CWinSystemEGL::ClampToGUIDisplayLimits(int &width, int &height)
   return true;
 }
 
+bool CWinSystemEGL::GetNativeResolution(RESOLUTION_INFO *res)
+{
+  return m_egl->GetNativeResolution(res);
+}
+
+bool CWinSystemEGL::SetNativeResolution(RESOLUTION_INFO& res)
+{
+  return m_egl->SetNativeResolution(res);
+}
+
 #endif
