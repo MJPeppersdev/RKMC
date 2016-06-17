@@ -829,6 +829,11 @@ CDemuxStream* CDVDDemuxFFmpegRK::AddStream(int iId)
         st->iOrientation = 0;
         st->iBitsPerPixel = pStream->codec->bits_per_coded_sample;
 
+        if (pStream->codec->pix_fmt == AV_PIX_FMT_YUV420P10)
+          st->iBitsPerPixel = 10;
+        else
+          st->iBitsPerPixel = 8;
+
         AVDictionaryEntry *rtag = av_dict_get(pStream->metadata, "rotate", NULL, 0);
         if (rtag) 
           st->iOrientation = atoi(rtag->value);
