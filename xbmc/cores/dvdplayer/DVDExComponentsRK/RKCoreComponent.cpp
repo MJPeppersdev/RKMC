@@ -180,6 +180,9 @@ void CRKCodec::Flush()
 
 int CRKCodec::DecodeVideo(uint8_t *pData, size_t size, double dts, double pts)
 {
+  /* register render & display callback */
+  g_renderManager.RegisterRenderUpdateCallBack((const void*)this, RenderUpdateCallBack);
+  
   int ret = VC_BUFFER;
   if (m_bReady)
   {
