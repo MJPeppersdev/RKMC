@@ -32,6 +32,8 @@ using namespace ActiveAE;
 #include "settings/Settings.h"
 #include "windowing/WindowingFactory.h"
 #include "utils/log.h"
+#include <sys/system_properties.h>
+
 
 #define MAX_CACHE_LEVEL 0.4   // total cache time of stream in seconds
 #define MAX_WATER_LEVEL 0.2   // buffered time after stream stages in seconds
@@ -2321,6 +2323,19 @@ bool CActiveAE::SupportsRaw(AEDataFormat format, int samplerate)
 {
   if (!m_sink.SupportsFormat(CSettings::GetInstance().GetString(CSettings::SETTING_AUDIOOUTPUT_PASSTHROUGHDEVICE), format, samplerate))
     return false;
+
+  if (format == AE_FMT_DTSHD ||
+      format == AE_FMT_TRUEHD ||
+      format == AE_FMT_EAC3) {
+    const int MEDIA_AUDIO_SPDIF = 8;
+    char buf[PROP_VALUE_MAX];  
+    __system_property_get("persist.audio.currentplayback", buf);
+    if(atoi(buf) == MEDIA_AUDIO_SPDIF) 
+    {
+      CLog::Log(LOGERROR, "ActiveAE::%s - failed to support with spdif!", __FUNCTION__);
+      return false;
+    }
+  }
 
   return true;
 }
