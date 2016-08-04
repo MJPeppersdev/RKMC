@@ -29,6 +29,7 @@
 #include "cores/dvdplayer/DVDCodecs/DVDCodecUtils.h"
 #include "cores/dvdplayer/DVDCodecs/Video/DVDVideoPPFFmpeg.h"
 #include "cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.h"
+#include "cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecLibMpeg2.h"
 #include "utils/log.h"
 #include <sstream>
 #include <iomanip>
@@ -153,7 +154,10 @@ CDVDVideoCodec* CDVDPlayerVideoRK::CreateVideoCodec(CDVDStreamInfo &hint, const 
     options.m_formats = info.formats;
 
   options.m_opaque_pointer = info.opaque_pointer;
-  
+  if ((hint.codec == AV_CODEC_ID_MPEG2VIDEO || hint.codec == AV_CODEC_ID_MPEG1VIDEO))
+  {
+    if ((pCodec = OpenCodec(new CDVDVideoCodecLibMpeg2(), hint, options))) return pCodec;
+  }
   if( (pCodec = OpenCodec(new CDVDVideoCodecRK(), hint, options)) ) return pCodec;
   if( (pCodec = OpenCodec(new CDVDVideoCodecFFmpeg(), hint, options)) ) return pCodec;
 
