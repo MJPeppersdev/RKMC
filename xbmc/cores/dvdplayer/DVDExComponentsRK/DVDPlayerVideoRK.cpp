@@ -154,7 +154,7 @@ CDVDVideoCodec* CDVDPlayerVideoRK::CreateVideoCodec(CDVDStreamInfo &hint, const 
     options.m_formats = info.formats;
 
   options.m_opaque_pointer = info.opaque_pointer;
-  if ((hint.codec == AV_CODEC_ID_MPEG2VIDEO || hint.codec == AV_CODEC_ID_MPEG1VIDEO))
+  if ((hint.codec == AV_CODEC_ID_MPEG2VIDEO || hint.codec == AV_CODEC_ID_MPEG1VIDEO) && hint.width < 1920)
   {
     if ((pCodec = OpenCodec(new CDVDVideoCodecLibMpeg2(), hint, options))) return pCodec;
   }
@@ -485,7 +485,6 @@ void CDVDPlayerVideoRK::Process()
 
       if (iDecoderState & VC_BYPASS)
       {
-        CLog::Log(LOGDEBUG, "CDVDPlayerVideo - video decoder returned bypass");
         m_messageQueue.Put(pMsg->Acquire(), iPriority + 10);
       }
       else
