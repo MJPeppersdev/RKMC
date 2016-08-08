@@ -237,10 +237,10 @@ bool CDVDVideoCodecRK::IsRkHwSupport(CDVDStreamInfo & hints)
       return false;
     case AV_CODEC_ID_MPEG1VIDEO:
     case AV_CODEC_ID_MPEG2VIDEO:
-      return true;
     case AV_CODEC_ID_MPEG4:
       if (hints.width >= 3840 || hints.height >= 2160)
         return false;
+      return true;
     case AV_CODEC_ID_FLV1:
     case AV_CODEC_ID_H264:
     case AV_CODEC_ID_VC1:
