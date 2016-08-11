@@ -376,15 +376,24 @@ void CRKCodec::RenderUpdateCallBack(const void *ctx, const CRect &SrcRect, const
 
 void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
 {
-  if (m_displayResolution != DestRect)
+  CRect dstRect = DestRect;
+  switch(g_graphicsContext.GetStereoMode()) 
+  {
+  case RENDER_STEREO_MODE_SPLIT_VERTICAL: dstRect.x2 = dstRect.x2 * 2; break;
+  case RENDER_STEREO_MODE_SPLIT_HORIZONTAL: dstRect.y2 = dstRect.y2 * 2; break;
+  case RENDER_STEREO_MODE_MVC: return;
+  }
+  
+  if (m_displayResolution != dstRect)
   {  
     CLog::Log(LOGDEBUG,"%s: UpdateRenderRect", __MODULE_NAME__);
-    m_displayResolution = DestRect;
+    m_displayResolution = dstRect;
     int* dst = new int[4];
     dst[0] = m_displayResolution.x1;
     dst[1] = m_displayResolution.y1;
     dst[2] = m_displayResolution.x2 - m_displayResolution.x1;
     dst[3] = m_displayResolution.y2 - m_displayResolution.y1;
+
     SendCommand(RK_CMD_SETRES, dst);
   }
 }
