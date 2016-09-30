@@ -62,7 +62,7 @@ extern "C" int XBMC_Run(bool renderGUI)
     return status;
   }
 
-#if defined(HAVE_BREAKPAD)
+#if defined(HAVE_BREAKPAD) && 0
   // Must have our TEMP dir fixed first
   std::string tempPath = CSpecialProtocol::TranslatePath("special://temp/");
   google_breakpad::MinidumpDescriptor descriptor(tempPath.c_str());
