@@ -34,6 +34,7 @@
 #include <sstream>
 #include <iomanip>
 #include <math.h>
+#include <sys/prctl.h>
 
 /* for sync-based resampling */
 #define PROPORTIONAL 20.0
@@ -498,6 +499,7 @@ void CDVDPlayerAudio::UpdatePlayerInfo()
 
 void CDVDPlayerAudio::Process()
 {
+  prctl(PR_SET_NAME, (unsigned long)"CDVDPlayerAudio", 0, 0, 0);
   CLog::Log(LOGNOTICE, "running thread: CDVDPlayerAudio::Process()");
 
   bool packetadded(false);
@@ -508,7 +510,7 @@ void CDVDPlayerAudio::Process()
   while (!m_bStop)
   {
     int result = DecodeFrame(audioframe);
-
+    Sleep(1);
     //Drop when not playing normally
     if(m_speed   != DVD_PLAYSPEED_NORMAL
     && m_started == true)

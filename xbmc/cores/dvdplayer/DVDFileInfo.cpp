@@ -20,9 +20,12 @@
 
 #include <string>
 #include <cstdlib>
+#include <sys/prctl.h>
 #include "threads/SystemClock.h"
 #include "DVDFileInfo.h"
 #include "FileItem.h"
+#include "Application.h"
+#include "cores/VideoRenderers/RenderManager.h"
 #include "settings/AdvancedSettings.h"
 #include "pictures/Picture.h"
 #include "video/VideoInfoTag.h"
@@ -97,6 +100,7 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
                                 CTextureDetails &details,
                                 CStreamDetails *pStreamDetails, int pos)
 {
+  prctl(PR_SET_NAME, (unsigned long)"ExtractThumb", 0, 0, 0);
   std::string redactPath = CURL::GetRedacted(strPath);
   unsigned int nTime = XbmcThreads::SystemClockMillis();
   CDVDInputStream *pInputStream = CDVDFactoryInputStream::CreateInputStream(NULL, strPath, "");
@@ -222,7 +226,7 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
       int nTotalLen = pDemuxer->GetStreamLength();
       int nSeekTo = (pos==-1?nTotalLen / 3:pos);
 
-      CLog::Log(LOGDEBUG,"%s - seeking to pos %dms (total: %dms) in %s", __FUNCTION__, nSeekTo, nTotalLen, redactPath.c_str());
+      CLog::Log(LOGERROR,"%s - seeking to pos %dms (total: %dms) in %s", __FUNCTION__, nSeekTo, nTotalLen, redactPath.c_str());
       if (pDemuxer->SeekTime(nSeekTo, true))
       {
         int iDecoderState = VC_ERROR;
@@ -261,6 +265,9 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
                 break;
             }
           }
+
+          if (g_application.m_pPlayer->IsPlayingVideo() && g_renderManager.IsStarted())
+            break;
 
         } while (abort_index--);
 

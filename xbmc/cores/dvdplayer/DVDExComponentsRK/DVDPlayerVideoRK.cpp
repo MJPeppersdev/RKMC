@@ -35,6 +35,7 @@
 #include <iomanip>
 #include <numeric>
 #include <iterator>
+#include <sys/prctl.h>
 
 class CPulldownCorrection
 {
@@ -222,6 +223,7 @@ void CDVDPlayerVideoRK::Process()
   bool bRequestDrop = false;
   int iDropDirective;
 
+  prctl(PR_SET_NAME, (unsigned long)"CDVDPlayerVideoRK", 0, 0, 0);
   m_videoStats.Start();
   m_droppingStats.Reset();
 

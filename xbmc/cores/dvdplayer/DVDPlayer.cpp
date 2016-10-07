@@ -84,6 +84,7 @@
 
 #include "DVDExComponentsRK/DVDPlayerVideoRK.h"
 #include "DVDExComponentsRK/DVDDemuxFFmpegRK.h"
+#include <sys/prctl.h>
 
 using namespace PVR;
 using namespace KODI::MESSAGING;
@@ -1142,6 +1143,7 @@ void CDVDPlayer::CheckBetterStream(CCurrentStream& current, CDemuxStream* stream
 
 void CDVDPlayer::Process()
 {
+  prctl(PR_SET_NAME, (unsigned long)"CDVDPlayer", 0, 0, 0);
   if (!OpenInputStream())
   {
     m_bAbortRequest = true;
