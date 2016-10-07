@@ -234,6 +234,9 @@ bool CDVDVideoCodecRK::IsRkHwSupport(CDVDStreamInfo & hints)
     case AV_CODEC_ID_RV20:
     case AV_CODEC_ID_RV30:
     case AV_CODEC_ID_RV40:
+    case AV_CODEC_ID_VP6:
+    case AV_CODEC_ID_VP6F:
+    case AV_CODEC_ID_VP6A:
       return false;
     case AV_CODEC_ID_MPEG1VIDEO:
     case AV_CODEC_ID_MPEG2VIDEO:
@@ -247,9 +250,6 @@ bool CDVDVideoCodecRK::IsRkHwSupport(CDVDStreamInfo & hints)
     case AV_CODEC_ID_WMV3:
     case AV_CODEC_ID_VP8:
     case AV_CODEC_ID_HEVC:
-    case AV_CODEC_ID_VP6:
-    case AV_CODEC_ID_VP6F:
-    case AV_CODEC_ID_VP6A:
       CLog::Log(LOGDEBUG,"CDVDVideoCodecRK support codec %d", codec_id);
       return true;
     default:
