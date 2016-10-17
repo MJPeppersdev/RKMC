@@ -56,6 +56,10 @@
 #include "TextureCache.h"
 #include "Util.h"
 #include "utils/LangCodeExpander.h"
+#include "settings/Settings.h"
+
+#include "DVDExComponentsRK/DVDPlayerVideoRK.h"
+#include "DVDExComponentsRK/DVDDemuxFFmpegRK.h"
 
 
 bool CDVDFileInfo::GetFileDuration(const std::string &path, int& duration)
@@ -136,7 +140,17 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
 
   try
   {
-    pDemuxer = CDVDFactoryDemuxer::CreateDemuxer(pInputStream, true);
+    if (CSettings::GetInstance().GetBool(RKMC_SETTING_RKCODEC)) 
+    {
+      std::unique_ptr<CDVDDemuxFFmpegRK> demuxer(new CDVDDemuxFFmpegRK());
+      if(demuxer->Open(pInputStream))
+          pDemuxer = demuxer.release();
+    }
+    else
+    {
+      pDemuxer = CDVDFactoryDemuxer::CreateDemuxer(pInputStream, true);
+    }
+
     if(!pDemuxer)
     {
       delete pInputStream;
@@ -221,7 +235,7 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
       pVideoCodec = CDVDFactoryCodec::CreateVideoCodec( hint );
     }
 
-    if (pVideoCodec)
+    if (pVideoCodec && hint.bitsperpixel < 10)
     {
       int nTotalLen = pDemuxer->GetStreamLength();
       int nSeekTo = (pos==-1?nTotalLen / 3:pos);
