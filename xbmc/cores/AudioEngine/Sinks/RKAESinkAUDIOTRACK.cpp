@@ -178,7 +178,10 @@ CRKAESinkAUDIOTRACK::~CRKAESinkAUDIOTRACK()
 void CRKAESinkAUDIOTRACK::PopulateExStaticFields()
 {
   jhclass c = find_class("android/media/AudioFormat");
-  CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = 10;
+  if (CJNIAudioManager::GetSDKVersion() >= 23)
+    CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = 20;
+  else
+    CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = 10;
 }
 
 bool CRKAESinkAUDIOTRACK::IsSupported(int sampleRateInHz, int channelConfig, int encoding)
