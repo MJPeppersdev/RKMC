@@ -1,0 +1,126 @@
+diff --git a/core/jni/android_media_AudioFormat.h b/core/jni/android_media_AudioFormat.h
+index bb13c35..a3bafb5 100644
+--- a/core/jni/android_media_AudioFormat.h
++++ b/core/jni/android_media_AudioFormat.h
+@@ -31,11 +31,11 @@
+ #define ENCODING_AAC_LC     10
+ #define ENCODING_AAC_HE_V1  11
+ #define ENCODING_AAC_HE_V2  12
++#define ENCODING_IEC61937   20
+ #define ENCODING_INVALID    0
+ #define ENCODING_DEFAULT    1
+ 
+ 
+-
+ #define CHANNEL_INVALID 0
+ #define CHANNEL_OUT_DEFAULT 1
+ 
+@@ -64,6 +64,8 @@ static inline audio_format_t audioFormatToNative(int audioFormat)
+         return AUDIO_FORMAT_AAC_HE_V1;
+     case ENCODING_AAC_HE_V2:
+         return AUDIO_FORMAT_AAC_HE_V2;
++    case ENCODING_IEC61937:
++        return AUDIO_FORMAT_IEC61937;
+     case ENCODING_DEFAULT:
+         return AUDIO_FORMAT_DEFAULT;
+     default:
+diff --git a/core/jni/android_media_AudioTrack.cpp b/core/jni/android_media_AudioTrack.cpp
+index 5faa150..3fee2a2 100644
+--- a/core/jni/android_media_AudioTrack.cpp
++++ b/core/jni/android_media_AudioTrack.cpp
+@@ -244,6 +244,23 @@ android_media_AudioTrack_setup(JNIEnv *env, jobject thiz, jobject weak_this,
+         return (jint) AUDIOTRACK_ERROR_SETUP_INVALIDFORMAT;
+     }
+ 
++    bool afPCM = true;
++    // check the format is pcm
++    if ((format != AUDIO_FORMAT_PCM_8_BIT) && (format != AUDIO_FORMAT_PCM_16_BIT)) {
++        if (format == AUDIO_FORMAT_AC3 ||
++            format == AUDIO_FORMAT_E_AC3 ||
++            format == AUDIO_FORMAT_DTS ||
++            format == AUDIO_FORMAT_DTS_HD ||
++            format == AUDIO_FORMAT_IEC61937) {
++            afPCM = false;
++            format = AUDIO_FORMAT_PCM_16_BIT;
++         } else {
++             ALOGE("Error creating Audiotrack: unsupported audio format!");
++         }
++    } else {
++        afPCM = true;  
++    }
++
+     // compute the frame count
+     size_t frameCount;
+     if (audio_is_linear_pcm(format)) {
+@@ -301,6 +318,7 @@ android_media_AudioTrack_setup(JNIEnv *env, jobject thiz, jobject weak_this,
+     lpJniStorage->mCallbackData.audioTrack_ref = env->NewGlobalRef(weak_this);
+     lpJniStorage->mCallbackData.busy = false;
+ 
++    audio_output_flags_t flag = afPCM ? AUDIO_OUTPUT_FLAG_NONE : AUDIO_OUTPUT_FLAG_DIRECT;
+     // initialize the native AudioTrack object
+     status_t status = NO_ERROR;
+     switch (memoryMode) {
+@@ -312,7 +330,7 @@ android_media_AudioTrack_setup(JNIEnv *env, jobject thiz, jobject weak_this,
+                 format,// word length, PCM
+                 nativeChannelMask,
+                 frameCount,
+-                AUDIO_OUTPUT_FLAG_NONE,
++                flag,
+                 audioCallback, &(lpJniStorage->mCallbackData),//callback, callback data (user)
+                 0,// notificationFrames == 0 since not using EVENT_MORE_DATA to feed the AudioTrack
+                 0,// shared mem
+@@ -338,7 +356,7 @@ android_media_AudioTrack_setup(JNIEnv *env, jobject thiz, jobject weak_this,
+                 format,// word length, PCM
+                 nativeChannelMask,
+                 frameCount,
+-                AUDIO_OUTPUT_FLAG_NONE,
++                flag,
+                 audioCallback, &(lpJniStorage->mCallbackData),//callback, callback data (user));
+                 0,// notificationFrames == 0 since not using EVENT_MORE_DATA to feed the AudioTrack
+                 lpJniStorage->mMemBase,// shared mem
+diff --git a/media/java/android/media/AudioFormat.java b/media/java/android/media/AudioFormat.java
+index bde3d19..0a4f6ed 100644
+--- a/media/java/android/media/AudioFormat.java
++++ b/media/java/android/media/AudioFormat.java
+@@ -252,6 +252,9 @@ public class AudioFormat {
+      * */
+     public static final int ENCODING_AAC_HE_V2 = 12;
+ 
++    /** Audio data format: ENCODING_IEC61937*/
++    public static final int ENCODING_IEC61937 = 20;
++    
+     /** Invalid audio channel configuration */
+     /** @deprecated Use {@link #CHANNEL_INVALID} instead.  */
+     @Deprecated    public static final int CHANNEL_CONFIGURATION_INVALID   = 0;
+@@ -443,6 +446,7 @@ public class AudioFormat {
+         case ENCODING_AAC_LC:
+         case ENCODING_AAC_HE_V1:
+         case ENCODING_AAC_HE_V2:
++        case ENCODING_IEC61937:
+             return true;
+         default:
+             return false;
+@@ -460,6 +464,7 @@ public class AudioFormat {
+         case ENCODING_E_AC3:
+         case ENCODING_DTS:
+         case ENCODING_DTS_HD:
++        case ENCODING_IEC61937:
+             return true;
+         default:
+             return false;
+@@ -483,6 +488,7 @@ public class AudioFormat {
+         case ENCODING_AAC_LC:
+         case ENCODING_AAC_HE_V1:
+         case ENCODING_AAC_HE_V2:
++        case ENCODING_IEC61937:
+             return false;
+         case ENCODING_INVALID:
+         default:
+@@ -715,6 +721,7 @@ public class AudioFormat {
+                 case ENCODING_E_AC3:
+                 case ENCODING_DTS:
+                 case ENCODING_DTS_HD:
++                case ENCODING_IEC61937:
+                     mEncoding = encoding;
+                     break;
+                 case ENCODING_INVALID:
