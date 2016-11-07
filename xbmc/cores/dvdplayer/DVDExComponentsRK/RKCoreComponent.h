@@ -227,6 +227,8 @@ private:
   int m_iSyncMode;
   double m_lfSyncThreshold;
   int m_iSpeed;
+
+  RK_U32 m_iStereoMode;
   
 };
 

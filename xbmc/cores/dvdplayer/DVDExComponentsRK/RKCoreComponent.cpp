@@ -28,6 +28,7 @@
 #include "windowing/egl/WinSystemEGL.h"
 #include "utils/SysfsUtils.h"
 #include "utils/log.h"
+#include "android/jni/SystemProperties.h"
 
 #define __MODULE_NAME__ "RKCodec"
 
@@ -43,6 +44,7 @@ CRKCodec::CRKCodec()
     m_iSyncMode(RK_CLIENT_NOTIFY),
     m_lfSyncThreshold(0.125),
     m_iSpeed(DVD_PLAYSPEED_PAUSE),
+    m_iStereoMode(0),
     m_dll(NULL)
      
 {
@@ -400,26 +402,31 @@ void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
 
 void CRKCodec::UpdateRenderStereo(bool flag)
 {
-  RK_U32 local_stereo = (m_displayInfo.type & RK_STEREO_MASK);
-  if (GetStereoMode() != local_stereo)
+  RK_U32 target_stereo = GetStereoMode();
+  if (flag)
+    target_stereo = (m_displayInfo.type & RK_STEREO_MASK);
+  
+  if (target_stereo != m_iStereoMode)
   {
-    if (flag)
+    RENDER_STEREO_MODE stereo_view;
+    RESOLUTION_INFO res_info;
+    
+    switch (target_stereo)
     {
-      RENDER_STEREO_MODE stereo_view;
-      RESOLUTION_INFO res_info;
-      switch (local_stereo)
-      {
-        case RK_STEREO_LR: stereo_view = RENDER_STEREO_MODE_SPLIT_VERTICAL; break;
-        case RK_STEREO_BT: stereo_view = RENDER_STEREO_MODE_SPLIT_HORIZONTAL; break;
-        case RK_STEREO_MVC: stereo_view = RENDER_STEREO_MODE_MVC; break;
-        default: stereo_view = (RENDER_STEREO_MODE)CMediaSettings::GetInstance().GetCurrentVideoSettings().m_StereoMode; break;
-      }
-      g_graphicsContext.SetStereoMode(stereo_view);
-      g_Windowing.GetNativeResolution(&res_info);
-      if (Support3D(res_info.iScreenWidth, res_info.iScreenHeight, res_info.fRefreshRate, stereo_view) && 
-          CSettings::GetInstance().GetBool(RKMC_SETTING_3DSWITCH))
-        SetNative3DResolution(stereo_view);
+      case RK_STEREO_LR: stereo_view = RENDER_STEREO_MODE_SPLIT_VERTICAL; break;
+      case RK_STEREO_BT: stereo_view = RENDER_STEREO_MODE_SPLIT_HORIZONTAL; break;
+      case RK_STEREO_MVC: stereo_view = RENDER_STEREO_MODE_MVC; break;
+      default: stereo_view = RENDER_STEREO_MODE_OFF; break;
     }
+
+    g_graphicsContext.SetStereoMode(stereo_view);
+    g_Windowing.GetNativeResolution(&res_info);
+    if (Support3D(res_info.iScreenWidth, res_info.iScreenHeight, res_info.fRefreshRate, stereo_view) && 
+        CSettings::GetInstance().GetBool(RKMC_SETTING_3DSWITCH)) {
+      SetNative3DResolution(stereo_view);      
+      CJNISystemProperties::set("persist.sys.overscan.main","overscan 100,100,100,100");
+    }
+    m_iStereoMode = target_stereo;
   }
 }
 
@@ -463,6 +470,8 @@ void CRKCodec::SetNative3DResolution(RK_U32 stereo_view)
     case RENDER_STEREO_MODE_MVC: out = 0; break;
     default: out = -1;
   }
+  
+  CLog::Log(LOGDEBUG, "%s: SetNative3DResolution mode = %d!", __MODULE_NAME__, out);
   if (SysfsUtils::HasRW("/sys/class/display/display0.HDMI/3dmode"))
   {
     SysfsUtils::SetInt("/sys/class/display/display0.HDMI/3dmode", out);
@@ -477,7 +486,7 @@ RK_U32 CRKCodec::GetStereoMode()
 {
   RK_U32  stereo_mode;
   
-  switch(CMediaSettings::GetInstance().GetCurrentVideoSettings().m_StereoMode)
+  switch(g_graphicsContext.GetStereoMode())
   {
     case RENDER_STEREO_MODE_SPLIT_VERTICAL:   stereo_mode = RK_STEREO_LR; break;
     case RENDER_STEREO_MODE_SPLIT_HORIZONTAL: stereo_mode = RK_STEREO_BT; break;

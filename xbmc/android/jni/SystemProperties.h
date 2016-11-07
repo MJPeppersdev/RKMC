@@ -25,7 +25,8 @@ class CJNISystemProperties
 {
 public:
   static std::string get(const std::string& property, const std::string& defaultValue);
-
+  static void set(const std::string& property, const std::string& value);
+  
 private:
   CJNISystemProperties();
   ~CJNISystemProperties() {};

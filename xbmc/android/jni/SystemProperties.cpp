@@ -30,3 +30,11 @@ std::string CJNISystemProperties::get(const std::string& property, const std::st
     "get", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
     jcast<jhstring>(property), jcast<jhstring>(defaultValue)));
 }
+
+void CJNISystemProperties::set(const std::string& property, const std::string& value)
+{
+   jcast<std::string>(call_static_method<jhstring>(m_classname,
+    "set", "(Ljava/lang/String;Ljava/lang/String;)V",
+    jcast<jhstring>(property), jcast<jhstring>(value)));
+}
+
