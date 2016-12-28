@@ -33,6 +33,7 @@ typedef unsigned short          RK_U16;
 typedef unsigned int            RK_U32;
 typedef unsigned long long int  RK_U64;
 typedef int                     RK_RET;
+typedef int                     RK_S32;
 typedef void*                   RK_PTR;
 typedef const void*             RK_ENV;
 typedef long long int           RK_PTS;
@@ -167,6 +168,8 @@ struct RKCodecStreamInfo_t {
   RK_U32 extrasize;
   RK_U32 codec_tag;
 
+  RK_S32 colortrc;
+
 };
 
 struct RKCodecDisplayInfo_t {
@@ -224,9 +227,9 @@ private:
   bool m_bOpen;
   bool m_bSubmittedEos;
   bool m_bSyncStatus;
-  int m_iSyncMode;
+  RK_S32 m_iSyncMode;
   double m_lfSyncThreshold;
-  int m_iSpeed;
+  RK_S32 m_iSpeed;
 
   RK_U32 m_iStereoMode;
   

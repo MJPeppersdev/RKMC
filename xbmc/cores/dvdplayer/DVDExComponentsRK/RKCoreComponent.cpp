@@ -94,6 +94,7 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
   m_streamInfo.extrasize = hints.extrasize;
   m_streamInfo.codec_tag = hints.codec_tag;
   m_streamInfo.stereo_mode = 0;
+  m_streamInfo.colortrc = hints.colortrc;
 
   /* construct display info */
   m_displayInfo.type = 0;

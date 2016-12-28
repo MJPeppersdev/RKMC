@@ -846,7 +846,8 @@ CDemuxStream* CDVDDemuxFFmpegRK::AddStream(int iId)
         if (!stereoMode.empty())
           st->stereo_mode = stereoMode;
 
-        
+        st->iColorTrc = pStream->codec->color_trc;
+
         if ( m_pInput->IsStreamType(DVDSTREAM_TYPE_DVD) )
         {
           if (pStream->codec->codec_id == AV_CODEC_ID_PROBE)
