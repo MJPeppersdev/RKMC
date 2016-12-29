@@ -18138,3 +18138,10 @@ msgctxt "#39004"
 msgid "Auto switch HDMI-3D Bluray3D"
 msgstr ""
 
+msgctxt "#39005"
+msgid "Accelerate VP9"
+msgstr ""
+
+msgctxt "#39006"
+msgid "Accelerate Mpeg1/2"
+msgstr ""

@@ -843,6 +843,26 @@
           <default>true</default>
           <control type="toggle" />
         </setting>
+        <setting id="videoplayer.rkcodec.vp9" type="boolean" label="39005">
+          <dependencies>
+            <dependency type="enable">
+              <condition setting="videoplayer.userkcodec" operator="is">true</condition>
+            </dependency>
+          </dependencies>
+          <level>1</level>
+          <default>false</default>
+          <control type="toggle" />
+        </setting>
+        <setting id="videoplayer.rkcodec.mpeg2" type="boolean" label="39006">
+          <dependencies>
+            <dependency type="enable">
+              <condition setting="videoplayer.userkcodec" operator="is">true</condition>
+            </dependency>
+          </dependencies>
+          <level>1</level>
+          <default>false</default>
+          <control type="toggle" />
+        </setting>
       </group>
       <group id="2">
         <setting id="videoplayer.framepacking" type="boolean" label="39002">

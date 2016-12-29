@@ -111,6 +111,9 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
       m_streamInfo.stereo_mode = RK_STEREO_MVC; 
   }
 
+  if (AV_CODEC_ID_VP9 == m_streamInfo.codec)
+    m_streamInfo.codec = AV_CODEC_ID_VP9 + 1;
+  
   /* init and open rk codec */
   RK_RET ret = m_dll->RK_CodecInit(&m_streamInfo);
   ret |= m_dll->RK_CodecOpen();

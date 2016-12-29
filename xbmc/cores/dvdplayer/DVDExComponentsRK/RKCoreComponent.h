@@ -86,7 +86,9 @@ class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
   END_METHOD_RESOLVE()
 };
 
-#define RKMC_SETTING_RKCODEC  "videoplayer.userkcodec"
+#define RKMC_SETTING_RKCODEC       "videoplayer.userkcodec"
+#define RKMC_SETTING_RKCODEC_VP9   "videoplayer.rkcodec.vp9"
+#define RKMC_SETTING_RKCODEC_MPEG2 "videoplayer.rkcodec.mpeg2"
 #define RKMC_SETTING_FP3D     "videoplayer.framepacking"
 #define RKMC_SETTING_3D24HZ   "videoplayer.force24hzbluray3d"
 #define RKMC_SETTING_3DSWITCH "videoplayer.forcehdmi3d"

@@ -17,7 +17,8 @@
  *  <http://www.gnu.org/licenses/>.
  *
  */
-
+ 
+#include "settings/Settings.h"
 #include "settings/MediaSettings.h"
 #include "settings/AdvancedSettings.h"
 #include "video/VideoReferenceClock.h"
@@ -155,11 +156,18 @@ CDVDVideoCodec* CDVDPlayerVideoRK::CreateVideoCodec(CDVDStreamInfo &hint, const 
     options.m_formats = info.formats;
 
   options.m_opaque_pointer = info.opaque_pointer;
-  if ((hint.codec == AV_CODEC_ID_MPEG2VIDEO || hint.codec == AV_CODEC_ID_MPEG1VIDEO) && hint.width < 1920)
+  if ((hint.codec == AV_CODEC_ID_MPEG2VIDEO || hint.codec == AV_CODEC_ID_MPEG1VIDEO) && !CSettings::GetInstance().GetBool(RKMC_SETTING_RKCODEC_MPEG2))
   {
     if ((pCodec = OpenCodec(new CDVDVideoCodecLibMpeg2(), hint, options))) return pCodec;
   }
+
+  if (hint.codec == AV_CODEC_ID_VP9 && !CSettings::GetInstance().GetBool(RKMC_SETTING_RKCODEC_VP9))
+  {
+    if ( (pCodec = OpenCodec(new CDVDVideoCodecFFmpeg(), hint, options)) ) return pCodec;
+  }
+  
   if( (pCodec = OpenCodec(new CDVDVideoCodecRK(), hint, options)) ) return pCodec;
+  
   if( (pCodec = OpenCodec(new CDVDVideoCodecFFmpeg(), hint, options)) ) return pCodec;
 
   return NULL;
