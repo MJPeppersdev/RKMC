@@ -13,8 +13,9 @@
 			<top></top>
 			<bottom>0</bottom>
 			<width>1320</width>
-			<height>90</height>
+			<height>60</height>
 			<texture>floor.png</texture>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
@@ -469,12 +470,12 @@
 				<top>0</top>
 				<width>35</width>
 				<height>35</height>
-				<colordiffuse>CCFFFFFF</colordiffuse>
+				<colordiffuse>AAFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
 				<animation effect="slide" start="0,0" end="145,0" time="0" condition="!System.HasAddon(script.globalsearch)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="608">
-				<colordiffuse>CCFFFFFF</colordiffuse>
+				<colordiffuse>AAFFFFFF</colordiffuse>
 				<description>Global Search</description>
 				<left>35</left>
 				<top>0</top>
@@ -515,7 +516,7 @@
 					<width>205</width>
 					<height>35</height>
 					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
-					<colordiffuse>CCFFFFFF</colordiffuse>
+					<colordiffuse>AAFFFFFF</colordiffuse>
 				</control>
 				<control type="group">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -705,7 +706,7 @@
 				</control>
 			</control>
 			<control type="radiobutton" id="607">
-				<colordiffuse>CCFFFFFF</colordiffuse>
+				<colordiffuse>AAFFFFFF</colordiffuse>
 				<description>Go to fullscreen Playback</description>
 				<left>385</left>
 				<top>0</top>
@@ -830,6 +831,7 @@
 				<width>1480</width>
 				<height>75</height>
 				<texture border="0,6,0,6">HomeBack.png</texture>
+				<colordiffuse>AAFFFFFF</colordiffuse>
 			</control>
 			<control type="image">
 				<left>0</left>

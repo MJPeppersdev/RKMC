@@ -4,6 +4,7 @@
 		<control type="image" id="90101">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90102">
@@ -43,6 +44,7 @@
 		<control type="image" id="90108">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
@@ -50,6 +52,7 @@
 		<control type="image" id="90161">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90162">
@@ -86,6 +89,7 @@
 		<control type="image" id="90168">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
@@ -93,6 +97,7 @@
 		<control type="image" id="90171">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90172">
@@ -130,6 +135,7 @@
 		<control type="image" id="90111">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90112">
@@ -169,6 +175,7 @@
 		<control type="image" id="90119">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
@@ -176,6 +183,7 @@
 		<control type="image" id="90121">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90122">
@@ -207,6 +215,7 @@
 		<control type="image" id="90127">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
@@ -214,6 +223,7 @@
 		<control type="image" id="90131">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90132">
@@ -225,6 +235,7 @@
 		<control type="image" id="90133">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
@@ -232,6 +243,7 @@
 		<control type="image" id="90147">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90148">
@@ -242,6 +254,7 @@
 		<control type="image" id="90149">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
@@ -249,6 +262,7 @@
 		<control type="image" id="90141">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90143">
@@ -279,6 +293,7 @@
 		<control type="image" id="90148">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
@@ -316,6 +331,7 @@
 		<control type="image" id="90248">
 			<width>35</width>
 			<height>35</height>
+			<colordiffuse>99FFFFFF</colordiffuse>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
