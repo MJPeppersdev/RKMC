@@ -213,8 +213,11 @@ struct closestRes
 void CSkinInfo::Start()
 {
   if (!LoadUserSettings())
+  {
     CLog::Log(LOGWARNING, "CSkinInfo: failed to load skin settings");
-
+    LoadSettings();
+  }
+  
   if (!m_resolutions.size())
   { // try falling back to whatever resolutions exist in the directory
     CFileItemList items;
@@ -694,6 +697,11 @@ CSkinSettingPtr CSkinInfo::ParseSetting(const TiXmlElement* element)
   if (!setting->Deserialize(element))
     return CSkinSettingPtr();
 
+  if (settingType == "string")
+  {
+    std::string settingValue = std::dynamic_pointer_cast<CSkinSettingString>(setting)->value;
+    std::dynamic_pointer_cast<CSkinSettingString>(setting)->value = CSpecialProtocol::TranslatePath(settingValue);
+  }
   return setting;
 }
 
