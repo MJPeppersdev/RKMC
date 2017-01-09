@@ -292,8 +292,8 @@ const std::string &CStereoscopicsManager::GetLabelForStereoMode(const RENDER_STE
 	  msgId = 36509;
 	  break;
     case RENDER_STEREO_MODE_MVC:
-      msgId = 36512;
-      break;
+    msgId = 36512;
+    break;
     default:
 	  msgId = 36502 + mode;
   }

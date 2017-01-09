@@ -98,9 +98,11 @@ enum RKCodecDecodeType
   RK_VIDEO               = 1,
   RK_AUDIO               = 0,
   RK_SUBTITLE            = 2,
+  RK_STEREO_OFF          = 0x0000,
   RK_STEREO_LR           = 0x1000,
   RK_STEREO_BT           = 0x2000,
   RK_STEREO_MVC          = 0x4000,
+  RK_STEREO_2D           = 0x8000,
   RK_STEREO_MASK         = 0xF000,
 };
 
@@ -117,6 +119,7 @@ enum RKCodecCommand
   RK_CMD_SYNC            = 2,
   RK_CMD_EOS             = 3,
   RK_CMD_SETRES          = 4,
+  RK_CMD_SETCROP         = 5,
   RK_CMD_MAX             = 1000
 };
 
@@ -223,15 +226,18 @@ private:
   RKCodecStreamInfo m_streamInfo;
   RKCodecDisplayInfo m_displayInfo;
   CRect m_displayResolution;
+  CRect m_displayCrop;
   DllLibRKCodec *m_dll;
   bool m_bLoad;
   bool m_bReady;
   bool m_bOpen;
+  bool m_bRender;
   bool m_bSubmittedEos;
   bool m_bSyncStatus;
   RK_S32 m_iSyncMode;
   double m_lfSyncThreshold;
   RK_S32 m_iSpeed;
+  RK_S32 m_iNextSpeed;
 
   RK_U32 m_iStereoMode;
   
