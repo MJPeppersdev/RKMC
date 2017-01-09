@@ -178,7 +178,9 @@ CRKAESinkAUDIOTRACK::~CRKAESinkAUDIOTRACK()
 void CRKAESinkAUDIOTRACK::PopulateExStaticFields()
 {
   jhclass c = find_class("android/media/AudioFormat");
-  if (CJNIAudioManager::GetSDKVersion() >= 23)
+  if (CJNIAudioManager::GetSDKVersion() >= 25)
+    CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = get_static_field<int>(c, "ENCODING_IEC61937");
+  else if (CJNIAudioManager::GetSDKVersion() >= 23)
     CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = 20;
   else
     CRKAESinkAUDIOTRACK::ENCODING_IEC61937 = 10;
