@@ -510,7 +510,6 @@ void CDVDPlayerAudio::Process()
   while (!m_bStop)
   {
     int result = DecodeFrame(audioframe);
-    Sleep(1);
     //Drop when not playing normally
     if(m_speed   != DVD_PLAYSPEED_NORMAL
     && m_started == true)
