@@ -182,6 +182,7 @@ struct RKCodecDisplayInfo_t {
   RK_PTS raw;
   RK_PTS pts;
   RK_U32 eos;
+  RK_PTS record;
 };
 
 typedef struct RKCodecStreamInfo_t RKCodecStreamInfo;
