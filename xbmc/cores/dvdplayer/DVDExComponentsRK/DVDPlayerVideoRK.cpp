@@ -495,7 +495,10 @@ void CDVDPlayerVideoRK::Process()
 
       if (iDecoderState & VC_BYPASS)
       {
-        m_messageQueue.Put(pMsg->Acquire(), iPriority + 10);
+        if (m_speed == DVD_PLAYSPEED_NORMAL)
+        {
+          m_messageQueue.Put(pMsg->Acquire(), iPriority + 10);
+        }
       }
       else
       {
