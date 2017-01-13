@@ -305,8 +305,13 @@ void CRKAESinkAUDIOTRACK::GetDelay(AEDelayStatus& status)
   // return a 32bit "int" that you should "interpret as unsigned."  As such,
   // for wrap saftey, we need to do all ops on it in 32bit integer math.
   uint32_t head_pos = (uint32_t)m_at_jni->getPlaybackHeadPosition();
+  double delay = 0.0;
 
-  double delay = (double)(m_frames_written - head_pos) / m_format.m_sampleRate;
+  if (m_frames_written >  head_pos)
+  {
+    delay = (double)(m_frames_written - head_pos) / m_format.m_sampleRate;
+  }
+
   status.SetDelay(delay);
 }
 
