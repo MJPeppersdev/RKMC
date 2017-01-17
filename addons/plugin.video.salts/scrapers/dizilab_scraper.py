@@ -18,22 +18,20 @@
 import re
 import urlparse
 import random
-import urllib
 import kodi
-import log_utils
+import log_utils  # @UnusedImport
 import dom_parser
 from salts_lib import scraper_utils
 from salts_lib.constants import FORCE_NO_MATCH
 from salts_lib.constants import VIDEO_TYPES
 from salts_lib.constants import QUALITIES
+from salts_lib.constants import XHR
 import scraper
 
 BASE_URL = 'http://dizilab.com'
 AJAX_URL = '/request/php/'
-STREAM_URL = '%s%s|User-Agent=%s&Referer=%s'
 ICONS = {'icon-tr': 'Turkish Subtitles', 'icon-en': 'English Subtitles', 'icon-orj': ''}
 DEFAULT_SUB = 'Turkish Subtitles'
-XHR = {'X-Requested-With': 'XMLHttpRequest'}
 
 class Scraper(scraper.Scraper):
     base_url = BASE_URL
@@ -61,8 +59,8 @@ class Scraper(scraper.Scraper):
             for v_id, icon in map(None, videos, subs):
                 ajax_url = urlparse.urljoin(self.base_url, AJAX_URL)
                 data = {'vid': v_id, 'tip': 1, 'type': 'loadVideo'}
-                headers = XHR
-                headers['Referer'] = page_url
+                headers = {'Referer': page_url}
+                headers.update(XHR)
                 html = self._http_get(ajax_url, data=data, headers=headers, cache_limit=.5)
                 sub = ICONS.get(icon, DEFAULT_SUB)
                 hosters += self.__get_cloud_links(html, page_url, sub)
@@ -143,7 +141,7 @@ class Scraper(scraper.Scraper):
                     for variant in js_data.get('variants', {}):
                         stream_host = random.choice(variant.get('hosts', []))
                         if stream_host:
-                            stream_url = STREAM_URL % (stream_host, variant['path'], scraper_utils.get_ua(), urllib.quote(page_url))
+                            stream_url = stream_host + variant['path'] + scraper_utils.append_headers({'User-Agent': scraper_utils.get_ua(), 'Referer': page_url})
                             if not stream_url.startswith('http'):
                                 stream_url = 'http://' + stream_url
                             host = self._get_direct_hostname(stream_url)
@@ -163,7 +161,7 @@ class Scraper(scraper.Scraper):
         title_pattern = 'class="episode-name"\s+href="(?P<url>[^"]+)">\s*(?P<title>[^<]+)'
         return self._default_get_episode_url(show_url, video, episode_pattern, title_pattern)
 
-    def search(self, video_type, title, year, season=''):
+    def search(self, video_type, title, year, season=''):  # @UnusedVariable
         results = []
         url = urlparse.urljoin(self.base_url, AJAX_URL)
         data = {'type': 'getDizi'}

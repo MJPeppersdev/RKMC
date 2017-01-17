@@ -18,7 +18,7 @@
 import re
 import urlparse
 import kodi
-import log_utils
+import log_utils  # @UnusedImport
 from salts_lib import scraper_utils
 from salts_lib.constants import FORCE_NO_MATCH
 from salts_lib.constants import VIDEO_TYPES
@@ -60,7 +60,7 @@ class Scraper(scraper.Scraper):
                     sources = [stream_url]
                 
                 for source in sources:
-                    stream_url = source + '|User-Agent=%s' % (scraper_utils.get_ua())
+                    stream_url = source + scraper_utils.append_headers({'User-Agent': scraper_utils.get_ua()})
                     host = self._get_direct_hostname(source)
                     if host == 'gvideo':
                         quality = scraper_utils.gv_get_quality(source)
@@ -76,7 +76,7 @@ class Scraper(scraper.Scraper):
                     hosters.append(hoster)
         return hosters
 
-    def search(self, video_type, title, year, season=''):
+    def search(self, video_type, title, year, season=''):  # @UnusedVariable
         results = []
         norm_title = scraper_utils.normalize_title(title)
         for movie in self.__get_movies():

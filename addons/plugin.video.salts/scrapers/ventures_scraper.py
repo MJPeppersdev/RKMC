@@ -19,7 +19,7 @@
 import re
 import urlparse
 import kodi
-import log_utils
+import log_utils  # @UnusedImport
 from salts_lib import scraper_utils
 from salts_lib.constants import FORCE_NO_MATCH
 from salts_lib.constants import VIDEO_TYPES
@@ -62,7 +62,7 @@ class Scraper(scraper.Scraper):
                     if match:
                         if meta['dubbed']: continue
                         if not match['url'].lower().endswith(('.mkv', '.mp4', '.avi')): continue
-                        stream_url = match['url'] + '|User-Agent=%s' % (scraper_utils.get_ua())
+                        stream_url = match['url'] + scraper_utils.append_headers({'User-Agent': scraper_utils.get_ua()})
                         stream_url = stream_url.replace(self.base_url, '')
                         quality = scraper_utils.height_get_quality(meta['height'])
                         hoster = {'multi-part': False, 'host': self._get_direct_hostname(stream_url), 'class': self, 'quality': quality, 'views': None, 'rating': None, 'url': stream_url, 'direct': True}
@@ -90,7 +90,7 @@ class Scraper(scraper.Scraper):
     def __episode_match(self, line, video):
         return scraper_utils.release_check(video, line['link'], require_title=False)
     
-    def search(self, video_type, title, year, season=''):
+    def search(self, video_type, title, year, season=''):  # @UnusedVariable
         results = []
         norm_title = scraper_utils.normalize_title(title)
         html = self._http_get(self.base_url, cache_limit=24 * 7)

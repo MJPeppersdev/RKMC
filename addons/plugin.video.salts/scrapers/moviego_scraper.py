@@ -17,10 +17,9 @@
 """
 import scraper
 import urlparse
-import urllib
 import re
 import kodi
-import log_utils
+import log_utils  # @UnusedImport
 import dom_parser
 from salts_lib import scraper_utils
 from salts_lib.constants import VIDEO_TYPES
@@ -60,21 +59,30 @@ class Scraper(scraper.Scraper):
                 page_quality = QUALITIES.HIGH
                 
             for fragment in dom_parser.parse_dom(html, 'div', {'class': 'tab_box'}):
+                direct = True
                 match = re.search('file\s*:\s*"([^"]+)', fragment)
                 if match:
                     stream_url = match.group(1)
                 else:
                     stream_url = self.__get_ajax_sources(fragment, page_url)
+                
+                if not stream_url:
+                    stream_url = dom_parser.parse_dom(fragment, 'iframe', ret='src')
+                    if stream_url:
+                        stream_url = stream_url[0]
+                        direct = False
                     
                 if stream_url:
-                    host = self._get_direct_hostname(stream_url)
-                    if host == 'gvideo':
-                        quality = scraper_utils.gv_get_quality(stream_url)
+                    quality = page_quality
+                    if direct:
+                        stream_url += scraper_utils.append_headers({'User-Agent': scraper_utils.get_ua(), 'Referer': page_url})
+                        host = self._get_direct_hostname(stream_url)
+                        if host == 'gvideo':
+                            quality = scraper_utils.gv_get_quality(stream_url)
                     else:
-                        quality = page_quality
+                        host = urlparse.urlparse(stream_url).hostname
                         
-                    stream_url += '|User-Agent=%s&Referer=%s' % (scraper_utils.get_ua(), urllib.quote(page_url))
-                    source = {'multi-part': False, 'url': stream_url, 'host': host, 'class': self, 'quality': quality, 'views': None, 'rating': None, 'direct': True}
+                    source = {'multi-part': False, 'url': stream_url, 'host': host, 'class': self, 'quality': quality, 'views': None, 'rating': None, 'direct': direct}
                     sources.append(source)
 
         return sources
@@ -84,33 +92,27 @@ class Scraper(scraper.Scraper):
         match = re.search('''\$\.getJSON\('([^']+)'\s*,\s*(\{.*?\})''', html)
         if match:
             ajax_url, params = match.groups()
-            ajax_url = ajax_url + '?' + urllib.urlencode(scraper_utils.parse_params(params))
+            params = scraper_utils.parse_params(params)
             ajax_url = urlparse.urljoin(self.base_url, ajax_url)
             headers = {'Referer': page_url}
             headers.update(XHR)
-            html = self._http_get(ajax_url, headers=headers, cache_limit=.5)
+            html = self._http_get(ajax_url, params=params, headers=headers, cache_limit=.5)
             js_data = scraper_utils.parse_json(html, ajax_url)
             stream_url = js_data.get('file', '')
         return stream_url
     
-    def search(self, video_type, title, year, season=''):
+    def search(self, video_type, title, year, season=''):  # @UnusedVariable
         results = []
-        data = {'subaction': 'search', 'do': 'search', 'story': urllib.quote(title)}
-        html = self._http_get(self.base_url, data=data, cache_limit=8)
+        data = {'hash': 'indexert', 'do': 'search', 'subaction': 'search', 'search_start': 0, 'full_search': 0, 'result_from': 1, 'story': title}
+        search_url = urlparse.urljoin(self.base_url, 'index.php')
+        html = self._http_get(search_url, params={'do': 'search'}, data=data, cache_limit=8)
         if dom_parser.parse_dom(html, 'div', {'class': 'sresult'}):
             for item in dom_parser.parse_dom(html, 'div', {'class': 'short_content'}):
                 match = re.search('href="([^"]+)', item)
                 match_title_year = dom_parser.parse_dom(item, 'div', {'class': 'short_header'})
                 if match and match_title_year:
                     url = match.group(1)
-                    match_title_year = match_title_year[0]
-                    match = re.search('(.*?)\s+\((\d{4})\)\s*', match_title_year)
-                    if match:
-                        match_title, match_year = match.groups()
-                    else:
-                        match_title = match_title_year
-                        match_year = ''
-                    
+                    match_title, match_year = scraper_utils.extra_year(match_title_year[0])
                     if not year or not match_year or year == match_year:
                         result = {'title': scraper_utils.cleanse_title(match_title), 'year': match_year, 'url': scraper_utils.pathify_url(url)}
                         results.append(result)
