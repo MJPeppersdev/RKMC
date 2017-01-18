@@ -597,6 +597,10 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "Режим показа видео формата 4:3"
 
+msgctxt "#174"
+msgid "Compiled:"
+msgstr "Сборник:"
+
 msgctxt "#175"
 msgid "Moods"
 msgstr "Настроение"
@@ -604,6 +608,14 @@ msgstr "Настроение"
 msgctxt "#176"
 msgid "Styles"
 msgstr "Стили"
+
+msgctxt "#177"
+msgid "%s successfully started"
+msgstr "Успешно запущен %s"
+
+msgctxt "#178"
+msgid "%s has been successfully started."
+msgstr "Успешно запущен %s."
 
 msgctxt "#179"
 msgid "Song"
@@ -1547,7 +1559,7 @@ msgstr "Макс."
 
 msgctxt "#420"
 msgid "Best match"
-msgstr "Оптимизир."
+msgstr "Наилучш."
 
 msgctxt "#421"
 msgid "Keep audio device alive"
@@ -2133,6 +2145,10 @@ msgctxt "#577"
 msgid "Date taken"
 msgstr "Дата создания"
 
+msgctxt "#578"
+msgid "Artist / Year"
+msgstr "Исполнитель/год"
+
 msgctxt "#580"
 msgid "Sort direction"
 msgstr "Направление сортировки"
@@ -2344,6 +2360,10 @@ msgstr "Файлы без информации Replay Gain "
 msgctxt "#643"
 msgid "Avoid clipping on ReplayGained files"
 msgstr "Избегать искажений для файлов с Reply Gain"
+
+msgctxt "#644"
+msgid "Stretch 16:9 - Nonlinear"
+msgstr "Нелин. растянутый 16:9"
 
 msgctxt "#645"
 msgid "Need to unpack a big file. Continue?"
@@ -2629,14 +2649,6 @@ msgctxt "#744"
 msgid "Files"
 msgstr "Файлы"
 
-msgctxt "#745"
-msgid "No scanned information for this view"
-msgstr "Нет сканированных данных для этого вида"
-
-msgctxt "#746"
-msgid "Please turn off library mode"
-msgstr "Выключите режим медиатеки"
-
 msgctxt "#747"
 msgid "Error loading image"
 msgstr "Ошибка загрузки картинки"
@@ -2832,6 +2844,154 @@ msgstr "Необходимо повторно считать тэги аудио
 msgctxt "#802"
 msgid "%s of %s available"
 msgstr "Доступно %s из %s"
+
+msgctxt "#803"
+msgid "Type"
+msgstr "Тип"
+
+msgctxt "#804"
+msgid "Search guide for"
+msgstr "Искать в телепрограмме"
+
+msgctxt "#805"
+msgid "Enter the search string to use to lookup matching events in the guide"
+msgstr "Введите строку для поиска соответствующих событий в программе"
+
+msgctxt "#806"
+msgid "Fulltext search (or title search only)"
+msgstr "Полнотекстовый поиск (или только в заголовках)"
+
+msgctxt "#807"
+msgid "Any day"
+msgstr "Любой день"
+
+msgctxt "#808"
+msgid "Every day"
+msgstr "Каждый день"
+
+msgctxt "#809"
+msgid "Any channel"
+msgstr "Любой канал"
+
+msgctxt "#810"
+msgid "Start any time"
+msgstr "Начинать в любое время"
+
+msgctxt "#811"
+msgid "Recording group"
+msgstr "Группа записи"
+
+msgctxt "#812"
+msgid "Prevent duplicate episodes"
+msgstr "Не допускать повторяющихся эпизодов"
+
+msgctxt "#813"
+msgid "Start padding time"
+msgstr "Интервал в начале записи"
+
+msgctxt "#814"
+msgid "End padding time"
+msgstr "Интервал в конце записи"
+
+msgctxt "#815"
+msgid "Record all episodes"
+msgstr "Запись всех эпизодов"
+
+msgctxt "#816"
+msgid "Record only new episodes"
+msgstr "Записывать только новые серии"
+
+msgctxt "#817"
+msgid "End any time"
+msgstr "Завершать в любое время"
+
+msgctxt "#818"
+msgid "Max recordings"
+msgstr "Максимальное кол-во записей"
+
+msgctxt "#820"
+msgid "One time"
+msgstr "Один раз"
+
+msgctxt "#821"
+msgid "One time (guide-based)"
+msgstr "Один раз (по программе)"
+
+msgctxt "#822"
+msgid "Repeating"
+msgstr "Повторение"
+
+msgctxt "#823"
+msgid "Repeating (guide-based)"
+msgstr "Повторение (по программе)"
+
+msgctxt "#828"
+msgid "Repeating timer deleted"
+msgstr "Повторяющийся таймер удалён."
+
+msgctxt "#831"
+msgid "Mondays"
+msgstr "По понедельникам"
+
+msgctxt "#832"
+msgid "Tuesdays"
+msgstr "По вторникам"
+
+msgctxt "#833"
+msgid "Wednesdays"
+msgstr "По средам"
+
+msgctxt "#834"
+msgid "Thursdays"
+msgstr "По четвергам"
+
+msgctxt "#835"
+msgid "Fridays"
+msgstr "По пятницам"
+
+msgctxt "#836"
+msgid "Saturdays"
+msgstr "По субботам"
+
+msgctxt "#837"
+msgid "Sundays"
+msgstr "По воскресениям"
+
+msgctxt "#840"
+msgid "Do you only want to delete this timer or also the repeating timer that has scheduled it?"
+msgstr "Вы хотите удалить только этот таймер или же все повторения?"
+
+msgctxt "#841"
+msgid "Only this"
+msgstr "Только этот"
+
+msgctxt "#842"
+msgid "Group timers"
+msgstr "Группа таймеров"
+
+msgctxt "#843"
+msgid "Activate"
+msgstr "Включить"
+
+msgctxt "#844"
+msgid "Deactivate"
+msgstr "Выключить"
+
+msgctxt "#845"
+msgid "Are you sure you want to delete this repeating timer and all timers it has scheduled?"
+msgstr "Удалить повторяющийся таймер и все связанные с ним таймеры?"
+
+msgctxt "#846"
+msgid "Are you sure you want to delete this timer?"
+msgstr "Удалить этот таймер?"
+
+msgctxt "#847"
+msgid "Confirm stop recording"
+msgstr "Подтверждение остановки записи"
+
+msgctxt "#848"
+msgid "Are you sure you want to stop this recording?"
+msgstr "Остановить эту запись?"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -3206,8 +3366,8 @@ msgid "Announce services to other systems"
 msgstr "Объявлять службы другим системам"
 
 msgctxt "#1268"
-msgid "iOS 8 compatibility mode"
-msgstr "Режим совместимости с iOS 8"
+msgid "Enable AirPlay \"Videos\" and \"Pictures\" support"
+msgstr "Включить поддержку \"Видео\" и \"Фото\" через AirPlay"
 
 msgctxt "#1269"
 msgid "Allow volume control"
@@ -4110,8 +4270,8 @@ msgid "Settings & file manager"
 msgstr "Настройки и менеджер файлов"
 
 msgctxt "#12376"
-msgid "Set as default for all videos"
-msgstr "Установить по умолчанию для всех видеофайлов"
+msgid "Set as default for all media"
+msgstr "Установить по-умолчанию для всех медиа"
 
 msgctxt "#12377"
 msgid "This will reset any previously saved values. Are you sure?"
@@ -4266,16 +4426,16 @@ msgid "Is another session active, perhaps over ssh?"
 msgstr "Проверьте, не активен ли другой сеанс (напр., SSH)."
 
 msgctxt "#13021"
-msgid "Mounted removable hard drive"
-msgstr "Подключен переносной жесткий диск"
+msgid "Mounted removable storage device"
+msgstr "Подключенное съемное устройство"
 
 msgctxt "#13022"
-msgid "Unsafe device removal"
-msgstr "Небезопасное отключение устройства"
+msgid "Unsafe storage device removal"
+msgstr "Небезопасное извлечение устройства"
 
 msgctxt "#13023"
-msgid "Successfully removed device"
-msgstr "Устройство отключено успешно"
+msgid "Successfully removed storage device"
+msgstr "Успешно удаленное устройство"
 
 msgctxt "#13024"
 msgid "Joystick plugged"
@@ -4493,6 +4653,10 @@ msgctxt "#13206"
 msgid "Overwrite"
 msgstr "Перезаписать"
 
+msgctxt "#13207"
+msgid "Forced only"
+msgstr "Только принудительные"
+
 msgctxt "#13208"
 msgid "Alarm clock"
 msgstr "Таймер напоминаний"
@@ -4709,10 +4873,6 @@ msgctxt "#13322"
 msgid "Right only"
 msgstr "Только правый"
 
-msgctxt "#13323"
-msgid "Enable karaoke support"
-msgstr "Разрешить поддержку караоке"
-
 msgctxt "#13324"
 msgid "Background transparency"
 msgstr "Уровень прозрачности фона"
@@ -4724,10 +4884,6 @@ msgstr "Уровень прозрачности текста"
 msgctxt "#13326"
 msgid "A/V delay"
 msgstr "Задержка звука относительно изображения"
-
-msgctxt "#13327"
-msgid "Karaoke"
-msgstr "Караоке"
 
 msgctxt "#13328"
 msgid "%s not found"
@@ -5109,6 +5265,10 @@ msgctxt "#13439"
 msgid "Allow hardware acceleration - MediaCodec"
 msgstr "Включить аппаратное ускорение - MediaCodec"
 
+msgctxt "#13440"
+msgid "Allow hardware acceleration - MediaCodec (Surface)"
+msgstr "Разрешить аппаратное ускорение - MediaCodec (Surface)"
+
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "Использовать MPEG-2 VDPAU"
@@ -5195,27 +5355,27 @@ msgstr "Синхронизировать видео с частотой дисп
 
 msgctxt "#13511"
 msgid "Choose art"
-msgstr "Картинки"
+msgstr "Иллюстрации"
 
 msgctxt "#13512"
 msgid "Current art"
-msgstr "Текущая картинка"
+msgstr "Текущие иллюстрации"
 
 msgctxt "#13513"
 msgid "Remote art"
-msgstr "Удаленная картинка"
+msgstr "Удаленные иллюстрации"
 
 msgctxt "#13514"
 msgid "Local art"
-msgstr "Локальная картинка"
+msgstr "Локальные иллюстрации"
 
 msgctxt "#13515"
 msgid "No art"
-msgstr "Без картинки"
+msgstr "Без иллюстраций"
 
 msgctxt "#13516"
 msgid "Add art"
-msgstr "Добавить картинку"
+msgstr "Добавить иллюстрации"
 
 msgctxt "#13550"
 msgid "Pause during refresh rate change"
@@ -5582,8 +5742,8 @@ msgid "File lists"
 msgstr "Списки файлов"
 
 msgctxt "#14082"
-msgid "Show EXIF picture information"
-msgstr "Показывать сведения о фото из EXIF"
+msgid "Reset the Audio DSP database..."
+msgstr "Очистить базу данных ЦОС..."
 
 msgctxt "#14083"
 msgid "Use fullscreen window"
@@ -5618,8 +5778,8 @@ msgid "Character set"
 msgstr "Кодировка"
 
 msgctxt "#14092"
-msgid "Debugging"
-msgstr "Отладка"
+msgid "Logging"
+msgstr "Логирование"
 
 msgctxt "#14093"
 msgid "Security"
@@ -5693,6 +5853,78 @@ msgctxt "#14110"
 msgid "Long date format"
 msgstr "Полный формат даты"
 
+msgctxt "#14111"
+msgid "Events"
+msgstr "События"
+
+msgctxt "#14112"
+msgid "Enable event logging"
+msgstr "Включить запись событий"
+
+msgctxt "#14113"
+msgid "Enable notification event logging"
+msgstr "Включить оповещение записи событий"
+
+msgctxt "#14114"
+msgid "Show event log"
+msgstr "Показать записи событий"
+
+msgctxt "#14115"
+msgid "Basic"
+msgstr "Базовый"
+
+msgctxt "#14116"
+msgid "Information"
+msgstr "Сведения"
+
+msgctxt "#14117"
+msgid "Warning"
+msgstr "Предупреждение"
+
+msgctxt "#14118"
+msgid "Error"
+msgstr "Ошибка"
+
+msgctxt "#14119"
+msgid "Level: %s"
+msgstr "Уровень: %s"
+
+msgctxt "#14120"
+msgid "Show higher levels"
+msgstr "Показать более высокие уровни"
+
+msgctxt "#14121"
+msgid "Blu-ray region Code"
+msgstr "Код региона Blu-ray"
+
+msgctxt "#14122"
+msgid "Region A"
+msgstr "Регион A"
+
+msgctxt "#14123"
+msgid "Region B"
+msgstr "Регион B"
+
+msgctxt "#14124"
+msgid "Region C"
+msgstr "Регион C"
+
+msgctxt "#15004"
+msgid "Basic"
+msgstr "Базовый"
+
+msgctxt "#15005"
+msgid "Application"
+msgstr "Приложение"
+
+msgctxt "#15006"
+msgid "Phone"
+msgstr "Телефон"
+
+msgctxt "#15007"
+msgid "Message"
+msgstr "Сообщение"
+
 msgctxt "#15011"
 msgid "%i Items failed to export"
 msgstr "Не удалось экспортировать %i элементов "
@@ -5721,9 +5953,213 @@ msgctxt "#15019"
 msgid "Add"
 msgstr "Добавить"
 
+msgctxt "#15020"
+msgid "Audio DSP manager"
+msgstr "Менеджер ЦОС аудио"
+
+msgctxt "#15021"
+msgid "Content type"
+msgstr "Тип содержимого"
+
+msgctxt "#15022"
+msgid "Listening mode"
+msgstr "Режим прослушивания"
+
+msgctxt "#15023"
+msgid "Master mode"
+msgstr "Режим мастера"
+
+msgctxt "#15024"
+msgid "Pre-process setup..."
+msgstr "Настройка предварительной обработки..."
+
+msgctxt "#15025"
+msgid "Listening mode setup..."
+msgstr "Настройка режима прослушивания..."
+
+msgctxt "#15026"
+msgid "Speaker / Output setup..."
+msgstr "Настройка вывода..."
+
+msgctxt "#15027"
+msgid "Audio information..."
+msgstr "Аудио информация..."
+
+msgctxt "#15028"
+msgid "Audio DSP settings - Main"
+msgstr "Настройки ЦОС аудио - Основные"
+
+msgctxt "#15029"
+msgid "Audio DSP settings - Listening mode"
+msgstr "Настройки ЦОС аудио - Режим прослушивания"
+
+msgctxt "#15030"
+msgid "Audio DSP settings - Speaker / Output"
+msgstr "Настройки ЦОС аудио - Настройки вывода"
+
+msgctxt "#15031"
+msgid "Audio DSP settings - Audio information"
+msgstr "Настройки ЦОС аудио - Аудио информация"
+
+msgctxt "#15033"
+msgid "Resampler setup..."
+msgstr "Настройки ресемплера..."
+
+msgctxt "#15034"
+msgid "Miscellaneous..."
+msgstr "Разное..."
+
+msgctxt "#15035"
+msgid "Audio DSP settings - Resampler"
+msgstr "Настройки ЦОС аудио - Настройки ресемплера"
+
+msgctxt "#15037"
+msgid "Audio DSP settings - Pre-process"
+msgstr "Настройки ЦОС аудио - Предварительная обработка"
+
+msgctxt "#15038"
+msgid "Audio DSP settings - Miscellaneous"
+msgstr "Настройки ЦОС аудио - Разное"
+
+msgctxt "#15039"
+msgid "Pre-processing setup..."
+msgstr "Предварительная обработка..."
+
+msgctxt "#15040"
+msgid "The settings dialogue can only be opened from the OSD menu during playback"
+msgstr "Настройки могут быть открыты только из экранного меню (OSD) во время воспроизведения"
+
+msgctxt "#15041"
+msgid "Unknown mode name"
+msgstr "Неизвестное имя режима"
+
+msgctxt "#15042"
+msgid "Content:"
+msgstr "Содержимое:"
+
+msgctxt "#15047"
+msgid "Audio DSP settings"
+msgstr "Настройки ЦОС аудио"
+
+msgctxt "#15048"
+msgid "No audio DSP add-on enabled"
+msgstr "Нет активных дополнений ЦОС аудио"
+
+msgctxt "#15049"
+msgid "The audio DSP manager has been enabled without any enabled DSP add-on. Enable at least one add-on in order to use the DSP functionality."
+msgstr "Менеджер ЦОС аудио включен без активных дополнений ЦОС аудио. Включите по крайней мере одно дополнение для использования функций ЦОС аудио."
+
+msgctxt "#15050"
+msgid "Available modes"
+msgstr "Доступные режимы"
+
+msgctxt "#15051"
+msgid "Active modes"
+msgstr "Активные режимы"
+
 msgctxt "#15052"
 msgid "Password"
 msgstr "Пароль"
+
+msgctxt "#15057"
+msgid "Input resampling"
+msgstr "Входная передискретизация"
+
+msgctxt "#15058"
+msgid "Pre-processing"
+msgstr "Предварительная обработка"
+
+msgctxt "#15059"
+msgid "Master processing"
+msgstr "Основная обработка"
+
+msgctxt "#15060"
+msgid "Post-processing"
+msgstr "Постобработка"
+
+msgctxt "#15061"
+msgid "Output resampling"
+msgstr "Выходная передискретизация"
+
+msgctxt "#15062"
+msgid "Detailed description"
+msgstr "Подробные сведения"
+
+msgctxt "#15063"
+msgid "No description available"
+msgstr "Сведения не доступны"
+
+msgctxt "#15064"
+msgid "Apply changes directly"
+msgstr "Применить изменения непосредственно"
+
+msgctxt "#15066"
+msgid "Clear active modes"
+msgstr "Очистить активные режимы"
+
+msgctxt "#15067"
+msgid "Close"
+msgstr "Закрыть"
+
+msgctxt "#15078"
+msgid "Mode settings"
+msgstr "Настройки режима"
+
+msgctxt "#15079"
+msgid "You have changed some audio DSP settings.\nWould you like to keep the new settings?"
+msgstr "Вы изменили некоторые настройки аудио WCG.\nСохранить новые настройки?"
+
+msgctxt "#15080"
+msgid "Change resampler"
+msgstr "Изменить передискретизацию"
+
+msgctxt "#15081"
+msgid "Process chain (with CPU usage)"
+msgstr "Обработка (с использованием ЦПУ)"
+
+msgctxt "#15082"
+msgid "Resampling to %i Hz"
+msgstr "Передискретизация к %i Гц"
+
+msgctxt "#15083"
+msgid "Final resampling to %i Hz"
+msgstr "Финальная передискретизация к %i Гц"
+
+msgctxt "#15084"
+msgid "Master process"
+msgstr "Основная обработка"
+
+msgctxt "#15085"
+msgid "Pre-process"
+msgstr "Предварительная обработка"
+
+msgctxt "#15086"
+msgid "Post-process"
+msgstr "Постобработка"
+
+msgctxt "#15087"
+msgid "Input"
+msgstr "Ввод"
+
+msgctxt "#15088"
+msgid "Output"
+msgstr "Вывод"
+
+msgctxt "#15089"
+msgid "Input signal"
+msgstr "Входной сигнал"
+
+msgctxt "#15090"
+msgid "Output signal"
+msgstr "Выходной сигнал"
+
+msgctxt "#15091"
+msgid "Positions"
+msgstr "Положения"
+
+msgctxt "#15092"
+msgid "CPU usage for DSP"
+msgstr "Использование ЦПУ для ЦОС"
 
 msgctxt "#15100"
 msgid "Library"
@@ -5776,6 +6212,26 @@ msgstr "Тема"
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "Стандартная тема"
+
+msgctxt "#15113"
+msgid "Here you can configure pre-processing modes. This processing stage only change the input data stream."
+msgstr "Здесь вы можете настроить режимы предварительной обработки. Этот этап обработки изменяет только входной поток данных."
+
+msgctxt "#15114"
+msgid "Here you can configure an input resampling process. Notice: Only one active mode is allowed!"
+msgstr "Здесь вы можете настроить процесс входной передискретизации. Примечание: Допускается только один активный режим!"
+
+msgctxt "#15115"
+msgid "Here you can configure master processing modes. Notice: On playback only one active mode can be selected!"
+msgstr "Здесь вы можете настроить режимы основной обработки. Примечание: Только один активный режим может быть выбран при воспроизведении!"
+
+msgctxt "#15116"
+msgid "Here you can configure a output resampling process. Notice: Only one active mode is allowed!"
+msgstr "Здесь вы можете настроить процесс выходной передискретизации. Примечание: Допускается только один активный режим!"
+
+msgctxt "#15117"
+msgid "Here you can configure post-processing modes. This processing stage can be used for equalizing and volume correction..."
+msgstr "Здесь вы можете настроить режимы пост-обработки. Этот этап обработки может быть использован для выравнивания и коррекции громкости..."
 
 msgctxt "#15200"
 msgid "Last.fm"
@@ -6362,8 +6818,8 @@ msgid "Are you sure you want to hide this channel?"
 msgstr "Скрыть этот канал?"
 
 msgctxt "#19040"
-msgid "Timer"
-msgstr "Таймер"
+msgid "Timers"
+msgstr "Таймеры"
 
 msgctxt "#19041"
 msgid "Are you sure you want to rename this recording?"
@@ -6430,8 +6886,8 @@ msgid "New timer"
 msgstr "Новый таймер"
 
 msgctxt "#19057"
-msgid "Edit timer"
-msgstr "Изменить таймер"
+msgid "Timer disabled"
+msgstr "Таймер выключен"
 
 msgctxt "#19058"
 msgid "Timer enabled"
@@ -6498,44 +6954,44 @@ msgid "Delay channel switch"
 msgstr "Задержка переключения каналов"
 
 msgctxt "#19074"
-msgid "Active:"
-msgstr "Включен:"
+msgid "Active"
+msgstr "Активный"
 
 msgctxt "#19075"
-msgid "Name:"
-msgstr "Имя:"
+msgid "Name"
+msgstr "Название"
 
 msgctxt "#19076"
-msgid "Folder:"
-msgstr "Папка:"
+msgid "Folder"
+msgstr "Папка"
 
 msgctxt "#19078"
-msgid "Channel:"
-msgstr "Канал:"
+msgid "Channel"
+msgstr "Канал"
 
 msgctxt "#19079"
-msgid "Day:"
-msgstr "День:"
+msgid "Days of week"
+msgstr "Дни недели"
 
 msgctxt "#19080"
-msgid "Begin:"
-msgstr "Начало:"
+msgid "Begin"
+msgstr "Начало"
 
 msgctxt "#19081"
-msgid "End:"
-msgstr "Конец:"
+msgid "End"
+msgstr "Окончание"
 
 msgctxt "#19082"
-msgid "Priority:"
-msgstr "Приоритет:"
+msgid "Priority"
+msgstr "Приоритет"
 
 msgctxt "#19083"
-msgid "Lifetime (days):"
-msgstr "Срок хранения (дней):"
+msgid "Lifetime"
+msgstr "Продолжительность"
 
 msgctxt "#19084"
-msgid "First day:"
-msgstr "Первый день:"
+msgid "First day"
+msgstr "Первый день"
 
 msgctxt "#19085"
 msgid "Unknown channel %u"
@@ -6837,6 +7293,10 @@ msgctxt "#19160"
 msgid "to"
 msgstr "по"
 
+msgctxt "#19161"
+msgid "any time"
+msgstr "любое время"
+
 msgctxt "#19162"
 msgid "Recording active"
 msgstr "Запись активна"
@@ -6890,12 +7350,12 @@ msgid "Default recording lifetime"
 msgstr "Срок хранения по умолчанию"
 
 msgctxt "#19175"
-msgid "Start padding time"
-msgstr "Интервал в начале записи"
+msgid "Default start padding time"
+msgstr "Отступ по времени в начале по-умолчанию"
 
 msgctxt "#19176"
-msgid "End padding time"
-msgstr "Интервал в конце записи"
+msgid "Default end padding time"
+msgstr "Отступ по времени в конце по-умолчанию"
 
 msgctxt "#19177"
 msgid "Playback"
@@ -6936,6 +7396,10 @@ msgstr "Очистить данные"
 msgctxt "#19186"
 msgid "All your TV related data (channels, groups, guide) will be cleared. Are you sure?"
 msgstr "Все данные ТВ (каналы, группы, программа) будут очищены. Продолжить?"
+
+msgctxt "#19187"
+msgid "Clearing all related data."
+msgstr "Удаление всех связанных данных."
 
 msgctxt "#19188"
 msgid "All your guide data will be cleared. Are you sure?"
@@ -7197,14 +7661,6 @@ msgctxt "#19254"
 msgid "Guide update failed for channel"
 msgstr "Не удалось обновить телепрограмму для канала"
 
-msgctxt "#19255"
-msgid "Start recording"
-msgstr "Начать запись"
-
-msgctxt "#19256"
-msgid "Stop recording"
-msgstr "Остановить запись"
-
 msgctxt "#19257"
 msgid "Lock channel"
 msgstr "Заблокировать канал"
@@ -7268,6 +7724,14 @@ msgstr "Дополнения PVR не найдены"
 msgctxt "#19272"
 msgid "You need a tuner, backend software, and an add-on for the backend to be able to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
 msgstr "Для использования функций PVR необходим тюнер, серверное ПО и соответствующее дополнение. Посетите http://kodi.wiki/view/PVR для получения дополнительной информации."
+
+msgctxt "#19273"
+msgid "No audio DSP add-ons could be found"
+msgstr "Дополнения ЦОС аудио не найдены"
+
+msgctxt "#19274"
+msgid "You need an add-on installed to be able to use audio digital signal processing (DSP)."
+msgstr "Необходимо установленное дополнение для использования цифровой обработки аудиосигнала (ЦОС)."
 
 msgctxt "#19275"
 msgid "Conflict warning"
@@ -7955,7 +8419,7 @@ msgstr "Копировать стандартные"
 
 msgctxt "#20065"
 msgid "Profile picture"
-msgstr "Картинка профиля"
+msgstr "ИЗображение профиля"
 
 msgctxt "#20066"
 msgid "Lock preferences"
@@ -8405,10 +8869,6 @@ msgctxt "#20183"
 msgid "Reload skin"
 msgstr "Обновить обложку"
 
-msgctxt "#20184"
-msgid "Rotate pictures using EXIF information"
-msgstr "Поворачивать фото по информации из EXIF"
-
 msgctxt "#20185"
 msgid "Use poster view styles for TV shows"
 msgstr "Использовать представления с постерами для сериалов"
@@ -8491,7 +8951,7 @@ msgstr "Видео Android"
 
 msgctxt "#20242"
 msgid "Android pictures"
-msgstr "Картинки Android"
+msgstr "Изображения Android"
 
 msgctxt "#20243"
 msgid "Android photos"
@@ -8791,7 +9251,7 @@ msgstr "Выбрать эскиз для сезона"
 
 msgctxt "#20372"
 msgid "Season image"
-msgstr "Картинка сезона"
+msgstr "Миниатюра для сезона"
 
 msgctxt "#20373"
 msgid "Season"
@@ -9069,6 +9529,10 @@ msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
 msgstr "Обновить сведения для всех объектов по этому пути?"
 
+msgctxt "#20444"
+msgid "Add to library"
+msgstr "Добавиьт в медиатеку"
+
 msgctxt "#20445"
 msgid "Fanart"
 msgstr "Фанарт"
@@ -9076,6 +9540,10 @@ msgstr "Фанарт"
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr "Найдены локальные сведения. Игнорировать и обновить из Интернет?"
+
+msgctxt "#20447"
+msgid "Do you want to add the media from this source to your library?"
+msgstr "Добавить контент из этого источника в медиатеку?"
 
 msgctxt "#20448"
 msgid "Couldn't download information"
@@ -9165,6 +9633,14 @@ msgctxt "#20469"
 msgid "Keep current set (%s)"
 msgstr "Оставить текущий цикл (%s)"
 
+msgctxt "#20470"
+msgid "Use movie sets for single movies"
+msgstr "Использовать киноциклы для одного фильма."
+
+msgctxt "#20471"
+msgid "Show empty TV shows"
+msgstr "Отображать пустые сериалы"
+
 msgctxt "#21330"
 msgid "Show hidden files and directories"
 msgstr "Показывать скрытые файлы и папки"
@@ -9192,6 +9668,30 @@ msgstr "Обзор файлов"
 msgctxt "#21336"
 msgid "Connecting to: %s"
 msgstr "Подключение к: %s"
+
+msgctxt "#21337"
+msgid "Never"
+msgstr "Никогда"
+
+msgctxt "#21338"
+msgid "Select version"
+msgstr "Выберите версию"
+
+msgctxt "#21339"
+msgid "Version %s"
+msgstr "Версия %s"
+
+msgctxt "#21340"
+msgid "Auto-update"
+msgstr "Автообновление"
+
+msgctxt "#21341"
+msgid "No updates available"
+msgstr "Нет доступных обновлений"
+
+msgctxt "#21342"
+msgid "There are currently no updates available for this add-on."
+msgstr "Нет доступных обновлений для этого дополнения"
 
 msgctxt "#21359"
 msgid "Add media share..."
@@ -9669,6 +10169,18 @@ msgctxt "#21477"
 msgid "Just \"Specials\""
 msgstr "Только \"Дополнения\""
 
+msgctxt "#21478"
+msgid "Open"
+msgstr "Открыть"
+
+msgctxt "#21479"
+msgid "Run"
+msgstr "Запустить"
+
+msgctxt "#21480"
+msgid "Use"
+msgstr "Использовать"
+
 msgctxt "#21602"
 msgid "(External)"
 msgstr "(Внешние)"
@@ -9804,6 +10316,10 @@ msgstr "Высота GPS"
 msgctxt "#21843"
 msgid "Orientation"
 msgstr "Ориентация"
+
+msgctxt "#21844"
+msgid "XP comment"
+msgstr "Комментарий XP"
 
 msgctxt "#21857"
 msgid "Sub-location"
@@ -10069,10 +10585,6 @@ msgctxt "#22022"
 msgid "Show video files in listings"
 msgstr "Показывать видеофайлы в списках"
 
-msgctxt "#22023"
-msgid "DirectX vendor:"
-msgstr "Производитель DirectX:"
-
 msgctxt "#22024"
 msgid "Direct3D version:"
 msgstr "Версия Direct3D:"
@@ -10092,46 +10604,6 @@ msgstr "Цвета"
 msgctxt "#22033"
 msgid "Charset"
 msgstr "Кодировка"
-
-msgctxt "#22034"
-msgid "Export karaoke titles as HTML"
-msgstr "Экспорт в формате HTML"
-
-msgctxt "#22035"
-msgid "Export karaoke titles as CSV"
-msgstr "Экспорт в формате CSV"
-
-msgctxt "#22036"
-msgid "Import karaoke titles..."
-msgstr "Импорт текста караоке…"
-
-msgctxt "#22037"
-msgid "Show song selector automatically"
-msgstr "Показывать выбор песни автоматически"
-
-msgctxt "#22038"
-msgid "Export karaoke titles..."
-msgstr "Экспорт текста караоке…"
-
-msgctxt "#22039"
-msgid "Enter song number"
-msgstr "Введите номер песни"
-
-msgctxt "#22040"
-msgid "white / green"
-msgstr "белый / зеленый"
-
-msgctxt "#22041"
-msgid "white / red"
-msgstr "белый / красный"
-
-msgctxt "#22042"
-msgid "white / blue"
-msgstr "белый / синий"
-
-msgctxt "#22043"
-msgid "black / white"
-msgstr "черный / белый"
 
 msgctxt "#22079"
 msgid "Default select action"
@@ -10290,8 +10762,8 @@ msgid "Add-on disabled"
 msgstr "Дополнение отключено"
 
 msgctxt "#24025"
-msgid "Context items"
-msgstr "Элементы контекстного меню"
+msgid "Context menus"
+msgstr "Контекстные меню"
 
 msgctxt "#24026"
 msgid "Languages"
@@ -10328,6 +10800,10 @@ msgstr "Установить из репозитория"
 msgctxt "#24034"
 msgid "Check for updates"
 msgstr "Проверить обновления"
+
+msgctxt "#24035"
+msgid "Image collections"
+msgstr "Коллекция изображений"
 
 msgctxt "#24036"
 msgid "Changelog"
@@ -10366,8 +10842,8 @@ msgid "Dependencies not met. Please contact add-on author."
 msgstr "Зависимости не соблюдены. Свяжитесь с разработчиком дополнения."
 
 msgctxt "#24045"
-msgid "Add-on does not have the correct structure"
-msgstr "Неправильная структура дополнения"
+msgid "Failed to install Add-on from zip file"
+msgstr "Не удалось установить дополнение из zip-файла."
 
 msgctxt "#24046"
 msgid "%s is used by the following installed add-on(s)"
@@ -10376,10 +10852,6 @@ msgstr "%s используется установленными дополне�
 msgctxt "#24047"
 msgid "This add-on can't be uninstalled"
 msgstr "Невозможно удалить дополнение"
-
-msgctxt "#24048"
-msgid "Rollback"
-msgstr "Вернуть"
 
 msgctxt "#24049"
 msgid "Incompatible"
@@ -10430,8 +10902,8 @@ msgid "Would you like to disable this add-on?"
 msgstr "Отключить это дополнение?"
 
 msgctxt "#24061"
-msgid "Add-on update available!"
-msgstr "Доступны обновления дополнений."
+msgid "Add-on updates available"
+msgstr "Доступны обновления дополнений"
 
 msgctxt "#24062"
 msgid "Enabled add-ons"
@@ -10537,6 +11009,10 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "Все репозитории"
 
+msgctxt "#24088"
+msgid "The DSP add-on is currently in use and can't be modified."
+msgstr "Дополнение ЦОС используется и не может быть изменено."
+
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "Дополнение перезапускается"
@@ -10557,13 +11033,9 @@ msgctxt "#24093"
 msgid "Checking %s..."
 msgstr "Проверка %s..."
 
-msgctxt "#24094"
-msgid "(current)"
-msgstr "(текущ.)"
-
 msgctxt "#24095"
-msgid "(blacklisted)"
-msgstr "(заблокирован.)"
+msgid "Local package cache"
+msgstr "Локальный кэш пакетов"
 
 msgctxt "#24096"
 msgid "Add-on is incompatible or has been marked broken in repository."
@@ -10721,6 +11193,62 @@ msgctxt "#24134"
 msgid "We were unable to load your configured language. Please check your language settings."
 msgstr "Мы не смогли загрузить языковой пакет из настроек. Пожалуйста, проверьте настройки вашего языка."
 
+msgctxt "#24135"
+msgid "Audio DSP"
+msgstr "ЦОС аудио"
+
+msgctxt "#24136"
+msgid "Audio DSP..."
+msgstr "ЦОС аудио..."
+
+msgctxt "#24137"
+msgid "Not allowed"
+msgstr "Не допускается"
+
+msgctxt "#24138"
+msgid "DSP add-on is currently in use and can't be removed."
+msgstr "Дополнение ЦОС используется и не может быть удалено."
+
+msgctxt "#24139"
+msgid "View Add-on"
+msgstr "Перейти к дополнению"
+
+msgctxt "#24140"
+msgid "View"
+msgstr "Перейти"
+
+msgctxt "#24141"
+msgid "Add-on disabled"
+msgstr "Дополнение отключено"
+
+msgctxt "#24142"
+msgid "The dependency on %s version %s could not be satisfied."
+msgstr "Требуемое дополнение %s версии %s не найдено."
+
+msgctxt "#24143"
+msgid "Installing the Add-on from zip file located at %s failed due to an invalid structure."
+msgstr "Не удалось установить дополнение из zip-файла %s из-за неверной структуры."
+
+msgctxt "#24144"
+msgid "Add-on uninstalled"
+msgstr "Дополнение удалено."
+
+msgctxt "#24145"
+msgid "Video library scanner"
+msgstr "Сканер видеотеки."
+
+msgctxt "#24146"
+msgid "Music library scanner"
+msgstr "Сканер музыкальной медиатеки"
+
+msgctxt "#24147"
+msgid "Failed to scan %s: %s"
+msgstr "Ошибка сканирования %s: %s"
+
+msgctxt "#24991"
+msgid "Could not connect to repository."
+msgstr "Не удалось подключиться  к репозиторию."
+
 msgctxt "#24992"
 msgid "System"
 msgstr "Система"
@@ -10740,6 +11268,10 @@ msgstr "Потерянные зависимости"
 msgctxt "#24996"
 msgid "Dependencies"
 msgstr "Зависимости"
+
+msgctxt "#24997"
+msgid "Look and feel"
+msgstr "Внешний вид"
 
 msgctxt "#24998"
 msgid "My add-ons"
@@ -10793,10 +11325,6 @@ msgctxt "#25010"
 msgid "Chapter %u"
 msgstr "Глава %u"
 
-msgctxt "#29800"
-msgid "Library mode"
-msgstr "Режим медиатеки"
-
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "Клавиатура QWERTY"
@@ -10804,6 +11332,326 @@ msgstr "Клавиатура QWERTY"
 msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Используется прямой вывод звука"
+
+msgctxt "#29900"
+msgid "Radiotext Plus info"
+msgstr "Информация Радиотекст Плюс"
+
+msgctxt "#29901"
+msgid "Band"
+msgstr "Группа"
+
+msgctxt "#29902"
+msgid "Style"
+msgstr "Стиль"
+
+msgctxt "#29903"
+msgid "Composer"
+msgstr "Композитор"
+
+msgctxt "#29904"
+msgid "Artist"
+msgstr "Исполнитель"
+
+msgctxt "#29905"
+msgid "Conductor"
+msgstr "Дерижер"
+
+msgctxt "#29906"
+msgid "Moderator"
+msgstr "Ведущий"
+
+msgctxt "#29907"
+msgid "Editorial Staff"
+msgstr "Сотрудники редакции"
+
+msgctxt "#29908"
+msgid "Program"
+msgstr "Программа"
+
+msgctxt "#29909"
+msgid "Studio"
+msgstr "Студия"
+
+msgctxt "#29910"
+msgid "Phone"
+msgstr "Телефон"
+
+msgctxt "#29911"
+msgid "EMail"
+msgstr "E-Mail"
+
+msgctxt "#29912"
+msgid "SMS"
+msgstr "СМС"
+
+msgctxt "#29913"
+msgid "Hotline"
+msgstr "Горячая линия"
+
+msgctxt "#29914"
+msgid "Website"
+msgstr "Сайт"
+
+msgctxt "#29915"
+msgid "Info"
+msgstr "Информация"
+
+msgctxt "#29916"
+msgid "News"
+msgstr "Новости"
+
+msgctxt "#29917"
+msgid "News local"
+msgstr "Местные новости"
+
+msgctxt "#29918"
+msgid "Sport"
+msgstr "Спорт"
+
+msgctxt "#29919"
+msgid "Lottery"
+msgstr "Лотерея"
+
+msgctxt "#29920"
+msgid "Stock"
+msgstr "Акции"
+
+msgctxt "#29921"
+msgid "Other"
+msgstr "Другое"
+
+msgctxt "#29922"
+msgid "Horoscope"
+msgstr "Гороскоп"
+
+msgctxt "#29926"
+msgid "Adult hits"
+msgstr "Хиты для взрослых"
+
+msgctxt "#29927"
+msgid "Spanish talk"
+msgstr "Испанский разговорный"
+
+msgctxt "#29928"
+msgid "Spanish music"
+msgstr "Испанская музыка"
+
+msgctxt "#29929"
+msgid "Hip hop"
+msgstr "Хип-хоп"
+
+msgctxt "#29930"
+msgid "Radio Traffic advisory message!"
+msgstr "Информационное сообщение о трафике!"
+
+msgctxt "#29931"
+msgid "Radio message"
+msgstr "Радио сообщение"
+
+msgctxt "#29932"
+msgid "Language"
+msgstr "Язык"
+
+msgctxt "#29933"
+msgid "College"
+msgstr "Студенческие"
+
+msgctxt "#29934"
+msgid "Personality"
+msgstr "Персоналии"
+
+msgctxt "#29935"
+msgid "Public"
+msgstr "Общественные"
+
+msgctxt "#29936"
+msgid "Soft music"
+msgstr "Легкая музыка"
+
+msgctxt "#29937"
+msgid "Adult hits"
+msgstr "Хиты для взрослых"
+
+msgctxt "#29938"
+msgid "Soft rock"
+msgstr "Легкий рок"
+
+msgctxt "#29939"
+msgid "Talk"
+msgstr "Разговорные"
+
+msgctxt "#29940"
+msgid "No programme type"
+msgstr "Без типа"
+
+msgctxt "#29941"
+msgid "News"
+msgstr "Новости"
+
+msgctxt "#29942"
+msgid "Current affairs"
+msgstr "События"
+
+msgctxt "#29943"
+msgid "Information"
+msgstr "Сведения"
+
+msgctxt "#29944"
+msgid "Sport"
+msgstr "Спорт"
+
+msgctxt "#29945"
+msgid "Education"
+msgstr "Обучение"
+
+msgctxt "#29946"
+msgid "Drama"
+msgstr "Драма"
+
+msgctxt "#29947"
+msgid "Culture"
+msgstr "Культура"
+
+msgctxt "#29948"
+msgid "Science"
+msgstr "Наука"
+
+msgctxt "#29949"
+msgid "Varied"
+msgstr "Разное"
+
+msgctxt "#29950"
+msgid "Pop music"
+msgstr "Популярная музыка"
+
+msgctxt "#29951"
+msgid "Rock music"
+msgstr "Рок музыка"
+
+msgctxt "#29952"
+msgid "Easy listening music"
+msgstr "Легкая музыка"
+
+msgctxt "#29953"
+msgid "Light classical"
+msgstr "Легкая класика"
+
+msgctxt "#29954"
+msgid "Serious classical"
+msgstr "Серьезная класика"
+
+msgctxt "#29955"
+msgid "Other music"
+msgstr "Другая музыка"
+
+msgctxt "#29956"
+msgid "Weather"
+msgstr "Погода"
+
+msgctxt "#29957"
+msgid "Finance"
+msgstr "Финансы"
+
+msgctxt "#29958"
+msgid "Children's Programmes"
+msgstr "Программы для детей"
+
+msgctxt "#29959"
+msgid "Social Affairs"
+msgstr "Социальные вопросы"
+
+msgctxt "#29960"
+msgid "Religion"
+msgstr "Религия"
+
+msgctxt "#29961"
+msgid "Phone-in"
+msgstr "Телефонные звонки"
+
+msgctxt "#29962"
+msgid "Travel"
+msgstr "Путешествия"
+
+msgctxt "#29963"
+msgid "Leisure"
+msgstr "Досуг"
+
+msgctxt "#29964"
+msgid "Jazz Music"
+msgstr "Джазовая музыка"
+
+msgctxt "#29965"
+msgid "Country Music"
+msgstr "Кантри"
+
+msgctxt "#29966"
+msgid "National Music"
+msgstr "Национальная музыка"
+
+msgctxt "#29967"
+msgid "Oldies Music"
+msgstr "Старое доброе"
+
+msgctxt "#29968"
+msgid "Folk Music"
+msgstr "Народная музыка"
+
+msgctxt "#29969"
+msgid "Documentary"
+msgstr "Документальный"
+
+msgctxt "#29970"
+msgid "Alarm Test"
+msgstr "Тест тревоги"
+
+msgctxt "#29971"
+msgid "Alarm"
+msgstr "Тревога"
+
+msgctxt "#29977"
+msgid "Classic rock music"
+msgstr "Классический рок"
+
+msgctxt "#29978"
+msgid "Classical"
+msgstr "Класическая"
+
+msgctxt "#29979"
+msgid "Nostalgia"
+msgstr "Ностальгия"
+
+msgctxt "#29980"
+msgid "Enable RDS for radio channels"
+msgstr "Включить RDS для радио каналов"
+
+msgctxt "#29981"
+msgid "RDS data can be used if present"
+msgstr "Данные RDS могут быть использованы если присутствуют"
+
+msgctxt "#29982"
+msgid "Message traffic advisory"
+msgstr "Информационное сообщение о трафике"
+
+msgctxt "#29983"
+msgid "RDS inform you about traffic advisory messages"
+msgstr "RDS будет информировать вас об информационных сообщениях о трафике"
+
+msgctxt "#29984"
+msgid "Increase volume on traffic advisory"
+msgstr "Увеличивать громкость для сообщений о трафике"
+
+msgctxt "#29985"
+msgid "If traffic advisory is send from RDS, volume is increased"
+msgstr "Громкость будет увеличена если поступило сообщение о трафике"
+
+msgctxt "#29986"
+msgid "Publicate traffic messages"
+msgstr "Публиковать сообщения о трафике"
+
+msgctxt "#29987"
+msgid "Send present traffic messages around and can be handled from add-ons (nothing inside Kodi)"
+msgstr "Отправить нынешние сообщения о трафике вокруг и могут быть обработаны дополнениями (ничего внутри Kodi)"
 
 msgctxt "#33001"
 msgid "Trailer quality"
@@ -11076,10 +11924,6 @@ msgstr "Нравится"
 msgctxt "#33080"
 msgid "Hate"
 msgstr "Не нравится"
-
-msgctxt "#33081"
-msgid "This file is stacked, select the part you want to play from."
-msgstr "Составной файл. Выберите часть для воспроизведения."
 
 msgctxt "#33082"
 msgid "Path to script"
@@ -11482,8 +12326,8 @@ msgid "The port is busy. Only one program can access the CEC adapter"
 msgstr "Порт занят. Только одна программа может использовать адаптер CEC."
 
 msgctxt "#36033"
-msgid "Pause playback when switching to another source"
-msgstr "Приостанавливать воспроизведение при переключении источников"
+msgid "Action when switching to another source"
+msgstr "Действие при переключении источников"
 
 msgctxt "#36035"
 msgid "Always"
@@ -11516,6 +12360,14 @@ msgstr "* Папка объекта"
 msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
 msgstr "Использовать ограниченный цветовой диапазон (16—235)"
+
+msgctxt "#36044"
+msgid "Stop Playback"
+msgstr "Остановить воспроизведение"
+
+msgctxt "#36045"
+msgid "Pause Playback"
+msgstr "Приостановить воспроизведение"
 
 msgctxt "#36101"
 msgid "Change the look and feel of the user interface."
@@ -11694,8 +12546,8 @@ msgid "Select in which cases you want to hide the season nodes of TV shows. If h
 msgstr "Выберите, в каких случаях вы хотите скрыть сезоны сериала. Если скрыто, то при выборе сериала будет выполнен переход к обзору серий."
 
 msgctxt "#36145"
-msgid "Group movies into \"Movie sets\" when browsing the movie library."
-msgstr "Объединять фильмы в киноциклы при просмотре фильмотеки."
+msgid "When enabled, movies belonging to a \"Movie set\" are grouped together under one entry for the set in the movie library, this entry can then be opened to display the individual movies. When disabled, each movie will have it's own entry in the movie library even if it belongs to a set."
+msgstr "Когда включено, фильмы принадлежащие к \"Киноциклу\" объединяются в одну запись в фильмотеке, эта запись может быть выбрана для отображения отдельных фильмов из цикла. При отключении, каждый фильм будет иметь свою собственную запись в фильмотеке, даже если он принадлежит к циклу."
 
 msgctxt "#36146"
 msgid "Check for new media files on startup."
@@ -11741,6 +12593,10 @@ msgctxt "#36156"
 msgid "Enable VAAPI hardware decoding of video files, mainly used for Intel graphics and in some circumstances AMD graphics."
 msgstr "Включить аппаратное декодирование видео при помощи VAAPI, которое, в основном, используется в картах Intel и в некоторых картах AMD."
 
+msgctxt "#36157"
+msgid "When enabled, a \"Movie set\" entry is used even if the movie library contains only a single movie from that set. When disabled, a \"Movie set\" entry is used only if the movie library contains more than one movie from that set."
+msgstr "Когда включено, \"Киноцикл\" используется, даже если фильмотека содержит только один фильм из этого цикла. При отключении, запись \"Киноцикл\" используется только если фильмотека содержит более одного фильма из цикла."
+
 msgctxt "#36158"
 msgid "Enable DXVA2 hardware decoding of video files."
 msgstr "Включить аппаратное декодирование видео при помощи DXVA2."
@@ -11760,6 +12616,10 @@ msgstr "Включить аппаратное декодирование вид�
 msgctxt "#36162"
 msgid "Enable VideoToolbox hardware decoding of video files."
 msgstr "Включить аппаратное декодирование видео при помощи VideoToolbox."
+
+msgctxt "#36163"
+msgid "Show TV shows with no episodes when browsing the video library."
+msgstr "Показывать сериалы без серий при просмотре видеотеки."
 
 msgctxt "#36164"
 msgid "Allow the refresh rate of the display to be changed so that it best matches the video frame rate. This may yield smoother video playback."
@@ -12007,7 +12867,7 @@ msgstr "Настройки просмотра и переключения ТВ-�
 
 msgctxt "#36227"
 msgid "Display stream of selected channel in a small box instead of fullscreen."
-msgstr "Показать картинку выбранного канала в маленьком окне вместо полного экрана."
+msgstr "Отображать выбранный канал в небольшом окне вместо полного экрана."
 
 msgctxt "#36228"
 msgid "Continue with the last viewed channel on startup."
@@ -12022,8 +12882,8 @@ msgid "Time to wait for a channel to be received after a channel change. Useful 
 msgstr "Время ожидания смены канала при отсутствии сигнала. Полезно при просмотре эфирных каналов с нестабильным приемом."
 
 msgctxt "#36231"
-msgid "Pressing a number button in full screen mode will automatically switch to the channel number that was entered after 1 second."
-msgstr "Автоматическое переключение на выбранный канал через 1 с при нажатии кнопки с цифрой в полноэкранном режиме."
+msgid "When flipping through channels using channel up/down buttons or when pressing a number button in full screen mode, channel switches must be confirmed using the OK button."
+msgstr "При переключении каналов в полноэкранном режиме с помощью клавиш вверх/вниз или с использованием цифровых клавиш, переключение канала должно быть подтверждено с помощью кнопки OK."
 
 msgctxt "#36232"
 msgid "When pressing channel up or down, the actual channel switch is delayed, allowing the user to flip to a channel number without waiting for each channel switch."
@@ -12261,42 +13121,6 @@ msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "Автоматически извлекать диск после оцифровки."
 
-msgctxt "#36292"
-msgid "This category contains the settings for how karaoke is handled."
-msgstr "Настройки воспроизведения караоке."
-
-msgctxt "#36293"
-msgid "When playing any music file, look for a matching .cdg file and display its graphics."
-msgstr "Во время проигрывания музыкальных композиций искать соответствующий файл .cdg и показывать изображения."
-
-msgctxt "#36294"
-msgid "Show song selection dialogue once the last song in the queue has been played."
-msgstr "Отображать диалог выбора композиции после окончания последней композиции в плейлисте."
-
-msgctxt "#36295"
-msgid "Select the font type used during karaoke."
-msgstr "Выбор шрифта караоке."
-
-msgctxt "#36296"
-msgid "Select the size of the font used during karaoke."
-msgstr "Выбор размера шрифта караоке."
-
-msgctxt "#36297"
-msgid "Select the font colour used during karaoke."
-msgstr "Выберите цвет шрифта караоке."
-
-msgctxt "#36298"
-msgid "Select the character set used during karaoke."
-msgstr "Выбор кодировки символов караоке."
-
-msgctxt "#36299"
-msgid "Export the karaoke numbered songs to HTML or CSV files."
-msgstr "Экспортировать пронумерованный список песен караоке в файл HTML или CSV."
-
-msgctxt "#36300"
-msgid "Import the karaoke numbered songs from HTML or CSV files."
-msgstr "Импортировать пронумерованный список песен караоке из файла HTML или CSV."
-
 msgctxt "#36301"
 msgid "No info available yet."
 msgstr "Информация пока недоступна."
@@ -12317,17 +13141,9 @@ msgctxt "#36305"
 msgid "This category contains the settings for how picture file lists are handled."
 msgstr "Настройки отображения списков изображений."
 
-msgctxt "#36306"
-msgid "If EXIF information exists (date, time, camera used, etc.), it will be displayed."
-msgstr "Показывать данные EXIF (дата, время, модель фотоаппарата и т. п.) при их наличии."
-
 msgctxt "#36307"
 msgid "Automatically generate picture thumbnails when entering picture folder."
 msgstr "Автоматически создавать эскизы при открытии папки с изображениями."
-
-msgctxt "#36308"
-msgid "Pictures will automatically rotate according to information in the EXIF tag, if found."
-msgstr "Автоматически поворачивать фото, если необходимые данные присутствуют в EXIF."
 
 msgctxt "#36309"
 msgid "Show videos in picture file lists."
@@ -12518,8 +13334,8 @@ msgid "In a multi-screen configuration, the screens not displaying this applicat
 msgstr "В системах с несколькими дисплеями затемнять все дисплеи, кроме дисплея с приложением."
 
 msgctxt "#36356"
-msgid "Eliminate vertical tearing."
-msgstr "Устранять вертикальные разрывы кадров."
+msgid "Eliminates tearing."
+msgstr "Устраняет разрывы."
 
 msgctxt "#36357"
 msgid "Calibrate the user interface by adjusting the overscan. Use this tool if the image being displayed is too large or small for your display."
@@ -12527,7 +13343,7 @@ msgstr "Калибровка интерфейса пользователя пу�
 
 msgctxt "#36358"
 msgid "Test patterns for display hardware calibration."
-msgstr "Тестовые картинки для проверки аппаратной калибровки дисплея."
+msgstr "Тестовые шаблоны для проверки аппаратной калибровки дисплея."
 
 msgctxt "#36359"
 msgid "Use limited colour range (16-235) instead of full colour range (0-255). Limited range should be used if your display is a regular HDMI TV and doesn't have a PC or other mode to display full range colour, however if your display is a PC monitor then leave this disabled to get proper blacks."
@@ -12558,8 +13374,8 @@ msgid "Select this option if your receiver is capable of decoding Dolby Digital 
 msgstr "Включите эту настройку, если ваш ресивер поддерживает аудиопотоки в формате Dolby Digital (AC3)."
 
 msgctxt "#36366"
-msgid "Select this option if your receiver is capable of decoding DTS streams."
-msgstr "Включите эту настройку, если ваш ресивер поддерживает аудиопотоки в формате DTS."
+msgid "Select this option if your receiver is capable of decoding DTS streams. Note: Enabling this will disable \"Support 8 channel DTS-HD audio decoding\" option"
+msgstr "Включите эту настройку, если ваш ресивер поддерживает аудиопотоки в формате DTS. Примечание: включение этой опции отключает опцию \"Поддержка 8-канального декодирования DTS-HD\""
 
 msgctxt "#36367"
 msgid "Select the maximum number of audio channels / speakers available for decoded audio. If optical / coax digital outputs are used, this must be set to 2.0"
@@ -12574,8 +13390,8 @@ msgid "Select this option if your receiver is capable of decoding TrueHD streams
 msgstr "Включите эту настройку, если ваш ресивер поддерживает аудиопотоки в формате TrueHD."
 
 msgctxt "#36370"
-msgid "Select this option if your receiver is capable of decoding DTS-HD streams."
-msgstr "Включите эту настройку, если ваш ресивер поддерживает аудиопотоки в формате DTS-HD."
+msgid "Select this option if your receiver is capable of decoding DTS-HD streams. Note: Enabling this will disable \"Support 8 channel DTS-HD audio decoding\" option"
+msgstr "Включите эту настройку, если ваш ресивер поддерживает аудиопотоки в формате DTS-HD. Примечание: включение этой опции отключает опцию \"Поддержка 8-канального декодирования DTS-HD\""
 
 msgctxt "#36371"
 msgid "Select the device to be used for playback of audio that has been decoded such as mp3."
@@ -12658,8 +13474,8 @@ msgid "Define what action to perform when the shutdown function timer lapsed."
 msgstr "Выбрать действие, которое будет выполнено по истечении указанного периода отсутствия активности."
 
 msgctxt "#36391"
-msgid "This category contains the settings for enabling debug functions. You can also enable component-specific debug logging in order to help troubleshoot related issues in more detail."
-msgstr "Настройки отладки. Так же возможно включить журнал отладки дополнительных компонентов."
+msgid "This category contains the settings for enabling event and debug logging. You can also enable component-specific debug logging in order to help troubleshoot related issues in more detail."
+msgstr "Категория содержит настройки для включения журналирования событий и отладки. Вы также можете включить журнал отладки для конкретных компонентов для того, чтобы помочь устранить связанные с ними проблемы."
 
 msgctxt "#36392"
 msgid "Turn debug logging on or off. Useful for troubleshooting."
@@ -12785,6 +13601,10 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using Amlogic decoder."
 msgstr "Включение аппаратного декодирования видео файлов при помощи декодера Amlogic."
 
+msgctxt "#36423"
+msgid "Repeating schedules shall only record new episodes. Not supported by all add-ons and backends."
+msgstr "Повторяющиеся расписания будут записывать только новые эпизоды. Поддерживается не всеми дополнениями и подсистемами."
+
 msgctxt "#36424"
 msgid "Select what will happen when an item is selected in the guide: [Show context menu] Will trigger the context menu from where you can choose further actions; [Switch to channel] Will instantly tune to the related channel; [Show information] Will display a detailed information with plot and further options; [Record] Will create a recording timer for the selected item."
 msgstr "Действие при выборе элемента телепрограммы. [Показать контекстное меню]  вывод контекстного меню для выбора дальнейших действий; [Переключиться на канал]  мгновенное переключение на соответствующий канал; [Показать сведения]  подробные сведения о сюжете и другие параметры; [Запись]  создание таймера записи для выбранного элемента."
@@ -12813,6 +13633,10 @@ msgctxt "#36430"
 msgid "Configure how video processing will be accelerated. This includes things like decoding and scaling."
 msgstr "Настройки аппаратной обработки видео, включая декодирование и масштабирование."
 
+msgctxt "#36431"
+msgid "Shows all events in the event log for the current profile with options to only show specific levels."
+msgstr "Показывает все события в журнале событий для текущего профиля с возможностью выбора показывать только определенные уровни."
+
 msgctxt "#36432"
 msgid "Select virtual keyboard layouts."
 msgstr "Выбрать раскладки экранной клавиатуры."
@@ -12828,6 +13652,38 @@ msgstr "Включить аппаратное ускорение - MMAL"
 msgctxt "#36435"
 msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
 msgstr "Использовать DVDPlayer для декодирования видеофайлов с ускорением MMAL."
+
+msgctxt "#36436"
+msgid "Audio DSP manager..."
+msgstr "Менеджер ЦОС аудио..."
+
+msgctxt "#36437"
+msgid "Allows to configure available modes for different stages in audio processing and to arrange the steps within the processing chain of each selected mode."
+msgstr "Позволяет настроить доступные режимы для разных этапов обработки аудио и организовать шаги в технологической цепочке каждого выбранного режима."
+
+msgctxt "#36438"
+msgid "Enables digital signal processing (DSP) of audio channels specified by the speaker configuration."
+msgstr "Включает цифровую обработку сигнала (ЦОС) аудио каналов, определенной конфигурацией динамиков."
+
+msgctxt "#36439"
+msgid "All data (add-on settings and audio DSP manager settings) in the audio DSP database will be erased."
+msgstr "Все данные (настройки дополнения и настройки менеджера ЦОС) в базе данных ЦОС аудио будут удалены."
+
+msgctxt "#36440"
+msgid "Erasing all DSP add-on and audio DSP manager settings in the audio DSP database."
+msgstr "Удаление всех настроек дополнений ЦОС и менеджера ЦОС в базе данных ЦОС аудио."
+
+msgctxt "#36441"
+msgid "Enable audio DSP processing"
+msgstr "Включить обработку ЦОС аудио"
+
+msgctxt "#36460"
+msgid "Event logging allows to keep track of what has happened."
+msgstr "Журнал событий позволяет отслеживать произошедшие события."
+
+msgctxt "#36461"
+msgid "Notification event describe regular processes and actions performed by the system or the user."
+msgstr "Уведомление оповещает о процессах и действиях, выполняемых системой или пользователем."
 
 msgctxt "#36500"
 msgid "Stereoscopic 3D mode / Current"
@@ -12872,6 +13728,10 @@ msgstr "Без стереоскопии / 2D"
 msgctxt "#36510"
 msgid "Anaglyph yellow / blue"
 msgstr "Анаглиф желтый / голубой"
+
+msgctxt "#36511"
+msgid "Checkerboard"
+msgstr "Шахматный"
 
 msgctxt "#36520"
 msgid "Playback mode of stereoscopic 3D videos"
@@ -12978,8 +13838,16 @@ msgid "Limits resolution of GUI to save memory. Does not affect video playback. 
 msgstr "Ограничение разрешения графического интерфейса с целью экономии памяти. Не влияет на воспроизведение видео. Требуется перезапуск."
 
 msgctxt "#36549"
-msgid "Use iOS8 compatible AirPlay support. If you have trouble with older iOS devices detecting this application as a valid target try switching this off. This option requires a restart to take effect!"
-msgstr "Использование режима совместимости iOS8 для AirPlay. При наличии проблем определения приложения на более старых iOS устройствах попробуйте отключить эту настройку. Настройка вступает в силу только после перезапуска."
+msgid "Enables support for receiving \"Videos\" and \"Pictures\" via AirPlay. This needs to be disabled when using iOS 9 or later clients to restore music streaming via AirPlay. \"Videos\" and \"Pictures\" are only supported for iOS clients using iOS 8.x and older."
+msgstr "Включает поддержку получения \"Видео\" и \"Фото\" через AirPlay. Эта опция должна быть отключена при использовании клиентов c iOS версии 9 или выше, для восстановления возможности вопокового воспроизведения музыки через AirPlay. \"Видео\" и \"Фото\" поддерживаются только клиентами c iOS 8.x и старше."
+
+msgctxt "#36550"
+msgid "Stereoscopic 3D effect strength"
+msgstr "Сила стереоскопического 3D эффекта"
+
+msgctxt "#36551"
+msgid "Defines the strength of the stereoscopic 3D effect in the GUI. This is done by controlling the depth of perception within the GUI, so the higher the value, the more elements will pop out of the screen. [Zero] Disables the stereoscopic 3D effect of the GUI.[CR]For a good visual experience, the value should be higher for small screens and lower for large screens. Note: this is not supported by all skins."
+msgstr "Определяет силу стереоскопического 3D эффекта в графическом интерфейсе. Реализуется путем контроля глубины восприятия в графическом интерфейсе, так что чем выше значение, тем сильнее эффект. [Ноль] Отключает эффект стереоскопического 3D.[CR]Для лучшего восприятия эффекта, значение должно быть больше для небольших экранов и меньше для больших экранов. Примечание:  поддерживается не всеми обложками."
 
 msgctxt "#36600"
 msgid "This category contains the settings for how the music library is handled."
@@ -13131,7 +13999,7 @@ msgstr "Усиливать центральный канал при микшир
 
 msgctxt "#37020"
 msgid "Enable higher colour depth artwork"
-msgstr "Разрешить картинки с расширенной глубиной цвета"
+msgstr "Разрешить иллюстрации с увеличенной глубиной цвета"
 
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
@@ -13175,11 +14043,11 @@ msgstr "Неограничен."
 
 msgctxt "#37031"
 msgid "Specifies how Blu-rays should be opened / played back. Note: Some disc menus are not fully supported and may cause problems."
-msgstr "Метод открытия/воспроизведения дисков Blu-ray. В данный момент дисков поддерживается не полностью, и его открытие может вызвать проблемы."
+msgstr "Метод открытия/воспроизведения дисков Blu-ray. В данный момент меню дисков поддерживается не полностью, и его открытие может вызвать проблемы."
 
 msgctxt "#37032"
 msgid "Accessibility"
-msgstr "Cпециальные возможности"
+msgstr "Cпециальные[CR]возможности"
 
 msgctxt "#37033"
 msgid "Video playback related accessibility settings, e.g. \"Prefer subtitles for the hearing impaired\"."
@@ -13260,3 +14128,27 @@ msgstr "Неограничен."
 msgctxt "#38016"
 msgid "%d fps"
 msgstr "%d кадр/с"
+
+msgctxt "#38017"
+msgid "Region A - Americas, East Asia and Southeast Asia. Region B - Africa, Middle East, Southwest Asia, Europe, Australia, New Zealand. Region C - Central Asia, mainland China, Mongolia, South Asia, Belarus, Russia, Ukraine, Kazakhstan."
+msgstr "Регион A - Северная и Южная Америка, Восточная Азия и Юго-Восточная Азия. Регион B - Африка, Ближний Восток, Юго-Западная Азия, Европа, Австралия, Новая Зеландия. Регион C - Центральная Азия, материковый Китай, Монголия, Южная Азия, Беларусь, Россия, Украина, Казахстан."
+
+msgctxt "#38018"
+msgid "My rating"
+msgstr "Мой рейтинг"
+
+msgctxt "#38019"
+msgid "Support 8 channel DTS-HD audio decoding"
+msgstr "Поддержка 8-канального декодирования DTS-HD"
+
+msgctxt "#38020"
+msgid "Enables decoding of high quality DTS-HD audio streams. Note: This increases CPU load and is only available when DTS and DTS-HD audio passthrough are disabled."
+msgstr "Включает декодирования высококачественных DTS-HD аудио потоков. Примечание: Это увеличивает нагрузку на процессор и доступен только тогда, когда прямой вывод звука для DTS и DTS-HD отключены."
+
+msgctxt "#38022"
+msgid "No rating"
+msgstr "Без рейтинга"
+
+msgctxt "#38023"
+msgid "Set my rating"
+msgstr "Установить мой рейтинг"

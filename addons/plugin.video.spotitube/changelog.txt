@@ -1,0 +1,57 @@
+﻿1.0.0
+- Initial release
+
+1.0.1
+- Changed default folder icon
+
+1.0.2
+- Changed name to "Youtube Music"
+- Removed info when not using Autoplay mode
+- Added support for iTunes Charts
+- Added support for Billboard
+
+1.0.3
+- Fixed setting: "iTunes: Force region"
+- Changed iTunes Charts listing (xml->json)
+- Added support for Official Charts Company (UK)
+- Added support for Beatport
+
+1.0.4
+- Billboard: small encoding bugfix
+
+1.0.5
+- Added support for Hype Machine
+- Added setting to select youtube addon
+
+1.0.6 by skatulskijean
+- Fix Youtube Video_ID access
+- Fix officialcharts.com regex
+- Remove officialcharts.com Catalogue and Scottish since no more aviable
+
+1.0.7 by skatulskijean
+- Fix Beatport (regex)
+- Fix Hype Machine
+
+1.0.8 by L0RE
+- Fix for Empty Playlists
+
+1.0.9 / 1.0.10 ???
+
+[B]Version 2.0.1  (12.12.2016)[/B] by realvito
+- Changed many codes and cleanup the script
+- added: More German-Translations
+- added: Icons for the sources in Mainmenu
+- added: More sources from Official Charts Company/removed: old sources
+- added: Settings in days for automatic CACHE-File deleting
+- fixed: Playing Videos via Youtube
+- fixed: Beatport-Playlists
+- fixed: Hypem-Title and Hypem-Images
+- fixed: Spotify-Genres and Spotify-Playlist-Images
+- fixed: showing more TitleImages from the sources and also better quality
+- removed: old Youtube-Addon settings, because there are no different versions furthermore
+- Tested on Win 8.1/64 bit Kodi-KRYPTON 17beta6, installed "plugin.video.youtube" Version 5.3.6 and "script.module.requests" Version 2.9.1
+...
+
+[B]Version 2.0.2  (18.12.2016)[/B] by realvito
+- VideoLinks werden schneller geöffnet - URL-Abfrage hakt nicht mehr
+- Bei Problemen mit Kodi-JARVIS 16 bitte README.txt beachten !

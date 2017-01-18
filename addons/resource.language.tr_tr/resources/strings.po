@@ -547,7 +547,7 @@ msgstr "Boş"
 
 msgctxt "#161"
 msgid "Unavailable"
-msgstr "Kullanılamıyor"
+msgstr "Kullanılamaz"
 
 msgctxt "#162"
 msgid "Tray open"
@@ -597,13 +597,25 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "4:3 videoları görüntüleme biçimi:"
 
+msgctxt "#174"
+msgid "Compiled:"
+msgstr "Derlendi:"
+
 msgctxt "#175"
 msgid "Moods"
-msgstr "Nitelik"
+msgstr "Ruh Halleri"
 
 msgctxt "#176"
 msgid "Styles"
 msgstr "Stiller"
+
+msgctxt "#177"
+msgid "%s successfully started"
+msgstr "%s başarıyla başlatıldı"
+
+msgctxt "#178"
+msgid "%s has been successfully started."
+msgstr "%s başarıyla başlatıldı"
 
 msgctxt "#179"
 msgid "Song"
@@ -623,7 +635,7 @@ msgstr "Parçalar"
 
 msgctxt "#183"
 msgid "Review"
-msgstr "Analiz"
+msgstr "İnceleme"
 
 msgctxt "#184"
 msgid "Refresh"
@@ -699,7 +711,7 @@ msgstr "Ses çözücüleri"
 
 msgctxt "#202"
 msgid "Tagline"
-msgstr "Slogan"
+msgstr "Etiket satırı"
 
 msgctxt "#203"
 msgid "Plot outline"
@@ -771,7 +783,7 @@ msgstr "Uzak paylaşım"
 
 msgctxt "#221"
 msgid "Network is not connected"
-msgstr "Ağ bağlantısı yok"
+msgstr "Ağ bağlı değil"
 
 msgctxt "#222"
 msgid "Cancel"
@@ -991,7 +1003,7 @@ msgstr "Tarama miktarını değiştirmek için ok işaretini ayarlayın"
 
 msgctxt "#277"
 msgid "Adjust the bar to change the subtitles position"
-msgstr "Altyazı konumunu değiştirmek için çubuğu kaydırın"
+msgstr "Altyazı konumunu değiştirmek için çubuğu ayarlayın"
 
 msgctxt "#278"
 msgid "Adjust the rectangle so it is perfectly square"
@@ -1343,7 +1355,7 @@ msgstr "Sırala: Yıl"
 
 msgctxt "#367"
 msgid "Sort by: Rating"
-msgstr "Sırala: Puan"
+msgstr "Sırala: Derecelendirme"
 
 msgctxt "#368"
 msgid "IMDb"
@@ -1487,7 +1499,7 @@ msgstr "Hissedilen sıcaklık"
 
 msgctxt "#403"
 msgid "UV index"
-msgstr "UV değeri"
+msgstr "UV indeksi"
 
 msgctxt "#404"
 msgid "Wind"
@@ -1495,7 +1507,7 @@ msgstr "Rüzgar"
 
 msgctxt "#405"
 msgid "Dew point"
-msgstr "Donma noktası"
+msgstr "Çiy noktası"
 
 msgctxt "#406"
 msgid "Humidity"
@@ -1519,11 +1531,11 @@ msgstr "Hava durumu verisi alınamıyor"
 
 msgctxt "#413"
 msgid "Manual"
-msgstr "Manuel"
+msgstr "El ile"
 
 msgctxt "#414"
 msgid "No review for this album"
-msgstr "Bu albüm için analiz mevcut değil"
+msgstr "Bu albüm için inceleme mevcut değil"
 
 msgctxt "#415"
 msgid "Downloading thumbnail..."
@@ -1531,7 +1543,7 @@ msgstr "Küçük resim indiriliyor..."
 
 msgctxt "#416"
 msgid "Not available"
-msgstr "Kullanılamaz"
+msgstr "Kullanılamıyor"
 
 msgctxt "#417"
 msgid "View: Big icons"
@@ -1596,6 +1608,10 @@ msgstr "Önbellek yok"
 msgctxt "#432"
 msgid "Remove movie from library"
 msgstr "Filmi kitaplıktan kaldır"
+
+msgctxt "#433"
+msgid "Would you really like to remove '%s' from library?"
+msgstr "'%s' öğesini gerçekten kitaplıktan kaldırmak ister misiniz?"
 
 msgctxt "#434"
 msgid "From %s at %i %s"
@@ -1819,7 +1835,7 @@ msgstr "Genel ses boşluk payı"
 
 msgctxt "#495"
 msgid "Upscale videos to GUI resolution"
-msgstr "Videoları grafik kullanıcı arabirimi çözünürlüğüne yükselt"
+msgstr "Videoları GUI çözünürlüğüne yükselt"
 
 msgctxt "#496"
 msgid "Calibration"
@@ -1847,7 +1863,7 @@ msgstr "Albüm adları aranıyor..."
 
 msgctxt "#502"
 msgid "Open"
-msgstr "Açık"
+msgstr "Aç"
 
 msgctxt "#503"
 msgid "Busy"
@@ -1883,7 +1899,7 @@ msgstr "Giriş penceresi"
 
 msgctxt "#514"
 msgid "Manual settings"
-msgstr "Manuel ayarlar"
+msgstr "El ile yapılan ayarlar"
 
 msgctxt "#515"
 msgid "Genre"
@@ -2015,7 +2031,7 @@ msgstr "Çok kanallı sesleri stereo'ya dönüştür"
 
 msgctxt "#549"
 msgid "Number"
-msgstr "Numarası"
+msgstr "Numara"
 
 msgctxt "#550"
 msgid "Sort by: %s"
@@ -2071,7 +2087,7 @@ msgstr "Yıl"
 
 msgctxt "#563"
 msgid "Rating"
-msgstr "Puan"
+msgstr "Derecelendirme"
 
 msgctxt "#564"
 msgid "Type"
@@ -2091,7 +2107,7 @@ msgstr "Çalma sayısı"
 
 msgctxt "#568"
 msgid "Last played"
-msgstr "Son çalınan"
+msgstr "Son çalınma"
 
 msgctxt "#569"
 msgid "Comment"
@@ -2127,7 +2143,11 @@ msgstr "Oynatma sayısı"
 
 msgctxt "#577"
 msgid "Date taken"
-msgstr "Alındığı tarih"
+msgstr "Çekildiği tarih"
+
+msgctxt "#578"
+msgid "Artist / Year"
+msgstr "Sanatçı / Yıl"
 
 msgctxt "#580"
 msgid "Sort direction"
@@ -2215,7 +2235,7 @@ msgstr "Standart"
 
 msgctxt "#603"
 msgid "Extreme"
-msgstr "Extreme"
+msgstr "Aşırı"
 
 msgctxt "#604"
 msgid "Constant bitrate"
@@ -2341,6 +2361,10 @@ msgctxt "#643"
 msgid "Avoid clipping on ReplayGained files"
 msgstr "ReplayGain olan dosyalarda ses kırpılmasından kaçın"
 
+msgctxt "#644"
+msgid "Stretch 16:9 - Nonlinear"
+msgstr "16:9'a genişlet - Nonlinear"
+
 msgctxt "#645"
 msgid "Need to unpack a big file. Continue?"
 msgstr "Büyük bir dosyayı açmak gerekiyor. Devam edilsin mi?"
@@ -2411,7 +2435,7 @@ msgstr "Dışa aktarma klasörü seç"
 
 msgctxt "#662"
 msgid "This file is no longer available."
-msgstr "Bu dosya artık mevcut değil."
+msgstr "Bu dosya artık yok."
 
 msgctxt "#663"
 msgid "Would you like to remove it from the library?"
@@ -2527,7 +2551,7 @@ msgstr "Otomatik (DHCP)"
 
 msgctxt "#717"
 msgid "Manual (static)"
-msgstr "Manuel (statik)"
+msgstr "El ile (statik)"
 
 msgctxt "#719"
 msgid "IP address"
@@ -2625,14 +2649,6 @@ msgctxt "#744"
 msgid "Files"
 msgstr "Dosyalar"
 
-msgctxt "#745"
-msgid "No scanned information for this view"
-msgstr "Bu görünüm için taranmış bilgi yok"
-
-msgctxt "#746"
-msgid "Please turn off library mode"
-msgstr "Lütfen kitaplık modunu kapatın"
-
 msgctxt "#747"
 msgid "Error loading image"
 msgstr "Resim yüklenirken hata oluştu"
@@ -2707,7 +2723,7 @@ msgstr "Gri"
 
 msgctxt "#770"
 msgid "Error %i: share not available"
-msgstr "Hata %i: paylaşım bulunamıyor"
+msgstr "Hata %i: paylaşım kullanılamıyor"
 
 msgctxt "#772"
 msgid "Audio output"
@@ -2787,7 +2803,7 @@ msgstr "Uzaktan kontrol"
 
 msgctxt "#791"
 msgid "Allow remote control by programs on this system"
-msgstr "Bu sistemde programlar tarafından uzaktan kontrole izin ver"
+msgstr "Bu sistemdeki programlar tarafından uzaktan kontrole izin ver"
 
 msgctxt "#792"
 msgid "Port"
@@ -2799,7 +2815,7 @@ msgstr "Bağlantı noktası aralığı"
 
 msgctxt "#794"
 msgid "Allow remote control by programs on other systems"
-msgstr "Diğer sistemlerde programlar tarafından uzaktan kontrole izin ver"
+msgstr "Diğer sistemlerdeki programlar tarafından uzaktan kontrole izin ver"
 
 msgctxt "#795"
 msgid "Initial repeat delay (ms)"
@@ -2821,9 +2837,161 @@ msgctxt "#799"
 msgid "Library update"
 msgstr "Kitaplık güncellemesi"
 
+msgctxt "#800"
+msgid "Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "Müzik kitaplığının dosyalardan etiketleri yeniden taraması gerekiyor. Şimdi tarama yapmak ister misiniz?"
+
 msgctxt "#802"
 msgid "%s of %s available"
 msgstr "%s / %s kullanılabilir"
+
+msgctxt "#803"
+msgid "Type"
+msgstr "Tür"
+
+msgctxt "#804"
+msgid "Search guide for"
+msgstr "Rehberde ara"
+
+msgctxt "#805"
+msgid "Enter the search string to use to lookup matching events in the guide"
+msgstr "Rehberde eşleşen etkinlikleri aramak için arama dizesi girin"
+
+msgctxt "#806"
+msgid "Fulltext search (or title search only)"
+msgstr "Tam metin arama (veya sadece başlık araması)"
+
+msgctxt "#807"
+msgid "Any day"
+msgstr "Herhangi bir gün"
+
+msgctxt "#808"
+msgid "Every day"
+msgstr "Her gün"
+
+msgctxt "#809"
+msgid "Any channel"
+msgstr "Herhangi bir kanal"
+
+msgctxt "#810"
+msgid "Start any time"
+msgstr "Herhangi bir zamanda başla"
+
+msgctxt "#811"
+msgid "Recording group"
+msgstr "Kayıt grubu"
+
+msgctxt "#812"
+msgid "Prevent duplicate episodes"
+msgstr "Yinelenen bölümleri engelle"
+
+msgctxt "#813"
+msgid "Start padding time"
+msgstr "Başlangıç doldurma zamanı"
+
+msgctxt "#814"
+msgid "End padding time"
+msgstr "Bitiş doldurma zamanı"
+
+msgctxt "#815"
+msgid "Record all episodes"
+msgstr "Tüm bölümleri kaydet"
+
+msgctxt "#816"
+msgid "Record only new episodes"
+msgstr "Sadece yeni bölümleri kaydet"
+
+msgctxt "#817"
+msgid "End any time"
+msgstr "Herhangi bir zamanda bitir"
+
+msgctxt "#818"
+msgid "Max recordings"
+msgstr "En fazla kayıt"
+
+msgctxt "#820"
+msgid "One time"
+msgstr "Bir kez"
+
+msgctxt "#821"
+msgid "One time (guide-based)"
+msgstr "Bir kez (rehber tabanlı)"
+
+msgctxt "#822"
+msgid "Repeating"
+msgstr "Yinelenen"
+
+msgctxt "#823"
+msgid "Repeating (guide-based)"
+msgstr "Yinelenen (rehber tabanlı)"
+
+msgctxt "#828"
+msgid "Repeating timer deleted"
+msgstr "Yinelenen zamanlayıcı silindi"
+
+msgctxt "#831"
+msgid "Mondays"
+msgstr "Pazartesileri"
+
+msgctxt "#832"
+msgid "Tuesdays"
+msgstr "Salıları"
+
+msgctxt "#833"
+msgid "Wednesdays"
+msgstr "Çarşambaları"
+
+msgctxt "#834"
+msgid "Thursdays"
+msgstr "Perşembeleri"
+
+msgctxt "#835"
+msgid "Fridays"
+msgstr "Cumaları"
+
+msgctxt "#836"
+msgid "Saturdays"
+msgstr "Cumartesileri"
+
+msgctxt "#837"
+msgid "Sundays"
+msgstr "Pazarları"
+
+msgctxt "#840"
+msgid "Do you only want to delete this timer or also the repeating timer that has scheduled it?"
+msgstr "Yalnızca bu zamanlayıcıyımı yoksa planlanmış olan yinelenen zamanlayıcıyıda silmek istiyor musunuz?"
+
+msgctxt "#841"
+msgid "Only this"
+msgstr "Sadece bunu"
+
+msgctxt "#842"
+msgid "Group timers"
+msgstr "Zamanlayıcı grupları"
+
+msgctxt "#843"
+msgid "Activate"
+msgstr "Etkinleştir"
+
+msgctxt "#844"
+msgid "Deactivate"
+msgstr "Devre dışı bırak"
+
+msgctxt "#845"
+msgid "Are you sure you want to delete this repeating timer and all timers it has scheduled?"
+msgstr "Bu yinelenen zamanlayıcıyı ve bütün planlanmış olan zamanlayıcıları silmek istediğinize emin misiniz?"
+
+msgctxt "#846"
+msgid "Are you sure you want to delete this timer?"
+msgstr "Bu zamanlayıcıyı silmek istediğinizden emin misiniz?"
+
+msgctxt "#847"
+msgid "Confirm stop recording"
+msgstr "Kaydı durdurmayı onayla"
+
+msgctxt "#848"
+msgid "Are you sure you want to stop this recording?"
+msgstr "Bu kayıdı durdurmak istediğinizden emin misiniz?"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -2856,6 +3024,10 @@ msgstr "Önizleme"
 msgctxt "#1001"
 msgid "Unable to connect"
 msgstr "Bağlanamıyor"
+
+msgctxt "#1002"
+msgid "The connection to the network location couldn't be established. This could be due to the network not being connected. Would you like to add it anyway?"
+msgstr "Ağ konumuna bağlantı kurulamadı. Bu, bağlanmamış olan ağa bağlı olabilir. Yine de eklemek ister misiniz?"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -2932,6 +3104,10 @@ msgstr "Yeni paylaşımlara gözat"
 msgctxt "#1024"
 msgid "Browse"
 msgstr "Gözat"
+
+msgctxt "#1025"
+msgid "Couldn't retrieve directory information. This could be due to the network not being connected. Would you like to add it anyway?"
+msgstr "Dizin bilgisi alınamadı. Bu, bağlanmamış olan ağa bağlı olabilir. Yine de eklemek ister misiniz?"
 
 msgctxt "#1026"
 msgid "Add source"
@@ -3190,8 +3366,8 @@ msgid "Announce services to other systems"
 msgstr "Servisleri diğer sistemlere duyur"
 
 msgctxt "#1268"
-msgid "iOS 8 compatibility mode"
-msgstr "iOS 8 uyumluluk modu"
+msgid "Enable AirPlay \"Videos\" and \"Pictures\" support"
+msgstr "AirPlay \"Video\" ve \"Resim\" desteğini etkinleştir"
 
 msgctxt "#1269"
 msgid "Allow volume control"
@@ -3383,7 +3559,7 @@ msgstr "rüzgarlı"
 
 msgctxt "#1413"
 msgid "Patches"
-msgstr "İzler"
+msgstr "Kısmen"
 
 msgctxt "#1414"
 msgid "Thunderstorm"
@@ -3523,7 +3699,7 @@ msgstr "Ani fırtına"
 
 msgctxt "#1448"
 msgid "Precipitation"
-msgstr "Düşen Yağış"
+msgstr "Yağış"
 
 msgctxt "#1449"
 msgid "Partial"
@@ -3544,6 +3720,10 @@ msgstr "Boş liste"
 msgctxt "#2081"
 msgid "Went back to parent list because the active list has been emptied"
 msgstr "Etkin liste boşaltıldığı için üst listeye geri gidiliyor"
+
+msgctxt "#2101"
+msgid "Newer version needed. Check the log for more information about this message."
+msgstr "Yeni sürüm gerekli. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#2102"
 msgid "%s error"
@@ -3599,7 +3779,7 @@ msgstr "Ayarlar - Ekran"
 
 msgctxt "#10010"
 msgid "Settings - Appearance - GUI calibration"
-msgstr "Ayarlar - Görünüm - Grafik kullanıcı arabirimi ayarı"
+msgstr "Ayarlar - Görünüm - GUI ayarı"
 
 msgctxt "#10011"
 msgid "Settings - Videos - Screen calibration"
@@ -3651,7 +3831,7 @@ msgstr "Videolar"
 
 msgctxt "#10028"
 msgid "Videos / Playlist"
-msgstr "Videolar  /Çalma listesi"
+msgstr "Videolar / Çalma listesi"
 
 msgctxt "#10029"
 msgid "Login screen"
@@ -3699,7 +3879,7 @@ msgstr "Yardım"
 
 msgctxt "#10044"
 msgid "No help available"
-msgstr "Yardım mevcut değil"
+msgstr "Yardım yok"
 
 msgctxt "#10045"
 msgid "Resets all the visible settings to their default values."
@@ -3707,7 +3887,7 @@ msgstr "Görünen bütün ayarları varsayılan değerlerine sıfırlar."
 
 msgctxt "#10046"
 msgid "No categories available"
-msgstr "Kategori mevcut değil."
+msgstr "Kategori yok"
 
 msgctxt "#10047"
 msgid "Try changing the setting level to see additional categories and settings."
@@ -4081,13 +4261,21 @@ msgctxt "#12362"
 msgid "Shutdown system if number of master lock retries is exceeded"
 msgstr "Eğer yönetici kilidi yeniden deneme sınırı aşılırsa sistemi kapat"
 
+msgctxt "#12367"
+msgid "Master code is not valid. Please enter a valid master code."
+msgstr "Yönetici kodu geçerli değil. Lütfen geçerli yönetici kodunu girin."
+
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "Ayarlar ve dosya yöneticisi"
 
 msgctxt "#12376"
-msgid "Set as default for all videos"
-msgstr "Tüm videolar için varsayılan olarak ayarla"
+msgid "Set as default for all media"
+msgstr "Tüm ortamlar için varsayılan olarak ayarla"
+
+msgctxt "#12377"
+msgid "This will reset any previously saved values. Are you sure?"
+msgstr "Bu işlem önceden kaydedilmiş değerleri sıfırlar. Emin misiniz?"
 
 msgctxt "#12378"
 msgid "Amount of time to display each image"
@@ -4238,16 +4426,16 @@ msgid "Is another session active, perhaps over ssh?"
 msgstr "Başka bir oturum mu etkin, ssh üzerinden olabilir mi?"
 
 msgctxt "#13021"
-msgid "Mounted removable hard drive"
-msgstr "Çıkarılabilir sabit disk bağlandı"
+msgid "Mounted removable storage device"
+msgstr "Çıkarılabilir depolama aygıtı bağlandı"
 
 msgctxt "#13022"
-msgid "Unsafe device removal"
-msgstr "Aygıt güvensiz bir şekilde kaldırıldı"
+msgid "Unsafe storage device removal"
+msgstr "Depolama aygıt güvensiz bir şekilde kaldırıldı"
 
 msgctxt "#13023"
-msgid "Successfully removed device"
-msgstr "Aygıt başarıyla kaldırıldı"
+msgid "Successfully removed storage device"
+msgstr "Depolama aygıtı başarıyla kaldırıldı"
 
 msgctxt "#13024"
 msgid "Joystick plugged"
@@ -4383,7 +4571,7 @@ msgstr "Dış görünüm korunsun mu?"
 
 msgctxt "#13130"
 msgid "Blank other displays"
-msgstr "Diğer görüntüleri temizle"
+msgstr "Diğer ekranları boşalt"
 
 msgctxt "#13131"
 msgid "Disabled"
@@ -4391,15 +4579,23 @@ msgstr "Devre dışı"
 
 msgctxt "#13132"
 msgid "Blank displays"
-msgstr "Görüntüleri temizle"
+msgstr "Ekranları boşalt"
 
 msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "Etkin bağlantılar algılandı!"
 
+msgctxt "#13141"
+msgid "If you proceed, you might not be able to control this application any longer. Are you sure you want to stop the event server?"
+msgstr "Eğer devam ederseniz, artık bu uygulamayı kontrol etmek mümkün olmayabilir. Olay sunucusunu durdurmak istediğinize emin misiniz?"
+
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Apple Kumanda modu değiştirilsin mi?"
+
+msgctxt "#13145"
+msgid "If you are currently using the Apple Remote to control this application, changing this setting might affect your ability to continue controlling it. Do you want to proceed?"
+msgstr "Eğer bu uygulamayı kontrol etmek için Apple Kumanda kullanıyorsanız bu ayarı değiştirmek kontrol etme yeteneğini etkileyebilir. Devam etmek istiyor musunuz?"
 
 msgctxt "#13159"
 msgid "Subnet mask"
@@ -4456,6 +4652,10 @@ msgstr "Bilinmiyor"
 msgctxt "#13206"
 msgid "Overwrite"
 msgstr "Üzerine yaz"
+
+msgctxt "#13207"
+msgid "Forced only"
+msgstr "Sadece zorunlu"
 
 msgctxt "#13208"
 msgid "Alarm clock"
@@ -4617,6 +4817,10 @@ msgctxt "#13307"
 msgid "Track naming template"
 msgstr "Parça adlandırma şablonu"
 
+msgctxt "#13308"
+msgid "Do you wish to reboot your system instead of just this application?"
+msgstr "Sistemi yeniden başlatmak yerine bu uygulamayı yeniden başlatmak ister misiniz?"
+
 msgctxt "#13310"
 msgid "Zoom effect"
 msgstr "Yakınlaştırma efekti"
@@ -4669,10 +4873,6 @@ msgctxt "#13322"
 msgid "Right only"
 msgstr "Sadece sağ"
 
-msgctxt "#13323"
-msgid "Enable karaoke support"
-msgstr "Karaoke desteğini etkinleştir"
-
 msgctxt "#13324"
 msgid "Background transparency"
 msgstr "Arka plan şeffaflığı"
@@ -4684,10 +4884,6 @@ msgstr "Ön plan şeffaflığı"
 msgctxt "#13326"
 msgid "A/V delay"
 msgstr "Ses/Video gecikmesi"
-
-msgctxt "#13327"
-msgid "Karaoke"
-msgstr "Karaoke"
 
 msgctxt "#13328"
 msgid "%s not found"
@@ -4743,7 +4939,7 @@ msgstr "Kırmızı"
 
 msgctxt "#13344"
 msgid "Cycle"
-msgstr "Karışık"
+msgstr "Döngü"
 
 msgctxt "#13345"
 msgid "Switch LED off on playback"
@@ -4947,7 +5143,7 @@ msgstr "%s önayarları"
 
 msgctxt "#13408"
 msgid "(IMDb user rating)"
-msgstr "(IMDb kullanıcı puanı)"
+msgstr "(IMDb kullanıcı derecelendirmesi)"
 
 msgctxt "#13409"
 msgid "Top 250"
@@ -5069,6 +5265,10 @@ msgctxt "#13439"
 msgid "Allow hardware acceleration - MediaCodec"
 msgstr "Donanım hızlandırmasına izin ver - MediaCodec"
 
+msgctxt "#13440"
+msgid "Allow hardware acceleration - MediaCodec (Surface)"
+msgstr "Donanım hızlandırmasına izin ver - MediaCodec (Surface)"
+
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "MPEG-2 VDPAU kullan"
@@ -5083,7 +5283,7 @@ msgstr "MPEG-4 VDPAU Kullan"
 
 msgctxt "#13444"
 msgid "Enable this option to use hardware acceleration for the MPEG-4 codec. If disabled the CPU will be used instead. Some ION hardware has problems with this being enabled by default."
-msgstr "MPEG-4 codec bileşenleri donanım hızlandırmasını kullanmak için bu seçeneği etkinleştirin. Eğer devre dışı ise CPU kullanılır. Bazı ION donanımları bu seçenek varsayılan olarak etkin olduğundan sorunlar yaratabilir."
+msgstr "MPEG-4 codec bileşenleri donanım hızlandırmasını kullanmak için bu seçeneği etkinleştirin. Eğer devre dışı ise CPU kullanılır. Bazı ION donanımlarında bu seçenek etkin olduğunda sorunlar yaratabilir."
 
 msgctxt "#13445"
 msgid "Use VC-1 VDPAU"
@@ -5279,7 +5479,7 @@ msgstr "Oyun dizini"
 
 msgctxt "#14010"
 msgid "Auto switch to thumbs based on"
-msgstr "Küçük resimlere göre otomatik değiştir"
+msgstr "Küçük resimleri otomatik değiştir"
 
 msgctxt "#14011"
 msgid "Enable auto switching to thumbs view"
@@ -5435,7 +5635,7 @@ msgstr "Tarih biçimi"
 
 msgctxt "#14053"
 msgid "GUI filters"
-msgstr "Grafik kullanıcı arabirimi filtreleri"
+msgstr "GUI filtreleri"
 
 msgctxt "#14054"
 msgid "%2.1f dB"
@@ -5542,8 +5742,8 @@ msgid "File lists"
 msgstr "Dosya listesi"
 
 msgctxt "#14082"
-msgid "Show EXIF picture information"
-msgstr "EXIF resim bilgilerini göster"
+msgid "Reset the Audio DSP database..."
+msgstr "Ses DSP veritabanını sıfırla..."
 
 msgctxt "#14083"
 msgid "Use fullscreen window"
@@ -5555,7 +5755,7 @@ msgstr "Seçilen şarkıları sıraya al"
 
 msgctxt "#14086"
 msgid "Playback"
-msgstr "Kayıttan yürüt"
+msgstr "Oynatım"
 
 msgctxt "#14087"
 msgid "Discs"
@@ -5578,8 +5778,8 @@ msgid "Character set"
 msgstr "Karakter kümesi"
 
 msgctxt "#14092"
-msgid "Debugging"
-msgstr "Hata ayıklama"
+msgid "Logging"
+msgstr "Günlük"
 
 msgctxt "#14093"
 msgid "Security"
@@ -5603,7 +5803,7 @@ msgstr "Ses CD'si yerleştirilince yapılacak eylem"
 
 msgctxt "#14098"
 msgid "Play"
-msgstr "Çal"
+msgstr "Oynat"
 
 msgctxt "#14099"
 msgid "Eject disc when the CD ripping is complete"
@@ -5653,13 +5853,85 @@ msgctxt "#14110"
 msgid "Long date format"
 msgstr "Uzun tarih biçimi"
 
+msgctxt "#14111"
+msgid "Events"
+msgstr "Olaylar"
+
+msgctxt "#14112"
+msgid "Enable event logging"
+msgstr "Olay günlüğünü etkinleştir"
+
+msgctxt "#14113"
+msgid "Enable notification event logging"
+msgstr "Bildirim olay günlüğünü etkinleştir"
+
+msgctxt "#14114"
+msgid "Show event log"
+msgstr "Olay günlüğünü göster"
+
+msgctxt "#14115"
+msgid "Basic"
+msgstr "Temel"
+
+msgctxt "#14116"
+msgid "Information"
+msgstr "Bilgi"
+
+msgctxt "#14117"
+msgid "Warning"
+msgstr "Uyarı"
+
+msgctxt "#14118"
+msgid "Error"
+msgstr "Hata"
+
+msgctxt "#14119"
+msgid "Level: %s"
+msgstr "Düzey: %s"
+
+msgctxt "#14120"
+msgid "Show higher levels"
+msgstr "Daha yüksek düzeyleri göster"
+
+msgctxt "#14121"
+msgid "Blu-ray region Code"
+msgstr "Blu-ray Bölge Kodu"
+
+msgctxt "#14122"
+msgid "Region A"
+msgstr "Bölge A"
+
+msgctxt "#14123"
+msgid "Region B"
+msgstr "Bölge B"
+
+msgctxt "#14124"
+msgid "Region C"
+msgstr "Bölge C"
+
+msgctxt "#15004"
+msgid "Basic"
+msgstr "Temel"
+
+msgctxt "#15005"
+msgid "Application"
+msgstr "Uygulama"
+
+msgctxt "#15006"
+msgid "Phone"
+msgstr "Telefon"
+
+msgctxt "#15007"
+msgid "Message"
+msgstr "Mesaj"
+
 msgctxt "#15011"
 msgid "%i Items failed to export"
 msgstr "%i öğe dışa aktarılamadı"
 
 msgctxt "#15012"
 msgid "Unavailable source"
-msgstr "Kaynak kullanılamıyor"
+msgstr "Kaynak kullanılamaz"
 
 msgctxt "#15013"
 msgid "What would you like to do with media items from %s"
@@ -5681,9 +5953,213 @@ msgctxt "#15019"
 msgid "Add"
 msgstr "Ekle"
 
+msgctxt "#15020"
+msgid "Audio DSP manager"
+msgstr "Ses DSP yöneticisi"
+
+msgctxt "#15021"
+msgid "Content type"
+msgstr "İçerik türü"
+
+msgctxt "#15022"
+msgid "Listening mode"
+msgstr "Dinleme modu"
+
+msgctxt "#15023"
+msgid "Master mode"
+msgstr "Ana mod"
+
+msgctxt "#15024"
+msgid "Pre-process setup..."
+msgstr "Ön işlem ayarı..."
+
+msgctxt "#15025"
+msgid "Listening mode setup..."
+msgstr "Dinleme modu ayarı..."
+
+msgctxt "#15026"
+msgid "Speaker / Output setup..."
+msgstr "Hoparlör / Çıkış ayarı..."
+
+msgctxt "#15027"
+msgid "Audio information..."
+msgstr "Ses bilgisi..."
+
+msgctxt "#15028"
+msgid "Audio DSP settings - Main"
+msgstr "Ses DSP ayarları - Ana"
+
+msgctxt "#15029"
+msgid "Audio DSP settings - Listening mode"
+msgstr "Ses DSP ayarları - Dinleme modu"
+
+msgctxt "#15030"
+msgid "Audio DSP settings - Speaker / Output"
+msgstr "Ses DSP ayarları - Hoparlör / Çıkış"
+
+msgctxt "#15031"
+msgid "Audio DSP settings - Audio information"
+msgstr "Ses DSP ayarları - Ses bilgisi"
+
+msgctxt "#15033"
+msgid "Resampler setup..."
+msgstr "Yeniden örnekleyici ayarı..."
+
+msgctxt "#15034"
+msgid "Miscellaneous..."
+msgstr "Çeşitli..."
+
+msgctxt "#15035"
+msgid "Audio DSP settings - Resampler"
+msgstr "Ses DSP ayarları - Yeniden örnekleyici"
+
+msgctxt "#15037"
+msgid "Audio DSP settings - Pre-process"
+msgstr "Ses DSP ayarları - Ön işlem"
+
+msgctxt "#15038"
+msgid "Audio DSP settings - Miscellaneous"
+msgstr "Ses DSP ayarları - Çeşitli"
+
+msgctxt "#15039"
+msgid "Pre-processing setup..."
+msgstr "Ön işleme ayarı..."
+
+msgctxt "#15040"
+msgid "The settings dialogue can only be opened from the OSD menu during playback"
+msgstr "Ayarlar iletişim kutusu sadece oynatım sırasında OSD menüsünden açılır."
+
+msgctxt "#15041"
+msgid "Unknown mode name"
+msgstr "Bilinmeyen mod adı"
+
+msgctxt "#15042"
+msgid "Content:"
+msgstr "İçerik:"
+
+msgctxt "#15047"
+msgid "Audio DSP settings"
+msgstr "Ses DSP ayarları"
+
+msgctxt "#15048"
+msgid "No audio DSP add-on enabled"
+msgstr "Hiçbir ses DSP eklentisi etkin değil"
+
+msgctxt "#15049"
+msgid "The audio DSP manager has been enabled without any enabled DSP add-on. Enable at least one add-on in order to use the DSP functionality."
+msgstr "Ses DSP yöneticisi herhangi bir etkin DSP eklentisi olmadan etkinleştirildi. DSP işlevini kullanmak için en azından bir eklentiyi etkinleştirin."
+
+msgctxt "#15050"
+msgid "Available modes"
+msgstr "Kullanılabilir modlar"
+
+msgctxt "#15051"
+msgid "Active modes"
+msgstr "Etkin modlar"
+
 msgctxt "#15052"
 msgid "Password"
 msgstr "Parola"
+
+msgctxt "#15057"
+msgid "Input resampling"
+msgstr "Yeniden örnekleme girişi"
+
+msgctxt "#15058"
+msgid "Pre-processing"
+msgstr "Ön işleme"
+
+msgctxt "#15059"
+msgid "Master processing"
+msgstr "Ana işleme"
+
+msgctxt "#15060"
+msgid "Post-processing"
+msgstr "Son işleme"
+
+msgctxt "#15061"
+msgid "Output resampling"
+msgstr "Yeniden örnekleme çıkışı"
+
+msgctxt "#15062"
+msgid "Detailed description"
+msgstr "Detaylı açıklama"
+
+msgctxt "#15063"
+msgid "No description available"
+msgstr "Açıklama yok"
+
+msgctxt "#15064"
+msgid "Apply changes directly"
+msgstr "Değişiklikleri doğrudan uygula"
+
+msgctxt "#15066"
+msgid "Clear active modes"
+msgstr "Etkin modları temizle"
+
+msgctxt "#15067"
+msgid "Close"
+msgstr "Kapat"
+
+msgctxt "#15078"
+msgid "Mode settings"
+msgstr "Mod ayarları"
+
+msgctxt "#15079"
+msgid "You have changed some audio DSP settings.\nWould you like to keep the new settings?"
+msgstr "Bazı ses DSP ayarlarını değişti.\nYeni ayarları korumak ister misiniz?"
+
+msgctxt "#15080"
+msgid "Change resampler"
+msgstr "Yeniden örnekleyiciyi değiştir"
+
+msgctxt "#15081"
+msgid "Process chain (with CPU usage)"
+msgstr "İşlem zinciri (CPU kullanımı ile)"
+
+msgctxt "#15082"
+msgid "Resampling to %i Hz"
+msgstr "%i Hz'e yeniden örnekleniyor"
+
+msgctxt "#15083"
+msgid "Final resampling to %i Hz"
+msgstr "Son olarak %i Hz'e yeniden örnekleniyor"
+
+msgctxt "#15084"
+msgid "Master process"
+msgstr "Ana işlem"
+
+msgctxt "#15085"
+msgid "Pre-process"
+msgstr "Ön işlem"
+
+msgctxt "#15086"
+msgid "Post-process"
+msgstr "Son işlem"
+
+msgctxt "#15087"
+msgid "Input"
+msgstr "Giriş"
+
+msgctxt "#15088"
+msgid "Output"
+msgstr "Çıkış"
+
+msgctxt "#15089"
+msgid "Input signal"
+msgstr "Giriş sinyali"
+
+msgctxt "#15090"
+msgid "Output signal"
+msgstr "Çıkış sinyali"
+
+msgctxt "#15091"
+msgid "Positions"
+msgstr "Konumlar"
+
+msgctxt "#15092"
+msgid "CPU usage for DSP"
+msgstr "DSP için CPU kullanımı"
 
 msgctxt "#15100"
 msgid "Library"
@@ -5711,7 +6187,7 @@ msgstr "* Bütün türler"
 
 msgctxt "#15106"
 msgid "Skin built-in"
-msgstr "Skin yerleşik"
+msgstr "Yerleşik dış görünüm"
 
 msgctxt "#15107"
 msgid "Buffering..."
@@ -5736,6 +6212,26 @@ msgstr "Tema"
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "Varsayılan tema"
+
+msgctxt "#15113"
+msgid "Here you can configure pre-processing modes. This processing stage only change the input data stream."
+msgstr "Buradan ön işleme modlarını yapılandırabilirsiniz. Bu işleme aşaması sadece akışın giriş verisini değiştirir."
+
+msgctxt "#15114"
+msgid "Here you can configure an input resampling process. Notice: Only one active mode is allowed!"
+msgstr "Buradan bir girişin yeniden örnekleme işlemlerini yapılandırabilirsiniz. Not: Sadece bir etkin moda izin verilir!"
+
+msgctxt "#15115"
+msgid "Here you can configure master processing modes. Notice: On playback only one active mode can be selected!"
+msgstr "Buradan ana işleme modlarını yapılandırabilirsiniz. Not: Oynatılırken sadece bir tane etkin mod seçilebilir!"
+
+msgctxt "#15116"
+msgid "Here you can configure a output resampling process. Notice: Only one active mode is allowed!"
+msgstr "Buradan bir çıkışın yeniden örnekleme işlemlerini yapılandırabilirsiniz. Not: Sadece bir etkin moda izin verilir!"
+
+msgctxt "#15117"
+msgid "Here you can configure post-processing modes. This processing stage can be used for equalizing and volume correction..."
+msgstr "Buradan son işleme modlarını yapılandırabilirsiniz. Bu işleme aşaması sadece eşitleyici ve ses düzeyi düzeltmek için kullanılır."
 
 msgctxt "#15200"
 msgid "Last.fm"
@@ -5863,7 +6359,7 @@ msgstr "Bob"
 
 msgctxt "#16022"
 msgid "Bob - Inverted"
-msgstr "Bob - Inverted"
+msgstr "Bob - Ters çevrilmiş"
 
 msgctxt "#16024"
 msgid "Cancelling..."
@@ -5977,13 +6473,25 @@ msgctxt "#16201"
 msgid "Copy failed"
 msgstr "Kopyalanamadı"
 
+msgctxt "#16202"
+msgid "Failed to copy at least one file. Check the log for more information about this message."
+msgstr "En az bir dosya kopyalanamadı. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
 msgctxt "#16203"
 msgid "Move failed"
 msgstr "Taşınamadı"
 
+msgctxt "#16204"
+msgid "Failed to move at least one file. Check the log for more information about this message."
+msgstr "En az bir dosya taşınamadı. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
 msgctxt "#16205"
 msgid "Delete failed"
 msgstr "Silinemedi"
+
+msgctxt "#16206"
+msgid "Failed to delete at least one file. Check the log for more information about this message."
+msgstr "En az bir dosya silinemedi. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -6131,7 +6639,7 @@ msgstr "IMX - Fast motion (çift)"
 
 msgctxt "#16400"
 msgid "Post-processing"
-msgstr "Post-processing"
+msgstr "Son işleme"
 
 msgctxt "#17500"
 msgid "Display sleep timeout"
@@ -6289,6 +6797,14 @@ msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "Bu kanal kaydı zaten başlamış."
 
+msgctxt "#19035"
+msgid "%s couldn't be played. Check the log for more information about this message."
+msgstr "%s oynatılamadı. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
+msgctxt "#19036"
+msgid "This recording can't be played. Check the log for more information about this message."
+msgstr "Bu kayıt oynatılamıyor. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
 msgctxt "#19037"
 msgid "Show signal quality"
 msgstr "Sinyal kalitesini göster"
@@ -6302,8 +6818,8 @@ msgid "Are you sure you want to hide this channel?"
 msgstr "Bu kanalı gizlemek istediğinize emin misiniz?"
 
 msgctxt "#19040"
-msgid "Timer"
-msgstr "Zamanlayıcı"
+msgid "Timers"
+msgstr "Zamanlayıcılar"
 
 msgctxt "#19041"
 msgid "Are you sure you want to rename this recording?"
@@ -6316,6 +6832,14 @@ msgstr "Bu zamanlayıcıyı yeniden adlandırmak istediğinize emin misiniz?"
 msgctxt "#19043"
 msgid "Recording"
 msgstr "Kayıt"
+
+msgctxt "#19044"
+msgid "Please check your configuration. Check the log for more information about this message."
+msgstr "Lütfen yapılandırmanızı kontrol edin. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
+msgctxt "#19045"
+msgid "No PVR clients have been started yet. Wait for the PVR clients to start up. Check the log for more information about this message."
+msgstr "PVR istemcileri henüz başlamadı. PVR istemcilerinin başlamasını bekleyin. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#19046"
 msgid "New channel"
@@ -6362,8 +6886,8 @@ msgid "New timer"
 msgstr "Yeni zamanlayıcı"
 
 msgctxt "#19057"
-msgid "Edit timer"
-msgstr "Zamanlayıcıyı düzenle"
+msgid "Timer disabled"
+msgstr "Zamanlayıcı devre dışı"
 
 msgctxt "#19058"
 msgid "Timer enabled"
@@ -6405,6 +6929,10 @@ msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "Bu olay zaten kaydedilmektedir."
 
+msgctxt "#19068"
+msgid "This recording couldn't be deleted. Check the log for more information about this message."
+msgstr "Bu kayıt silinemedi. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
 msgctxt "#19069"
 msgid "Guide"
 msgstr "Rehber"
@@ -6426,44 +6954,44 @@ msgid "Delay channel switch"
 msgstr "Kanal değiştirme gecikmesi"
 
 msgctxt "#19074"
-msgid "Active:"
-msgstr "Etkin:"
+msgid "Active"
+msgstr "Etkin"
 
 msgctxt "#19075"
-msgid "Name:"
-msgstr "Ad:"
+msgid "Name"
+msgstr "Ad"
 
 msgctxt "#19076"
-msgid "Folder:"
-msgstr "Klasör:"
+msgid "Folder"
+msgstr "Klasör"
 
 msgctxt "#19078"
-msgid "Channel:"
-msgstr "Kanal:"
+msgid "Channel"
+msgstr "Kanal"
 
 msgctxt "#19079"
-msgid "Day:"
-msgstr "Gün:"
+msgid "Days of week"
+msgstr "Haftanın günleri"
 
 msgctxt "#19080"
-msgid "Begin:"
-msgstr "Başla:"
+msgid "Begin"
+msgstr "Başlangıç"
 
 msgctxt "#19081"
-msgid "End:"
-msgstr "Son:"
+msgid "End"
+msgstr "Bitiş"
 
 msgctxt "#19082"
-msgid "Priority:"
-msgstr "Öncelik:"
+msgid "Priority"
+msgstr "Öncelik"
 
 msgctxt "#19083"
-msgid "Lifetime (days):"
-msgstr "Yaşam süresi (gün):"
+msgid "Lifetime"
+msgstr "Ömür"
 
 msgctxt "#19084"
-msgid "First day:"
-msgstr "İlk gün:"
+msgid "First day"
+msgstr "İlk gün"
 
 msgctxt "#19085"
 msgid "Unknown channel %u"
@@ -6559,7 +7087,19 @@ msgstr "​"
 
 msgctxt "#19108"
 msgid "Fallback framerate"
-msgstr "Kare hızını geri çek"
+msgstr "Temel kare hızı"
+
+msgctxt "#19109"
+msgid "Couldn't save timer. Check the log for more information about this message."
+msgstr "Zamanlayıcı kaydedilemedi. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
+msgctxt "#19110"
+msgid "An unexpected error occurred. Try again later or check the log for more information."
+msgstr "Beklenmeyen bir hata oluştu. Daha sonra tekrar deneyin veya daha fazla bilgi için günlük dosyasını denetleyin."
+
+msgctxt "#19111"
+msgid "PVR backend error. Check the log for more information about this message."
+msgstr "PVR arka uç hatası. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#19112"
 msgid "Delete this recording?"
@@ -6659,7 +7199,7 @@ msgstr "Büyük küçük harf duyarlı"
 
 msgctxt "#19136"
 msgid "Channel unavailable"
-msgstr "Kanal kullanılamıyor"
+msgstr "Kanal kullanılamaz"
 
 msgctxt "#19137"
 msgid "No groups defined. Please create a group first"
@@ -6696,6 +7236,10 @@ msgstr "Gruplanmış"
 msgctxt "#19146"
 msgid "Groups"
 msgstr "Gruplar"
+
+msgctxt "#19147"
+msgid "The PVR backend does not support this action. Check the log for more information about this message."
+msgstr "PVR arka uç bu eylemi desteklemiyor. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#19148"
 msgid "Channel"
@@ -6749,6 +7293,10 @@ msgctxt "#19160"
 msgid "to"
 msgstr "​şuraya:"
 
+msgctxt "#19161"
+msgid "any time"
+msgstr "herhangi bir zaman"
+
 msgctxt "#19162"
 msgid "Recording active"
 msgstr "Kaydetme etkin"
@@ -6757,9 +7305,13 @@ msgctxt "#19163"
 msgid "Recordings"
 msgstr "Kayıtlar"
 
+msgctxt "#19164"
+msgid "Can't start recording. Check the log for more information about this message."
+msgstr "Kayıt başlatılamıyor. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
+
 msgctxt "#19165"
 msgid "Switch"
-msgstr "Geçiş yap"
+msgstr "Değiştir"
 
 msgctxt "#19166"
 msgid "PVR information"
@@ -6798,12 +7350,12 @@ msgid "Default recording lifetime"
 msgstr "Varsayılan kayıt ömrü"
 
 msgctxt "#19175"
-msgid "Start padding time"
-msgstr "Başlangıç doldurma zamanı"
+msgid "Default start padding time"
+msgstr "Varsayılan başlangıç doldurma zamanı"
 
 msgctxt "#19176"
-msgid "End padding time"
-msgstr "Bitiş doldurma zamanı"
+msgid "Default end padding time"
+msgstr "Varsayılan bitiş doldurma zamanı"
 
 msgctxt "#19177"
 msgid "Playback"
@@ -6837,6 +7389,22 @@ msgctxt "#19184"
 msgid "Deleted recordings"
 msgstr "Silinmiş kayıtlar"
 
+msgctxt "#19185"
+msgid "Clear data"
+msgstr "Verileri temizle"
+
+msgctxt "#19186"
+msgid "All your TV related data (channels, groups, guide) will be cleared. Are you sure?"
+msgstr "Tüm TV ile ilgili olan verileriniz (kanallar, gruplar, rehber) temizlenecek. Emin misiniz?"
+
+msgctxt "#19187"
+msgid "Clearing all related data."
+msgstr "İlgili tüm veri temizleniyor."
+
+msgctxt "#19188"
+msgid "All your guide data will be cleared. Are you sure?"
+msgstr "Tüm rehber verileriniz temizlenecek. Emin misiniz?"
+
 msgctxt "#19189"
 msgid "Continue last channel on startup"
 msgstr "Başlangıçta son kanala devam et"
@@ -6852,6 +7420,10 @@ msgstr "PVR hizmeti"
 msgctxt "#19192"
 msgid "None of the connected PVR backends supports scanning for channels."
 msgstr "Bağlı olan hiçbir PVR arka ucu kanal taramasını desteklemiyor."
+
+msgctxt "#19193"
+msgid "The channel scan can't be started. Check the log for more information about this message."
+msgstr "Kanal tarama başlatılamadı. Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#19194"
 msgid "Continue?"
@@ -6903,7 +7475,7 @@ msgstr "Grup yönetimi"
 
 msgctxt "#19206"
 msgid "Activate guide:"
-msgstr "Etkinlik rehberi:"
+msgstr "Rehberi etkinleştir:"
 
 msgctxt "#19207"
 msgid "Group:"
@@ -6968,6 +7540,10 @@ msgstr "Kanal guruplarını arka uç(lar) ile eşitle"
 msgctxt "#19222"
 msgid "Guide"
 msgstr "Rehber"
+
+msgctxt "#19223"
+msgid "No PVR add-on could be enabled. Check your settings or the log for more information."
+msgstr "Hizbir PVR eklentisi etkinleştirilemedi. Ayarlarınızı kontrol edin veya daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -7037,6 +7613,10 @@ msgctxt "#19240"
 msgid "No PVR add-on enabled"
 msgstr "Hiçbir PVR eklentisi etkin değil"
 
+msgctxt "#19241"
+msgid "The PVR manager has been enabled without any enabled PVR add-on. Enable at least one add-on in order to use the PVR functionality."
+msgstr "PVR yöneticisi herhangi bir etkin PVR eklentisi olmadan etkinleştirildi. PVR işlevini kullanmak için en azından bir eklentiyi etkinleştirin."
+
 msgctxt "#19244"
 msgid "Backend idle time"
 msgstr "Arka uç boşta kalma süresi"
@@ -7080,14 +7660,6 @@ msgstr "Kanal için rehber güncellemesi planlandı"
 msgctxt "#19254"
 msgid "Guide update failed for channel"
 msgstr "Kanal için rehber güncellemesi başarısız oldu."
-
-msgctxt "#19255"
-msgid "Start recording"
-msgstr "Kaydı başlat"
-
-msgctxt "#19256"
-msgid "Stop recording"
-msgstr "Kaydı durdur"
 
 msgctxt "#19257"
 msgid "Lock channel"
@@ -7148,6 +7720,18 @@ msgstr "Gruplanmış öğeler"
 msgctxt "#19271"
 msgid "No PVR add-ons could be found"
 msgstr "Hiçbir PVR eklentisi bulunamadı"
+
+msgctxt "#19272"
+msgid "You need a tuner, backend software, and an add-on for the backend to be able to use PVR. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Arka ucun PVR özelliğini kullanabilmesi için tv tarayıcısı, arka uç yazılımı ve bir eklentiye ihtiyacınız var. Daha fazlasını öğrenmek için http://kodi.wiki/view/PVR adresini ziyaret edin."
+
+msgctxt "#19273"
+msgid "No audio DSP add-ons could be found"
+msgstr "Hiçbir ses DSP eklentisi bulunamadı"
+
+msgctxt "#19274"
+msgid "You need an add-on installed to be able to use audio digital signal processing (DSP)."
+msgstr "Dijital ses işleme (DSP) özelliğini kullanabilmek için bir eklenti yüklü olması gerekir."
 
 msgctxt "#19275"
 msgid "Conflict warning"
@@ -8075,7 +8659,7 @@ msgstr "Weave"
 
 msgctxt "#20130"
 msgid "Weave - Inverted"
-msgstr "Zikzak - Çevrilmiş"
+msgstr "Weave - Ters çevrilmiş"
 
 msgctxt "#20131"
 msgid "Blend"
@@ -8285,10 +8869,6 @@ msgctxt "#20183"
 msgid "Reload skin"
 msgstr "Dış görünümü yeniden yükle"
 
-msgctxt "#20184"
-msgid "Rotate pictures using EXIF information"
-msgstr "Resimleri EXIF bilgilerini kullanarak döndür"
-
 msgctxt "#20185"
 msgid "Use poster view styles for TV shows"
 msgstr "TV Programları için poster görünümü stillerini kullan"
@@ -8307,7 +8887,7 @@ msgstr "Kitaplık güncellemelerini duyur"
 
 msgctxt "#20189"
 msgid "Enable auto scrolling for plot & review"
-msgstr "Özet ve analiz için otomatik kaydırmayı etkinleştir"
+msgstr "Özet ve inceleme için otomatik kaydırmayı etkinleştir"
 
 msgctxt "#20190"
 msgid "Custom"
@@ -8359,7 +8939,7 @@ msgstr "Bu etkinleştirildiğinde, albümler ve sanatçılar için indirilen her
 
 msgctxt "#20222"
 msgid "Look for external subtitles"
-msgstr "Harici altyazılara bakın"
+msgstr "Harici altyazıları ara"
 
 msgctxt "#20240"
 msgid "Android music"
@@ -8411,11 +8991,11 @@ msgstr "Ağ Dosya Sistemi (NFS)"
 
 msgctxt "#20260"
 msgid "Secure Shell (SSH / SFTP)"
-msgstr "Güvenli Shell (SSH / SFTP)"
+msgstr "Güvenli Kabuk (SSH / SFTP)"
 
 msgctxt "#20262"
 msgid "Zeroconf browser"
-msgstr "Zeroconf tarayıcı"
+msgstr "Zeroconf tarayıcısı"
 
 msgctxt "#20300"
 msgid "Web server directory (HTTP)"
@@ -8647,7 +9227,7 @@ msgstr "Bölüm özeti"
 
 msgctxt "#20366"
 msgid "* All seasons"
-msgstr "* Bütün sezonlar"
+msgstr "* Tüm sezonlar"
 
 msgctxt "#20367"
 msgid "Hide watched"
@@ -8707,7 +9287,7 @@ msgstr "Seçilen klasörü taramalara dahil etme"
 
 msgctxt "#20381"
 msgid "Specials"
-msgstr "Specials"
+msgstr "Özeller"
 
 msgctxt "#20383"
 msgid "Selected folder contains a single video"
@@ -8949,6 +9529,10 @@ msgctxt "#20443"
 msgid "Do you want to refresh information for all items within this path?"
 msgstr "Bu yol içindeki tüm öğelerin bilgilerini yenilemek istiyor musunuz?"
 
+msgctxt "#20444"
+msgid "Add to library"
+msgstr "Kitaplığa ekle"
+
 msgctxt "#20445"
 msgid "Fanart"
 msgstr "Fanart"
@@ -8956,6 +9540,10 @@ msgstr "Fanart"
 msgctxt "#20446"
 msgid "Locally stored information found. Ignore and refresh from Internet?"
 msgstr "Yerel olarak depolanan bilgi bulundu. Yoksayıp internetten yenilensin mi?"
+
+msgctxt "#20447"
+msgid "Do you want to add the media from this source to your library?"
+msgstr "Bu kaynaktan ortamları kitaplığınıza eklemek istiyor musunuz?"
 
 msgctxt "#20448"
 msgid "Couldn't download information"
@@ -8991,7 +9579,7 @@ msgstr "Dinleyici"
 
 msgctxt "#20456"
 msgid "Flatten hierarchy"
-msgstr "Düz hiyerarşi"
+msgstr "Düzleştirilmiş hiyerarşi"
 
 msgctxt "#20457"
 msgid "Movie set"
@@ -9035,7 +9623,7 @@ msgstr "Film kümesini seç"
 
 msgctxt "#20467"
 msgid "No set (remove from %s)"
-msgstr "Yok (şuradan kaldır: %s)"
+msgstr "Küme yok (%s kümesinden kaldır)"
 
 msgctxt "#20468"
 msgid "Add movie to a new set"
@@ -9045,13 +9633,65 @@ msgctxt "#20469"
 msgid "Keep current set (%s)"
 msgstr "Geçerli kümeyi (%s) koru"
 
+msgctxt "#20470"
+msgid "Use movie sets for single movies"
+msgstr "Tek filmler için film setleri kullan"
+
+msgctxt "#20471"
+msgid "Show empty TV shows"
+msgstr "Boş TV programlarını göster"
+
 msgctxt "#21330"
 msgid "Show hidden files and directories"
 msgstr "Gizli dosyaları ve dizinleri göster"
 
+msgctxt "#21331"
+msgid "New media detected"
+msgstr "Yeni ortam algılandı"
+
+msgctxt "#21332"
+msgid "Browse videos"
+msgstr "Videolara gözat"
+
+msgctxt "#21333"
+msgid "Browse music"
+msgstr "Müziklere gözat"
+
+msgctxt "#21334"
+msgid "Browse pictures"
+msgstr "Resimlere gözat"
+
+msgctxt "#21335"
+msgid "Browse files"
+msgstr "Dosyalara gözat"
+
 msgctxt "#21336"
 msgid "Connecting to: %s"
 msgstr "Bağlanıyor: %s"
+
+msgctxt "#21337"
+msgid "Never"
+msgstr "Asla"
+
+msgctxt "#21338"
+msgid "Select version"
+msgstr "Sürüm seç"
+
+msgctxt "#21339"
+msgid "Version %s"
+msgstr "Sürüm %s"
+
+msgctxt "#21340"
+msgid "Auto-update"
+msgstr "Otomatik güncelle"
+
+msgctxt "#21341"
+msgid "No updates available"
+msgstr "Hiçbir güncelleme bulunamadı"
+
+msgctxt "#21342"
+msgid "There are currently no updates available for this add-on."
+msgstr "Bu eklenti için güncelleştirme bulunmamaktadır."
 
 msgctxt "#21359"
 msgid "Add media share..."
@@ -9099,7 +9739,7 @@ msgstr "Fare ve dokunmatik ekran desteğini etkinleştir"
 
 msgctxt "#21370"
 msgid "Play GUI sounds during media playback"
-msgstr "Medya sesleri çalarken arayüz seslerini de çal"
+msgstr "Ortam seslerini çalarken GUI seslerini de çal"
 
 msgctxt "#21371"
 msgid "Thumbnail"
@@ -9295,7 +9935,7 @@ msgstr "Çok dilli"
 
 msgctxt "#21419"
 msgid "No information providers present"
-msgstr "İçerik sağlayıcılarla ilgili bilgi bulunamadı"
+msgstr "İçerik sağlayıcılarla ilgili bilgi yok"
 
 msgctxt "#21420"
 msgid "Value to match"
@@ -9439,7 +10079,7 @@ msgstr "Önbellek dolu"
 
 msgctxt "#21455"
 msgid "Cache filled before reaching required amount for continuous playback"
-msgstr "Sürekli oynatma için gerekli olan önbellek doldu"
+msgstr "Önbellek sürekli oynatma için gerekli miktara ulaşamadan doldu"
 
 msgctxt "#21456"
 msgid "External storage"
@@ -9507,7 +10147,11 @@ msgstr "İlk girişte"
 
 msgctxt "#21472"
 msgid "Include \"All seasons\" and \"Specials\""
-msgstr "\"Tüm sezonlar\" ve \"Özel\" dahil"
+msgstr "\"Tüm sezonlar\" ve \"Özeller\" dahil"
+
+msgctxt "#21473"
+msgid "Whether or not to consider the items from \"All seasons\" and \"Specials\" in the unwatched item selection."
+msgstr "İzlenmemiş öğe seçiminde \"Tüm sezonlar\" ve \"Özeller\" öğelerinin görüntülenip görüntülenmeyeceğini ayarlayın."
 
 msgctxt "#21474"
 msgid "Neither"
@@ -9524,6 +10168,18 @@ msgstr "Sadece \"Tüm sezonlar\""
 msgctxt "#21477"
 msgid "Just \"Specials\""
 msgstr "Sadece \"Özeller\""
+
+msgctxt "#21478"
+msgid "Open"
+msgstr "Aç"
+
+msgctxt "#21479"
+msgid "Run"
+msgstr "Çalıştır"
+
+msgctxt "#21480"
+msgid "Use"
+msgstr "Kullan"
 
 msgctxt "#21602"
 msgid "(External)"
@@ -9661,6 +10317,10 @@ msgctxt "#21843"
 msgid "Orientation"
 msgstr "Oryantasyon"
 
+msgctxt "#21844"
+msgid "XP comment"
+msgstr "XP açıklaması"
+
 msgctxt "#21857"
 msgid "Sub-location"
 msgstr "Alt-konum"
@@ -9687,11 +10347,11 @@ msgstr "Resim yazısı"
 
 msgctxt "#21863"
 msgid "Author"
-msgstr "Yazar"
+msgstr "Yazan"
 
 msgctxt "#21864"
 msgid "Headline"
-msgstr "Manşet"
+msgstr "Başlık"
 
 msgctxt "#21865"
 msgid "Special instructions"
@@ -9703,11 +10363,11 @@ msgstr "Kategori"
 
 msgctxt "#21867"
 msgid "Byline"
-msgstr "Byline"
+msgstr "Yazan"
 
 msgctxt "#21868"
 msgid "Byline title"
-msgstr "Byline title"
+msgstr "Yazanın ünvanı"
 
 msgctxt "#21869"
 msgid "Credit"
@@ -9925,10 +10585,6 @@ msgctxt "#22022"
 msgid "Show video files in listings"
 msgstr "Listelerde video dosyalarını göster"
 
-msgctxt "#22023"
-msgid "DirectX vendor:"
-msgstr "DirectX sağlayıcısı:"
-
 msgctxt "#22024"
 msgid "Direct3D version:"
 msgstr "Direct3D sürümü:"
@@ -9948,46 +10604,6 @@ msgstr "Renkler"
 msgctxt "#22033"
 msgid "Charset"
 msgstr "Karakter kümesi"
-
-msgctxt "#22034"
-msgid "Export karaoke titles as HTML"
-msgstr "Karaoke başlıklarını HTML olarak dışa aktar"
-
-msgctxt "#22035"
-msgid "Export karaoke titles as CSV"
-msgstr "Karaoke başlıklarını CVS olarak dışa aktar"
-
-msgctxt "#22036"
-msgid "Import karaoke titles..."
-msgstr "Karaoke başlıklarını içe aktar..."
-
-msgctxt "#22037"
-msgid "Show song selector automatically"
-msgstr "Şarkı seçiciyi otomatik olarak göster"
-
-msgctxt "#22038"
-msgid "Export karaoke titles..."
-msgstr "Karaoke başlıklarını dışa aktar..."
-
-msgctxt "#22039"
-msgid "Enter song number"
-msgstr "Şarkı numarasını girin"
-
-msgctxt "#22040"
-msgid "white / green"
-msgstr "beyaz / yeşil"
-
-msgctxt "#22041"
-msgid "white / red"
-msgstr "beyaz / kırmızı"
-
-msgctxt "#22042"
-msgid "white / blue"
-msgstr "beyaz / mavi"
-
-msgctxt "#22043"
-msgid "black / white"
-msgstr "siyah / beyaz"
 
 msgctxt "#22079"
 msgid "Default select action"
@@ -10011,7 +10627,7 @@ msgstr "Tümünü oynat"
 
 msgctxt "#23049"
 msgid "Teletext not available"
-msgstr "Teletekst mevcut değil"
+msgstr "Teletekst yok"
 
 msgctxt "#23050"
 msgid "Activate teletext"
@@ -10146,8 +10762,8 @@ msgid "Add-on disabled"
 msgstr "Eklenti devre dışı"
 
 msgctxt "#24025"
-msgid "Context items"
-msgstr "Ortam öğeleri"
+msgid "Context menus"
+msgstr "İçerik menüleri"
 
 msgctxt "#24026"
 msgid "Languages"
@@ -10184,6 +10800,10 @@ msgstr "Depodan yükle"
 msgctxt "#24034"
 msgid "Check for updates"
 msgstr "Güncellemeleri denetle"
+
+msgctxt "#24035"
+msgid "Image collections"
+msgstr "Resim koleksiyonları"
 
 msgctxt "#24036"
 msgid "Changelog"
@@ -10222,8 +10842,8 @@ msgid "Dependencies not met. Please contact add-on author."
 msgstr "Bağımlılıklar karşılanmadı. Lütfen eklenti yazarı ile iletişime geçin."
 
 msgctxt "#24045"
-msgid "Add-on does not have the correct structure"
-msgstr "Eklenti doğru bir yapıya sahip değil"
+msgid "Failed to install Add-on from zip file"
+msgstr "Eklenti zip dosyasından yüklenemedi"
 
 msgctxt "#24046"
 msgid "%s is used by the following installed add-on(s)"
@@ -10232,10 +10852,6 @@ msgstr "%s aşağıdaki yüklü olan eklenti(ler) tarafından kullanılıyor"
 msgctxt "#24047"
 msgid "This add-on can't be uninstalled"
 msgstr "Bu eklenti kaldırılamaz"
-
-msgctxt "#24048"
-msgid "Rollback"
-msgstr "Geri alma"
 
 msgctxt "#24049"
 msgid "Incompatible"
@@ -10286,8 +10902,8 @@ msgid "Would you like to disable this add-on?"
 msgstr "Bu eklentiyi devre dışı bırakmak ister misiniz?"
 
 msgctxt "#24061"
-msgid "Add-on update available!"
-msgstr "Eklenti güncellemesi var!"
+msgid "Add-on updates available"
+msgstr "Eklenti güncellemeleri var"
 
 msgctxt "#24062"
 msgid "Enabled add-ons"
@@ -10347,7 +10963,7 @@ msgstr "Devre dışı bırak"
 
 msgctxt "#24076"
 msgid "Add-on required"
-msgstr "Eklenti gerekli"
+msgstr "Gerekli eklenti"
 
 msgctxt "#24077"
 msgid "Verifying downloaded add-on..."
@@ -10393,6 +11009,10 @@ msgctxt "#24087"
 msgid "All repositories"
 msgstr "Tüm depolar"
 
+msgctxt "#24088"
+msgid "The DSP add-on is currently in use and can't be modified."
+msgstr "DSP eklentisi şu anda kullanılıyor ve değiştirilemez."
+
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "Eklenti yeniden başlatılır"
@@ -10413,13 +11033,9 @@ msgctxt "#24093"
 msgid "Checking %s..."
 msgstr "%s denetleniyor..."
 
-msgctxt "#24094"
-msgid "(current)"
-msgstr "(geçerli)"
-
 msgctxt "#24095"
-msgid "(blacklisted)"
-msgstr "(kara listede)"
+msgid "Local package cache"
+msgstr "Yerel paket önbelleği"
 
 msgctxt "#24096"
 msgid "Add-on is incompatible or has been marked broken in repository."
@@ -10479,7 +11095,7 @@ msgstr "Altyazı bulunamadı"
 
 msgctxt "#24110"
 msgid "Downloading subtitles ..."
-msgstr "Altyazılar indiriliyor..."
+msgstr "Altyazı indiriliyor..."
 
 msgctxt "#24111"
 msgid "Languages to download subtitles for"
@@ -10519,7 +11135,7 @@ msgstr "Film altyazılarını aramak için kullanılacak varsayılan hizmeti se�
 
 msgctxt "#24120"
 msgid "Manual search string"
-msgstr "Manuel arama dizesi"
+msgstr "El ile arama dizesi"
 
 msgctxt "#24121"
 msgid "Enter search string"
@@ -10577,6 +11193,62 @@ msgctxt "#24134"
 msgid "We were unable to load your configured language. Please check your language settings."
 msgstr "Dil yapılandırmanız yüklenemedi. Lütfen dil ayarlarınızı denetleyin."
 
+msgctxt "#24135"
+msgid "Audio DSP"
+msgstr "Ses DSP"
+
+msgctxt "#24136"
+msgid "Audio DSP..."
+msgstr "Ses DSP..."
+
+msgctxt "#24137"
+msgid "Not allowed"
+msgstr "İzin verilmedi"
+
+msgctxt "#24138"
+msgid "DSP add-on is currently in use and can't be removed."
+msgstr "DSP eklentisi şu anda kullanılıyor ve kaldırılamaz."
+
+msgctxt "#24139"
+msgid "View Add-on"
+msgstr "Eklentiyi görüntüle"
+
+msgctxt "#24140"
+msgid "View"
+msgstr "Görüntüle"
+
+msgctxt "#24141"
+msgid "Add-on disabled"
+msgstr "Eklenti devre dışı"
+
+msgctxt "#24142"
+msgid "The dependency on %s version %s could not be satisfied."
+msgstr "%s eklentisinin %s sürümünün bağımlılıkları karşılanamadı."
+
+msgctxt "#24143"
+msgid "Installing the Add-on from zip file located at %s failed due to an invalid structure."
+msgstr "%s yolunda bulunan eklenti zip dosyası yüklenirken geçersiz yapısı nedeniyle başarısız oldu."
+
+msgctxt "#24144"
+msgid "Add-on uninstalled"
+msgstr "Eklenti kaldırıldı"
+
+msgctxt "#24145"
+msgid "Video library scanner"
+msgstr "Video kitaplığı tarayıcısı"
+
+msgctxt "#24146"
+msgid "Music library scanner"
+msgstr "Müzik kitaplığı tarayıcısı"
+
+msgctxt "#24147"
+msgid "Failed to scan %s: %s"
+msgstr "%s taranamadı: %s"
+
+msgctxt "#24991"
+msgid "Could not connect to repository."
+msgstr "Depoya bağlanamıyor"
+
 msgctxt "#24992"
 msgid "System"
 msgstr "Sistem"
@@ -10596,6 +11268,10 @@ msgstr "Sahipsiz kalan bağımlılıklar"
 msgctxt "#24996"
 msgid "Dependencies"
 msgstr "Bağımlılıklar"
+
+msgctxt "#24997"
+msgid "Look and feel"
+msgstr "Görünüm ve kullanım"
 
 msgctxt "#24998"
 msgid "My add-ons"
@@ -10649,10 +11325,6 @@ msgctxt "#25010"
 msgid "Chapter %u"
 msgstr "Bölüm %u"
 
-msgctxt "#29800"
-msgid "Library mode"
-msgstr "Kitaplık modu"
-
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTY klavye"
@@ -10660,6 +11332,326 @@ msgstr "QWERTY klavye"
 msgctxt "#29802"
 msgid "Passthrough audio in use"
 msgstr "Doğrudan ses geçişi kullanımda"
+
+msgctxt "#29900"
+msgid "Radiotext Plus info"
+msgstr "Radiotext Plus bilgisi"
+
+msgctxt "#29901"
+msgid "Band"
+msgstr "Grup"
+
+msgctxt "#29902"
+msgid "Style"
+msgstr "Tür"
+
+msgctxt "#29903"
+msgid "Composer"
+msgstr "Besteci"
+
+msgctxt "#29904"
+msgid "Artist"
+msgstr "Sanatçı"
+
+msgctxt "#29905"
+msgid "Conductor"
+msgstr "Orkestra Şefi"
+
+msgctxt "#29906"
+msgid "Moderator"
+msgstr "Moderatör"
+
+msgctxt "#29907"
+msgid "Editorial Staff"
+msgstr "Redaksiyon Ekibi"
+
+msgctxt "#29908"
+msgid "Program"
+msgstr "Program"
+
+msgctxt "#29909"
+msgid "Studio"
+msgstr "Stüdyo"
+
+msgctxt "#29910"
+msgid "Phone"
+msgstr "Telefon"
+
+msgctxt "#29911"
+msgid "EMail"
+msgstr "E-Posta"
+
+msgctxt "#29912"
+msgid "SMS"
+msgstr "SMS"
+
+msgctxt "#29913"
+msgid "Hotline"
+msgstr "Bilgi hattı"
+
+msgctxt "#29914"
+msgid "Website"
+msgstr "Web sitesi"
+
+msgctxt "#29915"
+msgid "Info"
+msgstr "Bilgi"
+
+msgctxt "#29916"
+msgid "News"
+msgstr "Haberler"
+
+msgctxt "#29917"
+msgid "News local"
+msgstr "Yerel haberler"
+
+msgctxt "#29918"
+msgid "Sport"
+msgstr "Spor"
+
+msgctxt "#29919"
+msgid "Lottery"
+msgstr "Piyango"
+
+msgctxt "#29920"
+msgid "Stock"
+msgstr "Stok"
+
+msgctxt "#29921"
+msgid "Other"
+msgstr "Diğer"
+
+msgctxt "#29922"
+msgid "Horoscope"
+msgstr "Burç"
+
+msgctxt "#29926"
+msgid "Adult hits"
+msgstr "Gençlik hit müzikleri"
+
+msgctxt "#29927"
+msgid "Spanish talk"
+msgstr "İspanyolca talk show"
+
+msgctxt "#29928"
+msgid "Spanish music"
+msgstr "İspanyol müziği"
+
+msgctxt "#29929"
+msgid "Hip hop"
+msgstr "Hip hop"
+
+msgctxt "#29930"
+msgid "Radio Traffic advisory message!"
+msgstr "Radyo trafik önerisi mesajı!"
+
+msgctxt "#29931"
+msgid "Radio message"
+msgstr "Radyo mesajı"
+
+msgctxt "#29932"
+msgid "Language"
+msgstr "Dil"
+
+msgctxt "#29933"
+msgid "College"
+msgstr "Akademik Kuruluş Yayını"
+
+msgctxt "#29934"
+msgid "Personality"
+msgstr "Radyo show"
+
+msgctxt "#29935"
+msgid "Public"
+msgstr "Halk yayını"
+
+msgctxt "#29936"
+msgid "Soft music"
+msgstr "Hafif müzik"
+
+msgctxt "#29937"
+msgid "Adult hits"
+msgstr "Gençlik hit müzikleri"
+
+msgctxt "#29938"
+msgid "Soft rock"
+msgstr "Soft rock"
+
+msgctxt "#29939"
+msgid "Talk"
+msgstr "Sohbet"
+
+msgctxt "#29940"
+msgid "No programme type"
+msgstr "Program türü yok"
+
+msgctxt "#29941"
+msgid "News"
+msgstr "Haberler"
+
+msgctxt "#29942"
+msgid "Current affairs"
+msgstr "Güncel gelişmeler"
+
+msgctxt "#29943"
+msgid "Information"
+msgstr "Bilgi"
+
+msgctxt "#29944"
+msgid "Sport"
+msgstr "Spor"
+
+msgctxt "#29945"
+msgid "Education"
+msgstr "Eğitim"
+
+msgctxt "#29946"
+msgid "Drama"
+msgstr "Dram"
+
+msgctxt "#29947"
+msgid "Culture"
+msgstr "Kültür"
+
+msgctxt "#29948"
+msgid "Science"
+msgstr "Bilim"
+
+msgctxt "#29949"
+msgid "Varied"
+msgstr "Çeşitli"
+
+msgctxt "#29950"
+msgid "Pop music"
+msgstr "Pop müzik"
+
+msgctxt "#29951"
+msgid "Rock music"
+msgstr "Rock müzik"
+
+msgctxt "#29952"
+msgid "Easy listening music"
+msgstr "Hafif müzik"
+
+msgctxt "#29953"
+msgid "Light classical"
+msgstr "Hafif klasik"
+
+msgctxt "#29954"
+msgid "Serious classical"
+msgstr "Ağır klasik"
+
+msgctxt "#29955"
+msgid "Other music"
+msgstr "Diğer müzik"
+
+msgctxt "#29956"
+msgid "Weather"
+msgstr "Hava Durumu"
+
+msgctxt "#29957"
+msgid "Finance"
+msgstr "Finans"
+
+msgctxt "#29958"
+msgid "Children's Programmes"
+msgstr "Çocuk Programları"
+
+msgctxt "#29959"
+msgid "Social Affairs"
+msgstr "Sosyal gelişmeler"
+
+msgctxt "#29960"
+msgid "Religion"
+msgstr "Din"
+
+msgctxt "#29961"
+msgid "Phone-in"
+msgstr "Telefonla katılım"
+
+msgctxt "#29962"
+msgid "Travel"
+msgstr "Seyahat"
+
+msgctxt "#29963"
+msgid "Leisure"
+msgstr "Dinlenme"
+
+msgctxt "#29964"
+msgid "Jazz Music"
+msgstr "Jazz Müzik"
+
+msgctxt "#29965"
+msgid "Country Music"
+msgstr "Country Müzik"
+
+msgctxt "#29966"
+msgid "National Music"
+msgstr "Ulusal Müzik"
+
+msgctxt "#29967"
+msgid "Oldies Music"
+msgstr "Eski Hit Müzikler"
+
+msgctxt "#29968"
+msgid "Folk Music"
+msgstr "Halk Müziği"
+
+msgctxt "#29969"
+msgid "Documentary"
+msgstr "Belgesel"
+
+msgctxt "#29970"
+msgid "Alarm Test"
+msgstr "Alarm Test"
+
+msgctxt "#29971"
+msgid "Alarm"
+msgstr "Alarm"
+
+msgctxt "#29977"
+msgid "Classic rock music"
+msgstr "Klasik rock müzik"
+
+msgctxt "#29978"
+msgid "Classical"
+msgstr "Klasik"
+
+msgctxt "#29979"
+msgid "Nostalgia"
+msgstr "Nostalji"
+
+msgctxt "#29980"
+msgid "Enable RDS for radio channels"
+msgstr "Radyo kanalları için RDS'yi etkinleştir"
+
+msgctxt "#29981"
+msgid "RDS data can be used if present"
+msgstr "RDS verisi varsa kullanılabilir"
+
+msgctxt "#29982"
+msgid "Message traffic advisory"
+msgstr "Trafik önerisi mesajı"
+
+msgctxt "#29983"
+msgid "RDS inform you about traffic advisory messages"
+msgstr "RDS sizi trafik önerisi mesajları hakkında bilgilendirir"
+
+msgctxt "#29984"
+msgid "Increase volume on traffic advisory"
+msgstr "Trafik önerisinde ses düzeyini yükselt"
+
+msgctxt "#29985"
+msgid "If traffic advisory is send from RDS, volume is increased"
+msgstr "Eğer RDS tarafından trafik önerisi yollanırsa ses düzeyi yükseltilir"
+
+msgctxt "#29986"
+msgid "Publicate traffic messages"
+msgstr "Trafik mesajları yayınla"
+
+msgctxt "#29987"
+msgid "Send present traffic messages around and can be handled from add-ons (nothing inside Kodi)"
+msgstr "Etrafınıza şu andaki trafik mesajlarını göderir ve sadece eklentiler ile çalışır (yerleşik Kodi desteği yok)"
 
 msgctxt "#33001"
 msgid "Trailer quality"
@@ -10743,7 +11735,7 @@ msgstr "Durum"
 
 msgctxt "#33021"
 msgid "Precipitation"
-msgstr "Düşen yağış"
+msgstr "Yağış"
 
 msgctxt "#33022"
 msgid "Precip"
@@ -10763,7 +11755,7 @@ msgstr "Görünen"
 
 msgctxt "#33026"
 msgid "Departure from normal"
-msgstr "Departure from normal"
+msgstr "Normal değerlerden ayrılış"
 
 msgctxt "#33027"
 msgid "Sunrise"
@@ -10779,7 +11771,7 @@ msgstr "Ayrıntılar"
 
 msgctxt "#33030"
 msgid "Outlook"
-msgstr "Outlook"
+msgstr "Görünüm"
 
 msgctxt "#33031"
 msgid "Coverflow"
@@ -10891,7 +11883,7 @@ msgstr "Hakkında"
 
 msgctxt "#33067"
 msgid "Star rating"
-msgstr "Yıldız puanı"
+msgstr "Yıldız derecelendirmesi"
 
 msgctxt "#33068"
 msgid "Background"
@@ -10932,10 +11924,6 @@ msgstr "Aşk"
 msgctxt "#33080"
 msgid "Hate"
 msgstr "Nefret"
-
-msgctxt "#33081"
-msgid "This file is stacked, select the part you want to play from."
-msgstr "Bu dosya yığınlandı, oynatmak istediğiniz bölümü seçin."
 
 msgctxt "#33082"
 msgid "Path to script"
@@ -11047,11 +12035,11 @@ msgstr "7.1"
 
 msgctxt "#34111"
 msgid "Select the behaviour when no sound is required for either playback or GUI sounds.[CR][Always] Continuous inaudible signal is output, this keeps the receiving audio device alive for any new sounds, however this might also block sound from other applications.[CR][1-10 Minutes] Same as [Always] except that after the selected period of time audio enters a suspended state.[CR][Off] Audio output enters a suspended state. Note: Sounds can be missed if audio enters suspended state."
-msgstr "Oynatma veya grafik kullanıcı arabirimi sesleri için herhangi bir ses gerekli olmadığındaki davranışı seçin.[CR][Her zaman] - sürekli duyulamaz sinyal çıkışı, bu yeni sesler için çıktı aygıtını canlı tutar ancak bu da diğer uygulamaların seslerini engelleyebilir.[CR][1-10 Dakika] - [Her zaman] ile aynı olmasının dışında seçilen süreden sonra askıda bekleme durumuna girer.[CR][Kapalı] - ses çıkışı askıda bekleme durumuna girer. Not - Sesler askıda bekleme durumuna girerse sesler çalmayabilir."
+msgstr "Oynatma veya GUI sesleri için herhangi bir ses gerekli olmadığındaki davranışı seçin.[CR][Her zaman] - sürekli duyulamaz sinyal çıkışı, bu yeni sesler için çıktı aygıtını canlı tutar ancak bu da diğer uygulamaların seslerini engelleyebilir.[CR][1-10 Dakika] - [Her zaman] ile aynı olmasının dışında seçilen süreden sonra askıda bekleme durumuna girer.[CR][Kapalı] - ses çıkışı askıda bekleme durumuna girer. Not - Sesler askıda bekleme durumuna girerse sesler çalmayabilir."
 
 msgctxt "#34120"
 msgid "Play GUI sounds"
-msgstr "Grafik kullanıcı arabirimi seslerini çal"
+msgstr "GUI seslerini çal"
 
 msgctxt "#34121"
 msgid "Only when playback stopped"
@@ -11096,6 +12084,10 @@ msgstr "Çalınacak önceki öğe bulunamadı"
 msgctxt "#34300"
 msgid "Failed to start Zeroconf"
 msgstr "Zeroconf başlatılamadı"
+
+msgctxt "#34301"
+msgid "Is Apple's Bonjour service installed? Check the log for more information about this message."
+msgstr "Apple'ın Bonjour hizmeti yüklü mü? Bu mesaj hakkında daha fazla bilgi için günlük dosyasını denetleyin."
 
 msgctxt "#34302"
 msgid "Failed to start AirPlay as it requires Zeroconf to be enabled."
@@ -11219,11 +12211,11 @@ msgstr "Pulse-Eight Nyxboard"
 
 msgctxt "#36002"
 msgid "Switch to keyboard side command"
-msgstr "Switch to keyboard side command"
+msgstr "Klavye yan komutuna geçiş yap"
 
 msgctxt "#36003"
 msgid "Switch to remote side command"
-msgstr "Switch to remote side command"
+msgstr "Uzaktan kumanda yan komutuna geçiş yap"
 
 msgctxt "#36004"
 msgid "Press \"user\" button command"
@@ -11334,8 +12326,8 @@ msgid "The port is busy. Only one program can access the CEC adapter"
 msgstr "Bağlantı noktası meşgul. Sadece bir program CEC bağdaştırıcısına erişebilir"
 
 msgctxt "#36033"
-msgid "Pause playback when switching to another source"
-msgstr "Başka bir kaynağa geçince oynatımı duraklat"
+msgid "Action when switching to another source"
+msgstr "Başka bir kaynağa geçince yapılacak eylem"
 
 msgctxt "#36035"
 msgid "Always"
@@ -11369,6 +12361,14 @@ msgctxt "#36042"
 msgid "Use limited colour range (16-235)"
 msgstr "Sınırlı renk aralığı kullan (16-235)"
 
+msgctxt "#36044"
+msgid "Stop Playback"
+msgstr "Oynatımı Durdur"
+
+msgctxt "#36045"
+msgid "Pause Playback"
+msgstr "Oynatımı Duraklat"
+
 msgctxt "#36101"
 msgid "Change the look and feel of the user interface."
 msgstr "Kullanıcı arabiriminin görünüm ve düzenini değiştir."
@@ -11395,7 +12395,7 @@ msgstr "Seçtiğiniz dış görünümün renklerini değiştirin."
 
 msgctxt "#36107"
 msgid "Choose the fonts displayed in the user interface. The font sets are configured by your skin."
-msgstr "Kullanıcı arabiriminde görüntülenen yazı tiplerini seç. Yazı tipi kümeleri dış görünüm tarafından yapılandırılır."
+msgstr "Kullanıcı arabiriminde görüntülenen yazı tiplerini seçin. Yazı tipi kümeleri dış görünüm tarafından yapılandırılır."
 
 msgctxt "#36108"
 msgid "Resize the view of the user interface."
@@ -11541,9 +12541,13 @@ msgctxt "#36143"
 msgid "Downloads thumbnails for actors from online databases when adding media to the library."
 msgstr "Medya kitaplığa eklendiğinde aktör küçük resimlerini çevrimiçi veritabanlarından indir."
 
+msgctxt "#36144"
+msgid "Select in which cases you want to hide the season nodes of TV shows. If hidden, selecting a TV show will directly jump into the episodes view."
+msgstr "TV programlarının sezon düğümlerini hangi durumlarda gizleyeceğinizi seçin. Eğer gizlenmiş ise, TV programlarını seçmek sizi doğrudan bölüm görünümüne atlatacaktır."
+
 msgctxt "#36145"
-msgid "Group movies into \"Movie sets\" when browsing the movie library."
-msgstr "Film kitaplığına göz atarken filmleri \"Film kümeleri\" içine grupla."
+msgid "When enabled, movies belonging to a \"Movie set\" are grouped together under one entry for the set in the movie library, this entry can then be opened to display the individual movies. When disabled, each movie will have it's own entry in the movie library even if it belongs to a set."
+msgstr "Etkin olduğunda, film kümesine ait olan filmler kitaplıkta bir giriş altında gruplanır ve bu giriş sonra tek tek filmleri görüntülemek için açılabilir. Devre dışı olduğunda, her film bir kümeye ait olsa bile film kitaplığında kendi girişi olacaktır."
 
 msgctxt "#36146"
 msgid "Check for new media files on startup."
@@ -11589,6 +12593,10 @@ msgctxt "#36156"
 msgid "Enable VAAPI hardware decoding of video files, mainly used for Intel graphics and in some circumstances AMD graphics."
 msgstr "Video dosyalarının VAAPI donanımsal kod çözmesini etkinleştir. Çoğunlukla Intel ve bazı durumlarda AMD grafik işlemcileri için kullanılır."
 
+msgctxt "#36157"
+msgid "When enabled, a \"Movie set\" entry is used even if the movie library contains only a single movie from that set. When disabled, a \"Movie set\" entry is used only if the movie library contains more than one movie from that set."
+msgstr "Etkin olduğunda, kitaplıktaki film kümesi sadece bir tek film içerse bile film kümesi girdisi kullanılır. Devre dışı olduğunda, kitaplıktaki film kümesi yalnızca birden fazla film içeriyorsa film kümesi girdisi kullanılır."
+
 msgctxt "#36158"
 msgid "Enable DXVA2 hardware decoding of video files."
 msgstr "Video dosyalarının DXVA2 donanımsal kod çözmesini etkinleştir."
@@ -11608,6 +12616,10 @@ msgstr "Video dosyalarının OpenMax donanımsal kod çözmesini etkinleştir."
 msgctxt "#36162"
 msgid "Enable VideoToolbox hardware decoding of video files."
 msgstr "Video dosyalarının VideoToolbox donanımsal kod çözmesini etkinleştir."
+
+msgctxt "#36163"
+msgid "Show TV shows with no episodes when browsing the video library."
+msgstr "Video kitaplığına gözatarken bölümü olmayan TV programlarını göster."
 
 msgctxt "#36164"
 msgid "Allow the refresh rate of the display to be changed so that it best matches the video frame rate. This may yield smoother video playback."
@@ -11632,6 +12644,10 @@ msgstr "Kullanıcı arabirimindeki saati 12 veya 24 saat biçimininden kullanmak
 msgctxt "#36169"
 msgid "Select the quality of resampling for cases where the audio output needs to be at a different sampling rate from that used by the source.[CR][Low] Is fast and will have minimal impact on system resources such as the use of the CPU.[CR][Medium] & [High] Will use progressively more system resources."
 msgstr "Ses çıkış kaynağı tarafından kullanılandan farklı bir örnekleme oranında olması gereken durumlar için yeniden örnekleme kalitesini seçin.[CR][Düşük] hızlı ve CPU kullanımı gibi sistem kaynakları üzerinde çok az etkisi olur,[CR][Orta] ve [Yüksek] giderek daha fazla sistem kaynaklarını kullanır."
+
+msgctxt "#36170"
+msgid "Stretch the video up to the set percentage in order to minimise black bars."
+msgstr "Siyah çubukları azaltmak için videoyu ayarlanan yüzdeye kadar genişlet."
 
 msgctxt "#36171"
 msgid "Select the zoom level that 4:3 videos are shown on widescreen displays."
@@ -11866,8 +12882,8 @@ msgid "Time to wait for a channel to be received after a channel change. Useful 
 msgstr "Kanal değiştirdikten sonra alınacak kanal için beklenecek süre. Zaman zaman sinyal gücünü kaybeden havadan yayın kanalları için kullanışlıdır."
 
 msgctxt "#36231"
-msgid "Pressing a number button in full screen mode will automatically switch to the channel number that was entered after 1 second."
-msgstr "Tam ekran modundayken bir sayı tuşlanırsa, sayı tuşlandıktan 1 saniye sonra otomatik olarak tuşlanan kanalı açar."
+msgid "When flipping through channels using channel up/down buttons or when pressing a number button in full screen mode, channel switches must be confirmed using the OK button."
+msgstr "Kanal değiştirmeleri yukarı/aşağı düğmelerine veya tam ekranda numara tuşlarına bastıktan sonra OK tuşuna basarak onaylanması gereklidir."
 
 msgctxt "#36232"
 msgid "When pressing channel up or down, the actual channel switch is delayed, allowing the user to flip to a channel number without waiting for each channel switch."
@@ -12019,7 +13035,7 @@ msgstr "Ses dosyalarına kodlanmış ReplayGain bilgisi olmayan dosyalar ile kul
 
 msgctxt "#36270"
 msgid "Reduce the volume of the file if clipping will occur."
-msgstr "Kırpma oluşursa dosyasının ses düzeyini azalt."
+msgstr "Kırpma oluşursa dosyanın ses düzeyini azalt."
 
 msgctxt "#36271"
 msgid "Smoothly fade from one audio track to the next. You can set the amount of overlap from 1-15 seconds."
@@ -12032,6 +13048,10 @@ msgstr "İki parça aynı albümde ise çapraz geçişe izin ver."
 msgctxt "#36273"
 msgid "Select the visualisation that will be displayed while listening to music."
 msgstr "Müzik dinlerken hangi görsel öğenin gösterileceğini seçin."
+
+msgctxt "#36274"
+msgid "Read the tag information from song files. For large directories this can increase read time, especially over a network."
+msgstr "Şarkı dosyalarının etiket bilgilerini oku. Bu özellikle ağ üzerinden büyük dizinlerin okuma süresini yavaşlatır."
 
 msgctxt "#36275"
 msgid "Control the way that the names of songs are displayed in the user interface. In order to function properly, tag reading needs to be enabled."
@@ -12079,7 +13099,7 @@ msgstr "Kopyalanan parçaların sabit sürücünüzde kaydedileceği konumu seç
 
 msgctxt "#36286"
 msgid "Control how saved music is named from the tags. Tags: [B]%N[/B]: TrackNumber, [B]%S[/B]: DiscNumber, [B]%A[/B]: Artist, [B]%T[/B]: Title, [B]%B[/B]: Album, [B]%G[/B]: Genre, [B]%Y[/B]: Year, [B]%F[/B]: FileName, [B]%D[/B]: Duration, [B]%J[/B]: Date, [B]%R[/B]: Rating, [B]%I[/B]: FileSize."
-msgstr "Kaydedilmiş müziğin etiketler tarafından nasıl adlandırılacağını kontrol edin. Etiketler: [B]%N[/B]: ParçaNumarası, [B]%S[/B]: DiskNumarası, [B]%A[/B]: Artist, [B]%T[/B]: Başlık, [B]%B[/B]: Albüm, [B]%G[/B]: Tür, [B]%Y[/B]: Yıl, [B]%F[/B]: DosyaAdı, [B]%D[/B]: Süre, [B]%J[/B]: Tarih, [B]%R[/B]: Puan, [B]%I[/B]: DosyaBoyutu."
+msgstr "Kaydedilmiş müziğin etiketler tarafından nasıl adlandırılacağını kontrol edin. Etiketler: [B]%N[/B]: ParçaNumarası, [B]%S[/B]: DiskNumarası, [B]%A[/B]: Artist, [B]%T[/B]: Başlık, [B]%B[/B]: Albüm, [B]%G[/B]: Tür, [B]%Y[/B]: Yıl, [B]%F[/B]: DosyaAdı, [B]%D[/B]: Süre, [B]%J[/B]: Tarih, [B]%R[/B]: Derecelendirme, [B]%I[/B]: DosyaBoyutu."
 
 msgctxt "#36287"
 msgid "Select which audio encoder to use when ripping."
@@ -12101,42 +13121,6 @@ msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "CD kopyalama işlemi bitince diski otomatik olarak çıkar."
 
-msgctxt "#36292"
-msgid "This category contains the settings for how karaoke is handled."
-msgstr "Bu kategori karaoke ile ilgili ayarları içerir."
-
-msgctxt "#36293"
-msgid "When playing any music file, look for a matching .cdg file and display its graphics."
-msgstr "Herhangi bir müzik dosyası çalınırken eşleşen .cdg dosyasına bak ve grafiklerini görüntüle."
-
-msgctxt "#36294"
-msgid "Show song selection dialogue once the last song in the queue has been played."
-msgstr "Sıradaki son şarkı çalındıktan sonra şarkı seçimi iletişim kutusunu göster."
-
-msgctxt "#36295"
-msgid "Select the font type used during karaoke."
-msgstr "Karaoke sırasında kullanılacak yazı tipi türünü seçin."
-
-msgctxt "#36296"
-msgid "Select the size of the font used during karaoke."
-msgstr "Karaoke sırasında kullanılacak yazı tipi boyutunu seçin."
-
-msgctxt "#36297"
-msgid "Select the font colour used during karaoke."
-msgstr "Karaoke sırasında kullanılacak yazı tipi rengini seçin."
-
-msgctxt "#36298"
-msgid "Select the character set used during karaoke."
-msgstr "Karaoke sırasında kullanılacak karakter kümesini seçin."
-
-msgctxt "#36299"
-msgid "Export the karaoke numbered songs to HTML or CSV files."
-msgstr "Karaoke numaralı şarkıları HTML veya CSV dosyası olarak dışa aktar."
-
-msgctxt "#36300"
-msgid "Import the karaoke numbered songs from HTML or CSV files."
-msgstr "Karaoke numaralı şarkıları HTML veya CSV dosyası olarak içe aktar."
-
 msgctxt "#36301"
 msgid "No info available yet."
 msgstr "Henüz hiçbir bilgi yok."
@@ -12157,17 +13141,9 @@ msgctxt "#36305"
 msgid "This category contains the settings for how picture file lists are handled."
 msgstr "Bu kategori resim dosyası listeleri ile ilgili ayarları içerir."
 
-msgctxt "#36306"
-msgid "If EXIF information exists (date, time, camera used, etc.), it will be displayed."
-msgstr "Eğer EXIF bilgisi varsa (tarih, kullanılan kamera, vs.), görüntülenecek."
-
 msgctxt "#36307"
 msgid "Automatically generate picture thumbnails when entering picture folder."
 msgstr "Resim klasörüne girerken küçük resimleri otomatik olarak oluştur."
-
-msgctxt "#36308"
-msgid "Pictures will automatically rotate according to information in the EXIF tag, if found."
-msgstr "Eğer varsa EXIF etiketindeki bilgiye göre resimler otomatik olarak döndürülecek."
 
 msgctxt "#36309"
 msgid "Show videos in picture file lists."
@@ -12349,13 +13325,17 @@ msgctxt "#36353"
 msgid "Changes the refresh rate that the user interface is displayed in."
 msgstr "Kullanıcı arabirimi yenileme hızını değiştirir."
 
+msgctxt "#36354"
+msgid "If enabled, fullscreen mode will be applied by using a window instead of a real fullscreen mode. The main benefit is for multi-screen configurations, so that other applications can be used in parallel more easily. This uses more resources so playback may be less smooth."
+msgstr "Eğer etkinse gerçek tam ekran yerine tam ekran penceresi kullanılır. Bunun avantajı çoklu ekran yapılandırmaları içindir. Kodi diğer uygulamaları simge durumuna küçültmeden kullanılabilir. Bu daha fazla kaynak kullandığı için oynatım çok akıcı olmayabilir."
+
 msgctxt "#36355"
 msgid "In a multi-screen configuration, the screens not displaying this application are blacked out."
 msgstr "Çoklu ekran yapılandırmasında, bu uygulamayı görüntülemeyen ekranlar karartılır."
 
 msgctxt "#36356"
-msgid "Eliminate vertical tearing."
-msgstr "Dikey kopmayı ortadan kaldır."
+msgid "Eliminates tearing."
+msgstr "Görüntüdeki kopmayı ortadan kaldırır."
 
 msgctxt "#36357"
 msgid "Calibrate the user interface by adjusting the overscan. Use this tool if the image being displayed is too large or small for your display."
@@ -12394,8 +13374,8 @@ msgid "Select this option if your receiver is capable of decoding Dolby Digital 
 msgstr "Eğer alıcınız Dolby Digital (AC3) kod çözme desteğine sahipse bu seçeneği seçin."
 
 msgctxt "#36366"
-msgid "Select this option if your receiver is capable of decoding DTS streams."
-msgstr "Eğer alıcınız DTS kod çözme desteğine sahipse bu seçeneği seçin."
+msgid "Select this option if your receiver is capable of decoding DTS streams. Note: Enabling this will disable \"Support 8 channel DTS-HD audio decoding\" option"
+msgstr "Eğer alıcınız DTS kod çözme desteğine sahipse bu seçeneği seçin. Not: Bunu etkinleştirmek \"8 kanal DTS-HD ses çözücü desteği\" seçeneğini devre dışı bırakır."
 
 msgctxt "#36367"
 msgid "Select the maximum number of audio channels / speakers available for decoded audio. If optical / coax digital outputs are used, this must be set to 2.0"
@@ -12410,8 +13390,8 @@ msgid "Select this option if your receiver is capable of decoding TrueHD streams
 msgstr "Eğer alıcınız TrueHD kod çözme desteğine sahipse bu seçeneği seçin."
 
 msgctxt "#36370"
-msgid "Select this option if your receiver is capable of decoding DTS-HD streams."
-msgstr "Eğer alıcınız DTS-HD kod çözme desteğine sahipse bu seçeneği seçin."
+msgid "Select this option if your receiver is capable of decoding DTS-HD streams. Note: Enabling this will disable \"Support 8 channel DTS-HD audio decoding\" option"
+msgstr "Eğer alıcınız DTS-HD kod çözme desteğine sahipse bu seçeneği seçin. Not: Bunu etkinleştirmek \"8 kanal DTS-HD ses çözücü desteği\" seçeneğini devre dışı bırakır."
 
 msgctxt "#36371"
 msgid "Select the device to be used for playback of audio that has been decoded such as mp3."
@@ -12494,8 +13474,8 @@ msgid "Define what action to perform when the shutdown function timer lapsed."
 msgstr "Kapatma işlevi zamanlayıcısı atlandığında hangi eylemin gerçekleştirileceğini tanımla."
 
 msgctxt "#36391"
-msgid "This category contains the settings for enabling debug functions. You can also enable component-specific debug logging in order to help troubleshoot related issues in more detail."
-msgstr "Bu kategori hata ayıklama işlevleri ile ilgili ayarları içerir. Ayrıca daha ayrıntılı olarak ilgili sorunları gidermenize yardımcı olması için bileşene özel hata ayıklama günlüğünü etkinleştirebilirsiniz."
+msgid "This category contains the settings for enabling event and debug logging. You can also enable component-specific debug logging in order to help troubleshoot related issues in more detail."
+msgstr "Bu kategori olay ve hata ayıklama işlevleri ile ilgili ayarları içerir. Ayrıca daha ayrıntılı olarak ilgili sorunları gidermenize yardımcı olması için bileşene özel hata ayıklama günlüğünü etkinleştirebilirsiniz."
 
 msgctxt "#36392"
 msgid "Turn debug logging on or off. Useful for troubleshooting."
@@ -12611,7 +13591,7 @@ msgstr "Hava durumu bilgisi için kullanılacak yer bilgisini tanımlayın."
 
 msgctxt "#36420"
 msgid "Look for external subtitles for videos provided by the UPnP server. This can cause extensive CPU, filesystem and network load."
-msgstr "Videolar için UPnP sunucusu tarafından sağlanan harici altyazılara bak. Bu kapsamlı bir şekilde CPU, dosya sistemi ve ağ yüküne neden olabilir."
+msgstr "Videolar için UPnP sunucusu tarafından sağlanan harici altyazıları ara. Bu kapsamlı bir şekilde CPU, dosya sistemi ve ağ yüküne neden olabilir."
 
 msgctxt "#36421"
 msgid "Bypassing VDPAU mixer saves resources on low power systems but slightly reduces picture quality."
@@ -12620,6 +13600,10 @@ msgstr "VDPAU mikseri atlayarak düşük güçlü sistemlerde kaynak tasarrufu s
 msgctxt "#36422"
 msgid "Enable hardware video decode using Amlogic decoder."
 msgstr "Amlogic kod çözücü kullanarak donanımsal video kod çözmesini etkinleştir"
+
+msgctxt "#36423"
+msgid "Repeating schedules shall only record new episodes. Not supported by all add-ons and backends."
+msgstr "Yinelenen zamanlamalar sadece yeni bölümleri kaydeder. Bütün eklentiler ve arka uçlar tarafından desteklenmez."
 
 msgctxt "#36424"
 msgid "Select what will happen when an item is selected in the guide: [Show context menu] Will trigger the context menu from where you can choose further actions; [Switch to channel] Will instantly tune to the related channel; [Show information] Will display a detailed information with plot and further options; [Record] Will create a recording timer for the selected item."
@@ -12649,6 +13633,10 @@ msgctxt "#36430"
 msgid "Configure how video processing will be accelerated. This includes things like decoding and scaling."
 msgstr "Görüntü işleme hızlandırmasının nasıl olacağını yapılandırın. Bu, kod çözme ve ölçeklendirme gibi şeyleri içerir."
 
+msgctxt "#36431"
+msgid "Shows all events in the event log for the current profile with options to only show specific levels."
+msgstr "Geçerli profil için olay günlüğündeki bütün olayları gösterir."
+
 msgctxt "#36432"
 msgid "Select virtual keyboard layouts."
 msgstr "Sanal klavye düzenlerini seç."
@@ -12664,6 +13652,38 @@ msgstr "Donanım hızlandırmasına izin ver - MMAL"
 msgctxt "#36435"
 msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
 msgstr "Video dosyalarının kod çözmesi için MMAL hızlandırmalı DVDPlayer'ı kullan."
+
+msgctxt "#36436"
+msgid "Audio DSP manager..."
+msgstr "Ses DSP yöneticisi..."
+
+msgctxt "#36437"
+msgid "Allows to configure available modes for different stages in audio processing and to arrange the steps within the processing chain of each selected mode."
+msgstr "Ses işlemenin farklı aşamalarında mevcut modlarını yapılandırmak için ve seçilen her modda işleme zinciri içindeki adımları yapılandırmaya izin verir."
+
+msgctxt "#36438"
+msgid "Enables digital signal processing (DSP) of audio channels specified by the speaker configuration."
+msgstr "Hoparlör yapılandırması tarafından belirtilen ses kanalları için dijital sinyal işleme (DSP) özelliğini etkinleştirir."
+
+msgctxt "#36439"
+msgid "All data (add-on settings and audio DSP manager settings) in the audio DSP database will be erased."
+msgstr "Ses DSP veritabanındaki tüm veriler (eklenti ayarları ve ses DSP yöneticisi ayarları) silinecektir."
+
+msgctxt "#36440"
+msgid "Erasing all DSP add-on and audio DSP manager settings in the audio DSP database."
+msgstr "Tüm DSP eklentileri ve DSP yöneticisi ayarları ses DSP veritabanından siliniyor."
+
+msgctxt "#36441"
+msgid "Enable audio DSP processing"
+msgstr "Ses DSP işleme özelliğini etkinleştir"
+
+msgctxt "#36460"
+msgid "Event logging allows to keep track of what has happened."
+msgstr "Olay günlüğü sisteminizde olmuş olayları izlemenize olanak sağlar."
+
+msgctxt "#36461"
+msgid "Notification event describe regular processes and actions performed by the system or the user."
+msgstr "Bildirim olayı sistem veya kullanıcı tarafından gerçekleştirilen düzenli süreçleri ve eylemleri açıklar."
 
 msgctxt "#36500"
 msgid "Stereoscopic 3D mode / Current"
@@ -12708,6 +13728,10 @@ msgstr "Monoskopik / 2B"
 msgctxt "#36510"
 msgid "Anaglyph yellow / blue"
 msgstr "Anaglif sarı / mavi"
+
+msgctxt "#36511"
+msgid "Checkerboard"
+msgstr "Damalı"
 
 msgctxt "#36520"
 msgid "Playback mode of stereoscopic 3D videos"
@@ -12763,7 +13787,7 @@ msgstr "Stereoskopik 3B video modu"
 
 msgctxt "#36536"
 msgid "Invert stereoscopic 3D mode (flip eyes)"
-msgstr "Ters çevrilmiş Stereoskopik 3B mod (flip eyes)"
+msgstr "Ters çevrilmiş Stereoskopik 3B mod (gözleri ters çevir)"
 
 msgctxt "#36537"
 msgid "Select in which mode stereoscopic 3D videos will be played.[CR][Ask me] Will show a dialogue to select the desired mode for each playback.[CR][Preferred mode] Will use the preferred mode specified in the \"System -> Video hardware\" section of the settings.[CR][Monoscopic / 2D] Will play the video in mono / 2D.[CR][Ignore] Disables any stereoscopic 3D processing and handling."
@@ -12771,7 +13795,7 @@ msgstr "Stereoskopik 3B videoların hangi modda oynatılacağını seçin.[CR][B
 
 msgctxt "#36538"
 msgid "[Enabled] Switch GUI (and some TVs) back to 2D mode, between videos in a playlist or when playback ended.[CR][Disabled] GUI and TV will stay in stereoscopic 3D mode. For video playlists with mixed stereoscopic 3D and 2D content, then the GUI will also stay in stereoscopic 3D mode even when a non-stereoscopic 2D video is playing."
-msgstr "[Etkin] Oynatım sona erdiğinde grafik kullanıcı arabirimini (ve bazı televizyonlar) 2B moduna geri döndür.[CR][Devre dışı] Grafik kullanıcı arabirimi ve TV stereoskopik 3B modunda kalır. Video çalma listeleri için stereoskopik 3B modu, stereoskopik olmayan videolar için bile değişmez."
+msgstr "[Etkin] Oynatım sona erdiğinde GUI'yi (ve bazı televizyonları) 2B moduna geri döndür.[CR][Devre dışı] GUI ve TV stereoskopik 3B modunda kalır. Video çalma listeleri için stereoskopik 3B modu, stereoskopik olmayan videolar için bile değişmez."
 
 msgctxt "#36539"
 msgid "Changes the stereoscopic 3D mode of the user interface."
@@ -12779,7 +13803,7 @@ msgstr "Kullanıcı arabiriminin stereoskopik 3B modunu değiştirir."
 
 msgctxt "#36540"
 msgid "The preferred mode in which stereoscopic 3D media such as videos should be played."
-msgstr "Stereoskopik 3B medya ve böyle videoların oynatılması için tercih edilen mod."
+msgstr "Stereoskopik 3B ortam ve böyle videoların oynatılması için tercih edilen mod."
 
 msgctxt "#36541"
 msgid "Allows volume control from AirPlay clients."
@@ -12811,11 +13835,19 @@ msgstr "Fanart ve kapaklar için daha yüksek kaliteli dokular kullan (daha fazl
 
 msgctxt "#36548"
 msgid "Limits resolution of GUI to save memory. Does not affect video playback. Requires restart."
-msgstr "Bellek tasarrufu için grafik kullanıcı arabirimi çözünürlüğünü sınırlar. Video oynatımını etkilemez. Yeniden başlatma gerektirir."
+msgstr "Bellek tasarrufu için GUI çözünürlüğünü sınırlar. Video oynatımını etkilemez. Yeniden başlatma gerektirir."
 
 msgctxt "#36549"
-msgid "Use iOS8 compatible AirPlay support. If you have trouble with older iOS devices detecting this application as a valid target try switching this off. This option requires a restart to take effect!"
-msgstr "iOS8 uyumlu AirPlay desteği kullan. Eğer eski iOS cihazları ile bu uygulamayı geçerli bir hedef olarak algılamada sorun yaşıyorsanız bunu kapatmayı deneyin. Bu seçeneğin etkili olması için yeniden başlatmak gerekir!"
+msgid "Enables support for receiving \"Videos\" and \"Pictures\" via AirPlay. This needs to be disabled when using iOS 9 or later clients to restore music streaming via AirPlay. \"Videos\" and \"Pictures\" are only supported for iOS clients using iOS 8.x and older."
+msgstr "AirPlay yoluyla \"Video\" ve \"Resim\" alma desteğini etkinleştirir. iOS 9 veya üstü istemcileri kullanırken bu özelliğin devre dışı bırakılması gerekir. \"Video\" ve \"Resim\" sadece iOS 8.x ve daha eski iOS istemcilerini destekler."
+
+msgctxt "#36550"
+msgid "Stereoscopic 3D effect strength"
+msgstr "Stereoskopik 3B efekt düzeyi"
+
+msgctxt "#36551"
+msgid "Defines the strength of the stereoscopic 3D effect in the GUI. This is done by controlling the depth of perception within the GUI, so the higher the value, the more elements will pop out of the screen. [Zero] Disables the stereoscopic 3D effect of the GUI.[CR]For a good visual experience, the value should be higher for small screens and lower for large screens. Note: this is not supported by all skins."
+msgstr "GUI'nin stereoskopik 3B efektinin gücünü tanımlar. Bunu GUI içindeki algı derinliğini kontrol ederek yapar ve bu nedenle daha yüksek bir değer, daha fazla öğenin ekranın dışına taşmasını sağlayacaktır. [Zero] GUI'nin stereoskopik 3B efektini devre dışı bırakır.[CR]İyi bir görsel deneyim için değer küçük ekranlar için daha yüksek ve büyük ekranlar için daha düşük olmalıdır. Not: Bu özellik tüm dış görünümler tarafından desteklenmemektedir."
 
 msgctxt "#36600"
 msgid "This category contains the settings for how the music library is handled."
@@ -12855,7 +13887,7 @@ msgstr "sezon"
 
 msgctxt "#36905"
 msgid "seasons"
-msgstr "sezonlar"
+msgstr "sezon"
 
 msgctxt "#36906"
 msgid "episode"
@@ -12927,11 +13959,11 @@ msgstr "(Görme engelliler)"
 
 msgctxt "#37001"
 msgid "(Director's comments)"
-msgstr "(Yönetmenin yorumu)"
+msgstr "(Yönetmenin açıklamaları)"
 
 msgctxt "#37002"
 msgid "(Director's comments 2)"
-msgstr "(Yönetmenin yorumu 2)"
+msgstr "(Yönetmenin açıklamaları 2)"
 
 msgctxt "#37011"
 msgid "(CC)"
@@ -12943,7 +13975,7 @@ msgstr "(Zorla)"
 
 msgctxt "#37013"
 msgid "(Director's comments)"
-msgstr "(Yönetmenin yorumu)"
+msgstr "(Yönetmenin açıklamaları)"
 
 msgctxt "#37014"
 msgid "Last used profile"
@@ -12971,7 +14003,7 @@ msgstr "Daha yüksek çizim renk derinliğini etkinleştir"
 
 msgctxt "#37021"
 msgid "Set GUI resolution limit"
-msgstr "Grafik kullanıcı arabirimi çözünürlük sınırını ayarla"
+msgstr "GUI çözünürlük sınırını ayarla"
 
 msgctxt "#37022"
 msgid "UPnP player"
@@ -13057,6 +14089,10 @@ msgctxt "#37042"
 msgid "Defines which step sizes to use when pressing the skip buttons. If more steps are selected for a skip direction, these can be applied by subsequent presses on the skip button within the defined skip delay. Forward (positive) and backward (negative) steps can be defined independently."
 msgstr "Atlama düğmelerine basıldığında hangi boyutta atlanacağını tanımlar. Atlama yönü için daha fazla adım seçilirse, bunlar tanımlanmış atlama gecikmesi içinde atlama düğmesine sonraki basmalar ile uygulanabilir. İleri (artı) ve geri (eksi) atlama adımları birbirlerinden bağımsız olarak tanımlanabilir."
 
+msgctxt "#37043"
+msgid "Defines the time to wait for subsequent key presses before performing the skip. Only applies when using smart skipping (when using more than one skip step for a direction)."
+msgstr "Atlamadan önceki tuşa basılma bekleme süresini tanımlar. Sadece akıllı atlama uygulandığında geçerli (bir yön için birden fazla atlama adımı kullanıldığında)"
+
 msgctxt "#37044"
 msgid "Extract chapter thumbnails"
 msgstr "Bölüm küçük resimlerini ayıkla"
@@ -13071,15 +14107,15 @@ msgstr "GPU hızlandırmalı"
 
 msgctxt "#38011"
 msgid "Show \"All items\" entry"
-msgstr "\"Bütün öğeler\" girdisini göster"
+msgstr "\"Tüm öğeler\" girdisini göster"
 
 msgctxt "#38012"
 msgid "Show \"All items\" entry in directory, e.g. \"All albums\" or \"All seasons\"."
-msgstr "Dizinde \"Bütün öğeler\" girdisini göster. örn. \"Bütün albümler\" veya \"Bütün sezonlar\""
+msgstr "Dizinde \"Tüm öğeler\" girdisini göster. örn. \"Tüm albümler\" veya \"Tüm sezonlar\""
 
 msgctxt "#38013"
 msgid "Limit GUI updates during playback"
-msgstr "Oynatma sırasında arayüz güncellemelerini sınırla"
+msgstr "Oynatma sırasında GUI güncellemelerini sınırla"
 
 msgctxt "#38014"
 msgid "Limits the speed (fps) used to update the GUI while playing videos. This can reduce CPU load and fix playback issues while the GUI is shown."
@@ -13092,3 +14128,27 @@ msgstr "Limitsiz"
 msgctxt "#38016"
 msgid "%d fps"
 msgstr "%d fps"
+
+msgctxt "#38017"
+msgid "Region A - Americas, East Asia and Southeast Asia. Region B - Africa, Middle East, Southwest Asia, Europe, Australia, New Zealand. Region C - Central Asia, mainland China, Mongolia, South Asia, Belarus, Russia, Ukraine, Kazakhstan."
+msgstr "Bölge A - Amerika, Doğu Asya ve Güneydoğu Asya. Bölge B - Afrika, Orta Doğu, Güneybatı Asya, Avrupa, Avustralya, Yeni Zelanda. Bölge C - Orta Asya, Çin, Moğolistan, Güney Asya, Beyaz Rusya, Rusya, Ukrayna, Kazakistan."
+
+msgctxt "#38018"
+msgid "My rating"
+msgstr "Derecelendirmem"
+
+msgctxt "#38019"
+msgid "Support 8 channel DTS-HD audio decoding"
+msgstr "8 kanal DTS-HD ses çözücü desteği"
+
+msgctxt "#38020"
+msgid "Enables decoding of high quality DTS-HD audio streams. Note: This increases CPU load and is only available when DTS and DTS-HD audio passthrough are disabled."
+msgstr "Yüksek kalite DTS-HD ses akışlarının kod çözmesini etkinleştirir. Not: Bu CPU kullanımını arttırır ve sadece DTS ve DTS-HD doğrudan ses geçişi devre dışı ise kullanılabilir."
+
+msgctxt "#38022"
+msgid "No rating"
+msgstr "Derecelendirme yok"
+
+msgctxt "#38023"
+msgid "Set my rating"
+msgstr "Derecelendirmemi ayarla"

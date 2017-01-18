@@ -22,7 +22,7 @@
     <setting id="HomeVideosButton3" type="string">plugin.video.phstreams</setting>
     <setting id="HomeVideosButton4" type="string">plugin.video.salts</setting>
     <setting id="HomeVideosButton5" type="string">plugin.video.1channel</setting>
-    <setting id="HomeMusicButton1" type="string">plugin.audio.musicbox</setting>
+    <setting id="HomeMusicButton1" type="string">plugin.video.spotitube</setting>
     <setting id="HomeMusicButton2" type="string">plugin.audio.soundcloud</setting>
     <setting id="HomeMusicButton3" type="string">plugin.audio.jambmc</setting>
     <setting id="HomeMusicButton4" type="string">plugin.audio.worldradio</setting>
@@ -33,8 +33,8 @@
     <setting id="HomePictureButton4" type="string"></setting>
     <setting id="HomePictureButton5" type="string"></setting>
     <setting id="HomeProgramButton1" type="string">plugin.program.addoninstaller</setting>
-    <setting id="HomeProgramButton2" type="string">plugin.program.totalinstaller</setting>
+    <setting id="HomeProgramButton2" type="string">script.navi-x</setting>
     <setting id="HomeProgramButton3" type="string">script.program.androidnetflix</setting>
-    <setting id="HomeProgramButton4" type="string">plugin.dbmc</setting>
+    <setting id="HomeProgramButton4" type="string">script.ftvguide</setting>
     <setting id="HomeProgramButton5" type="string">plugin.program.xbmchub.notifications</setting>
 </settings>

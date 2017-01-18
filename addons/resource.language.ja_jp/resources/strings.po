@@ -303,7 +303,7 @@ msgstr "表示：自動 (大)"
 
 msgctxt "#100"
 msgid "View: Icons"
-msgstr "表示：アイコン (小)"
+msgstr "表示 : アイコン"
 
 msgctxt "#101"
 msgid "View: List"
@@ -597,6 +597,10 @@ msgctxt "#173"
 msgid "Display 4:3 videos as"
 msgstr "アスペクト比 4:3 のビデオの再生"
 
+msgctxt "#174"
+msgid "Compiled:"
+msgstr "コンパイル : "
+
 msgctxt "#175"
 msgid "Moods"
 msgstr "ムード"
@@ -604,6 +608,14 @@ msgstr "ムード"
 msgctxt "#176"
 msgid "Styles"
 msgstr "スタイル"
+
+msgctxt "#177"
+msgid "%s successfully started"
+msgstr "%s が起動しました。"
+
+msgctxt "#178"
+msgid "%s has been successfully started."
+msgstr "%s は起動しています。"
 
 msgctxt "#179"
 msgid "Song"
@@ -691,7 +703,7 @@ msgstr "Web インターフェイス"
 
 msgctxt "#200"
 msgid "Audio encoders"
-msgstr "オーディオ エンコーダー"
+msgstr "オーディオエンコーダー"
 
 msgctxt "#201"
 msgid "Audio decoders"
@@ -845,9 +857,17 @@ msgctxt "#240"
 msgid "Display mode"
 msgstr "表示モード"
 
+msgctxt "#241"
+msgid "Full screen #%d"
+msgstr "フルスクリーン #%d"
+
 msgctxt "#242"
 msgid "Windowed"
 msgstr "ウィンドウ化"
+
+msgctxt "#243"
+msgid "Refresh rate"
+msgstr "リフレッシュレート"
 
 msgctxt "#244"
 msgid "Full screen"
@@ -1537,9 +1557,17 @@ msgctxt "#419"
 msgid "High"
 msgstr "最高気温"
 
+msgctxt "#420"
+msgid "Best match"
+msgstr "ベストマッチ"
+
 msgctxt "#421"
 msgid "Keep audio device alive"
 msgstr "オーディオ デバイスをスリープさせない"
+
+msgctxt "#422"
+msgid "Delete album information"
+msgstr "アルバム情報の削除"
 
 msgctxt "#423"
 msgid "Delete CD information"
@@ -1561,6 +1589,10 @@ msgctxt "#427"
 msgid "Disc"
 msgstr "ディスク"
 
+msgctxt "#428"
+msgid "Insert correct CD / DVD"
+msgstr "正しい CD/DVD を入れて下さい"
+
 msgctxt "#429"
 msgid "Please insert the following disc:"
 msgstr "次の CD/DVD を挿入して下さい："
@@ -1576,6 +1608,10 @@ msgstr "キャッシュしない"
 msgctxt "#432"
 msgid "Remove movie from library"
 msgstr "ライブラリからムービーを削除"
+
+msgctxt "#433"
+msgid "Would you really like to remove '%s' from library?"
+msgstr "本当に「%s」をライブラリから削除しますか?"
 
 msgctxt "#434"
 msgid "From %s at %i %s"
@@ -1789,9 +1825,17 @@ msgctxt "#492"
 msgid "Resize VobSubs"
 msgstr "字幕の大きさ"
 
+msgctxt "#493"
+msgid "Advanced options (experts only!)"
+msgstr "高度な設定 (エキスパート専用!)"
+
 msgctxt "#494"
 msgid "Overall audio headroom"
 msgstr "全体の音量(dB)"
+
+msgctxt "#495"
+msgid "Upscale videos to GUI resolution"
+msgstr "ビデオを GUI の解像度に合わせる"
 
 msgctxt "#496"
 msgid "Calibration"
@@ -1828,6 +1872,10 @@ msgstr "ビジー"
 msgctxt "#504"
 msgid "Empty"
 msgstr "空"
+
+msgctxt "#505"
+msgid "Loading media information from files..."
+msgstr "ファイルからメディア情報を読み込んでいます..."
 
 msgctxt "#507"
 msgid "Sort by: Usage"
@@ -2093,6 +2141,14 @@ msgctxt "#576"
 msgid "Times played"
 msgstr "再生回数"
 
+msgctxt "#577"
+msgid "Date taken"
+msgstr "撮影日"
+
+msgctxt "#578"
+msgid "Artist / Year"
+msgstr "アーティスト / 年"
+
 msgctxt "#580"
 msgid "Sort direction"
 msgstr "並べ替え方向"
@@ -2193,6 +2249,10 @@ msgctxt "#607"
 msgid "To:"
 msgstr "保存先："
 
+msgctxt "#608"
+msgid "Couldn't rip CD or track because CDDARipPath is not set."
+msgstr "CDDARip のパスが設定されていないので、CDトラックを取り込むことができません。"
+
 msgctxt "#610"
 msgid "Rip audio track"
 msgstr "オーディオトラックを読み込む"
@@ -2257,9 +2317,17 @@ msgctxt "#632"
 msgid "Stretch 4:3"
 msgstr "画面比 4:3"
 
+msgctxt "#633"
+msgid "Wide zoom"
+msgstr "ワイドズーム"
+
 msgctxt "#634"
 msgid "Stretch 16:9"
 msgstr "画面比 16:9"
+
+msgctxt "#635"
+msgid "Original size"
+msgstr "オリジナルサイズ"
 
 msgctxt "#636"
 msgid "Custom"
@@ -2292,6 +2360,10 @@ msgstr "ReplayGain 情報がないファイル"
 msgctxt "#643"
 msgid "Avoid clipping on ReplayGained files"
 msgstr "ReplayGain 情報ありのファイル再生時のクリップを防止"
+
+msgctxt "#644"
+msgid "Stretch 16:9 - Nonlinear"
+msgstr "16:9に拡大 - 非線形"
 
 msgctxt "#645"
 msgid "Need to unpack a big file. Continue?"
@@ -2329,6 +2401,10 @@ msgctxt "#653"
 msgid "Update library"
 msgstr "ライブラリを更新"
 
+msgctxt "#654"
+msgid "Show debug information"
+msgstr "デバッグ情報を表示"
+
 msgctxt "#655"
 msgid "Browse for executable"
 msgstr "実行ファイルを参照"
@@ -2365,6 +2441,10 @@ msgctxt "#663"
 msgid "Would you like to remove it from the library?"
 msgstr "ライブラリから削除しますか?"
 
+msgctxt "#664"
+msgid "Browse for script"
+msgstr "スクリプトを参照"
+
 msgctxt "#665"
 msgid "Compression level"
 msgstr "圧縮レベル"
@@ -2373,9 +2453,57 @@ msgctxt "#666"
 msgid "Enable component-specific logging"
 msgstr "コンポーネント固有のログ出力を有効にする"
 
+msgctxt "#667"
+msgid "Enable Dolby Digital (AC3) transcoding"
+msgstr "Dolby Digital (AC3) トランスコード有効"
+
 msgctxt "#668"
 msgid "Specify component-specific logging..."
 msgstr "コンポーネント固有のログ出力を指定してください..."
+
+msgctxt "#669"
+msgid "Verbose logging for the [B]SMB[/B] library"
+msgstr "[B}SMB[/B} ライブラリの詳細なログ"
+
+msgctxt "#670"
+msgid "Verbose logging for the [B]libcURL[/B] library (HTTP(S), DAV)"
+msgstr "[B]libcURL[/B] ライブラリ (http(s), DAV) の詳細なログ"
+
+msgctxt "#672"
+msgid "Verbose logging for the [B]FFmpeg[/B] libraries"
+msgstr "[B]FFmpeg[/B] ライブラリの詳細なログ"
+
+msgctxt "#673"
+msgid "Verbose logging for the [B]RTMP[/B] library"
+msgstr "[B]RTMP[/B] ライブラリの詳細なログ"
+
+msgctxt "#674"
+msgid "Verbose logging for [B]D-Bus[/B] calls"
+msgstr "[B]D-Bus[/B] コールの詳細なログ"
+
+msgctxt "#675"
+msgid "Verbose logging for [B]JSON-RPC[/B] requests"
+msgstr "[B]JSON-RPC[/B] リクエストの詳細なログ"
+
+msgctxt "#676"
+msgid "Verbose logging for the [B]Audio[/B] component"
+msgstr "[B]オーディオ[/B]コンポーネントの詳細なログ"
+
+msgctxt "#677"
+msgid "Verbose logging for the [B]AirTunes[/B] library"
+msgstr "[B]AirTunes[/B] ライブラリの詳細なログ"
+
+msgctxt "#678"
+msgid "Verbose logging for the [B]UPnP[/B] components"
+msgstr "[B]UPnP[/B] コンポーネントの詳細なログ"
+
+msgctxt "#679"
+msgid "Verbose logging for the [B]libCEC[/B] library"
+msgstr "[B]libCEC[/B] ライブラリの詳細なログ"
+
+msgctxt "#680"
+msgid "Verbose logging for the [B]Video[/B] component"
+msgstr "[B]ビデオ[/B]コンポーネントの詳細なログ"
 
 msgctxt "#700"
 msgid "Cleaning up library"
@@ -2420,6 +2548,10 @@ msgstr "アサインメント"
 msgctxt "#716"
 msgid "Automatic (DHCP)"
 msgstr "自動 (DHCP)"
+
+msgctxt "#717"
+msgid "Manual (static)"
+msgstr "手動 (固定)"
 
 msgctxt "#719"
 msgid "IP address"
@@ -2516,14 +2648,6 @@ msgstr "黄色"
 msgctxt "#744"
 msgid "Files"
 msgstr "ファイル"
-
-msgctxt "#745"
-msgid "No scanned information for this view"
-msgstr "スキャン情報はありませんでした"
-
-msgctxt "#746"
-msgid "Please turn off library mode"
-msgstr "ライブラリモードを終了して下さい"
 
 msgctxt "#747"
 msgid "Error loading image"
@@ -2709,9 +2833,165 @@ msgctxt "#798"
 msgid "Internet access"
 msgstr "インターネット接続"
 
+msgctxt "#799"
+msgid "Library update"
+msgstr "ライブラリの更新"
+
+msgctxt "#800"
+msgid "Music library needs to rescan tags from files. Would you like to scan now?"
+msgstr "音楽ライブラリは、ファイルからタグを再スキャンする必要があります。いまスキャンしますか?"
+
 msgctxt "#802"
 msgid "%s of %s available"
 msgstr "%s / %s 利用可能"
+
+msgctxt "#803"
+msgid "Type"
+msgstr "タイプ"
+
+msgctxt "#804"
+msgid "Search guide for"
+msgstr "番組表から検索"
+
+msgctxt "#805"
+msgid "Enter the search string to use to lookup matching events in the guide"
+msgstr "番組表から検索する文字列を入力してください"
+
+msgctxt "#806"
+msgid "Fulltext search (or title search only)"
+msgstr "全文検索(もしくは番組名のみでの検索)"
+
+msgctxt "#807"
+msgid "Any day"
+msgstr "毎日"
+
+msgctxt "#808"
+msgid "Every day"
+msgstr "毎日"
+
+msgctxt "#809"
+msgid "Any channel"
+msgstr "どのチャンネルでも"
+
+msgctxt "#810"
+msgid "Start any time"
+msgstr "いつでも開始"
+
+msgctxt "#811"
+msgid "Recording group"
+msgstr "録画グループ"
+
+msgctxt "#812"
+msgid "Prevent duplicate episodes"
+msgstr "話(回)の重複防止"
+
+msgctxt "#813"
+msgid "Start padding time"
+msgstr "開始時の余分な時間"
+
+msgctxt "#814"
+msgid "End padding time"
+msgstr "終了後の余分な時間"
+
+msgctxt "#815"
+msgid "Record all episodes"
+msgstr "すべての回を録画する"
+
+msgctxt "#816"
+msgid "Record only new episodes"
+msgstr "新しい話(回)のみ録画"
+
+msgctxt "#817"
+msgid "End any time"
+msgstr "いつでも終了"
+
+msgctxt "#818"
+msgid "Max recordings"
+msgstr "最大録画数"
+
+msgctxt "#820"
+msgid "One time"
+msgstr "1度だけ"
+
+msgctxt "#821"
+msgid "One time (guide-based)"
+msgstr "1度だけ(番組表に従う)"
+
+msgctxt "#822"
+msgid "Repeating"
+msgstr "くり返し"
+
+msgctxt "#823"
+msgid "Repeating (guide-based)"
+msgstr "くり返し(番組表に従う)"
+
+msgctxt "#828"
+msgid "Repeating timer deleted"
+msgstr "くり返し録画予約を削除しました"
+
+msgctxt "#831"
+msgid "Mondays"
+msgstr "毎週月曜"
+
+msgctxt "#832"
+msgid "Tuesdays"
+msgstr "毎週火曜"
+
+msgctxt "#833"
+msgid "Wednesdays"
+msgstr "毎週水曜"
+
+msgctxt "#834"
+msgid "Thursdays"
+msgstr "毎週木曜"
+
+msgctxt "#835"
+msgid "Fridays"
+msgstr "毎週金曜"
+
+msgctxt "#836"
+msgid "Saturdays"
+msgstr "毎週土曜"
+
+msgctxt "#837"
+msgid "Sundays"
+msgstr "毎週日曜"
+
+msgctxt "#840"
+msgid "Do you only want to delete this timer or also the repeating timer that has scheduled it?"
+msgstr "この録画予約だけを削除しますか?　それとも予定されているくり返し録画予約も削除しますか?"
+
+msgctxt "#841"
+msgid "Only this"
+msgstr "この予約のみ"
+
+msgctxt "#842"
+msgid "Group timers"
+msgstr "録画予約グループ"
+
+msgctxt "#843"
+msgid "Activate"
+msgstr "有効にする"
+
+msgctxt "#844"
+msgid "Deactivate"
+msgstr "無効にする"
+
+msgctxt "#845"
+msgid "Are you sure you want to delete this repeating timer and all timers it has scheduled?"
+msgstr "本当に、このくり返し録画予約を削除し、予定されているすべての予約も削除してよろしいですか?"
+
+msgctxt "#846"
+msgid "Are you sure you want to delete this timer?"
+msgstr "本当にこの録画予約を削除してよろしいですか?"
+
+msgctxt "#847"
+msgid "Confirm stop recording"
+msgstr "録画の停止で確認する"
+
+msgctxt "#848"
+msgid "Are you sure you want to stop this recording?"
+msgstr "本当に録画を注視してよろしいですか?"
 
 msgctxt "#850"
 msgid "Invalid port number entered"
@@ -2725,6 +3005,18 @@ msgctxt "#852"
 msgid "Valid port range is 1024-65535"
 msgstr "ポート番号は 1024-65535 の間から選んで下さい"
 
+msgctxt "#997"
+msgid "Add pictures..."
+msgstr "画像の追加..."
+
+msgctxt "#998"
+msgid "Add music..."
+msgstr "音楽の追加..."
+
+msgctxt "#999"
+msgid "Add videos..."
+msgstr "ビデオの追加..."
+
 msgctxt "#1000"
 msgid "Preview"
 msgstr "プレビュー"
@@ -2732,6 +3024,10 @@ msgstr "プレビュー"
 msgctxt "#1001"
 msgid "Unable to connect"
 msgstr "接続できません"
+
+msgctxt "#1002"
+msgid "The connection to the network location couldn't be established. This could be due to the network not being connected. Would you like to add it anyway?"
+msgstr "ネットワークの場所への接続を確立できませんでした。ネットワークが接続されていないかもしれません。それでも追加しますか?"
 
 msgctxt "#1006"
 msgid "IP address"
@@ -2797,6 +3093,10 @@ msgctxt "#1021"
 msgid "Enter the paths or browse for the media locations."
 msgstr "メディアのパスを参照するか入力してください。"
 
+msgctxt "#1022"
+msgid "Enter a name for this media source."
+msgstr "メディアソースの名前を入力してください。"
+
 msgctxt "#1023"
 msgid "Browse for new share"
 msgstr "新しい共有の参照"
@@ -2804,6 +3104,10 @@ msgstr "新しい共有の参照"
 msgctxt "#1024"
 msgid "Browse"
 msgstr "参照"
+
+msgctxt "#1025"
+msgid "Couldn't retrieve directory information. This could be due to the network not being connected. Would you like to add it anyway?"
+msgstr "ディレクトリ情報を取得することができませんでした。ネットワークが接続されていないかもしれません。それでも追加しますか?"
 
 msgctxt "#1026"
 msgid "Add source"
@@ -2849,6 +3153,18 @@ msgctxt "#1036"
 msgid "Favourites"
 msgstr "お気に入り"
 
+msgctxt "#1037"
+msgid "Video add-ons"
+msgstr "ビデオ アドオン"
+
+msgctxt "#1038"
+msgid "Music add-ons"
+msgstr "ミュージック アドオン"
+
+msgctxt "#1039"
+msgid "Picture add-ons"
+msgstr "ピクチャー アドオン"
+
 msgctxt "#1040"
 msgid "Loading directory"
 msgstr "ディレクトリの読み込み中"
@@ -2860,6 +3176,10 @@ msgstr "%i アイテムを取得"
 msgctxt "#1042"
 msgid "Retrieved %i of %i items"
 msgstr "%i アイテム (全 %i アイテム中) を取得"
+
+msgctxt "#1043"
+msgid "Program add-ons"
+msgstr "プログラム アドオン"
 
 msgctxt "#1044"
 msgid "Set plug-in thumb"
@@ -2912,6 +3232,10 @@ msgstr "SOCKS4A"
 msgctxt "#1184"
 msgid "SOCKS5"
 msgstr "SOCKS5"
+
+msgctxt "#1185"
+msgid "SOCKS5 with remote DNS resolving"
+msgstr "SOCKS5 では外部 DNS 名前解決を利用する "
 
 msgctxt "#1200"
 msgid "SMB client"
@@ -3037,13 +3361,21 @@ msgctxt "#1259"
 msgid "Zeroconf"
 msgstr "Zeroconf"
 
+msgctxt "#1260"
+msgid "Announce services to other systems"
+msgstr "他のシステムにサービスをアナウンスする"
+
 msgctxt "#1268"
-msgid "iOS 8 compatibility mode"
-msgstr "iOS 8 互換モード"
+msgid "Enable AirPlay \"Videos\" and \"Pictures\" support"
+msgstr "AirPlay の「ビデオ」と「写真」のサポートを有効にする"
 
 msgctxt "#1269"
 msgid "Allow volume control"
 msgstr "音量調整を許可"
+
+msgctxt "#1270"
+msgid "Enable AirPlay support"
+msgstr "AirPlay を有効にする"
 
 msgctxt "#1271"
 msgid "Device name"
@@ -3077,6 +3409,26 @@ msgctxt "#1375"
 msgid "Temperature"
 msgstr "温度"
 
+msgctxt "#1376"
+msgid "Pressure"
+msgstr "気圧"
+
+msgctxt "#1377"
+msgid "Proximity"
+msgstr "付近"
+
+msgctxt "#1378"
+msgid "Intensity"
+msgstr "強さ"
+
+msgctxt "#1379"
+msgid "Ragged"
+msgstr "不規則"
+
+msgctxt "#1380"
+msgid "Very"
+msgstr "とても"
+
 msgctxt "#1381"
 msgid "Extreme"
 msgstr "最高"
@@ -3085,9 +3437,29 @@ msgctxt "#1382"
 msgid "Whirls"
 msgstr "旋風"
 
+msgctxt "#1383"
+msgid "Sky is clear"
+msgstr "晴天"
+
 msgctxt "#1384"
 msgid "Broken"
 msgstr "Broken"
+
+msgctxt "#1385"
+msgid "Tornado"
+msgstr "竜巻"
+
+msgctxt "#1386"
+msgid "Tropical"
+msgstr "南国の"
+
+msgctxt "#1387"
+msgid "Hurricane"
+msgstr "台風"
+
+msgctxt "#1388"
+msgid "Cold"
+msgstr "寒い"
 
 msgctxt "#1389"
 msgid "Windy"
@@ -3096,6 +3468,26 @@ msgstr "Windy"
 msgctxt "#1390"
 msgid "Settings"
 msgstr "設定"
+
+msgctxt "#1391"
+msgid "Breeze"
+msgstr "吹雪"
+
+msgctxt "#1392"
+msgid "Gentle"
+msgstr "穏やかな"
+
+msgctxt "#1393"
+msgid "High wind, near gale"
+msgstr "強い風、強風"
+
+msgctxt "#1394"
+msgid "Severe"
+msgstr "きびしい"
+
+msgctxt "#1395"
+msgid "Violent"
+msgstr "猛烈な"
 
 msgctxt "#1396"
 msgid "Drifting"
@@ -3197,6 +3589,10 @@ msgctxt "#1420"
 msgid "Moderate"
 msgstr "Moderate"
 
+msgctxt "#1421"
+msgid "Very high"
+msgstr "とても高い"
+
 msgctxt "#1422"
 msgid "Windy"
 msgstr "Windy"
@@ -3297,6 +3693,10 @@ msgctxt "#1446"
 msgid "Unknown"
 msgstr "不明"
 
+msgctxt "#1447"
+msgid "Squalls"
+msgstr "突風、スコール"
+
 msgctxt "#1448"
 msgid "Precipitation"
 msgstr "降雨量"
@@ -3321,6 +3721,10 @@ msgctxt "#2081"
 msgid "Went back to parent list because the active list has been emptied"
 msgstr "アクティブなリストが空だったため、親のリストに戻りました。"
 
+msgctxt "#2101"
+msgid "Newer version needed. Check the log for more information about this message."
+msgstr "新しいバージョンが必要です。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#2102"
 msgid "%s error"
 msgstr "%s エラー"
@@ -3328,6 +3732,10 @@ msgstr "%s エラー"
 msgctxt "#2103"
 msgid "Add-on error"
 msgstr "アドオンエラー"
+
+msgctxt "#2104"
+msgid "Check the log for more information."
+msgstr "詳しくはログを参照してください。"
 
 msgctxt "#10000"
 msgid "Home"
@@ -3368,6 +3776,14 @@ msgstr "設定 - 一般"
 msgctxt "#10009"
 msgid "Settings - Screen"
 msgstr "設定 - 画面"
+
+msgctxt "#10010"
+msgid "Settings - Appearance - GUI calibration"
+msgstr "設定 - 外観 - GUI 設定"
+
+msgctxt "#10011"
+msgid "Settings - Videos - Screen calibration"
+msgstr "設定 - 画面 - スクリーン設定"
 
 msgctxt "#10012"
 msgid "Settings - Pictures"
@@ -3412,6 +3828,10 @@ msgstr "設定 - TV"
 msgctxt "#10025"
 msgid "Videos"
 msgstr "ビデオ"
+
+msgctxt "#10028"
+msgid "Videos / Playlist"
+msgstr "ビデオ / プレイリスト"
 
 msgctxt "#10029"
 msgid "Login screen"
@@ -3473,6 +3893,10 @@ msgctxt "#10047"
 msgid "Try changing the setting level to see additional categories and settings."
 msgstr "設定レベルを変えてみてください。追加のカテゴリーと設定項目が見えるようになります。"
 
+msgctxt "#10100"
+msgid "Yes / No dialogue"
+msgstr "はい / いいえ ダイアログ"
+
 msgctxt "#10101"
 msgid "Progress dialogue"
 msgstr "進行ダイアログ"
@@ -3505,6 +3929,10 @@ msgctxt "#10134"
 msgid "Favourites"
 msgstr "お気に入り"
 
+msgctxt "#10135"
+msgid "Songs / Info"
+msgstr "歌 / 情報"
+
 msgctxt "#10136"
 msgid "Smart playlist editor"
 msgstr "スマートプレイリストエディター"
@@ -3513,9 +3941,17 @@ msgctxt "#10137"
 msgid "Smart playlist rule editor"
 msgstr "スマートプレイリストルールエディター"
 
+msgctxt "#10139"
+msgid "Pictures / Info"
+msgstr "ピクチャー / 情報"
+
 msgctxt "#10140"
 msgid "Add-on settings"
 msgstr "アドオン設定"
+
+msgctxt "#10146"
+msgid "Add-ons / Info"
+msgstr "アドオン / 情報"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -3536,6 +3972,18 @@ msgstr "バッファ中"
 msgctxt "#10214"
 msgid "Opening stream"
 msgstr "ストリームを開いていいます"
+
+msgctxt "#10500"
+msgid "Music / Playlist"
+msgstr "ミュージック / プレイリスト"
+
+msgctxt "#10501"
+msgid "Music / Files"
+msgstr "ミュージック / ファイル"
+
+msgctxt "#10502"
+msgid "Music / Library"
+msgstr "ミュージック / ライブラリ"
 
 msgctxt "#10503"
 msgid "Playlist editor"
@@ -3563,7 +4011,7 @@ msgstr "天気予報"
 
 msgctxt "#10509"
 msgid "Network gaming"
-msgstr "ネットワーク・ゲーム"
+msgstr "ネットワーク ゲーム"
 
 msgctxt "#10510"
 msgid "Extensions"
@@ -3577,6 +4025,14 @@ msgctxt "#10516"
 msgid "Music - Library"
 msgstr "ミュージック - ライブラリ"
 
+msgctxt "#10517"
+msgid "Now playing - Music"
+msgstr "ミュージック - 現在再生中"
+
+msgctxt "#10522"
+msgid "Now playing - Videos"
+msgstr "ビデオ - 現在再生中"
+
 msgctxt "#10523"
 msgid "Album information"
 msgstr "アルバム情報"
@@ -3589,9 +4045,21 @@ msgctxt "#12000"
 msgid "Select dialogue"
 msgstr "選択ダイアログ"
 
+msgctxt "#12001"
+msgid "Music / Info"
+msgstr "ミュージック / 情報"
+
 msgctxt "#12002"
 msgid "Dialogue OK"
 msgstr "ダイアログ OK"
+
+msgctxt "#12003"
+msgid "Videos / Info"
+msgstr "ビデオ / 情報"
+
+msgctxt "#12004"
+msgid "Scripts / Info"
+msgstr "スクリプト / 情報"
 
 msgctxt "#12005"
 msgid "Fullscreen video"
@@ -3679,7 +4147,7 @@ msgstr "*"
 
 msgctxt "#12325"
 msgid "Locked! Enter code..."
-msgstr "ロック中！コードを入力してください"
+msgstr "ロック中！コードを入力してください…"
 
 msgctxt "#12326"
 msgid "Enter password"
@@ -3693,9 +4161,17 @@ msgctxt "#12328"
 msgid "Enter unlock code"
 msgstr "アンロックコード入力"
 
+msgctxt "#12329"
+msgid "or press \"C\" to cancel"
+msgstr "もしくは 「C」を押して中止"
+
 msgctxt "#12330"
 msgid "Enter gamepad button combo and"
 msgstr "ボタンパスワードを入力し"
+
+msgctxt "#12331"
+msgid "press \"OK\", or \"Back\" to cancel"
+msgstr "「OK」を押す、または「戻る」で中止。"
 
 msgctxt "#12332"
 msgid "Set lock"
@@ -3728,6 +4204,10 @@ msgstr "テキストパスワード"
 msgctxt "#12340"
 msgid "Enter new password"
 msgstr "新しいパスワードを入力"
+
+msgctxt "#12341"
+msgid "Re-enter new password"
+msgstr "新しいパスワードを再入力"
 
 msgctxt "#12342"
 msgid "Incorrect password,"
@@ -3777,13 +4257,25 @@ msgctxt "#12360"
 msgid "Master lock"
 msgstr "マスターロック"
 
+msgctxt "#12362"
+msgid "Shutdown system if number of master lock retries is exceeded"
+msgstr "マスターロックのリトライ回数を超えたら、システムを停止する。"
+
+msgctxt "#12367"
+msgid "Master code is not valid. Please enter a valid master code."
+msgstr "マスターコードが無効です。有効なマスターコードを入力してください。"
+
 msgctxt "#12373"
 msgid "Settings & file manager"
 msgstr "設定 & ファイルマネージャー"
 
 msgctxt "#12376"
-msgid "Set as default for all videos"
-msgstr "全ビデオにデフォルトとして設定"
+msgid "Set as default for all media"
+msgstr "すべてのメディアのデフォルトに設定する"
+
+msgctxt "#12377"
+msgid "This will reset any previously saved values. Are you sure?"
+msgstr "以前に保存されている値はすべてリセットされます。よろしいですか?"
 
 msgctxt "#12378"
 msgid "Amount of time to display each image"
@@ -3792,6 +4284,26 @@ msgstr "一枚の表示時間"
 msgctxt "#12379"
 msgid "Use pan and zoom effects"
 msgstr "パン/ズームエフェクトの使用"
+
+msgctxt "#12382"
+msgid "%s xx"
+msgstr "%s xx"
+
+msgctxt "#12383"
+msgid "12-hour clock"
+msgstr "12時間計"
+
+msgctxt "#12384"
+msgid "24-hour clock"
+msgstr "24時間計"
+
+msgctxt "#12385"
+msgid "Day / Month"
+msgstr "日 / 月"
+
+msgctxt "#12386"
+msgid "Month / Day"
+msgstr "月 / 日"
 
 msgctxt "#12390"
 msgid "System uptime"
@@ -3845,6 +4357,10 @@ msgctxt "#13000"
 msgid "System"
 msgstr "システム"
 
+msgctxt "#13001"
+msgid "Immediate HDD spindown"
+msgstr "すぐにHDDをスピンダウンする"
+
 msgctxt "#13002"
 msgid "Video only"
 msgstr "ビデオのみ"
@@ -3893,6 +4409,10 @@ msgctxt "#13015"
 msgid "Power button action"
 msgstr "電源ボタンを押した際の動作"
 
+msgctxt "#13016"
+msgid "Power off system"
+msgstr "システムの電源を切る"
+
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
 msgstr "アイドルシャットダウンオフ"
@@ -3905,13 +4425,17 @@ msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
 msgstr "別のセッションが動作中です（ssh 経由かも?)"
 
+msgctxt "#13021"
+msgid "Mounted removable storage device"
+msgstr "マウントされたリムーバブルストレージ装置"
+
 msgctxt "#13022"
-msgid "Unsafe device removal"
-msgstr "安全でないデバイスの取り外し"
+msgid "Unsafe storage device removal"
+msgstr "安全でないストレージ装置の取り外し"
 
 msgctxt "#13023"
-msgid "Successfully removed device"
-msgstr "デバイスが正しく外されました"
+msgid "Successfully removed storage device"
+msgstr "ストレージ装置は取り外されました"
 
 msgctxt "#13024"
 msgid "Joystick plugged"
@@ -3921,9 +4445,21 @@ msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "ジョイスティックが外されました"
 
+msgctxt "#13026"
+msgid "Try to wakeup remote servers on access"
+msgstr "アクセスがあったら、リモートサーバーの起動を試みる"
+
+msgctxt "#13027"
+msgid "Wake-on-LAN (%s)"
+msgstr "Wake-on-LAN (%s)"
+
 msgctxt "#13028"
 msgid "Waiting for network to connect..."
 msgstr "ネットワーク接続中..."
+
+msgctxt "#13029"
+msgid "Failed to execute Wake-on-LAN!"
+msgstr "Wake-on-LAN の実行に失敗しました!"
 
 msgctxt "#13030"
 msgid "Waiting for server to wake up..."
@@ -3936,6 +4472,10 @@ msgstr "サーバー起動のための待機時間..."
 msgctxt "#13032"
 msgid "Waiting for services to launch..."
 msgstr "サービス起動中..."
+
+msgctxt "#13033"
+msgid "MAC discovery"
+msgstr "MAC探索"
 
 msgctxt "#13034"
 msgid "Updated for %s"
@@ -3976,6 +4516,14 @@ msgstr "ビデオ再生中のみ有効"
 msgctxt "#13108"
 msgid "Always enabled"
 msgstr "常に有効"
+
+msgctxt "#13109"
+msgid "Test & apply the resolution"
+msgstr "テストして解像度を適用する"
+
+msgctxt "#13110"
+msgid "Save this resolution?"
+msgstr "この解像度を保存してよろしいですか?"
 
 msgctxt "#13111"
 msgid "Would you like to keep this change?"
@@ -4037,9 +4585,17 @@ msgctxt "#13140"
 msgid "Active connections detected!"
 msgstr "アクディブな接続が検出されました!"
 
+msgctxt "#13141"
+msgid "If you proceed, you might not be able to control this application any longer. Are you sure you want to stop the event server?"
+msgstr "このアプリケーションを操作することができなくなります。本当にイベントサーバーを停止してよろしいですか?"
+
 msgctxt "#13144"
 msgid "Change Apple Remote mode?"
 msgstr "Apple Remote モードを変更しますか?"
+
+msgctxt "#13145"
+msgid "If you are currently using the Apple Remote to control this application, changing this setting might affect your ability to continue controlling it. Do you want to proceed?"
+msgstr "現在、Apple Remoto をつかってこのアプリケーションを操作しているのであれば、この設定を変更すると引き続きコントロールが継続できるかに影響を及ぼします。設定変更を実施してよろしいですか?"
 
 msgctxt "#13159"
 msgid "Subnet mask"
@@ -4097,6 +4653,10 @@ msgctxt "#13206"
 msgid "Overwrite"
 msgstr "上書き"
 
+msgctxt "#13207"
+msgid "Forced only"
+msgstr "強制字幕のみ"
+
 msgctxt "#13208"
 msgid "Alarm clock"
 msgstr "アラーム クロック"
@@ -4148,6 +4708,10 @@ msgstr "移動のキャンセル"
 msgctxt "#13270"
 msgid "Hardware:"
 msgstr "ハードウェア："
+
+msgctxt "#13271"
+msgid "CPU usage:"
+msgstr "CPU 使用率："
 
 msgctxt "#13274"
 msgid "Connected, but no DNS is available."
@@ -4253,6 +4817,10 @@ msgctxt "#13307"
 msgid "Track naming template"
 msgstr "トラック命名テンプレート"
 
+msgctxt "#13308"
+msgid "Do you wish to reboot your system instead of just this application?"
+msgstr "このアプリケーションを実行していますが、システムを再起動しますか?"
+
 msgctxt "#13310"
 msgid "Zoom effect"
 msgstr "ズーム エフェクト"
@@ -4305,10 +4873,6 @@ msgctxt "#13322"
 msgid "Right only"
 msgstr "右のみ"
 
-msgctxt "#13323"
-msgid "Enable karaoke support"
-msgstr "CD+G 再生有効化"
-
 msgctxt "#13324"
 msgid "Background transparency"
 msgstr "バックグラウンド透明"
@@ -4320,10 +4884,6 @@ msgstr "フォアグラウンド透明"
 msgctxt "#13326"
 msgid "A/V delay"
 msgstr "A/V 遅延"
-
-msgctxt "#13327"
-msgid "Karaoke"
-msgstr "カラオケ"
 
 msgctxt "#13328"
 msgid "%s not found"
@@ -4513,6 +5073,10 @@ msgctxt "#13390"
 msgid "There are no settings available\nfor this visualisation"
 msgstr "この視覚化には\n可能な設定がありません"
 
+msgctxt "#13391"
+msgid "Eject / Load"
+msgstr "取り出し/読み込み"
+
 msgctxt "#13392"
 msgid "Use visualisation if playing audio"
 msgstr "オーディオ再生中に視覚化を使用"
@@ -4540,6 +5104,10 @@ msgstr "字幕有効化"
 msgctxt "#13398"
 msgid "Shortcuts"
 msgstr "ショートカット"
+
+msgctxt "#13399"
+msgid "Ignore articles when sorting"
+msgstr "並べ替えの際に、文書は無視する"
 
 msgctxt "#13400"
 msgid "Crossfade between songs on the same album"
@@ -4637,29 +5205,101 @@ msgctxt "#13423"
 msgid "Remember for this path"
 msgstr "このパス用に記憶"
 
+msgctxt "#13425"
+msgid "Allow hardware acceleration - VDPAU"
+msgstr "ハードウェアアクセラレータを許可 - VDPAU"
+
+msgctxt "#13426"
+msgid "Allow hardware acceleration - VAAPI"
+msgstr "ハードウェアアクセラレータを許可 - VAAPI"
+
+msgctxt "#13427"
+msgid "Allow hardware acceleration - DXVA2"
+msgstr "ハードウェアアクセラレータを許可 - DXVA2"
+
+msgctxt "#13428"
+msgid "Allow hardware acceleration - CrystalHD"
+msgstr "ハードウェアアクセラレータを許可 - CrystalHD"
+
+msgctxt "#13429"
+msgid "Allow hardware acceleration - VDADecoder"
+msgstr "ハードウェアアクセラレータを許可 - VDADecoder"
+
+msgctxt "#13430"
+msgid "Allow hardware acceleration - OpenMax"
+msgstr "ハードウェアアクセラレータを許可 - OpenMax"
+
+msgctxt "#13431"
+msgid "Pixel shaders"
+msgstr "ピクセル シェーダー"
+
+msgctxt "#13432"
+msgid "Allow hardware acceleration - VideoToolbox"
+msgstr "ハードウェアアクセラレータを許可 - VideoToolbox"
+
 msgctxt "#13433"
 msgid "Play next video automatically"
-msgstr "自動で次の動画を再生"
+msgstr "自動で次のビデオを再生"
 
 msgctxt "#13434"
 msgid "Play only this"
 msgstr "これだけを再生"
 
+msgctxt "#13435"
+msgid "Enable HQ scalers for scaling above"
+msgstr "拡大縮小の際に高画質で行う"
+
+msgctxt "#13436"
+msgid "Allow hardware acceleration - libstagefright"
+msgstr "ハードウェアアクセラレータを許可 - libstagefright"
+
+msgctxt "#13437"
+msgid "Prefer VDPAU video mixer"
+msgstr "VDPAU ビデオミキサーを優先する"
+
+msgctxt "#13438"
+msgid "Allow hardware acceleration - amcodec"
+msgstr "ハードウェアアクセラレータを許可 - amcodec"
+
+msgctxt "#13439"
+msgid "Allow hardware acceleration - MediaCodec"
+msgstr "ハードウェアアクセラレータを許可 - MediaCodec"
+
+msgctxt "#13440"
+msgid "Allow hardware acceleration - MediaCodec (Surface)"
+msgstr "ハードウエア・アクセラレーションを許可する - メディアコーデック (Surface)"
+
 msgctxt "#13441"
 msgid "Use MPEG-2 VDPAU"
 msgstr "MPEG-2 VDPAU を利用"
+
+msgctxt "#13442"
+msgid "Enable this option to use hardware acceleration for MPEG-(1 / 2) codecs. If disabled the CPU will be used instead. Older Radeon Cards tend to segfault with this enabled."
+msgstr "この設定を有効にすると、MPEG-(1 もしくは 2)コーデックに対してハードウエアアクセラレーションを利用します。無効にするとCPUを代わりに利用します。古い Radeon カードでは、この設定を有効にすると segfault を起こしがちになります。"
 
 msgctxt "#13443"
 msgid "Use MPEG-4 VDPAU"
 msgstr "MPEG-4 VDPAU を利用"
 
+msgctxt "#13444"
+msgid "Enable this option to use hardware acceleration for the MPEG-4 codec. If disabled the CPU will be used instead. Some ION hardware has problems with this being enabled by default."
+msgstr "MPEG-4 コーデックでハードウェアアクセラレーションを利用するには、この設定を有効にします。無効の場合は代わりに CPU を使います。いくつかの ION ハードウエアでは、この設定を有効にすると問題が発生します。"
+
 msgctxt "#13445"
 msgid "Use VC-1 VDPAU"
 msgstr "VC-1 VDPAU を使用"
 
+msgctxt "#13446"
+msgid "Enable this option to use hardware acceleration for VC-1 based codecs. If disabled the CPU will be used instead. AMD hardware with VDPAU can't decode VC-1 Simple."
+msgstr "VC-1 ベースのコーデックでハードウェアアクセラレーションを利用するには、この設定を有効にします。無効の場合は代わりに CPU を使います。VDPAU 搭載の AMD ハードウエアでは、VC-1 シンプルを復号できません。"
+
 msgctxt "#13447"
 msgid "Use MPEG-2 VAAPI"
 msgstr "MPEG-2 VAAPI を利用"
+
+msgctxt "#13448"
+msgid "Enable this option to use hardware acceleration for MPEG-(1 / 2) codecs. If disabled the CPU will be used instead. Some MPEG-2 videos might have green artifacts."
+msgstr "MPEG-(1/2) コーデックでハードウェアアクセラレーションを利用するには、この設定を有効にします。無効の場合は 代わりに CPU を使います。MPEG-2 ビデオでは、場合によって緑色の画像の乱れが発生します。"
 
 msgctxt "#13449"
 msgid "Use MPEG-4 VAAPI"
@@ -4667,15 +5307,23 @@ msgstr "MPEG-4 VAAPI を利用"
 
 msgctxt "#13450"
 msgid "Enable this option to use hardware acceleration for the MPEG-4 codec. If disabled the CPU will be used instead."
-msgstr "MPEG-4 コーデックでハードウェア高速化を利用するには、この設定を有効にします。無効の場合は代わりに CPU を使います。"
+msgstr "MPEG-4 コーデックでハードウェアアクセラレーションを利用するには、この設定を有効にします。無効の場合は代わりに CPU を使います。"
 
 msgctxt "#13451"
 msgid "Use VC-1 VAAPI"
 msgstr "VC-1 VAAPI を利用"
 
+msgctxt "#13452"
+msgid "Enable this option to use hardware acceleration for VC-1 based codecs. If disabled the CPU will be used instead. Especially VC-1 interlaced fails hard on Intel hardware."
+msgstr "VC-1 ベースのコーデックでハードウェアアクセラレーションを利用するには、この設定を有効にします。無効の場合は代わりに CPU を使います。Intelハードウエア上では重大な障害が発生しやすいです。"
+
 msgctxt "#13457"
 msgid "Prefer VAAPI render method"
 msgstr "VAAPI 描画を推奨します"
+
+msgctxt "#13458"
+msgid "Allow hardware acceleration - OMXPlayer"
+msgstr "ハードウェアアクセラレーションを許可 - OMXPlayer"
 
 msgctxt "#13459"
 msgid "Use OMXPlayer for decoding of video files."
@@ -4685,6 +5333,10 @@ msgctxt "#13505"
 msgid "Resample quality"
 msgstr "再サンプリング品質"
 
+msgctxt "#13506"
+msgid "Low (fast)"
+msgstr "低 (高速)"
+
 msgctxt "#13507"
 msgid "Medium"
 msgstr "中"
@@ -4692,6 +5344,10 @@ msgstr "中"
 msgctxt "#13508"
 msgid "High"
 msgstr "高"
+
+msgctxt "#13509"
+msgid "Really high (slow)"
+msgstr "最高 (遅い)"
 
 msgctxt "#13510"
 msgid "Sync playback to display"
@@ -4729,6 +5385,14 @@ msgctxt "#13551"
 msgid "Off"
 msgstr "オフ"
 
+msgctxt "#13552"
+msgid "%.1f second"
+msgstr "%.1f 秒"
+
+msgctxt "#13553"
+msgid "%.1f seconds"
+msgstr "%.1f 秒"
+
 msgctxt "#13554"
 msgid "%d Minute"
 msgstr "%d 分"
@@ -4736,6 +5400,18 @@ msgstr "%d 分"
 msgctxt "#13555"
 msgid "%d Minutes"
 msgstr "%d 分"
+
+msgctxt "#13556"
+msgid "Skip steps"
+msgstr "スキップ ステップ数"
+
+msgctxt "#13557"
+msgid "Skip delay"
+msgstr "スキップの開始遅延"
+
+msgctxt "#13600"
+msgid "Apple Remote"
+msgstr "Apple リモート"
 
 msgctxt "#13602"
 msgid "Allow start of Kodi using the remote"
@@ -4752,6 +5428,22 @@ msgstr "無効"
 msgctxt "#13611"
 msgid "Standard"
 msgstr "標準"
+
+msgctxt "#13612"
+msgid "Universal remote"
+msgstr "ユニバーサル リモート"
+
+msgctxt "#13613"
+msgid "Harmony remote"
+msgstr "Harmony リモート"
+
+msgctxt "#13620"
+msgid "Apple Remote error"
+msgstr "Apple Remote エラー"
+
+msgctxt "#13621"
+msgid "Apple Remote support couldn't be enabled."
+msgstr "Apple Remote サポートを有効にできませんでした。"
 
 msgctxt "#14000"
 msgid "Stack"
@@ -4853,6 +5545,10 @@ msgctxt "#14026"
 msgid "Video cache - DVD-ROM"
 msgstr "ビデオ キャッシュ - DVD-ROM"
 
+msgctxt "#14027"
+msgid "Video cache - Local network"
+msgstr "ビデオキャッシュ - ローカルネットワーク"
+
 msgctxt "#14028"
 msgid "Video cache - Internet"
 msgstr "ビデオキャッシュ - インターネット"
@@ -4860,6 +5556,10 @@ msgstr "ビデオキャッシュ - インターネット"
 msgctxt "#14030"
 msgid "Audio cache - DVD-ROM"
 msgstr "オーディオ キャッシュ - DVD-ROM"
+
+msgctxt "#14031"
+msgid "Audio cache - Local network"
+msgstr "オーディオキャッシュ - ローカルネットワーク"
 
 msgctxt "#14032"
 msgid "Audio cache - Internet"
@@ -4877,9 +5577,17 @@ msgctxt "#14036"
 msgid "Services"
 msgstr "サービス"
 
+msgctxt "#14037"
+msgid "DVD cache - Local network"
+msgstr "DVD キャッシュ - ローカルネットワーク"
+
 msgctxt "#14038"
 msgid "Network settings changed"
 msgstr "ネットワーク設定が変更されました"
+
+msgctxt "#14039"
+msgid "A restart is required to change your network setup. Would you like to restart now?"
+msgstr "ネットワーク設定を変更するには再起動が必要です。 今すぐ再始動しますか？"
 
 msgctxt "#14041"
 msgid "Internet connection bandwidth limitation"
@@ -4941,6 +5649,10 @@ msgctxt "#14056"
 msgid "Stop scan"
 msgstr "スキャン停止"
 
+msgctxt "#14057"
+msgid "Not possible while scanning for media information"
+msgstr "メディア情報スキャン中は不可能"
+
 msgctxt "#14058"
 msgid "Film grain effect"
 msgstr "フィルム粒子エフェクト"
@@ -4972,6 +5684,10 @@ msgstr "日付の設定"
 msgctxt "#14065"
 msgid "Set time"
 msgstr "時刻の設定"
+
+msgctxt "#14066"
+msgid "Enter the time in 24-hour HH:MM format"
+msgstr "時刻を24時間表示、HH:MM形式で入力"
 
 msgctxt "#14067"
 msgid "Enter the date in DD/MM/YYYY format"
@@ -5025,10 +5741,6 @@ msgctxt "#14081"
 msgid "File lists"
 msgstr "ファイルリスト"
 
-msgctxt "#14082"
-msgid "Show EXIF picture information"
-msgstr "EXIF 情報を表示"
-
 msgctxt "#14083"
 msgid "Use fullscreen window"
 msgstr "フルスクリーンウィンドウを使用"
@@ -5062,8 +5774,8 @@ msgid "Character set"
 msgstr "文字セット"
 
 msgctxt "#14092"
-msgid "Debugging"
-msgstr "デバッグ"
+msgid "Logging"
+msgstr "ログ"
 
 msgctxt "#14093"
 msgid "Security"
@@ -5081,9 +5793,17 @@ msgctxt "#14096"
 msgid "Rip"
 msgstr "Rip"
 
+msgctxt "#14097"
+msgid "Audio CD insert action"
+msgstr "オーディオ CD 挿入時のアクション"
+
 msgctxt "#14098"
 msgid "Play"
 msgstr "再生"
+
+msgctxt "#14099"
+msgid "Eject disc when the CD ripping is complete"
+msgstr "リッピング完了後に CD をイジェクト"
 
 msgctxt "#14100"
 msgid "Stop ripping CD"
@@ -5117,6 +5837,10 @@ msgctxt "#14107"
 msgid "Time format"
 msgstr "時刻のフォーマット"
 
+msgctxt "#14108"
+msgid "Use 12 / 24-hour format"
+msgstr "12 / 24 時形式を使用"
+
 msgctxt "#14109"
 msgid "Short date format"
 msgstr "短い日付形式"
@@ -5124,6 +5848,78 @@ msgstr "短い日付形式"
 msgctxt "#14110"
 msgid "Long date format"
 msgstr "長い日付形式"
+
+msgctxt "#14111"
+msgid "Events"
+msgstr "イベント"
+
+msgctxt "#14112"
+msgid "Enable event logging"
+msgstr "イベントログを有効にする"
+
+msgctxt "#14113"
+msgid "Enable notification event logging"
+msgstr "通知(notification)イベントログを有効にする"
+
+msgctxt "#14114"
+msgid "Show event log"
+msgstr "イベントログを表示する"
+
+msgctxt "#14115"
+msgid "Basic"
+msgstr "ベーシック"
+
+msgctxt "#14116"
+msgid "Information"
+msgstr "情報"
+
+msgctxt "#14117"
+msgid "Warning"
+msgstr "警告"
+
+msgctxt "#14118"
+msgid "Error"
+msgstr "エラー"
+
+msgctxt "#14119"
+msgid "Level: %s"
+msgstr "ログレベル : %s"
+
+msgctxt "#14120"
+msgid "Show higher levels"
+msgstr "より高いレベルを表示する"
+
+msgctxt "#14121"
+msgid "Blu-ray region Code"
+msgstr "Blu-ray リージョン コード"
+
+msgctxt "#14122"
+msgid "Region A"
+msgstr "リージョン A"
+
+msgctxt "#14123"
+msgid "Region B"
+msgstr "リージョン B"
+
+msgctxt "#14124"
+msgid "Region C"
+msgstr "リージョン C"
+
+msgctxt "#15004"
+msgid "Basic"
+msgstr "ベーシック"
+
+msgctxt "#15005"
+msgid "Application"
+msgstr "アプリケーション"
+
+msgctxt "#15006"
+msgid "Phone"
+msgstr "電話"
+
+msgctxt "#15007"
+msgid "Message"
+msgstr "メッセージ"
 
 msgctxt "#15011"
 msgid "%i Items failed to export"
@@ -5153,9 +5949,213 @@ msgctxt "#15019"
 msgid "Add"
 msgstr "追加"
 
+msgctxt "#15020"
+msgid "Audio DSP manager"
+msgstr "オーディオ DSP マネージャー"
+
+msgctxt "#15021"
+msgid "Content type"
+msgstr "コンテンツ種別"
+
+msgctxt "#15022"
+msgid "Listening mode"
+msgstr "リスニング モード"
+
+msgctxt "#15023"
+msgid "Master mode"
+msgstr "マスター モード"
+
+msgctxt "#15024"
+msgid "Pre-process setup..."
+msgstr "プリプロセス設定..."
+
+msgctxt "#15025"
+msgid "Listening mode setup..."
+msgstr "リスニング モード設定..."
+
+msgctxt "#15026"
+msgid "Speaker / Output setup..."
+msgstr "スピーカー・出力設定"
+
+msgctxt "#15027"
+msgid "Audio information..."
+msgstr "オーディオ情報..."
+
+msgctxt "#15028"
+msgid "Audio DSP settings - Main"
+msgstr "オーディオ DSP 設定 - メイン"
+
+msgctxt "#15029"
+msgid "Audio DSP settings - Listening mode"
+msgstr "オーディオ DSP 設定 - リスニング モード"
+
+msgctxt "#15030"
+msgid "Audio DSP settings - Speaker / Output"
+msgstr "オーディオ DSP 設定 - スピーカー・出力"
+
+msgctxt "#15031"
+msgid "Audio DSP settings - Audio information"
+msgstr "オーディオ DSP 設定 - オーディオ情報"
+
+msgctxt "#15033"
+msgid "Resampler setup..."
+msgstr "リサンプラー設定..."
+
+msgctxt "#15034"
+msgid "Miscellaneous..."
+msgstr "その他..."
+
+msgctxt "#15035"
+msgid "Audio DSP settings - Resampler"
+msgstr "オーディオ DSP 設定 - リサンプラー"
+
+msgctxt "#15037"
+msgid "Audio DSP settings - Pre-process"
+msgstr "オーディオ DSP 設定 - プリプロセス"
+
+msgctxt "#15038"
+msgid "Audio DSP settings - Miscellaneous"
+msgstr "オーディオ DSP 設定 - その他"
+
+msgctxt "#15039"
+msgid "Pre-processing setup..."
+msgstr "プリプロセス設定..."
+
+msgctxt "#15040"
+msgid "The settings dialogue can only be opened from the OSD menu during playback"
+msgstr "設定ダイアログは、再生中のみ OSD メニューから開きます"
+
+msgctxt "#15041"
+msgid "Unknown mode name"
+msgstr "不明なモード名"
+
+msgctxt "#15042"
+msgid "Content:"
+msgstr "コンテンツ : "
+
+msgctxt "#15047"
+msgid "Audio DSP settings"
+msgstr "オーディオ DSP 設定"
+
+msgctxt "#15048"
+msgid "No audio DSP add-on enabled"
+msgstr "有効なオーディオ DSP アドオンがありません"
+
+msgctxt "#15049"
+msgid "The audio DSP manager has been enabled without any enabled DSP add-on. Enable at least one add-on in order to use the DSP functionality."
+msgstr "有効な DSP アドオンはありませんが、オーディオ DSP マネージャーを有効にしました。DSP の機能を使うには少なくとも1つのアドオンを有効にする必要があります。"
+
+msgctxt "#15050"
+msgid "Available modes"
+msgstr "使用可能なモード"
+
+msgctxt "#15051"
+msgid "Active modes"
+msgstr "動作中のモード"
+
 msgctxt "#15052"
 msgid "Password"
 msgstr "パスワード"
+
+msgctxt "#15057"
+msgid "Input resampling"
+msgstr "入力リサンプル"
+
+msgctxt "#15058"
+msgid "Pre-processing"
+msgstr "プリプロセス"
+
+msgctxt "#15059"
+msgid "Master processing"
+msgstr "マスター プロセス"
+
+msgctxt "#15060"
+msgid "Post-processing"
+msgstr "後処理"
+
+msgctxt "#15061"
+msgid "Output resampling"
+msgstr "出力リサンプル"
+
+msgctxt "#15062"
+msgid "Detailed description"
+msgstr "詳細な説明"
+
+msgctxt "#15063"
+msgid "No description available"
+msgstr "説明がありません"
+
+msgctxt "#15064"
+msgid "Apply changes directly"
+msgstr "直接変更を適用する"
+
+msgctxt "#15066"
+msgid "Clear active modes"
+msgstr "動作中のモードをクリアーする"
+
+msgctxt "#15067"
+msgid "Close"
+msgstr "閉じる"
+
+msgctxt "#15078"
+msgid "Mode settings"
+msgstr "モード設定"
+
+msgctxt "#15079"
+msgid "You have changed some audio DSP settings.\nWould you like to keep the new settings?"
+msgstr "オーディオ設定を変更しました。\n新しい設定を残しますか?"
+
+msgctxt "#15080"
+msgid "Change resampler"
+msgstr "リサンプラーの変更"
+
+msgctxt "#15081"
+msgid "Process chain (with CPU usage)"
+msgstr "プロセス チェーン (CPU使用率ふくむ)"
+
+msgctxt "#15082"
+msgid "Resampling to %i Hz"
+msgstr "%i Hz にリサンプル"
+
+msgctxt "#15083"
+msgid "Final resampling to %i Hz"
+msgstr "最終的に %i Hz にリサンプル"
+
+msgctxt "#15084"
+msgid "Master process"
+msgstr "マスター プロセス"
+
+msgctxt "#15085"
+msgid "Pre-process"
+msgstr "プリプロセス"
+
+msgctxt "#15086"
+msgid "Post-process"
+msgstr "ポストプロセス"
+
+msgctxt "#15087"
+msgid "Input"
+msgstr "入力"
+
+msgctxt "#15088"
+msgid "Output"
+msgstr "出力"
+
+msgctxt "#15089"
+msgid "Input signal"
+msgstr "入力信号"
+
+msgctxt "#15090"
+msgid "Output signal"
+msgstr "出力信号"
+
+msgctxt "#15091"
+msgid "Positions"
+msgstr "位置"
+
+msgctxt "#15092"
+msgid "CPU usage for DSP"
+msgstr "DSP の CPU使用率"
 
 msgctxt "#15100"
 msgid "Library"
@@ -5181,6 +6181,10 @@ msgctxt "#15105"
 msgid "* All genres"
 msgstr "* すべてのジャンル"
 
+msgctxt "#15106"
+msgid "Skin built-in"
+msgstr "ビルトインのスキン"
+
 msgctxt "#15107"
 msgid "Buffering..."
 msgstr "バッファリング..."
@@ -5204,6 +6208,26 @@ msgstr "テーマ"
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "デフォルトテーマ"
+
+msgctxt "#15113"
+msgid "Here you can configure pre-processing modes. This processing stage only change the input data stream."
+msgstr "ここでプリプロセスのモードを設定します。このプロセスは入力データのストリームだけを変更します。"
+
+msgctxt "#15114"
+msgid "Here you can configure an input resampling process. Notice: Only one active mode is allowed!"
+msgstr "ここで入力リサンプルプロセスを設定します。注意 : 動作中のモード1つのみ許可されています。"
+
+msgctxt "#15115"
+msgid "Here you can configure master processing modes. Notice: On playback only one active mode can be selected!"
+msgstr "ここでマスタープロセスモードを設定します。注意 : 再生時は、1つのモードのみ選択できます。"
+
+msgctxt "#15116"
+msgid "Here you can configure a output resampling process. Notice: Only one active mode is allowed!"
+msgstr "ここで出力リサンプルプロセスを設定します。注意 : 動作中のモード1つのみ許可されています。"
+
+msgctxt "#15117"
+msgid "Here you can configure post-processing modes. This processing stage can be used for equalizing and volume correction..."
+msgstr "ここでポストプロセスのモードを設定します。このプロセスはイコライザーとボリューム調整にのみ使われます。"
 
 msgctxt "#15200"
 msgid "Last.fm"
@@ -5236,6 +6260,10 @@ msgstr "パーティーモードで再生"
 msgctxt "#15300"
 msgid "Path not found or invalid"
 msgstr "パスが見つからないか、パスが無効です"
+
+msgctxt "#15301"
+msgid "Couldn't connect to network server"
+msgstr "サーバーに接続できません"
 
 msgctxt "#15302"
 msgid "No servers found"
@@ -5275,7 +6303,7 @@ msgstr "新しいタイトルを入力"
 
 msgctxt "#16009"
 msgid "Enter the movie name"
-msgstr "動画名を入力"
+msgstr "ムービー名を入力"
 
 msgctxt "#16010"
 msgid "Enter the profile name"
@@ -5317,9 +6345,17 @@ msgctxt "#16019"
 msgid "Auto select"
 msgstr "自動選択"
 
+msgctxt "#16020"
+msgid "Deinterlace"
+msgstr "インターレース解除"
+
 msgctxt "#16021"
 msgid "Bob"
-msgstr "ODD フィールド表示"
+msgstr "Bob - ODD フィールド表示"
+
+msgctxt "#16022"
+msgid "Bob - Inverted"
+msgstr "Bob - EVEN フィールド表示"
 
 msgctxt "#16024"
 msgid "Cancelling..."
@@ -5333,9 +6369,17 @@ msgctxt "#16026"
 msgid "Playback failed"
 msgstr "プレイバックに失敗しました"
 
+msgctxt "#16027"
+msgid "One or more items failed to play. Check the log for more information about this message."
+msgstr "1つ以上の項目で再生に失敗しました。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#16028"
 msgid "Enter value"
 msgstr "値を入力"
+
+msgctxt "#16029"
+msgid "Check the log for more information about this message."
+msgstr "このメッセージについての詳細はログを参照してください。"
 
 msgctxt "#16030"
 msgid "Party mode aborted."
@@ -5345,9 +6389,25 @@ msgctxt "#16031"
 msgid "No matching songs in the library."
 msgstr "ライブラリには一致する曲はありませんでした。"
 
+msgctxt "#16032"
+msgid "Couldn't initialise database."
+msgstr "データベースの初期化に失敗しました。"
+
+msgctxt "#16033"
+msgid "Couldn't open database."
+msgstr "データベースを開けませんでした。"
+
+msgctxt "#16034"
+msgid "Couldn't get songs from database."
+msgstr "データベースから曲を取得できませんでした。"
+
 msgctxt "#16035"
 msgid "Party mode playlist"
 msgstr "パーティモードプレイリスト"
+
+msgctxt "#16036"
+msgid "Deinterlace (half)"
+msgstr "インターレース解除 (Half)"
 
 msgctxt "#16037"
 msgid "Deinterlace video"
@@ -5368,6 +6428,10 @@ msgstr "自動"
 msgctxt "#16041"
 msgid "On"
 msgstr "オン"
+
+msgctxt "#16100"
+msgid "All videos"
+msgstr "すべてのビデオ"
 
 msgctxt "#16101"
 msgid "Unwatched"
@@ -5405,13 +6469,25 @@ msgctxt "#16201"
 msgid "Copy failed"
 msgstr "コピーに失敗"
 
+msgctxt "#16202"
+msgid "Failed to copy at least one file. Check the log for more information about this message."
+msgstr "1つ以上のファイルでコピーに失敗しました。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#16203"
 msgid "Move failed"
 msgstr "移動に失敗"
 
+msgctxt "#16204"
+msgid "Failed to move at least one file. Check the log for more information about this message."
+msgstr "1つ以上のファイルで移動に失敗しました。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#16205"
 msgid "Delete failed"
 msgstr "削除に失敗"
+
+msgctxt "#16206"
+msgid "Failed to delete at least one file. Check the log for more information about this message."
+msgstr "1つ以上のファイルで削除に失敗しました。このメッセージについての詳細はログを参照してください。"
 
 msgctxt "#16300"
 msgid "Video scaling method"
@@ -5457,17 +6533,61 @@ msgctxt "#16310"
 msgid "Temporal"
 msgstr "Temporal"
 
+msgctxt "#16311"
+msgid "Temporal / Spatial"
+msgstr "時空間"
+
+msgctxt "#16312"
+msgid "VDPAU - Noise reduction"
+msgstr "VDPAU - ノイズリダクション"
+
+msgctxt "#16313"
+msgid "VDPAU - Sharpness"
+msgstr "VDPAU - シャープネス"
+
+msgctxt "#16314"
+msgid "Inverse telecine"
+msgstr "逆テレシネ"
+
+msgctxt "#16315"
+msgid "Lanczos3 - Optimised"
+msgstr "Lanczos3 - Optimised"
+
 msgctxt "#16316"
 msgid "Auto"
 msgstr "自動"
+
+msgctxt "#16317"
+msgid "Temporal (half)"
+msgstr "半時系列"
+
+msgctxt "#16318"
+msgid "Temporal / Spatial (half)"
+msgstr "半時空間"
 
 msgctxt "#16319"
 msgid "DXVA"
 msgstr "DXVA"
 
+msgctxt "#16320"
+msgid "DXVA - Bob"
+msgstr "DXVA - Bob"
+
+msgctxt "#16321"
+msgid "DXVA - Best"
+msgstr "DXVA - Best"
+
 msgctxt "#16322"
 msgid "Spline36"
 msgstr "Spline36"
+
+msgctxt "#16323"
+msgid "Spline36 - Optimised"
+msgstr "Spline36 - Optimised"
+
+msgctxt "#16324"
+msgid "Software - Blend"
+msgstr "Software - Blend"
 
 msgctxt "#16325"
 msgid "VDPAU - Bob"
@@ -5476,6 +6596,42 @@ msgstr "VDPAU - Bob"
 msgctxt "#16326"
 msgid "DXVA-HD"
 msgstr "DXVA-HD"
+
+msgctxt "#16327"
+msgid "VAAPI - Bob"
+msgstr "VAAPI - Bob"
+
+msgctxt "#16328"
+msgid "VAAPI - Motion adaptive"
+msgstr "VAAPI - Motion adaptive"
+
+msgctxt "#16329"
+msgid "VAAPI - Motion compensated"
+msgstr "VAAPI - Motion compensated"
+
+msgctxt "#16330"
+msgid "MMAL - Advanced"
+msgstr "MMAL - Advanced"
+
+msgctxt "#16331"
+msgid "MMAL - Advanced (half)"
+msgstr "MMAL - Advanced (half)"
+
+msgctxt "#16332"
+msgid "MMAL - Bob"
+msgstr "MMAL - Bob"
+
+msgctxt "#16333"
+msgid "MMAL - Bob (half)"
+msgstr "MMAL - Bob (half)"
+
+msgctxt "#16334"
+msgid "IMX - Fast motion"
+msgstr "IMX - Fast motion"
+
+msgctxt "#16335"
+msgid "IMX - Fast motion (double)"
+msgstr "IMX - Fast motion (double)"
 
 msgctxt "#16400"
 msgid "Post-processing"
@@ -5501,6 +6657,10 @@ msgctxt "#19000"
 msgid "Switch to channel"
 msgstr "チャンネル切り替え"
 
+msgctxt "#19001"
+msgid "Separate the search words by using AND, OR and / or NOT."
+msgstr "検索文字列を AND 、ORと / もしく NOT を使って分割してください。"
+
 msgctxt "#19002"
 msgid "or use phrases to find an exact match, like \"The wizard of Oz\"."
 msgstr "あるいは、\"The wizard of Oz\" のようにすると、フレーズの完全一致で検索ができます。"
@@ -5508,6 +6668,10 @@ msgstr "あるいは、\"The wizard of Oz\" のようにすると、フレーズ
 msgctxt "#19003"
 msgid "Find similar"
 msgstr "似ているものを探す"
+
+msgctxt "#19004"
+msgid "Importing guide from clients"
+msgstr "クライアントから番組表をインポート"
 
 msgctxt "#19005"
 msgid "PVR stream information"
@@ -5537,6 +6701,10 @@ msgctxt "#19011"
 msgid "UNC"
 msgstr "UNC"
 
+msgctxt "#19012"
+msgid "PVR backend"
+msgstr "PVR バックエンド"
+
 msgctxt "#19013"
 msgid "Free to air"
 msgstr "Free to air（無料衛星放送）"
@@ -5548,6 +6716,10 @@ msgstr "Fixed"
 msgctxt "#19015"
 msgid "Encryption"
 msgstr "暗号化"
+
+msgctxt "#19016"
+msgid "PVR backend %i - %s"
+msgstr "PVR バックエンド %i - %s"
 
 msgctxt "#19017"
 msgid "Recordings"
@@ -5587,11 +6759,15 @@ msgstr "今後の録画"
 
 msgctxt "#19026"
 msgid "Add timer..."
-msgstr "タイマーの追加..."
+msgstr "録画予約の追加..."
 
 msgctxt "#19027"
 msgid "No search results"
 msgstr "検索結果はありません"
+
+msgctxt "#19028"
+msgid "No guide entries"
+msgstr "番組表データなし"
 
 msgctxt "#19029"
 msgid "Channel"
@@ -5617,6 +6793,14 @@ msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "このチャンネルで録画がすでに始まっています"
 
+msgctxt "#19035"
+msgid "%s couldn't be played. Check the log for more information about this message."
+msgstr "%s は再生できませんでした。このメッセージについての詳細はログを参照してください。"
+
+msgctxt "#19036"
+msgid "This recording can't be played. Check the log for more information about this message."
+msgstr "この録画は再生できません。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#19037"
 msgid "Show signal quality"
 msgstr "電波状態を表示"
@@ -5630,7 +6814,7 @@ msgid "Are you sure you want to hide this channel?"
 msgstr "このチャンネルを本当に隠していいですか？"
 
 msgctxt "#19040"
-msgid "Timer"
+msgid "Timers"
 msgstr "タイマー"
 
 msgctxt "#19041"
@@ -5639,15 +6823,31 @@ msgstr "この録画の名称を本当に変更しますか？"
 
 msgctxt "#19042"
 msgid "Are you sure you want to rename this timer?"
-msgstr "このタイマーの名前を本当に変更していいですか？"
+msgstr "本当にこの録画予約の名前を変更していいですか?"
 
 msgctxt "#19043"
 msgid "Recording"
 msgstr "録画中"
 
+msgctxt "#19044"
+msgid "Please check your configuration. Check the log for more information about this message."
+msgstr "設定を確認してください。このメッセージについての詳細はログを参照ください。"
+
+msgctxt "#19045"
+msgid "No PVR clients have been started yet. Wait for the PVR clients to start up. Check the log for more information about this message."
+msgstr "PVR クライアントが起動していません。PVR クライアントの起動を待ってください。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#19046"
 msgid "New channel"
 msgstr "新規チャンネル"
+
+msgctxt "#19047"
+msgid "Programme information"
+msgstr "番組情報"
+
+msgctxt "#19048"
+msgid "Group manager"
+msgstr "グループ管理"
 
 msgctxt "#19049"
 msgid "Show channel"
@@ -5679,15 +6879,15 @@ msgstr "情報がありません"
 
 msgctxt "#19056"
 msgid "New timer"
-msgstr "新規タイマー"
+msgstr "新規録画予約"
 
 msgctxt "#19057"
-msgid "Edit timer"
-msgstr "タイマーの編集"
+msgid "Timer disabled"
+msgstr "予約を無効にしました"
 
 msgctxt "#19058"
 msgid "Timer enabled"
-msgstr "タイマーがセットされました"
+msgstr "録画予約が有効になりました"
 
 msgctxt "#19059"
 msgid "Stop recording"
@@ -5695,15 +6895,19 @@ msgstr "録画を中止"
 
 msgctxt "#19060"
 msgid "Delete timer"
-msgstr "タイマーを削除"
+msgstr "録画予約を削除"
 
 msgctxt "#19061"
 msgid "Add timer"
-msgstr "タイマーを追加"
+msgstr "録画予約を追加"
 
 msgctxt "#19062"
 msgid "Sort by: Channel"
 msgstr "ソート順: チャンネル"
+
+msgctxt "#19063"
+msgid "Go to beginning"
+msgstr "最初に"
 
 msgctxt "#19064"
 msgid "Go to end"
@@ -5711,7 +6915,7 @@ msgstr "最後へ"
 
 msgctxt "#19065"
 msgid "Timer settings"
-msgstr "タイマーの設定"
+msgstr "録画予約の設定"
 
 msgctxt "#19066"
 msgid "Channel icons"
@@ -5720,6 +6924,10 @@ msgstr "チャンネル アイコン"
 msgctxt "#19067"
 msgid "This event is already being recorded."
 msgstr "このイベントはすでに録画中です。"
+
+msgctxt "#19068"
+msgid "This recording couldn't be deleted. Check the log for more information about this message."
+msgstr "録画を削除できませんでした。このメッセージについての詳細はログを参照してください。"
 
 msgctxt "#19069"
 msgid "Guide"
@@ -5733,49 +6941,53 @@ msgctxt "#19071"
 msgid "Update interval"
 msgstr "更新間隔"
 
+msgctxt "#19072"
+msgid "Don't cache in local database"
+msgstr "ローカルデータベースにキャッシュしていません"
+
 msgctxt "#19073"
 msgid "Delay channel switch"
 msgstr "チャンネル切り替えの遅延"
 
 msgctxt "#19074"
-msgid "Active:"
-msgstr "アクティブ:"
+msgid "Active"
+msgstr "有効"
 
 msgctxt "#19075"
-msgid "Name:"
-msgstr "名称:"
+msgid "Name"
+msgstr "Name"
 
 msgctxt "#19076"
-msgid "Folder:"
-msgstr "フォルダー:"
+msgid "Folder"
+msgstr "フォルダー"
 
 msgctxt "#19078"
-msgid "Channel:"
-msgstr "チャンネル:"
+msgid "Channel"
+msgstr "チャンネル"
 
 msgctxt "#19079"
-msgid "Day:"
-msgstr "日:"
+msgid "Days of week"
+msgstr "曜日"
 
 msgctxt "#19080"
-msgid "Begin:"
-msgstr "開始:"
+msgid "Begin"
+msgstr "開始"
 
 msgctxt "#19081"
-msgid "End:"
-msgstr "終了:"
+msgid "End"
+msgstr "終了"
 
 msgctxt "#19082"
-msgid "Priority:"
-msgstr "優先度:"
+msgid "Priority"
+msgstr "優先順位"
 
 msgctxt "#19083"
-msgid "Lifetime (days):"
-msgstr "期間 (日):"
+msgid "Lifetime"
+msgstr "保存期間"
 
 msgctxt "#19084"
-msgid "First day:"
-msgstr "最初の日："
+msgid "First day"
+msgstr "初日"
 
 msgctxt "#19085"
 msgid "Unknown channel %u"
@@ -5869,6 +7081,22 @@ msgctxt "#19107"
 msgid "at"
 msgstr ":"
 
+msgctxt "#19108"
+msgid "Fallback framerate"
+msgstr "フォールバック・フレームレート"
+
+msgctxt "#19109"
+msgid "Couldn't save timer. Check the log for more information about this message."
+msgstr "予約を保存できません。このメッセージについての詳細はログを参照してください。"
+
+msgctxt "#19110"
+msgid "An unexpected error occurred. Try again later or check the log for more information."
+msgstr "予期しないエラーが発生しました。もう一度試してみるか、ログを確認してください。"
+
+msgctxt "#19111"
+msgid "PVR backend error. Check the log for more information about this message."
+msgstr "PVR バックエンドエラー。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#19112"
 msgid "Delete this recording?"
 msgstr "この録画を削除しますか?"
@@ -5893,6 +7121,10 @@ msgctxt "#19117"
 msgid "Search for channels"
 msgstr "チャンネルの検索"
 
+msgctxt "#19118"
+msgid "Can't use PVR functions while searching."
+msgstr "検索中に PVR 機能を使うことはできません。"
+
 msgctxt "#19119"
 msgid "On which server do you want to search?"
 msgstr "どのサーバーで検索したいですか?"
@@ -5907,7 +7139,7 @@ msgstr "リピートしない"
 
 msgctxt "#19122"
 msgid "This timer is still recording. Are you sure you want to delete this timer?"
-msgstr "このタイマーは現在録画中です。本当にこのタイマーを削除していいですか？"
+msgstr "この予約は現在録画中です。本当にこのタイマーを削除していいですか?"
 
 msgctxt "#19123"
 msgid "Free to air channels only"
@@ -5965,6 +7197,10 @@ msgctxt "#19136"
 msgid "Channel unavailable"
 msgstr "チャンネル利用不可"
 
+msgctxt "#19137"
+msgid "No groups defined. Please create a group first"
+msgstr "グループがありません。まずグループを作ってください。"
+
 msgctxt "#19139"
 msgid "Name of the new group"
 msgstr "新しいグループの名前"
@@ -5997,37 +7233,41 @@ msgctxt "#19146"
 msgid "Groups"
 msgstr "グループ"
 
+msgctxt "#19147"
+msgid "The PVR backend does not support this action. Check the log for more information about this message."
+msgstr "PVR バックエンドはこの操作をサポートしていません。このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#19148"
 msgid "Channel"
 msgstr "チャンネル"
 
 msgctxt "#19149"
 msgid "Mo"
-msgstr "月曜日"
+msgstr "月"
 
 msgctxt "#19150"
 msgid "Tu"
-msgstr "火曜日"
+msgstr "火"
 
 msgctxt "#19151"
 msgid "We"
-msgstr "水曜日"
+msgstr "水"
 
 msgctxt "#19152"
 msgid "Th"
-msgstr "木曜日"
+msgstr "木"
 
 msgctxt "#19153"
 msgid "Fr"
-msgstr "金曜日"
+msgstr "金"
 
 msgctxt "#19154"
 msgid "Sa"
-msgstr "土曜日"
+msgstr "土"
 
 msgctxt "#19155"
 msgid "Su"
-msgstr "日曜日"
+msgstr "日"
 
 msgctxt "#19156"
 msgid "from"
@@ -6049,6 +7289,10 @@ msgctxt "#19160"
 msgid "to"
 msgstr "まで"
 
+msgctxt "#19161"
+msgid "any time"
+msgstr "何時でも"
+
 msgctxt "#19162"
 msgid "Recording active"
 msgstr "録画有効"
@@ -6056,6 +7300,10 @@ msgstr "録画有効"
 msgctxt "#19163"
 msgid "Recordings"
 msgstr "録画"
+
+msgctxt "#19164"
+msgid "Can't start recording. Check the log for more information about this message."
+msgstr "録画を開始できません。このメッセージについての詳細はログを参照してください。"
 
 msgctxt "#19165"
 msgid "Switch"
@@ -6098,12 +7346,12 @@ msgid "Default recording lifetime"
 msgstr "規定の録画期間"
 
 msgctxt "#19175"
-msgid "Start padding time"
-msgstr "開始時の余分な時間"
+msgid "Default start padding time"
+msgstr "標準前倒し時間"
 
 msgctxt "#19176"
-msgid "End padding time"
-msgstr "終了後の余分な時間"
+msgid "Default end padding time"
+msgstr "標準延長時間"
 
 msgctxt "#19177"
 msgid "Playback"
@@ -6121,6 +7369,14 @@ msgctxt "#19180"
 msgid "TV"
 msgstr "TV"
 
+msgctxt "#19181"
+msgid "Menu / OSD"
+msgstr "メニュー"
+
+msgctxt "#19182"
+msgid "Days to display"
+msgstr "表示する日数"
+
 msgctxt "#19183"
 msgid "Radio"
 msgstr "ラジオ"
@@ -6128,6 +7384,10 @@ msgstr "ラジオ"
 msgctxt "#19184"
 msgid "Deleted recordings"
 msgstr "削除済みの録画"
+
+msgctxt "#19185"
+msgid "Clear data"
+msgstr "データクリア"
 
 msgctxt "#19189"
 msgid "Continue last channel on startup"
@@ -6144,6 +7404,10 @@ msgstr "PVR サービス"
 msgctxt "#19192"
 msgid "None of the connected PVR backends supports scanning for channels."
 msgstr "チャンネルのスキャンに対応した PVR バックエンドがありません。"
+
+msgctxt "#19193"
+msgid "The channel scan can't be started. Check the log for more information about this message."
+msgstr "チャンネル走査が開始できません。このメッセージについての詳細はログを参照してください。"
 
 msgctxt "#19194"
 msgid "Continue?"
@@ -6223,7 +7487,7 @@ msgstr "新しいチャンネルの有効なURLを入力してください"
 
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
-msgstr "PVR バックエンドがタイマーをサポートしていません。"
+msgstr "PVR バックエンドが録画予約をサポートしていません。"
 
 msgctxt "#19216"
 msgid "All radio channels"
@@ -6287,7 +7551,7 @@ msgstr "検索結果をクリア"
 
 msgctxt "#19233"
 msgid "Display a notification on timer updates"
-msgstr "タイマーの更新で通知を表示する"
+msgstr "録画予約の更新で通知を表示する"
 
 msgctxt "#19234"
 msgid "Use channel numbers from backend"
@@ -6303,7 +7567,7 @@ msgstr "クライアントからチャンネルを読み込み中"
 
 msgctxt "#19237"
 msgid "Loading timers from clients"
-msgstr "クライアントからタイマーを読み込み中"
+msgstr "クライアントから録画予約を読み込み中"
 
 msgctxt "#19238"
 msgid "Loading recordings from clients"
@@ -6340,14 +7604,6 @@ msgstr "データベースからガイドを読み込み中"
 msgctxt "#19251"
 msgid "Update guide information"
 msgstr "ガイド情報を更新"
-
-msgctxt "#19255"
-msgid "Start recording"
-msgstr "録画の開始"
-
-msgctxt "#19256"
-msgid "Stop recording"
-msgstr "録画の中止"
 
 msgctxt "#19257"
 msgid "Lock channel"
@@ -7177,10 +8433,6 @@ msgctxt "#20183"
 msgid "Reload skin"
 msgstr "スキンを再ロード"
 
-msgctxt "#20184"
-msgid "Rotate pictures using EXIF information"
-msgstr "EXIF 情報による画像の向き補正"
-
 msgctxt "#20185"
 msgid "Use poster view styles for TV shows"
 msgstr "Use Poster View Styles for TV Shows"
@@ -7675,7 +8927,7 @@ msgstr "ファンアートを取得"
 
 msgctxt "#20414"
 msgid "Show fanart in video and music libraries"
-msgstr "ビデオと音楽のライブラリで Fanart を表示する"
+msgstr "ビデオとミュージックのライブラリでファンアートを表示する"
 
 msgctxt "#20415"
 msgid "Scanning for new content"
@@ -7864,6 +9116,10 @@ msgstr "隠しファイル/ディレクトリを表示"
 msgctxt "#21336"
 msgid "Connecting to: %s"
 msgstr "接続中：%s"
+
+msgctxt "#21337"
+msgid "Never"
+msgstr "使用しない"
 
 msgctxt "#21359"
 msgid "Add media share..."
@@ -8193,6 +9449,10 @@ msgctxt "#21451"
 msgid "Internet connection required."
 msgstr "インターネット接続が必要です。"
 
+msgctxt "#21452"
+msgid "Get more..."
+msgstr "さらに取得..."
+
 msgctxt "#21453"
 msgid "Root filesystem"
 msgstr "ルートファイルシステム"
@@ -8252,6 +9512,10 @@ msgstr "%s から %s まで"
 msgctxt "#21470"
 msgid "%s [%d]"
 msgstr "%s [%d]"
+
+msgctxt "#21478"
+msgid "Open"
+msgstr "開く"
 
 msgctxt "#21602"
 msgid "(External)"
@@ -8439,15 +9703,15 @@ msgstr "Object Name"
 
 msgctxt "#21873"
 msgid "City"
-msgstr "City"
+msgstr "都市"
 
 msgctxt "#21874"
 msgid "State"
-msgstr "State"
+msgstr "州"
 
 msgctxt "#21875"
 msgid "Country"
-msgstr "Country"
+msgstr "国"
 
 msgctxt "#21877"
 msgid "Date created"
@@ -8459,7 +9723,7 @@ msgstr "緊急"
 
 msgctxt "#21879"
 msgid "Country code"
-msgstr "Country Code"
+msgstr "国コード"
 
 msgctxt "#21880"
 msgid "Reference service"
@@ -8536,6 +9800,10 @@ msgstr "アクティブな期間"
 msgctxt "#21899"
 msgid "Label"
 msgstr "レーベル"
+
+msgctxt "#21900"
+msgid "Born / Formed"
+msgstr "生誕 / 結成"
 
 msgctxt "#22000"
 msgid "Update library on startup"
@@ -8621,10 +9889,6 @@ msgctxt "#22022"
 msgid "Show video files in listings"
 msgstr "リストでビデオファイルを表示"
 
-msgctxt "#22023"
-msgid "DirectX vendor:"
-msgstr "DirectX ベンダー："
-
 msgctxt "#22024"
 msgid "Direct3D version:"
 msgstr "Direct3D バージョン："
@@ -8644,30 +9908,6 @@ msgstr "色"
 msgctxt "#22033"
 msgid "Charset"
 msgstr "文字セット"
-
-msgctxt "#22034"
-msgid "Export karaoke titles as HTML"
-msgstr "カラオケタイトルをエクスポート (HTML)"
-
-msgctxt "#22035"
-msgid "Export karaoke titles as CSV"
-msgstr "カラオケタイトルをエクスポート (CSV)"
-
-msgctxt "#22036"
-msgid "Import karaoke titles..."
-msgstr "カラオケタイトルのインポート..."
-
-msgctxt "#22037"
-msgid "Show song selector automatically"
-msgstr "Show song selector automatically"
-
-msgctxt "#22038"
-msgid "Export karaoke titles..."
-msgstr "カラオケタイトルのエクスポート..."
-
-msgctxt "#22039"
-msgid "Enter song number"
-msgstr "Enter song number"
 
 msgctxt "#22079"
 msgid "Default select action"
@@ -8849,14 +10089,6 @@ msgctxt "#24042"
 msgid "Downloading %i%%"
 msgstr "ダウンロード中 %i%%"
 
-msgctxt "#24045"
-msgid "Add-on does not have the correct structure"
-msgstr "アドオンが正しい構造になっていません"
-
-msgctxt "#24048"
-msgid "Rollback"
-msgstr "ロールバック"
-
 msgctxt "#24049"
 msgid "Incompatible"
 msgstr "互換性なし"
@@ -8884,10 +10116,6 @@ msgstr "アップデートの確認"
 msgctxt "#24056"
 msgid "Last updated %s"
 msgstr "最終更新 : %s"
-
-msgctxt "#24061"
-msgid "Add-on update available!"
-msgstr "アドオンのアップデートがあります!"
 
 msgctxt "#24063"
 msgid "Auto update"
@@ -8944,14 +10172,6 @@ msgstr "視覚化ライブラリー"
 msgctxt "#24089"
 msgid "Add-on restarts"
 msgstr "アドオンの再起動"
-
-msgctxt "#24094"
-msgid "(current)"
-msgstr "(現在)"
-
-msgctxt "#24095"
-msgid "(blacklisted)"
-msgstr "(ブラックリスト)"
 
 msgctxt "#24096"
 msgid "Add-on is incompatible or has been marked broken in repository."
@@ -9053,6 +10273,14 @@ msgctxt "#24128"
 msgid "Configuration has been moved"
 msgstr "設定を移行しました。"
 
+msgctxt "#24140"
+msgid "View"
+msgstr "ビュー"
+
+msgctxt "#24141"
+msgid "Add-on disabled"
+msgstr "アドオン無効"
+
 msgctxt "#24992"
 msgid "System"
 msgstr "システム"
@@ -9104,6 +10332,50 @@ msgstr "この Blu-ray のメニューはサポートされていません"
 msgctxt "#29801"
 msgid "QWERTY keyboard"
 msgstr "QWERTYキーボード"
+
+msgctxt "#29902"
+msgid "Style"
+msgstr "スタイル"
+
+msgctxt "#29904"
+msgid "Artist"
+msgstr "アーティスト"
+
+msgctxt "#29909"
+msgid "Studio"
+msgstr "スタジオ"
+
+msgctxt "#29910"
+msgid "Phone"
+msgstr "電話"
+
+msgctxt "#29915"
+msgid "Info"
+msgstr "情報"
+
+msgctxt "#29932"
+msgid "Language"
+msgstr "言語"
+
+msgctxt "#29943"
+msgid "Information"
+msgstr "情報"
+
+msgctxt "#29946"
+msgid "Drama"
+msgstr "ドラマ"
+
+msgctxt "#29956"
+msgid "Weather"
+msgstr "天気"
+
+msgctxt "#29960"
+msgid "Religion"
+msgstr "宗教"
+
+msgctxt "#29969"
+msgid "Documentary"
+msgstr "ドキュメンタリー"
 
 msgctxt "#33001"
 msgid "Trailer quality"
@@ -9349,10 +10621,6 @@ msgctxt "#33080"
 msgid "Hate"
 msgstr "Hate"
 
-msgctxt "#33081"
-msgid "This file is stacked, select the part you want to play from."
-msgstr "This file is stacked, select the part you want to play from."
-
 msgctxt "#33082"
 msgid "Path to script"
 msgstr "スクリプトのパス"
@@ -9489,6 +10757,10 @@ msgctxt "#34300"
 msgid "Failed to start Zeroconf"
 msgstr "Zeroconf の起動に失敗"
 
+msgctxt "#34301"
+msgid "Is Apple's Bonjour service installed? Check the log for more information about this message."
+msgstr "Apple の Bonjour サービスはインストールされていますか? このメッセージについての詳細はログを参照してください。"
+
 msgctxt "#34402"
 msgid "Failed to initialise audio device"
 msgstr "オーディオデバイスの初期化に失敗しました。"
@@ -9624,10 +10896,6 @@ msgstr "TVがオフになった時"
 msgctxt "#36030"
 msgid "Connection lost"
 msgstr "接続切断"
-
-msgctxt "#36033"
-msgid "Pause playback when switching to another source"
-msgstr "他のソースに切り替える時再生を一時停止"
 
 msgctxt "#36035"
 msgid "Always"
@@ -9853,22 +11121,6 @@ msgctxt "#36291"
 msgid "Auto eject disc after rip is complete."
 msgstr "リッピング完了後、自動でディスクイジェクトする。"
 
-msgctxt "#36295"
-msgid "Select the font type used during karaoke."
-msgstr "カラオケに使用するフォントを選択します。"
-
-msgctxt "#36296"
-msgid "Select the size of the font used during karaoke."
-msgstr "カラオケに使用するフォントサイズを選択します。"
-
-msgctxt "#36297"
-msgid "Select the font colour used during karaoke."
-msgstr "カラオケに使用するフォント色を選択します。"
-
-msgctxt "#36298"
-msgid "Select the character set used during karaoke."
-msgstr "カラオケに使用する文字セットを選択します。"
-
 msgctxt "#36301"
 msgid "No info available yet."
 msgstr "情報がまだありません。"
@@ -9880,14 +11132,6 @@ msgstr "情報がまだありません。"
 msgctxt "#36303"
 msgid "No info available yet."
 msgstr "情報がまだありません。"
-
-msgctxt "#36306"
-msgid "If EXIF information exists (date, time, camera used, etc.), it will be displayed."
-msgstr "EXIF 情報 (日付、時刻、使用したカメラ、など) があれば表示されます。"
-
-msgctxt "#36308"
-msgid "Pictures will automatically rotate according to information in the EXIF tag, if found."
-msgstr "EXIF タグがあれば、その中の情報を使って画像が自動的に向きが補正されます。"
 
 msgctxt "#36310"
 msgid "No info available yet."
@@ -9913,25 +11157,13 @@ msgctxt "#36345"
 msgid "Sets the AirPlay password."
 msgstr "AirPlay パスワードを設定します。"
 
-msgctxt "#36356"
-msgid "Eliminate vertical tearing."
-msgstr "垂直方向のちらつきを抑制します。"
-
 msgctxt "#36358"
 msgid "Test patterns for display hardware calibration."
 msgstr "ハードウェア・キャリブレーション用のテストパターン"
 
-msgctxt "#36366"
-msgid "Select this option if your receiver is capable of decoding DTS streams."
-msgstr "レシーバーが DTS ストリームのデコードに対応している場合は、このオプションを選択してください。"
-
 msgctxt "#36369"
 msgid "Select this option if your receiver is capable of decoding TrueHD streams."
 msgstr "レシーバーが TrueHD ストリームのデコードに対応している場合は、このオプションを選択してください。"
-
-msgctxt "#36370"
-msgid "Select this option if your receiver is capable of decoding DTS-HD streams."
-msgstr "レシーバーが DTS+HD ストリームのデコードに対応している場合は、このオプションを選択してください。"
 
 msgctxt "#36381"
 msgid "Configure which proxy type is used."
@@ -9943,19 +11175,51 @@ msgstr "プロキシサーバーのアドレスを設定します。"
 
 msgctxt "#36383"
 msgid "Configure the proxy server port."
-msgstr "プロキシサーバーのポート番号を設定"
+msgstr "プロキシサーバーのポート番号を設定します。"
 
 msgctxt "#36384"
 msgid "Configure the proxy server username."
-msgstr "プロキシサーバーのユーザ名を設定"
+msgstr "プロキシサーバーのユーザ名を設定します。"
 
 msgctxt "#36385"
 msgid "Configure the proxy server password."
-msgstr "プロキシサーバーのパスワードを設定"
+msgstr "プロキシサーバーのパスワードを設定します。"
+
+msgctxt "#36400"
+msgid "Enable cache for playback of video, audio or DVDs from hard disk."
+msgstr "ハードディスク上のビデオ/オーディオ/DVD 再生でキャッシュを有効にします。"
+
+msgctxt "#36401"
+msgid "Enable cache for playback of video from DVD-ROM."
+msgstr "DVD-ROM のビデオ再生でキャッシュを有効にします。"
+
+msgctxt "#36402"
+msgid "Enable cache for video playback from local network."
+msgstr "ローカルネットワーク上のビデオ再生でキャッシュを有効にします。"
+
+msgctxt "#36403"
+msgid "Enable cache for video playback from Internet."
+msgstr "インターネット上のビデオ再生でキャッシュを有効にします。"
+
+msgctxt "#36404"
+msgid "Enable cache for playback of audio from DVD-ROM."
+msgstr "DVD-ROM のオーディオ再生でキャッシュを有効にします。"
+
+msgctxt "#36405"
+msgid "Enable cache for audio playback from local network."
+msgstr "ローカルネットワーク上のオーディオ再生でキャッシュを有効にします。"
+
+msgctxt "#36406"
+msgid "Enable cache for audio playback from Internet."
+msgstr "インターネット上のオーディオ再生でキャッシュを有効にします。"
 
 msgctxt "#36407"
 msgid "Enable cache for playback of DVD from DVD-ROM."
 msgstr "DVD-ROM の DVD 再生でキャッシュを有効にします。"
+
+msgctxt "#36408"
+msgid "Enable cache for DVD playback from local network."
+msgstr "ローカルネットワーク上の DVD 再生でキャッシュを有効にします。"
 
 msgctxt "#36409"
 msgid "Enable cache of unknown types from Internet."
@@ -10063,11 +11327,19 @@ msgstr "シーズン"
 
 msgctxt "#36906"
 msgid "episode"
-msgstr "episode"
+msgstr "エピソード"
 
 msgctxt "#36907"
 msgid "episodes"
-msgstr "episodes"
+msgstr "エピソード"
+
+msgctxt "#36908"
+msgid "music video"
+msgstr "音楽ビデオ"
+
+msgctxt "#36909"
+msgid "music videos"
+msgstr "音楽ビデオ"
 
 msgctxt "#36910"
 msgid "set"

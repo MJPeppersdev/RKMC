@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<addon id="plugin.video.spotitube" name="Youtube Music" version="2.0.2" provider-name="LORE/realvito">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+		<import addon="script.module.requests"/>
+		<import addon="script.module.simplejson" optional="true"/>
+		<import addon="plugin.video.youtube" version="5.2.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de">Musik über Youtube abspielen</summary>
+		<summary lang="en">Play Music via Youtube</summary>
+		<description lang="de">@realvito[CR]Musik aus verschiedenen Quellen z.B. Billboard, iTunes, Spotify etc. auswählen und über Youtube abspielen.[CR][CR]Für mehr Informationen zu allen Neuerungen siehe - CHANGELOG.[CR]     TEST IT AND LIKE IT</description>
+		<description lang="en">@realvito[CR]Choose Music from different sources e.g. Billboard, iTunes, Spotify etc. and play it via Youtube.[CR][CR]For more information about all new features see - CHANGELOG.[CR]     TEST IT AND LIKE IT</description>
+		<disclaimer></disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>http://www.kodinerds.net/index.php/Thread/47087-Release-YoutubeMusic-patched/</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/kodinerds/repo/tree/master/plugin.video.spotitube</source>
+		<news> [B]Version 2.0.1  (12.12.2016)[/B] by realvito
+					- Changed many codes and cleanup the script
+					- added: More German-Translations
+					- added: Icons for the sources in Mainmenu
+					- added: More sources from Official Charts Company/removed: old sources
+					- added: Settings in days for automatic CACHE-File deleting
+					- fixed: Playing Videos via Youtube
+					- fixed: Beatport-Playlists
+					- fixed: Hypem-Title and Hypem-Images
+					- fixed: Spotify-Genres and Spotify-Playlist-Images
+					- fixed: showing more TitleImages from the sources and also better quality
+					- removed: old Youtube-Addon settings, because there are no different versions furthermore
+					- Tested on Win 8.1/64 bit with Kodi-KRYPTON 17beta6, installed "plugin.video.youtube" Version 5.3.7 and "script.module.requests" Version 2.9.1
+					 [B]Version 2.0.2  (18.12.2016)[/B] by realvito
+					- VideoLinks werden schneller geöffnet - URL-Abfrage hakt nicht mehr
+					- Bei Problemen mit Kodi-JARVIS 16 bitte README.txt beachten !</news>
+	</extension>
+</addon>
