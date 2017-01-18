@@ -495,9 +495,13 @@ void CDVDPlayerVideoRK::Process()
 
       if (iDecoderState & VC_BYPASS)
       {
-        if (m_speed == DVD_PLAYSPEED_NORMAL || iPriority <= 50)
+        if (m_speed == DVD_PLAYSPEED_NORMAL || iPriority <= 150)
         {
           m_messageQueue.Put(pMsg->Acquire(), iPriority + 10);
+        }
+        else
+        {
+          CLog::Log(LOGDEBUG, "Warning! DVDPlayerVideoRK drop by pass packet!");
         }
       }
       else
