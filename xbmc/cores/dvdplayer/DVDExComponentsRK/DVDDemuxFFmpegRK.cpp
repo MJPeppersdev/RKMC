@@ -645,6 +645,7 @@ DemuxPacket* CDVDDemuxFFmpegRK::Read()
               tsB = AV_NOPTS_VALUE;
               break;
             }
+            CLog::Log(LOGERROR, "!!! MVC error: drop mvc packet");
             CDVDDemuxUtils::FreeDemuxPacket(mvcpkt);
             mvcpkt = m_SSIFqueue.front();
             tsB = (mvcpkt->dts != AV_NOPTS_VALUE ? mvcpkt->dts : mvcpkt->pts);
@@ -664,6 +665,9 @@ DemuxPacket* CDVDDemuxFFmpegRK::Read()
     {
       if (m_bSSIF && stream->iPhysicalId == 0x1012)
       { 
+        AVStream* stream = m_pFormatContext->streams[pPacket->iStreamId];
+        if (stream->need_parsing == AVSTREAM_PARSE_NONE)
+          stream->need_parsing = AVSTREAM_PARSE_FULL;
         DemuxPacket* newpkt = CDVDDemuxUtils::AllocateDemuxPacket(pPacket->iSize); 
         newpkt->iSize = pPacket->iSize;  
         newpkt->pts = pPacket->pts; 
