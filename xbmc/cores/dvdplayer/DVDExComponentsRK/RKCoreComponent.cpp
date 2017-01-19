@@ -29,6 +29,7 @@
 #include "utils/SysfsUtils.h"
 #include "utils/log.h"
 #include "android/jni/SystemProperties.h"
+#include "guilib/StereoscopicsManager.h"
 
 #define __MODULE_NAME__ "RKCodec"
 
@@ -41,7 +42,7 @@ CRKCodec::CRKCodec()
     m_bReady(false),
     m_bRender(false),
     m_bSubmittedEos(false),
-    m_bSyncStatus(false),
+    m_bSyncStatus(0),
     m_iSyncMode(RK_CLIENT_NOTIFY),
     m_lfSyncThreshold(0.125),
     m_iSpeed(DVD_PLAYSPEED_PAUSE),
@@ -295,11 +296,7 @@ void CRKCodec::UpdatePlayStatus()
     playerclock = CDVDClock::GetMasterClock();
     if (playerclock && info)    
     { 
-      if (!m_bSyncStatus && info->pts > 0)
-      {
-        UpdateRenderStereo(true);
-        m_bSyncStatus = true;
-      }
+      UpdateRenderStereo(true);
       master_pts = playerclock->GetClock();
       if (info->pts > 0.0)
         radio = (double)info->raw / info->pts - 1.0;
@@ -447,6 +444,10 @@ void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
 void CRKCodec::UpdateRenderStereo(bool flag)
 {
   RK_U32 target_stereo = GetStereoMode();
+  if (m_bSyncStatus++ < 10) {
+    if (!flag) return;
+  }
+  
   if (flag)
     target_stereo = (m_displayInfo.type & RK_STEREO_MASK);
   
@@ -467,14 +468,15 @@ void CRKCodec::UpdateRenderStereo(bool flag)
       default: stereo_view = RENDER_STEREO_MODE_OFF; break;
     }
 
-    g_graphicsContext.SetStereoMode(stereo_view);
     g_Windowing.GetNativeResolution(&res_info);
     if (Support3D(res_info.iScreenWidth, res_info.iScreenHeight, res_info.fRefreshRate, stereo_view) && 
         CSettings::GetInstance().GetBool(RKMC_SETTING_3DSWITCH)) {
       SetNative3DResolution(stereo_view);      
       CJNISystemProperties::set("persist.sys.overscan.main","overscan 100,100,100,100");
     }
-    
+
+    g_graphicsContext.SetStereoMode(stereo_view);
+    CStereoscopicsManager::GetInstance().SetStereoModeByUser(stereo_view);
     m_iStereoMode = target_stereo;
   }
 }

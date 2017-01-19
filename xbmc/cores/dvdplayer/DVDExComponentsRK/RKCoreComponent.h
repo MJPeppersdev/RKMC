@@ -234,7 +234,7 @@ private:
   bool m_bOpen;
   bool m_bRender;
   bool m_bSubmittedEos;
-  bool m_bSyncStatus;
+  RK_U32 m_bSyncStatus;
   RK_S32 m_iSyncMode;
   double m_lfSyncThreshold;
   RK_S32 m_iSpeed;
