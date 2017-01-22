@@ -19,6 +19,7 @@
  */
 
 #include "GUILabel.h"
+#include "Application.h"
 #include <limits>
 
 CGUILabel::CGUILabel(float posX, float posY, float width, float height, const CLabelInfo& labelInfo, CGUILabel::OVER_FLOW overflow)
@@ -41,6 +42,9 @@ CGUILabel::~CGUILabel(void)
 
 bool CGUILabel::SetScrolling(bool scrolling)
 {
+  if (g_application.m_pPlayer->IsPlaying())
+    scrolling = false;
+  
   bool changed = m_scrolling != scrolling;
 
   m_scrolling = scrolling;

@@ -38,6 +38,7 @@ public:
 
 protected:
   virtual void Process();
+  int OutputPicture(const DVDVideoPicture* src, double pts);
 
 private:
   CDVDVideoCodec* CreateVideoCodec(CDVDStreamInfo &hint, const CRenderInfo &info);

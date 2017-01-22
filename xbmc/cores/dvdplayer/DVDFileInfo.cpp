@@ -104,6 +104,9 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
                                 CTextureDetails &details,
                                 CStreamDetails *pStreamDetails, int pos)
 {
+  if (g_application.m_pPlayer->IsPlaying())
+    return false;
+  
   prctl(PR_SET_NAME, (unsigned long)"ExtractThumb", 0, 0, 0);
   std::string redactPath = CURL::GetRedacted(strPath);
   unsigned int nTime = XbmcThreads::SystemClockMillis();
@@ -219,7 +222,7 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
 
   if (nVideoStream != -1)
   {
-    CDVDVideoCodec *pVideoCodec;
+    CDVDVideoCodec *pVideoCodec = NULL;
 
     CDVDStreamInfo hint(*pDemuxer->GetStream(nVideoStream), true);
     hint.software = true;
@@ -230,7 +233,7 @@ bool CDVDFileInfo::ExtractThumb(const std::string &strPath,
       CDVDCodecOptions dvdOptions;
       pVideoCodec = CDVDFactoryCodec::OpenCodec(new CDVDVideoCodecFFmpeg(), hint, dvdOptions);
     }
-    else
+    else if (hint.codec != AV_CODEC_ID_HEVC)
     {
       pVideoCodec = CDVDFactoryCodec::CreateVideoCodec( hint );
     }
