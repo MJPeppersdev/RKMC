@@ -881,6 +881,13 @@
           <control type="toggle" />
         </setting>
       </group>
+      <group id="3">
+        <setting id="videoplayer.rkmc.frachdmi" type="boolean" label="39007">
+          <level>0</level>
+          <default>true</default>
+          <control type="toggle" />
+        </setting>
+      </group>
     </category>
     <category id="myvideos" label="14081" help="36601">
       <group id="1">

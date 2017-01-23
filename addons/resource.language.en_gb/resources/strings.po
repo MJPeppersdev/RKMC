@@ -18145,3 +18145,7 @@ msgstr ""
 msgctxt "#39006"
 msgid "Accelerate Mpeg1/2"
 msgstr ""
+
+msgctxt "#39007"
+msgid "Enable fractional HDMI(23.976、59.97)"
+msgstr "Need chip support rk3328、rk3399"

@@ -92,6 +92,7 @@ class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
 #define RKMC_SETTING_FP3D     "videoplayer.framepacking"
 #define RKMC_SETTING_3D24HZ   "videoplayer.force24hzbluray3d"
 #define RKMC_SETTING_3DSWITCH "videoplayer.forcehdmi3d"
+#define RKMC_SETTING_FRACHDMI "videoplayer.rkmc.frachdmi"
 
 enum RKCodecDecodeType
 {
@@ -215,8 +216,10 @@ protected:
   void UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect);
   RK_U32 GetStereoMode();
   void UpdateRenderStereo(bool flag = false);
+  void UpdateRenderFracHDMI();
   bool Support3D(int width, int height, float fps, uint32_t mode);
   void SetNative3DResolution(RK_U32 res3d);
+  void SetNativeFracResolution(bool enable);
 
 private:
   void ConfigureSetting();

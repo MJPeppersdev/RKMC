@@ -167,6 +167,7 @@ void CRKCodec::CloseDecoder()
     m_dll->RK_CodecClose();
     g_graphicsContext.SetStereoMode(RENDER_STEREO_MODE_OFF);
     SetNative3DResolution(RENDER_STEREO_MODE_OFF);
+    SetNativeFracResolution(false);
   }
 }
 
@@ -296,7 +297,11 @@ void CRKCodec::UpdatePlayStatus()
     playerclock = CDVDClock::GetMasterClock();
     if (playerclock && info)    
     { 
-      UpdateRenderStereo(true);
+      if (m_bSyncStatus++ < 10)
+      {
+        UpdateRenderStereo(true);
+        UpdateRenderFracHDMI();
+      }
       master_pts = playerclock->GetClock();
       if (info->pts > 0.0)
         radio = (double)info->raw / info->pts - 1.0;
@@ -444,7 +449,8 @@ void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
 void CRKCodec::UpdateRenderStereo(bool flag)
 {
   RK_U32 target_stereo = GetStereoMode();
-  if (m_bSyncStatus++ < 10) {
+  
+  if (m_bSyncStatus < 10) {
     if (!flag) return;
   }
   
@@ -478,6 +484,21 @@ void CRKCodec::UpdateRenderStereo(bool flag)
     g_graphicsContext.SetStereoMode(stereo_view);
     CStereoscopicsManager::GetInstance().SetStereoModeByUser(stereo_view);
     m_iStereoMode = target_stereo;
+  }
+}
+
+void CRKCodec::UpdateRenderFracHDMI()
+{
+  if (CSettings::GetInstance().GetBool(RKMC_SETTING_FRACHDMI))
+  {
+    RESOLUTION_INFO info = g_graphicsContext.GetResInfo(g_renderManager.GetResolution());
+    if (m_streamInfo.fpsrate > 0 && m_streamInfo.fpsscale > 0)
+    {
+      float frame_rate = (m_streamInfo.fpsrate + 0.0) / m_streamInfo.fpsscale;
+      float weight = (info.fRefreshRate - frame_rate) / info.fRefreshRate ;
+      if (weight >= 0.0009 && weight <= 0.0011)
+        SetNativeFracResolution(true);
+    }
   }
 }
 
@@ -558,6 +579,22 @@ RK_U32 CRKCodec::GetStereoMode()
   }
   
   return stereo_mode;
+}
+
+void CRKCodec::SetNativeFracResolution(bool enable)
+{
+  CLog::Log(LOGDEBUG, "%s: SetNativeFracResolution enable = %d!", __MODULE_NAME__, enable);
+  
+  char buffer[128] = {0};
+  sprintf(buffer, "frac=%d", enable);
+  if (SysfsUtils::HasRW("/sys/class/display/display0.HDMI/color"))
+  {
+    SysfsUtils::SetString("/sys/class/display/display0.HDMI/color", buffer);
+  }
+  else if (SysfsUtils::HasRW("/sys/class/display/HDMI/color"))
+  {
+    SysfsUtils::SetString("/sys/class/display/HDMI/color", buffer);
+  }
 }
 
 
