@@ -46,7 +46,8 @@ class DllLibRKCodecInterface
 {
 public:
   virtual ~DllLibRKCodecInterface(){}
-  virtual RK_RET RK_CodecInit(RK_PTR info, RK_PTR surface) = 0;
+  virtual RK_RET RK_CodecInit(RK_PTR info) = 0;
+  virtual RK_RET RK_CodecInit2(RK_PTR info, RK_PTR surface) = 0;
   virtual RK_RET RK_CodecOpen() = 0;
   virtual RK_RET RK_CodecWrite(RK_U32 type, RK_PTR data, RK_U32 isize, RK_PTS pts, RK_DTS dts) = 0;
   virtual RK_RET RK_CodecClose() = 0;
@@ -62,7 +63,8 @@ class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
 {
   DECLARE_DLL_WRAPPER(DllLibRKCodec, RK_LIBRARY);
 
-  DEFINE_METHOD2(RK_RET, RK_CodecInit, (RK_PTR p1, RK_PTR p2));
+  DEFINE_METHOD1(RK_RET, RK_CodecInit, (RK_PTR p1));
+  DEFINE_METHOD2(RK_RET, RK_CodecInit2, (RK_PTR p1, RK_PTR p2));
   DEFINE_METHOD0(RK_RET, RK_CodecOpen);
   DEFINE_METHOD5(RK_RET, RK_CodecWrite, (RK_U32 p1, RK_PTR p2, RK_U32 p3, RK_PTS p4, RK_DTS p5));
   DEFINE_METHOD0(RK_RET, RK_CodecClose);
@@ -85,6 +87,10 @@ class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
     RESOLVE_METHOD(RK_CodecSendCommand)
     RESOLVE_METHOD(RK_CodecRegisterListener)
   END_METHOD_RESOLVE()
+
+public:
+  bool RK_CodecEnableSurface() { return RESOLVE_METHOD_OPTIONAL(RK_CodecInit2) }
+  
 };
 
 #define RKMC_SETTING_RKCODEC       "videoplayer.userkcodec"

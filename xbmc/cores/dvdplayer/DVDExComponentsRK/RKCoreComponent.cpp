@@ -44,6 +44,7 @@ CRKCodec::CRKCodec()
     m_bReady(false),
     m_bRender(false),
     m_bSubmittedEos(false),
+    m_bSurface(true),
     m_bSyncStatus(0),
     m_iSyncMode(RK_CLIENT_NOTIFY),
     m_lfSyncThreshold(0.125),
@@ -59,7 +60,6 @@ CRKCodec::CRKCodec()
     CLog::Log(LOGERROR, "%s: m_dll load fail!", __MODULE_NAME__);
   }
   m_bLoad = true;
-  m_bSurface = true;
 }
 
 CRKCodec::~CRKCodec()
@@ -123,14 +123,14 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
   RK_RET ret = 0;
 
   /* init rk codec & try surface mode */
-  if (m_bSurface && CJNIAudioManager::GetSDKVersion() >= 25)
+  if (m_bSurface && m_dll->RK_CodecEnableSurface())
   {
     m_videosurface = CXBMCApp::get()->getVideoViewSurface();
     if (m_videosurface)
-      ret = m_dll->RK_CodecInit(&m_streamInfo, GetNativeSurface(m_videosurface));
+      ret = m_dll->RK_CodecInit2(&m_streamInfo, GetNativeSurface(m_videosurface));
   }
   else
-    ret = m_dll->RK_CodecInit(&m_streamInfo, NULL);
+    ret = m_dll->RK_CodecInit(&m_streamInfo);
   
   /* open rk codec */
   ret |= m_dll->RK_CodecOpen();
