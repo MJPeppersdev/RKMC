@@ -25,6 +25,7 @@
 #include "threads/Thread.h"
 #include "threads/CriticalSection.h"
 #include "guilib/Geometry.h"
+#include "android/jni/Surface.h"
 
 #define RK_LIBRARY "librkffplayer.so"
 
@@ -45,7 +46,7 @@ class DllLibRKCodecInterface
 {
 public:
   virtual ~DllLibRKCodecInterface(){}
-  virtual RK_RET RK_CodecInit(RK_PTR info) = 0;
+  virtual RK_RET RK_CodecInit(RK_PTR info, RK_PTR surface) = 0;
   virtual RK_RET RK_CodecOpen() = 0;
   virtual RK_RET RK_CodecWrite(RK_U32 type, RK_PTR data, RK_U32 isize, RK_PTS pts, RK_DTS dts) = 0;
   virtual RK_RET RK_CodecClose() = 0;
@@ -61,7 +62,7 @@ class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
 {
   DECLARE_DLL_WRAPPER(DllLibRKCodec, RK_LIBRARY);
 
-  DEFINE_METHOD1(RK_RET, RK_CodecInit, (RK_PTR p1));
+  DEFINE_METHOD2(RK_RET, RK_CodecInit, (RK_PTR p1, RK_PTR p2));
   DEFINE_METHOD0(RK_RET, RK_CodecOpen);
   DEFINE_METHOD5(RK_RET, RK_CodecWrite, (RK_U32 p1, RK_PTR p2, RK_U32 p3, RK_PTS p4, RK_DTS p5));
   DEFINE_METHOD0(RK_RET, RK_CodecClose);
@@ -224,6 +225,7 @@ protected:
 private:
   void ConfigureSetting();
   void SendConfigure(RK_U32 config, RK_PTR param = NULL);
+  RK_PTR GetNativeSurface(CJNISurface xbmc_surface);
   
 private:
   CDVDStreamInfo  m_hints;
@@ -244,6 +246,9 @@ private:
   RK_S32 m_iNextSpeed;
 
   RK_U32 m_iStereoMode;
+
+  bool m_bSurface;
+  CJNISurface m_videosurface;
   
 };
 

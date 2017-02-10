@@ -29,7 +29,9 @@
 #include "utils/SysfsUtils.h"
 #include "utils/log.h"
 #include "android/jni/SystemProperties.h"
+#include "android/jni/Surface.h"
 #include "guilib/StereoscopicsManager.h"
+#include "android/activity/XBMCApp.h"
 
 #define __MODULE_NAME__ "RKCodec"
 
@@ -57,6 +59,7 @@ CRKCodec::CRKCodec()
     CLog::Log(LOGERROR, "%s: m_dll load fail!", __MODULE_NAME__);
   }
   m_bLoad = true;
+  m_bSurface = true;
 }
 
 CRKCodec::~CRKCodec()
@@ -116,9 +119,20 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
 
   if (AV_CODEC_ID_VP9 == m_streamInfo.codec)
     m_streamInfo.codec = AV_CODEC_ID_VP9 + 1;
+
+  RK_RET ret = 0;
+
+  /* init rk codec & try surface mode */
+  if (m_bSurface && CJNIAudioManager::GetSDKVersion() >= 25)
+  {
+    m_videosurface = CXBMCApp::get()->getVideoViewSurface();
+    if (m_videosurface)
+      ret = m_dll->RK_CodecInit(&m_streamInfo, GetNativeSurface(m_videosurface));
+  }
+  else
+    ret = m_dll->RK_CodecInit(&m_streamInfo, NULL);
   
-  /* init and open rk codec */
-  RK_RET ret = m_dll->RK_CodecInit(&m_streamInfo);
+  /* open rk codec */
   ret |= m_dll->RK_CodecOpen();
 
   if (ret != 0)
@@ -168,6 +182,9 @@ void CRKCodec::CloseDecoder()
     g_graphicsContext.SetStereoMode(RENDER_STEREO_MODE_OFF);
     SetNative3DResolution(RENDER_STEREO_MODE_OFF);
     SetNativeFracResolution(false);
+
+    if (m_bSurface && m_videosurface)
+      CXBMCApp::get()->clearVideoView();
   }
 }
 
@@ -595,6 +612,19 @@ void CRKCodec::SetNativeFracResolution(bool enable)
   {
     SysfsUtils::SetString("/sys/class/display/HDMI/color", buffer);
   }
+}
+
+RK_PTR CRKCodec::GetNativeSurface(CJNISurface xbmc_surface)
+{
+  RK_PTR native_surface = NULL;
+  jni::jhobject jsurface = xbmc_surface.get_raw();
+  JNIEnv* env = xbmc_jnienv();
+  jclass clazz = env->FindClass("android/view/Surface");
+  jfieldID field_surface = 0;
+  field_surface = env->GetFieldID(clazz, "mNativeObject", "J");
+  if (field_surface)
+    native_surface = (void*)env->GetIntField(jsurface, field_surface);
+  return native_surface;
 }
 
 
