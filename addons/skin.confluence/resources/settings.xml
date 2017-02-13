@@ -1,6 +1,6 @@
 <settings>
     <setting id="Use_Startup_Playlist" type="bool">false</setting>
-    <setting id="UseCustomBackground" type="bool">true</setting>
+    <setting id="UseCustomBackground" type="bool">false</setting>
     <setting id="HideBackGroundFanart" type="bool">false</setting>
     <setting id="ShowBackgroundVideo" type="bool">false</setting>
     <setting id="ShowBackgroundVis" type="bool">false</setting>

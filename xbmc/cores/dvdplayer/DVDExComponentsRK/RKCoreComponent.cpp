@@ -456,9 +456,9 @@ void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
   
   if (m_displayCrop != dstCrop)
   {
-    CLog::Log(LOGDEBUG,"%s: UpdateRenderCrop", __MODULE_NAME__);
     m_displayCrop = dstCrop;
     int mode = (int)m_iStereoMode;
+    CLog::Log(LOGDEBUG,"%s: UpdateRenderCrop mode=%d", __MODULE_NAME__, mode);
     SendCommand(RK_CMD_SETCROP, &mode);
   }
 }
@@ -501,6 +501,8 @@ void CRKCodec::UpdateRenderStereo(bool flag)
     g_graphicsContext.SetStereoMode(stereo_view);
     CStereoscopicsManager::GetInstance().SetStereoModeByUser(stereo_view);
     m_iStereoMode = target_stereo;
+    if (flag && m_streamInfo.stereo_mode == RK_STEREO_MVC)
+      CMediaSettings::GetInstance().GetCurrentVideoSettings().m_StereoMode = stereo_view;
   }
 }
 

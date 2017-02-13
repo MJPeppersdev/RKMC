@@ -432,6 +432,12 @@ void CDVDPlayerVideoRK::Process()
         m_iNrOfPicturesNotToSkip = 1;
       }
 
+      if (!m_pVideoCodec)
+      {
+        Sleep(100);
+        continue;
+      }
+
       bRequestDrop = false;
       iDropDirective = CalcDropRequirement(pts, false);
       if (iDropDirective & EOS_VERYLATE)
@@ -698,6 +704,9 @@ void CDVDPlayerVideoRK::Process()
         if (iDecoderState & VC_BUFFER)
           break;
 
+        if (!m_pVideoCodec || m_bStop)
+          break;
+        
         // update dropping stats
         CalcDropRequirement(pts, true);
 
