@@ -3,7 +3,7 @@
 #### About RKMC
 
 RKMC is a fork for Kodi and provides hardware acceleration and more features on
-rockchip mainstream chips(rk3229、rk3229h、rk3288、rk3368) and most android version(Android4.4、5.x、6.x).
+rockchip mainstream chips(rk3229、rk3229h、rk3288、rk3368、rk3399) and most android version(Android4.4、5.x、6.x、7.x).
 In the case of hardware allowed, RKMC supports 4K2K、4K2K 10bit(H264、HEVC)、MVC 3D
 (bluray & mkv)、high profile audio passthrough.
 
@@ -12,6 +12,8 @@ and related firmware patches are in RKMC-Patches folder.
 
 RKMC welcome everyone to participate in development! More problems can contact the 
 author james.lin@rock-chips.com. 
+
+* [Donate] (https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8QTLHX6ZXMC56)
 
 #### Build RKMC
 
