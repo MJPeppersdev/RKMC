@@ -7,13 +7,32 @@ rockchip mainstream chips(rk3229、rk3229h、rk3288、rk3368、rk3399) and most 
 In the case of hardware allowed, RKMC supports 4K2K、4K2K 10bit(H264、HEVC)、MVC 3D
 (bluray & mkv)、high profile audio passthrough.
 
-RKMC use specific ffmpeg version in https://github.com/JamesLinEngineer/RKMC-FFmpeg
+This project use specific ffmpeg version in https://github.com/JamesLinEngineer/RKMC-FFmpeg
 and related firmware patches are in RKMC-Patches folder.
 
-RKMC welcome everyone to participate in development! More problems can contact the 
+Welcome everyone to participate in development! More problems can contact the 
 author james.lin@rock-chips.com. 
 
-* [Donate] (https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8QTLHX6ZXMC56)
+* [Donate RKMC] (https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8QTLHX6ZXMC56)
+
+#### Fast Use and test RKMC
+
+RKMC16.1 can fast configure and install on your device with 2 steps.
+
+Step1: Find your device depends library on the github folder RKMC\xbmc\RKMC-Patches.
+       Just like your android box chip is RK3368 and system is Android5.1, you must
+	   download this library from RKMC-Patches/rk3368/Android5.1/librkffplayer.so.
+       Then use the command:
+	   adb push librkffplayer.so /system/lib/librkmcplayer.so
+
+Step2: Install test apk. Download the RKMC apk from the github foloder
+       RKMC\xbmc\RKMC-Build, then use the command:
+	   adb install rkmcapp-armeabi-v7a-debug.apk
+	   
+Important: 
+       Some device may not use Audio Passthrough with these simple configure.
+       If you want this characteristic please contact your box manufactor or rebuild
+	   the firmware with audio patches from github folder RKMC\xbmc\RKMC-Patches.
 
 #### Build RKMC
 
