@@ -26,8 +26,12 @@
 #include "threads/CriticalSection.h"
 #include "guilib/Geometry.h"
 #include "android/jni/Surface.h"
+#include "utils/SysfsUtils.h"
+#include "utils/StringUtils.h"
+
 
 #define RK_LIBRARY "librkffplayer.so"
+#define RK_TEST_LIBRARY "librkmcplayer.so"
 
 typedef unsigned char           RK_U8;
 typedef unsigned short          RK_U16;
@@ -61,7 +65,10 @@ public:
 
 class DllLibRKCodec : public DllDynamic, DllLibRKCodecInterface
 {
-  DECLARE_DLL_WRAPPER(DllLibRKCodec, RK_LIBRARY);
+
+public:
+  DllLibRKCodec() : 
+    DllDynamic(SysfsUtils::Has(RK_TEST_LIBRARY) || SysfsUtils::Has(StringUtils::Format("/system/lib/%s", RK_TEST_LIBRARY)) ? RK_TEST_LIBRARY : RK_LIBRARY) {};
 
   DEFINE_METHOD1(RK_RET, RK_CodecInit, (RK_PTR p1));
   DEFINE_METHOD2(RK_RET, RK_CodecInit2, (RK_PTR p1, RK_PTR p2));
