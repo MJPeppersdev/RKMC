@@ -434,13 +434,20 @@ void CRKCodec::UpdateRenderRect(const CRect &SrcRect, const CRect &DestRect)
   {  
     CLog::Log(LOGDEBUG,"%s: UpdateRenderRect", __MODULE_NAME__);
     m_displayResolution = dstRect;
-    int* dst = new int[4];
-    dst[0] = m_displayResolution.x1;
-    dst[1] = m_displayResolution.y1;
-    dst[2] = m_displayResolution.x2 - m_displayResolution.x1;
-    dst[3] = m_displayResolution.y2 - m_displayResolution.y1;
-
-    SendCommand(RK_CMD_SETRES, dst);
+    if (m_bSurface && m_videosurface)
+    {
+      CXBMCApp::get()->setVideoViewSurfaceRect(DestRect.x1, DestRect.y1, DestRect.x2, DestRect.y2);
+    }
+    else
+    {
+      int* dst = new int[4];
+      dst[0] = m_displayResolution.x1;
+      dst[1] = m_displayResolution.y1;
+      dst[2] = m_displayResolution.x2 - m_displayResolution.x1;
+      dst[3] = m_displayResolution.y2 - m_displayResolution.y1;
+  
+      SendCommand(RK_CMD_SETRES, dst);
+    }
   }
 
   CRect dstCrop  = dstRect;
