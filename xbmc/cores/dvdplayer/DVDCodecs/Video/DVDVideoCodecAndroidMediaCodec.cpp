@@ -373,6 +373,8 @@ bool CDVDVideoCodecAndroidMediaCodec::Open(CDVDStreamInfo &hints, CDVDCodecOptio
     case AV_CODEC_ID_VP3:
     case AV_CODEC_ID_VP6:
     case AV_CODEC_ID_VP6F:
+       CLog::Log(LOGDEBUG, "MediaCodec not support VP6");
+       return false;
     case AV_CODEC_ID_VP8:
       //m_mime = "video/x-vp6";
       //m_mime = "video/x-vp7";
