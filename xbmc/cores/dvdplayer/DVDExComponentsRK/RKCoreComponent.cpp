@@ -127,7 +127,12 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
   {
     m_videosurface = CXBMCApp::get()->getVideoViewSurface();
     if (m_videosurface)
+    {
       ret = m_dll->RK_CodecInit2(&m_streamInfo, GetNativeSurface(m_videosurface));
+      CXBMCApp::get()->setVideoViewSurfaceRect(0, 0, 
+        CDisplaySettings::GetInstance().GetCurrentResolutionInfo().iWidth,
+        CDisplaySettings::GetInstance().GetCurrentResolutionInfo().iHeight);
+    }
   }
   else
     ret = m_dll->RK_CodecInit(&m_streamInfo);
