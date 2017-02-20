@@ -203,6 +203,8 @@ struct RKCodecDisplayInfo_t {
 typedef struct RKCodecStreamInfo_t RKCodecStreamInfo;
 typedef struct RKCodecDisplayInfo_t RKCodecDisplayInfo;
 
+#define RK_LOCAL_CAVS 89
+
 class CRKCodec : public CThread
 {
 public:

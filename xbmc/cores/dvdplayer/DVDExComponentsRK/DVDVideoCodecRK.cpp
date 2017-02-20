@@ -251,6 +251,8 @@ bool CDVDVideoCodecRK::IsRkHwSupport(CDVDStreamInfo & hints)
     case AV_CODEC_ID_VP8:
     case AV_CODEC_ID_VP9:
     case AV_CODEC_ID_HEVC:
+    case AV_CODEC_ID_AVS:
+    case AV_CODEC_ID_CAVS:
       CLog::Log(LOGDEBUG,"CDVDVideoCodecRK support codec %d", codec_id);
       return true;
     default:

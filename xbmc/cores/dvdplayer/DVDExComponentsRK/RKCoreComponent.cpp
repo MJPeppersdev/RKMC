@@ -120,6 +120,10 @@ bool CRKCodec::OpenDecoder(CDVDStreamInfo &hints)
   if (AV_CODEC_ID_VP9 == m_streamInfo.codec)
     m_streamInfo.codec = AV_CODEC_ID_VP9 + 1;
 
+  if (AV_CODEC_ID_AVS == m_streamInfo.codec ||
+      AV_CODEC_ID_CAVS == m_streamInfo.codec)
+    m_streamInfo.codec = RK_LOCAL_CAVS;
+
   RK_RET ret = 0;
 
   /* init rk codec & try surface mode */
