@@ -633,6 +633,9 @@ CDVDPlayer::CDVDPlayer(IPlayerCallback& callback)
   m_omxplayer_mode                     = false;
 #endif
 
+  m_HasSwitchAudioChannel              = false;
+  m_CacheRecordLevel                   = 0;
+
   CreatePlayers();
 }
 
@@ -1791,10 +1794,19 @@ void CDVDPlayer::HandlePlaySpeed()
     // handle situation that we get no data on one stream
     if(m_CurrentAudio.id >= 0 && m_CurrentVideo.id >= 0)
     {
-      if ((!m_dvdPlayerAudio->AcceptsData() && !m_CurrentVideo.started)
+      if (((!m_dvdPlayerAudio->AcceptsData() || (!m_dvdPlayerVideo->AcceptsData() && m_dvdPlayerAudio->GetLevel() > 30)) && !m_CurrentVideo.started)
       ||  (!m_dvdPlayerVideo->AcceptsData() && !m_CurrentAudio.started))
       {
         caching = CACHESTATE_DONE;
+      }
+      else
+      {
+        if (m_CacheRecordLevel != (m_dvdPlayerVideo->GetLevel() / 10 + m_dvdPlayerAudio->GetLevel() / 10))
+        {
+          m_CacheRecordLevel = m_dvdPlayerVideo->GetLevel() / 10 + m_dvdPlayerAudio->GetLevel() / 10;
+          CLog::Log(LOGDEBUG, "cache process video player reach %d percent.", m_dvdPlayerVideo->GetLevel());
+          CLog::Log(LOGDEBUG, "cache process audio player reach %d percent.", m_dvdPlayerAudio->GetLevel());
+        }
       }
     }
   }
@@ -1998,7 +2010,8 @@ bool CDVDPlayer::CheckPlayerInit(CCurrentStream& current)
       return true;
     }
 
-    if((current.startpts - current.dts) > DVD_SEC_TO_TIME(20))
+    if((current.startpts - current.dts) > DVD_SEC_TO_TIME(20) ||
+      ((current.startpts - current.dts) > DVD_SEC_TO_TIME(3) && m_HasSwitchAudioChannel))
     {
       CLog::Log(LOGDEBUG, "%s - too far to decode before finishing seek", __FUNCTION__);
       if(m_CurrentAudio.startpts != DVD_NOPTS_VALUE)
@@ -2018,6 +2031,9 @@ bool CDVDPlayer::CheckPlayerInit(CCurrentStream& current)
       CLog::Log(LOGDEBUG, "%s - dropping packet type:%d dts:%f to get to start point at %f", __FUNCTION__, current.player,  current.dts, current.startpts);
       return true;
     }
+
+    if (current.type == STREAM_AUDIO)
+      m_HasSwitchAudioChannel = false;
   }
 
   //If this is the first packet after a discontinuity, send it as a resync
@@ -2477,6 +2493,7 @@ void CDVDPlayer::HandleMessages()
         CDVDMsgPlayerSetAudioStream* pMsg2 = (CDVDMsgPlayerSetAudioStream*)pMsg;
 
         SelectionStream& st = m_SelectionStreams.Get(STREAM_AUDIO, pMsg2->GetStreamId());
+        CLog::Log(LOGDEBUG, "switch current audio stream to %d stream.", st.id);
         if(st.source != STREAM_SOURCE_NONE)
         {
           if(st.source == STREAM_SOURCE_NAV && m_pInputStream && m_pInputStream->IsStreamType(DVDSTREAM_TYPE_DVD))
@@ -2497,6 +2514,8 @@ void CDVDPlayer::HandleMessages()
             m_messenger.Put(new CDVDMsgPlayerSeek((int) GetTime(), true, true, true, true, true));
           }
         }
+        
+        m_HasSwitchAudioChannel = true;
       }
       else if (pMsg->IsType(CDVDMsg::PLAYER_SET_SUBTITLESTREAM))
       {

@@ -532,6 +532,7 @@ protected:
     double  cache_level;   // current estimated required cache level
     double  cache_delay;   // time until cache is expected to reach estimated level
     double  cache_offset;  // percentage of file ahead of current position
+
   } m_State, m_StateInput;
   CCriticalSection m_StateSection;
 
@@ -568,4 +569,7 @@ protected:
   // omxplayer variables
   struct SOmxPlayerState m_OmxPlayerState;
   bool m_omxplayer_mode;            // using omxplayer acceleration
+
+  int  m_CacheRecordLevel; // record for print current cache level
+  bool m_HasSwitchAudioChannel;
 };
