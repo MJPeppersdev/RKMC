@@ -184,8 +184,10 @@ FAIL:
 void CRKCodec::CloseDecoder()
 {
   if (m_bReady)
-  {
+  {    
+    m_bReady = false;
     CLog::Log(LOGDEBUG,"%s: CloseDecoder!", __MODULE_NAME__);
+    g_renderManager.RegisterRenderUpdateCallBack(NULL, NULL);
     StopThread();
     m_dll->RK_CodecClose();
     g_graphicsContext.SetStereoMode(RENDER_STEREO_MODE_OFF);
