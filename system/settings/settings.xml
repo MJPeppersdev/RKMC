@@ -884,7 +884,7 @@
       <group id="3">
         <setting id="videoplayer.rkmc.frachdmi" type="boolean" label="39007">
           <level>0</level>
-          <default>true</default>
+          <default>false</default>
           <control type="toggle" />
         </setting>
       </group>
