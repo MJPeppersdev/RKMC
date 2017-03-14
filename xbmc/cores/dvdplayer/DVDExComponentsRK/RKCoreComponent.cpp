@@ -32,6 +32,7 @@
 #include "android/jni/Surface.h"
 #include "guilib/StereoscopicsManager.h"
 #include "android/activity/XBMCApp.h"
+#include "android/jni/DisplayOutputManager.h"
 
 #define __MODULE_NAME__ "RKCodec"
 
@@ -588,6 +589,12 @@ void CRKCodec::SetNative3DResolution(RK_U32 stereo_view)
   else if (SysfsUtils::HasRW("/sys/class/display/HDMI/3dmode"))
   {
     SysfsUtils::SetInt("/sys/class/display/HDMI/3dmode", out);
+  }
+  else
+  {
+    CJNIDisplayOutputManager * display = new CJNIDisplayOutputManager();
+    display->set3DMode(CJNIDisplayOutputManager::MAIN_DISPLAY, CJNIDisplayOutputManager::DISPLAY_IFACE_HDMI, out);
+    delete display;
   }
 }
 

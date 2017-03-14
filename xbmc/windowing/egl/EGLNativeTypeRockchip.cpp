@@ -31,11 +31,23 @@
 #include "utils/SysfsUtils.h"
 #include "utils/RegExp.h"
 
+CEGLNativeTypeRockchip::CEGLNativeTypeRockchip()
+{
+  display = NULL;
+  has_api = false;
+}
+
+CEGLNativeTypeRockchip::~CEGLNativeTypeRockchip()
+{
+  if (display)
+    delete display;
+}
+
 bool CEGLNativeTypeRockchip::CheckCompatibility()
 {
   if (StringUtils::StartsWithNoCase(CJNIBuild::HARDWARE, "rk3") && SysfsUtils::Has("/system/lib/librkffplayer.so"))  // Rockchip
   {
-    if (SysfsUtils::HasRW("/sys/class/display/display0.HDMI/mode") || SysfsUtils::HasRW("/sys/class/display/HDMI/mode"))
+    if (SysfsUtils::Has("/sys/class/display/display0.HDMI/mode") || SysfsUtils::Has("/sys/class/display/HDMI/mode"))
     {
       CLog::Log(LOGDEBUG, "RKEGL: Detected");
       return true;
@@ -121,28 +133,28 @@ bool CEGLNativeTypeRockchip::SetNativeResolution(const RESOLUTION_INFO &res)
       switch(res.iScreenWidth)
       {
         case 1280:
-          return SetDisplayResolution("1280x720p-60");
+          SetDisplayResolution("1280x720p-60");
           break;
         case 1920:
           if (res.dwFlags & D3DPRESENTFLAG_INTERLACED)
-            return SetDisplayResolution("1920x1080i-60");
+            SetDisplayResolution("1920x1080i-60");
           else
-            return SetDisplayResolution("1920x1080p-60");
+            SetDisplayResolution("1920x1080p-60");
           break;
         case 3840:
           if (CJNIBase::GetSDKVersion() >= 21)
-            return SetDisplayResolution("3840x2160p-60(YCbCr420)");
+            SetDisplayResolution("3840x2160p-60(YCbCr420)");
           else
-            return SetDisplayResolution("3840x2160p-60");
+            SetDisplayResolution("3840x2160p-60");
           break;
         case 4096:
           if (CJNIBase::GetSDKVersion() >= 21)
-            return SetDisplayResolution("4096x2160p-60(YCbCr420)");
+            SetDisplayResolution("4096x2160p-60(YCbCr420)");
           else
-            return SetDisplayResolution("4096x2160p-60");
+            SetDisplayResolution("4096x2160p-60");
           break;
         default:
-          return SetDisplayResolution("1920x1080p-60");
+          SetDisplayResolution("1920x1080p-60");
           break;
       }
       break;
@@ -150,28 +162,28 @@ bool CEGLNativeTypeRockchip::SetNativeResolution(const RESOLUTION_INFO &res)
       switch(res.iScreenWidth)
       {
         case 1280:
-          return SetDisplayResolution("1280x720p-50");
+          SetDisplayResolution("1280x720p-50");
           break;
         case 1920:
           if (res.dwFlags & D3DPRESENTFLAG_INTERLACED)
-            return SetDisplayResolution("1920x1080i-50");
+            SetDisplayResolution("1920x1080i-50");
           else
-            return SetDisplayResolution("1920x1080p-50");
+            SetDisplayResolution("1920x1080p-50");
           break;
         case 3840:
           if (CJNIBase::GetSDKVersion() >= 21)
-            return SetDisplayResolution("3840x2160p-50(YCbCr420)");
+            SetDisplayResolution("3840x2160p-50(YCbCr420)");
           else
-            return SetDisplayResolution("3840x2160p-50");
+            SetDisplayResolution("3840x2160p-50");
           break;
         case 4096:
           if (CJNIBase::GetSDKVersion() >= 21)
-            return SetDisplayResolution("4096x2160p-50(YCbCr420)");
+            SetDisplayResolution("4096x2160p-50(YCbCr420)");
           else
-            return SetDisplayResolution("4096x2160p-50");
+            SetDisplayResolution("4096x2160p-50");
           break;
         default:
-          return SetDisplayResolution("1920x1080p-60");
+          SetDisplayResolution("1920x1080p-60");
           break;
       }
       break;
@@ -179,10 +191,10 @@ bool CEGLNativeTypeRockchip::SetNativeResolution(const RESOLUTION_INFO &res)
       switch(res.iScreenWidth)
       {
         case 3840:
-          return SetDisplayResolution("3840x2160p-30");
+          SetDisplayResolution("3840x2160p-30");
           break;
         default:
-          return SetDisplayResolution("1920x1080p-30");
+          SetDisplayResolution("1920x1080p-30");
           break;
       }
       break;
@@ -190,10 +202,10 @@ bool CEGLNativeTypeRockchip::SetNativeResolution(const RESOLUTION_INFO &res)
       switch(res.iScreenWidth)
       {
         case 3840:
-          return SetDisplayResolution("3840x2160p-25");
+          SetDisplayResolution("3840x2160p-25");
           break;
         default:
-          return SetDisplayResolution("1920x1080p-25");
+          SetDisplayResolution("1920x1080p-25");
           break;
       }
       break;
@@ -201,20 +213,50 @@ bool CEGLNativeTypeRockchip::SetNativeResolution(const RESOLUTION_INFO &res)
       switch(res.iScreenWidth)
       {
         case 3840:
-          return SetDisplayResolution("3840x2160p-24");
+          SetDisplayResolution("3840x2160p-24");
           break;
         case 4096:
-          return SetDisplayResolution("4096x2160p-24");
+          SetDisplayResolution("4096x2160p-24");
           break;
         default:
-          return SetDisplayResolution("1920x1080p-24");
+          SetDisplayResolution("1920x1080p-24");
           break;
       }
       break;
   }
 
-  return false;
+  return true;
 }
+
+void CEGLNativeTypeRockchip::SetNative3DResolution(const RESOLUTION_INFO &res)
+{
+  int out;
+  switch(res.dwFlags)
+  {
+    case D3DPRESENTFLAG_MODE3DSBS: out = 8; break;
+    case D3DPRESENTFLAG_MODE3DTB: out = 6; break;
+    case D3DPRESENTFLAG_MODE3DMVC: out = 0; break;
+    default: out = -1;
+  }
+
+  CLog::Log(LOGDEBUG, "CEGLNativeTypeRockchip SetNative3DResolution mode = %d", out);
+  if (SysfsUtils::HasRW("/sys/class/display/display0.HDMI/3dmode"))
+  {
+    SysfsUtils::SetInt("/sys/class/display/display0.HDMI/3dmode", out);
+  }
+  else if (SysfsUtils::HasRW("/sys/class/display/HDMI/3dmode"))
+  {
+    SysfsUtils::SetInt("/sys/class/display/HDMI/3dmode", out);
+  }
+  else
+  {
+    if (!display)
+      display = new CJNIDisplayOutputManager();
+    display->set3DMode(CJNIDisplayOutputManager::MAIN_DISPLAY, CJNIDisplayOutputManager::DISPLAY_IFACE_HDMI, out);
+  }
+  
+}
+
 
 bool CEGLNativeTypeRockchip::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions)
 {
@@ -296,19 +338,24 @@ bool CEGLNativeTypeRockchip::SetDisplayResolution(const char *resolution)
 
   // switch display resolution
   std::string out = resolution;
-  out += '\n';
   if (SysfsUtils::HasRW("/sys/class/display/display0.HDMI/mode"))
   {
+    out += '\n';
     if (SysfsUtils::SetString("/sys/class/display/display0.HDMI/mode", out.c_str()) < 0)
       return false;
   }
   else if (SysfsUtils::HasRW("/sys/class/display/HDMI/mode"))
   {
+    out += '\n';
     if (SysfsUtils::SetString("/sys/class/display/HDMI/mode", out.c_str()) < 0)
       return false;
   }
   else
-    return false;
+  {
+    if (!display)
+      display = new CJNIDisplayOutputManager();
+    display->setMode(CJNIDisplayOutputManager::MAIN_DISPLAY, CJNIDisplayOutputManager::DISPLAY_IFACE_HDMI, out);
+  }
 
   m_curHdmiResolution = resolution;
 

@@ -21,9 +21,13 @@
  */
 
 #include "EGLNativeTypeAndroid.h"
+#include "android/jni/DisplayOutputManager.h"
+
 class CEGLNativeTypeRockchip : public CEGLNativeTypeAndroid
 {
 public:
+  CEGLNativeTypeRockchip();
+  ~CEGLNativeTypeRockchip();
   virtual std::string GetNativeName() const { return "rkandroid"; }
   virtual bool  CheckCompatibility();
   virtual int   GetQuirks() { return EGL_QUIRK_DESTROY_NATIVE_WINDOW_WITH_SURFACE; }
@@ -40,5 +44,11 @@ protected:
   bool SetDisplayResolution(const char *resolution);
   bool SysModeToResolution(std::string mode, RESOLUTION_INFO *res) const;
   int  Get3DMode();
+
+private:
+  void SetNative3DResolution(const RESOLUTION_INFO &res);
+  bool has_api;
+  CJNIDisplayOutputManager* display;
+  
 };
 
