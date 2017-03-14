@@ -486,11 +486,19 @@ DemuxPacket* CDVDDemuxFFmpegRK::Read()
 
       AVStream *stream = m_pFormatContext->streams[m_pkt.pkt.stream_index];
 
-      if (stream->codec->codec_type == AVMEDIA_TYPE_VIDEO && abs(m_speed) > DVD_PLAYSPEED_NORMAL) {
+      if (stream->codec->codec_type == AVMEDIA_TYPE_VIDEO && abs(m_speed) > DVD_PLAYSPEED_NORMAL)
+      {  
+        double pts = ConvertTimestamp(m_pkt.pkt.pts, stream->time_base.den, stream->time_base.num);
         if (m_pkt.pkt.flags & AV_PKT_FLAG_KEY)
+        {
           bDrop = false;
+          if (m_pkt.pkt.pts != AV_NOPTS_VALUE && fabs((CDVDClock::GetMasterClock()->GetClock() - pts) / DVD_TIME_BASE) > 5)
+            SeekTime(DVD_TIME_TO_MSEC(CDVDClock::GetMasterClock()->GetClock()));
+        }
         else
+        {
           bDrop = true;
+        }
       }
 
       if (IsVideoReady() && !bDrop)
