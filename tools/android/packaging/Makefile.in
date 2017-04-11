@@ -137,7 +137,8 @@ libs: $(PREFIX)/lib/@APP_NAME_LC@/lib@APP_NAME_LC@.so
 	cp -fp xbmc/libs/$(CPU)/* xbmc/lib/$(CPU)
 
 xbmc/classes.dex: res
-	mkdir -p xbmc/obj
+	mkdir -p xbmc/obj xbmc/src/org/xbmc/@APP_NAME_LC@
+	@cp xbmc/src/org/xbmc/kodi/*.java xbmc/src/org/xbmc/@APP_NAME_LC@/
 	@javac -classpath $(SDKROOT)/platforms/$(SDK_PLATFORM)/android.jar:xbmc/obj -d xbmc/obj -sourcepath xbmc/src xbmc/src/*.java
 	@javac -classpath $(SDKROOT)/platforms/$(SDK_PLATFORM)/android.jar:xbmc/obj -d xbmc/obj -sourcepath xbmc/src xbmc/src/org/xbmc/@APP_NAME_LC@/*.java
 	@$(DX) --dex --output=xbmc/classes.dex xbmc/obj
