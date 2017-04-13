@@ -648,9 +648,11 @@ RK_PTR CRKCodec::GetNativeSurface(CJNISurface xbmc_surface)
   JNIEnv* env = xbmc_jnienv();
   jclass clazz = env->FindClass("android/view/Surface");
   jfieldID field_surface = 0;
-  field_surface = env->GetFieldID(clazz, "mNativeObject", "J");
-  if (field_surface <= 0)
+  
+  if (CJNIAudioManager::GetSDKVersion() <= 19)
     field_surface = env->GetFieldID(clazz, "mNativeObject", "I");
+  else
+    field_surface = env->GetFieldID(clazz, "mNativeObject", "J");
   if (field_surface)
     native_surface = (void*)env->GetIntField(jsurface, field_surface);
   return native_surface;
